@@ -1,3 +1,6 @@
+# Config
+wp-config.php
+
 # Plugins
 /wp-content/plugins/*
 
