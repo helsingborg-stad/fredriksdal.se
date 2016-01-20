@@ -24,18 +24,38 @@
                     "composer/installers": "~1.0"
                 }
             }
+        },
+        
+        {
+            "type": "package",
+            "package": {
+                "type": "wordpress-theme",
+                "name": "helsingborg-stad/Bootstrap-Theme",
+                "version": "dev-master",
+                "source": {
+                    "url": "https://github.com/helsingborg-stad/Bootstrap-Theme.git",
+                    "type": "git",
+                    "reference": "origin/master"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
         }
+        
     ],
 
     "require": {
         "johnpbloch/wordpress": "^4.4",
-        "helsingborg-stad/Modularity": "dev-develop"
+        "helsingborg-stad/Modularity": "dev-develop",
+        "helsingborg-stad/Bootstrap-Theme": "dev-master"
     },
 
     "extra": {
         "wordpress-install-dir": "wp",
         "installer-paths": {
-            "wp-content/plugins/{$name}": ["helsingborg-stad/Modularity"]
+            "wp-content/plugins/{$name}": ["helsingborg-stad/Modularity"],
+            "wp-content/themes/{$name}": ["helsingborg-stad/Bootstrap-Theme"]
         }
     }
 }
