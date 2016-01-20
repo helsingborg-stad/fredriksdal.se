@@ -1,0 +1,41 @@
+{
+    "name": "helsingborg-stad/dunkerskulturhus.se",
+    "license": "GNU",
+    "authors": [
+        {
+            "name": "Helsingborg Stad",
+            "email": "webbredaktionen@helsingborg.se"
+        }
+    ],
+
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "type": "wordpress-plugin",
+                "name": "helsingborg-stad/Modularity",
+                "version": "dev-develop",
+                "source": {
+                    "url": "https://github.com/helsingborg-stad/Modularity.git",
+                    "type": "git",
+                    "reference": "origin/develop"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        }
+    ],
+
+    "require": {
+        "johnpbloch/wordpress": "^4.4",
+        "helsingborg-stad/Modularity": "dev-develop"
+    },
+
+    "extra": {
+        "wordpress-install-dir": "wp",
+        "installer-paths": {
+            "wp-content/plugins/{$name}": ["helsingborg-stad/Modularity"]
+        }
+    }
+}

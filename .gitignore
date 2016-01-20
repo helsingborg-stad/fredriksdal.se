@@ -1,0 +1,6 @@
+# Plugins
+/wp-content/plugins/*
+
+# Vendor directories
+/vendor
+/wp
