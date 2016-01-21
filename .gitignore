@@ -4,10 +4,13 @@ wp-config.php
 # Plugins
 /wp-content/plugins/*
 
-# Themes 
+# Themes
 /wp-content/themes/*
 !/wp-content/themes/dunkerskulturhus
 
 # Vendor directories
 /vendor
 /wp
+
+# Operating system files
+.DS_Store
