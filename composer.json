@@ -10,52 +10,27 @@
 
     "repositories": [
         {
-            "type": "package",
-            "package": {
-                "type": "wordpress-plugin",
-                "name": "helsingborg-stad/Modularity",
-                "version": "dev-develop",
-                "source": {
-                    "url": "https://github.com/helsingborg-stad/Modularity.git",
-                    "type": "git",
-                    "reference": "origin/develop"
-                },
-                "require": {
-                    "composer/installers": "~1.0"
-                }
-            }
+            "type": "vcs",
+            "url": "https://github.com/helsingborg-stad/Modularity.git"
         },
-        
         {
-            "type": "package",
-            "package": {
-                "type": "wordpress-theme",
-                "name": "helsingborg-stad/Bootstrap-Theme",
-                "version": "dev-develop",
-                "source": {
-                    "url": "https://github.com/helsingborg-stad/Bootstrap-Theme.git",
-                    "type": "git",
-                    "reference": "origin/develop"
-                },
-                "require": {
-                    "composer/installers": "~1.0"
-                }
-            }
+            "type": "vcs",
+            "url": "https://github.com/helsingborg-stad/Bootstrap-Theme.git"
         }
-        
     ],
 
     "require": {
+        "composer/installers": "~1.0",
         "johnpbloch/wordpress": "^4.4",
-        "helsingborg-stad/Modularity": "dev-develop",
-        "helsingborg-stad/Bootstrap-Theme": "dev-develop"
+        "helsingborg-stad/Modularity": "*@dev",
+        "helsingborg-stad/Bootstrap-Theme": "*@dev"
     },
 
     "extra": {
         "wordpress-install-dir": "wp",
         "installer-paths": {
-            "wp-content/plugins/{$name}": ["helsingborg-stad/Modularity"],
-            "wp-content/themes/{$name}": ["helsingborg-stad/Bootstrap-Theme"]
+            "wp-content/plugins/{$name}": ["type:wordpress-plugin"],
+            "wp-content/themes/{$name}": ["type:wordpress-theme"]
         }
     }
 }
