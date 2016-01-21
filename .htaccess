@@ -1,3 +1,6 @@
+#Redirect to admin
+RedirectMatch 301 /admin/(.*) /wp/wp-admin/$1
+
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
