@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5a1ddb4ae645cf425f9066a244c54685",
-    "content-hash": "01f93f660ad22ced06a82e3fae27d3a4",
+    "hash": "2065d98721e3a39239810710ef4bd409",
+    "content-hash": "a5bb6667e1557a71c65a0be1854840f5",
     "packages": [
         {
             "name": "composer/installers",
@@ -107,17 +107,17 @@
         },
         {
             "name": "helsingborg-stad/Bootstrap-Theme",
-            "version": "dev-master",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/helsingborg-stad/Bootstrap-Theme.git",
-                "reference": "origin/master"
+                "reference": "origin/develop"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-theme",
-            "time": "2015-12-22 09:54:36"
+            "time": "2016-01-20 09:27:41"
         },
         {
             "name": "helsingborg-stad/Modularity",

@@ -8,6 +8,15 @@ wp-config.php
 /wp-content/themes/*
 !/wp-content/themes/dunkerskulturhus
 
+# Upload 
+/wp-content/uploads/*
+/wp-content/uploads/cache/*
+/wp-content/uploads/cache/blade-cache/*
+!/wp-content/uploads/
+!/wp-content/uploads/cache/
+!/wp-content/uploads/blade-cache/
+
+
 # Vendor directories
 /vendor
 /wp

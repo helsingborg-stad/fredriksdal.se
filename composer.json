@@ -31,11 +31,11 @@
             "package": {
                 "type": "wordpress-theme",
                 "name": "helsingborg-stad/Bootstrap-Theme",
-                "version": "dev-master",
+                "version": "dev-develop",
                 "source": {
                     "url": "https://github.com/helsingborg-stad/Bootstrap-Theme.git",
                     "type": "git",
-                    "reference": "origin/master"
+                    "reference": "origin/develop"
                 },
                 "require": {
                     "composer/installers": "~1.0"
@@ -48,7 +48,7 @@
     "require": {
         "johnpbloch/wordpress": "^4.4",
         "helsingborg-stad/Modularity": "dev-develop",
-        "helsingborg-stad/Bootstrap-Theme": "dev-master"
+        "helsingborg-stad/Bootstrap-Theme": "dev-develop"
     },
 
     "extra": {
