@@ -8,7 +8,7 @@ wp-config.php
 /wp-content/themes/*
 !/wp-content/themes/dunkerskulturhus
 
-# Upload 
+# Upload
 /wp-content/uploads/*
 /wp-content/uploads/cache/*
 /wp-content/uploads/cache/blade-cache/*
@@ -16,10 +16,12 @@ wp-config.php
 !/wp-content/uploads/cache/
 !/wp-content/uploads/blade-cache/
 
-
 # Vendor directories
 /vendor
 /wp
+
+# Composer generated files
+composer.lock
 
 # Operating system files
 .DS_Store
