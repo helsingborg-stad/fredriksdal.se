@@ -22,8 +22,8 @@
     "require": {
         "composer/installers": "~1.0",
         "johnpbloch/wordpress": "^4.4",
-        "helsingborg-stad/Modularity": "*@dev",
-        "helsingborg-stad/Bootstrap-Theme": "*@dev"
+        "helsingborg-stad/Modularity": "dev-develop",
+        "helsingborg-stad/Bootstrap-Theme": "dev-develop"
     },
 
     "extra": {
