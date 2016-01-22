@@ -1,4 +1,7 @@
-@import 'mixin/positioning';
 
-@import 'layout/header';
-@import 'layout/mainmenu';
+.is-child-theme {
+	@import 'mixin/positioning';
+
+	@import 'layout/header';
+	@import 'layout/mainmenu';
+}
