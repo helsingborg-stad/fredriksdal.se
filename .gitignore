@@ -7,6 +7,7 @@ wp-config.php
 # Themes
 /wp-content/themes/*
 !/wp-content/themes/dunkerskulturhus
+/wp-content/themes/dunkerskulturhus/node_modules/
 
 # Upload
 /wp-content/uploads/*
