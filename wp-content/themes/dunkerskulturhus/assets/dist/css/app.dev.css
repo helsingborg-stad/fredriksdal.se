@@ -1,0 +1,35 @@
+#site-header {
+  padding-top: 15px; }
+  #site-header .logotype {
+    display: inline-block;
+    /*
+        &[data-tooltip] {
+            &:hover {
+                &::after,
+                &::before {
+                    bottom: 10px;
+                    left: 60%;
+                }
+            }
+        }
+        */ }
+
+.hero {
+  position: relative; }
+  .hero .search {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 30%;
+    min-width: 300px; }
+    .hero .search label {
+      display: inline-block;
+      font-weight: 300;
+      letter-spacing: 1px; }
+    .hero .search input[type="search"] {
+      border: none; }
+
+.navbar-mainmenu {
+  margin-top: 8px; }
