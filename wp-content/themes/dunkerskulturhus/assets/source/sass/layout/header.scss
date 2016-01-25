@@ -1,20 +1,10 @@
 #site-header {
-    padding-top: 15px;
+    position: absolute; 
+    z-index: 100; 
+    width: 100%; 
 
     .logotype {
         display: inline-block;
-
-        /*
-        &[data-tooltip] {
-            &:hover {
-                &::after,
-                &::before {
-                    bottom: 10px;
-                    left: 60%;
-                }
-            }
-        }
-        */
     }
 }
 
@@ -36,5 +26,9 @@
         input[type="search"] {
             border: none;
         }
+    }
+
+    .stripe {
+        display: none !important; 
     }
 }
