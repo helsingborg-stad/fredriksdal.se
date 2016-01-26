@@ -1,9 +1,18 @@
+.is-child-theme #wrapper {
+  position: relative; }
+
 .is-child-theme #site-header {
   display: table;
   position: absolute;
   z-index: 100;
   width: 100%;
-  padding-top: 0; }
+  padding-top: 0;
+  position: absolute;
+  top: 0;
+  left: 0; }
+  .is-child-theme #site-header .navbar {
+    background-color: transparent;
+    padding: 15px 0; }
 
 .is-child-theme .hero {
   position: relative;
@@ -41,3 +50,5 @@
     vertical-align: middle;
     text-align: right;
     width: 100%; }
+  .is-child-theme .navbar-mainmenu a {
+    color: #000; }
