@@ -1,6 +1,4 @@
-console.log("test"); 
 
-	
 var DunkersKultur; DunkersKultur = DunkersKultur || {};
 DunkersKultur.Liquid = DunkersKultur.Liquid || {};
 
