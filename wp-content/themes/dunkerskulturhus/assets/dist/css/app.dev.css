@@ -17,12 +17,14 @@
   .is-child-theme #site-header .navbar {
     background-color: transparent;
     padding: 15px 0; }
+  .is-child-theme #site-header.liquid-header {
+    background: #fff; }
 
 .is-child-theme .hero {
   position: relative;
   height: 100vh;
   overflow: hidden;
-  background: url("http://www.visitsweden.com/ImageVault/Images/id_778/scope_0/ImageVaultHandler.aspx") center;
+  background: url("http://www.planetware.com/photos-large/S/sweden-helsingborg-dunkers.jpg") center;
   background-size: cover; }
   .is-child-theme .hero .search {
     position: absolute;

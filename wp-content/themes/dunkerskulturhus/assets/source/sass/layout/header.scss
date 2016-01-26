@@ -15,13 +15,17 @@
         background-color: transparent;
         padding: 15px 0;
     }
+
+    &.liquid-header {
+        background: #fff; 
+    }
 }
 
 .hero {
     position: relative;
     height: 100vh;
     overflow: hidden;
-    background: url('http://www.visitsweden.com/ImageVault/Images/id_778/scope_0/ImageVaultHandler.aspx') center;
+    background: url('http://www.planetware.com/photos-large/S/sweden-helsingborg-dunkers.jpg') center;
     background-size: cover;  
 
     .search {

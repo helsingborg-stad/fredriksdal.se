@@ -18,16 +18,16 @@ DunkersKultur.Liquid.Liquid = (function ($) {
         		}
         	}.bind(this)); 
         }.bind(this));
-    }
+    };
 
 	Liquid.prototype.addClass = function () {
-		this.TargetElement.addClass(this.JqClassName); 
+	   //this.TargetElement.addClass(this.JqClassName); 
     };
 
     Liquid.prototype.removeClass = function () {
-		this.TargetElement.removeClass(this.JqClassName); 
+		//this.TargetElement.removeClass(this.JqClassName); 
     };
 
-	return new Clock();
+	return new Liquid();
 
 })(jQuery);
