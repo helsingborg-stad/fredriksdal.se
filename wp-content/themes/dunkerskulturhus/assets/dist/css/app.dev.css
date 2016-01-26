@@ -13,6 +13,9 @@
   .is-child-theme #site-header .navbar {
     background-color: transparent;
     padding: 15px 0; }
+    .is-child-theme #site-header .navbar .current-page-ancestor a::after,
+    .is-child-theme #site-header .navbar .current_page_item a::after {
+      display: none; }
 
 .is-child-theme .hero {
   position: relative;

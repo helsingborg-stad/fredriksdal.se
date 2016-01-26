@@ -15,6 +15,11 @@
     .navbar {
         background-color: transparent;
         padding: 15px 0;
+
+        .current-page-ancestor a::after,
+        .current_page_item a::after {
+            display: none;
+        }
     }
 }
 
