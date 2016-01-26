@@ -16,10 +16,6 @@
         {
             "type": "vcs",
             "url": "https://github.com/helsingborg-stad/Bootstrap-Theme.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/johnshopkins/acf-pro.git"
         }
     ],
 
