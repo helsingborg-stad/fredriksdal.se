@@ -9,6 +9,7 @@
 .hero {
     position: relative;
     height: 100vh;
+    overflow: hidden;
 
     .search {
         @include center();
