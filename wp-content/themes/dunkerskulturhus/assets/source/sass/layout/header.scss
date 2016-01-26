@@ -4,11 +4,10 @@
 
 #site-header {
     display: table;
-    position: absolute;
+    position: fixed;
     z-index: 100;
     width: 100%;
     padding-top: 0;
-    position: absolute;
     top: 0;
     left: 0;
 
@@ -22,6 +21,8 @@
     position: relative;
     height: 100vh;
     overflow: hidden;
+    background: url('http://www.visitsweden.com/ImageVault/Images/id_778/scope_0/ImageVaultHandler.aspx') center;
+    background-size: cover;  
 
     .search {
         @include center();

@@ -27,8 +27,7 @@ class Enqueue
      */
     public function script()
     {
-        wp_enqueue_script('dunkers-js', get_stylesheet_directory_uri(). '/assets/dist/js/hbg-prime.min.js', '', '1.0.0', true);
-
+        wp_enqueue_script('dunkers-js', get_stylesheet_directory_uri(). '/assets/dist/js/app.min.js', '', '1.0.0', true);
     }
 
 }

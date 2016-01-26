@@ -1,5 +1,3 @@
-console.info("Welcome!");
-
 console.log("test"); 
 
 	

@@ -35,9 +35,9 @@ gulp.task('sass-dev', function() {
 // Concatenate & Minify JS
 gulp.task('scripts-dist', function() {
     return gulp.src('assets/source/js/*.js')
-            .pipe(concat('packaged.js'))
+            .pipe(concat('app.js'))
             .pipe(gulp.dest('assets/dist/js'))
-            .pipe(rename('packaged.min.js'))
+            .pipe(rename('app.min.js'))
             .pipe(uglify())
             .pipe(gulp.dest('assets/dist/js'));
 });
