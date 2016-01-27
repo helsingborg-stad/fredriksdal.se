@@ -1,5 +1,3 @@
-console.info("Welcome!");
-
 
 var DunkersKultur; DunkersKultur = DunkersKultur || {};
 DunkersKultur.Liquid = DunkersKultur.Liquid || {};

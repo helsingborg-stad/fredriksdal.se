@@ -9,8 +9,8 @@ var minifycss 		= require('gulp-minify-css');
 var rename 			= require('gulp-rename');
 var autoprefixer 	= require('gulp-autoprefixer');
 var plumber 		= require('gulp-plumber');
-var imagemin 		= require('gulp-imagemin');
-var pngquant 		= require('imagemin-pngquant'); // $ npm i -D imagemin-pngquant
+//var imagemin 		= require('gulp-imagemin');
+//var pngquant 		= require('imagemin-pngquant'); // $ npm i -D imagemin-pngquant
 
 // Compile Our Sass
 gulp.task('sass-dist', function() {
@@ -35,29 +35,29 @@ gulp.task('sass-dev', function() {
 // Concatenate & Minify JS
 gulp.task('scripts-dist', function() {
     return gulp.src('assets/source/js/*.js')
-            .pipe(concat('packaged.js'))
+            .pipe(concat('app.js'))
             .pipe(gulp.dest('assets/dist/js'))
-            .pipe(rename('packaged.min.js'))
+            .pipe(rename('app.min.js'))
             .pipe(uglify())
             .pipe(gulp.dest('assets/dist/js'));
 });
 
 // Compress images
-gulp.task('imagemin', function () {
-    return gulp.src('assets/source/images/**/*')
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant()]
-        }))
-        .pipe(gulp.dest('assets/dist/images'));
-});
+//gulp.task('imagemin', function () {
+//    return gulp.src('assets/source/images/**/*')
+//        .pipe(imagemin({
+//            progressive: true,
+//            svgoPlugins: [{removeViewBox: false}],
+//            use: [pngquant()]
+//        }))
+//        .pipe(gulp.dest('assets/dist/images'));
+//});
 
 // Watch Files For Changes
 gulp.task('watch', function() {
     gulp.watch('assets/source/js/**/*.js', ['scripts-dist']);
     gulp.watch('assets/source/sass/**/*.scss', ['sass-dist', 'sass-dev']);
-    gulp.watch('assets/source/images/**/*', ['imagemin']);
+//    gulp.watch('assets/source/images/**/*', ['imagemin']);
 });
 
 // Default Task
