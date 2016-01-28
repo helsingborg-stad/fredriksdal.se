@@ -24,9 +24,24 @@ body.is-child-theme {
   left: 0;
   -webkit-transition: all 200ms;
           transition: all 200ms; }
+  .is-child-theme #site-header nav.navbar {
+    -webkit-transition: padding 200ms;
+            transition: padding 200ms; }
+  .is-child-theme #site-header .logotype svg, .is-child-theme #site-header .logotype img {
+    height: 30px; }
+  .is-child-theme #site-header .logotype svg path {
+    fill: #fff !important;
+    -webkit-transition: fill 300ms;
+            transition: fill 300ms; }
   .is-child-theme #site-header.liquid-header {
     background-color: rgba(255, 255, 255, 0.95);
-    border-bottom: 1px solid #fafbfb; }
+    border-bottom: 1px solid #fafbfb;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1); }
+    .is-child-theme #site-header.liquid-header .logotype svg path {
+      fill: #000 !important; }
+    .is-child-theme #site-header.liquid-header nav.navbar {
+      padding-top: 0;
+      padding-bottom: 0; }
 
 .is-child-theme.admin-bar #site-header {
   margin-top: 32px; }

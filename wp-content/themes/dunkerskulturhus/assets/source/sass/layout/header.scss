@@ -6,13 +6,40 @@
     padding-top: 0;
     top: 0px;
     left: 0;
-
     transition: all 200ms;
+
+    nav.navbar {
+        transition: padding 200ms;
+    }
+
+    .logotype {
+        svg, img {
+            height: 30px;
+        }
+
+        svg path {
+            fill: #fff !important;
+            transition: fill 300ms;
+        }
+    }
 
     &.liquid-header {
         background-color: rgba(#fff,.95);
         border-bottom: 1px solid $gray-light;
+        box-shadow: 0 0 2px rgba(#000, .1);
+
+        .logotype {
+            svg path {
+                fill: #000 !important;
+            }
+        }
+
+        nav.navbar {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
     }
+
 }
 
 &.admin-bar #site-header {
