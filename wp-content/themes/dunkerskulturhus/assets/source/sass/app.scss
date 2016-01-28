@@ -7,13 +7,6 @@
 @import 'mixin/positioning';
 @import 'mixin/icon';
 
-body.is-child-theme {
-    font-family: $base-font-family;
-    font-size: $base-font-size;
-    line-height: $base-line-height;
-    color: $base-font-color;
-}
-
 .is-child-theme {
 	@import 'layout/base';
 	@import 'layout/typography';

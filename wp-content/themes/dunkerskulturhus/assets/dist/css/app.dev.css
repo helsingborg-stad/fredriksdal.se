@@ -1,17 +1,14 @@
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,900,300);
-body.is-child-theme {
-  font-family: "Lato", "Roboto", "Helvetica", "Arial";
-  font-size: 17px;
-  line-height: 1.6;
-  color: #5e6a71; }
-
 .is-child-theme #wrapper {
   position: relative; }
 
-.is-child-theme body {
-  font-family: Times New Roman; }
-  .is-child-theme body h1, .is-child-theme body h2, .is-child-theme body h3, .is-child-theme body h4, .is-child-theme body h5, .is-child-theme body h6 {
+.is-child-themebody {
+  font-family: "KarbonSemibold", "Lato", "Roboto", "Helvetica", "Arial";
+  font-size: 17px;
+  line-height: 1.6;
+  color: #5e6a71; }
+  .is-child-themebody article p {
     font-family: Verdana; }
 
 .is-child-theme #site-header {
@@ -27,20 +24,39 @@ body.is-child-theme {
   .is-child-theme #site-header nav.navbar {
     -webkit-transition: padding 200ms;
             transition: padding 200ms; }
-  .is-child-theme #site-header .logotype svg, .is-child-theme #site-header .logotype img {
-    height: 25px; }
-  .is-child-theme #site-header .logotype svg path,
-  .is-child-theme #site-header .logotype svg use {
-    fill: #fff !important;
-    -webkit-transition: fill 300ms;
-            transition: fill 300ms; }
+  .is-child-theme #site-header .logotype {
+    -webkit-transition: opacity 300ms;
+            transition: opacity 300ms; }
+    .is-child-theme #site-header .logotype svg, .is-child-theme #site-header .logotype img {
+      height: 25px; }
+    .is-child-theme #site-header .logotype svg path,
+    .is-child-theme #site-header .logotype svg use {
+      fill: #fff !important;
+      -webkit-transition: fill 300ms;
+              transition: fill 300ms; }
+    .is-child-theme #site-header .logotype:after, .is-child-theme #site-header .logotype:before {
+      opacity: 0;
+      -webkit-transition: 200ms opacity;
+              transition: 200ms opacity; }
+    .is-child-theme #site-header .logotype:hover {
+      opacity: .9; }
+      .is-child-theme #site-header .logotype:hover:after {
+        border-radius: 2px;
+        padding: 10px;
+        background-color: #fff;
+        color: #1E1E1E;
+        text-transform: uppercase;
+        opacity: 1; }
+      .is-child-theme #site-header .logotype:hover:before {
+        border-bottom-color: #fff;
+        opacity: 1; }
   .is-child-theme #site-header.liquid-header {
     background-color: rgba(255, 255, 255, 0.92);
     border-bottom: 1px solid #fafbfb;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1); }
+    box-shadow: 0 0 2px rgba(30, 30, 30, 0.1); }
     .is-child-theme #site-header.liquid-header .logotype svg path,
     .is-child-theme #site-header.liquid-header .logotype svg use {
-      fill: #000 !important; }
+      fill: #1E1E1E !important; }
     .is-child-theme #site-header.liquid-header nav.navbar {
       padding-top: 10px;
       padding-bottom: 10px; }
@@ -100,20 +116,20 @@ body.is-child-theme {
     .is-child-theme #main-menu > ul > li.current_page_item a:hover {
       background: #fff;
       border-color: #fff;
-      color: #000; }
+      color: #1E1E1E; }
     .is-child-theme #main-menu > ul > li.current_page_item a:before {
       display: none; }
   .is-child-theme #main-menu > ul > li:last-child {
     padding-right: 0; }
 
 .is-child-theme #site-header.liquid-header #main-menu ul li a {
-  color: #000; }
+  color: #1E1E1E; }
   .is-child-theme #site-header.liquid-header #main-menu ul li a:before {
-    background-color: #000; }
+    background-color: #1E1E1E; }
 
 .is-child-theme #site-header.liquid-header #main-menu ul li.current_page_item a {
-  color: #000;
-  border-color: #000; }
+  color: #1E1E1E;
+  border-color: #1E1E1E; }
 
 .is-child-theme .hero {
   position: relative;
@@ -157,8 +173,10 @@ body.is-child-theme {
     color: #fff; }
 
 .is-child-theme footer.main-footer {
-  background: #eee;
-  border-top: 1px solid #e0e1e2; }
+  background: #1e1e1e;
+  border-top: 1px solid #e0e1e2;
+  padding-top: 100px;
+  padding-bottom: 100px; }
 
 .is-child-theme h1, .is-child-theme .h1,
 .is-child-theme h2, .is-child-theme .h2,
