@@ -18,6 +18,10 @@
         width: 70%;
         padding-bottom: 70%;
 
+        filter: grayscale(100%);
+        transition: 300ms filter ease-in-out,
+                    200ms transform cubic-bezier(0.250, 0.250, 0.240, 1.175);
+
         background-size: cover;
         background-position: center center;
 
@@ -39,6 +43,15 @@
 
         &::before {
             display: none !important;
+        }
+    }
+
+    &:hover {
+        text-decoration: none;
+
+        .box-image {
+            filter: grayscale(0);
+            transform: scale(1.1);
         }
     }
 }
