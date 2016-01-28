@@ -97,6 +97,10 @@ body.is-child-theme {
     text-transform: uppercase;
     letter-spacing: .05em;
     font-weight: bold; }
+  .is-child-theme .box-panel .box-content {
+    background-color: #fff;
+    border: none;
+    padding-top: 0; }
   .is-child-theme .box-panel ul,
   .is-child-theme .box-panel li,
   .is-child-theme .box-panel table,
