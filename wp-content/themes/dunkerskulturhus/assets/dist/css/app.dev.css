@@ -133,8 +133,8 @@ body.is-child-theme {
     padding-bottom: 70%;
     -webkit-filter: grayscale(100%);
             filter: grayscale(100%);
-    -webkit-transition: 300ms -webkit-filter, 200ms -webkit-transform, 300ms filter, 200ms -webkit-transform;
-            transition: 300ms filter, 200ms transform;
+    -webkit-transition: 300ms -webkit-filter ease-in-out, 200ms -webkit-transform cubic-bezier(0.25, 0.25, 0.24, 1.175), 300ms filter ease-in-out, 200ms -webkit-transform cubic-bezier(0.25, 0.25, 0.24, 1.175);
+            transition: 300ms filter ease-in-out, 200ms transform cubic-bezier(0.25, 0.25, 0.24, 1.175);
     background-size: cover;
     background-position: center center; }
     .is-child-theme .box-news .box-image img {
