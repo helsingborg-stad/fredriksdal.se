@@ -16,12 +16,17 @@ body.is-child-theme {
 
 .is-child-theme #site-header {
   display: table;
-  position: absolute;
+  position: fixed;
   z-index: 100;
   width: 100%;
   padding-top: 0;
   top: 0px;
-  left: 0; }
+  left: 0;
+  -webkit-transition: all 200ms;
+          transition: all 200ms; }
+  .is-child-theme #site-header.liquid-header {
+    background-color: #fff;
+    border-bottom: 1px solid #fafbfb; }
 
 .is-child-theme.home .navbar {
   background-color: transparent;
@@ -34,7 +39,7 @@ body.is-child-theme {
   position: relative;
   height: 100vh;
   overflow: hidden;
-  background: url("http://www.planetware.com/photos-large/S/sweden-helsingborg-dunkers.jpg") center;
+  background: url("../images/dunkers_hero_compressed.jpg") center;
   background-size: cover; }
   .is-child-theme .hero .search {
     position: absolute;

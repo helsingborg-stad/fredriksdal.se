@@ -5,27 +5,40 @@ DunkersKultur.Liquid = DunkersKultur.Liquid || {};
 DunkersKultur.Liquid.Liquid = (function ($) {
 
 	var TopOffset = 5;
-	var TargetElement = jQuery("#site-header"); 
-	var JqClassName = "liquid-header"; 
+	var TargetElement = "#site-header";
+	var JqClassName = "liquid-header";
 
 	function Liquid() {
         jQuery(function(){
-        	jQuery(window).scroll(function(element){
-        		if (element.scrollTop < this.TopOffset) {
-        			this.removeClass(); 
+        	jQuery(window).scroll(function(){
+        		if (jQuery(window).scrollTop() < TopOffset) {
+        			this.removeClass();
         		} else {
-        			this.addClass(); 
+        			this.addClass();
         		}
-        	}.bind(this)); 
+        	}.bind(this));
         }.bind(this));
     };
 
 	Liquid.prototype.addClass = function () {
-	   //this.TargetElement.addClass(this.JqClassName); 
+	   jQuery(TargetElement).addClass(JqClassName);
     };
 
     Liquid.prototype.removeClass = function () {
-		//this.TargetElement.removeClass(this.JqClassName); 
+		 jQuery(TargetElement).removeClass(JqClassName);
+    };
+
+    Liquid.prototype.updateTriggerValue = function () {
+        if( jQuery(TargetElement).attr('data-trigger-value') && this.isInt( jQuery(TargetElement).attr('data-trigger-value') ) ) {
+            TopOffset = jQuery(TargetElement).attr('data-trigger-value');
+        }
+    };
+
+    Liquid.prototype.isInt = function (value) {
+        var x;
+        if (isNaN(value)) { return false; }
+        x = parseFloat(value);
+        return (x | 0) === x;
     };
 
 	return new Liquid();
