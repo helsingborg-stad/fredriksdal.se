@@ -2,37 +2,15 @@
 
 @section('content')
 
+@if (is_active_sidebar('content-area'))
 <section class="creamy creamy-border-bottom gutter-xl gutter-vertical">
     <div class="container">
         <div class="grid">
-            <div class="grid-lg-6">
-                <div class="box box-panel">
-                    <h4 class="box-title">Öppettider</h4>
-                    <div class="box-content gutter">
-                        <p>
-                            <strong>Utställningarna:</strong><br>
-                            Måndag: Stängt<br>
-                            Tis-tors: 10:00-18:00<br>
-                            Fredag: 10:00-20:00<br>
-                            Lör-sön: 10:00-17:00
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid-lg-6">
-                <div class="box box-panel">
-                    <h4 class="box-title">Senaste nytt</h4>
-                    <ul>
-                        <li><a href="#" class="link-item">Utställning i konsthallen: Den konstiga konsten</a></li>
-                        <li><a href="#" class="link-item">Tisdag-fredag serveras veckans lunchrätt</a></li>
-                        <li><a href="#" class="link-item">Dolly Parton inställt, gratis biljetter till alla</a></li>
-                    </ul>
-                </div>
-            </div>
+            {{ dynamic_sidebar('content-area') }}
         </div>
     </div>
 </section>
+@endif
 
 <div class="container gutter-xl gutter-vertical">
     <div class="grid">
