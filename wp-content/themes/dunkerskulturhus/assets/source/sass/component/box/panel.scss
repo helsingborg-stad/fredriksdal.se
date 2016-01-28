@@ -1,0 +1,19 @@
+.box-panel {
+    .box-title {
+        background: #fff;
+        color: $base-font-color;
+        text-transform: uppercase;
+        letter-spacing: .05em;
+        font-weight: bold;
+    }
+
+    ul,
+    li,
+    table,
+    thead,
+    tfoot,
+    tr,
+    td {
+        border: none;
+    }
+}
