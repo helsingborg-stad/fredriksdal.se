@@ -176,7 +176,7 @@ body.is-child-theme {
 .is-child-theme h3, .is-child-theme .h3 {
   text-transform: uppercase; }
 
-.is-child-theme .box {
+.is-child-theme .creamy .box {
   background-color: #fff;
   border: 1px solid #cbcdce; }
 
