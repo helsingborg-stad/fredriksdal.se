@@ -1,9 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,900,300);
 
 @import 'config/typography';
+@import 'config/icons';
 @import 'config/colors';
 
 @import 'mixin/positioning';
+@import 'mixin/icon';
 
 body.is-child-theme {
     font-family: $base-font-family;
@@ -25,4 +27,5 @@ body.is-child-theme {
     @import 'component/box/panel';
 
     @import 'utility/creamy';
+    @import 'utility/link-item';
 }
