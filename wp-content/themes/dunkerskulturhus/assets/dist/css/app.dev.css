@@ -96,7 +96,7 @@ body.is-child-theme {
   text-transform: uppercase; }
 
 .is-child-theme .box-panel {
-  background-color: #e0e1e2;
+  background-color: #fff;
   border: 1px solid #cbcdce;
   padding: 10px; }
   .is-child-theme .box-panel .box-title {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Dunkers\ChildTheme;
+namespace Dunkers\Theme;
 
 class Enqueue
 {
