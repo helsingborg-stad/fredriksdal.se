@@ -10,9 +10,13 @@
     transition: all 200ms;
 
     &.liquid-header {
-        background-color: #fff;
+        background-color: rgba(#fff,.95);
         border-bottom: 1px solid $gray-light;
     }
+}
+
+&.admin-bar #site-header {
+    margin-top: 32px;
 }
 
 &.home .navbar {
