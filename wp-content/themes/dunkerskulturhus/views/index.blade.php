@@ -37,32 +37,50 @@
 <div class="container gutter-xl gutter-vertical">
     <div class="grid">
         <div class="grid-lg-12">
-            <h1 class="text-highlight">Aktuellt i Helsingborgs stad</h1>
+            <h1 class="text-highlight">Detta händer på Dunkers idag</h1>
         </div>
     </div>
 
     <div class="grid">
         <div class="grid-md-4 grid-sm-6">
             <a href="#" class="box box-news">
-                <img src="http://www.helsingborg.se/wp-content/uploads/2014/12/Kommunalanstalld_420x280.jpg" alt="Kommunalanställd">
+                <div class="box-image" style="background-image:url('http://gigguide.se/static/images/performers/661/markus-krunegard-1-original.jpeg');">
+                    <img src="http://gigguide.se/static/images/performers/661/markus-krunegard-1-original.jpeg" alt="Kommunalanställd">
+                </div>
                 <div class="box-content">
-                    <h5 class="link-item link-item-light">Ledia jobb i Helsingborgs stad</h5>
+                    <h5 class="link-item link-item-light">Markus Krunegård</h5>
+                    <p>
+                        Akustisk turné<br>
+                        18 mars 2016 kl. 19:00
+                    </p>
                 </div>
             </a>
         </div>
         <div class="grid-md-4 grid-sm-6">
             <a href="#" class="box box-news">
-                <img src="http://www.helsingborg.se/wp-content/uploads/2014/12/Kommunalanstalld_420x280.jpg" alt="Kommunalanställd">
+                <div class="box-image" style="background-image:url('http://mittkulturkort.se/data/kulturkortet/media/news/image/92/13/46/7/5164/e64c22a79bb566db/thumbs/kk_691_518_DEFAULT_cropfit_NORTH.jpg');">
+                    <img src="http://mittkulturkort.se/data/kulturkortet/media/news/image/92/13/46/7/5164/e64c22a79bb566db/thumbs/kk_691_518_DEFAULT_cropfit_NORTH.jpg" alt="Kommunalanställd">
+                </div>
                 <div class="box-content">
-                    <h5 class="link-item link-item-light">Ledia jobb i Helsingborgs stad</h5>
+                    <h5 class="link-item link-item-light">Arty after work</h5>
+                    <p>
+                        Häng ut efter jobb<br>
+                        Fredagar kl. 16:00
+                    </p>
                 </div>
             </a>
         </div>
         <div class="grid-md-4 grid-sm-6">
             <a href="#" class="box box-news">
-                <img src="http://www.helsingborg.se/wp-content/uploads/2014/12/Kommunalanstalld_420x280.jpg" alt="Kommunalanställd">
+                <div class="box-image" style="background-image:url('http://vansterparlan.v-blog.se/files/2014/07/Athena.jpg');">
+                    <img src="http://vansterparlan.v-blog.se/files/2014/07/Athena.jpg" alt="Kommunalanställd">
+                </div>
                 <div class="box-content">
-                    <h5 class="link-item link-item-light">Ledia jobb i Helsingborgs stad</h5>
+                    <h5 class="link-item link-item-light">Samtal på Dunkers</h5>
+                    <p>
+                        Athena Farrokhzad<br>
+                        16 mars 2016 14:00
+                    </p>
                 </div>
             </a>
         </div>
