@@ -1,0 +1,44 @@
+.box-news {
+    background-color: transparent;
+    color: #000;
+    text-align: center;
+    padding: 0;
+
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+
+    .box-image {
+        display: inline-block;
+        overflow: hidden;
+        border-radius: 50%;
+        width: 70%;
+        padding-bottom: 70%;
+
+        background-size: cover;
+        background-position: center center;
+
+        img {
+            display: none;
+        }
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .link-item {
+        padding: 0;
+        margin: 0;
+        left: 0;
+
+        &::before {
+            display: none !important;
+        }
+    }
+}
