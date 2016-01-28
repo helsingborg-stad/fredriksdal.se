@@ -19,8 +19,8 @@
         padding-bottom: 70%;
 
         filter: grayscale(100%);
-        transition: 300ms filter ease-in-out,
-                    200ms transform cubic-bezier(0.250, 0.250, 0.240, 1.175);
+        transition: 200ms filter ease-in-out,
+                    300ms transform cubic-bezier(0.250, 0.250, 0.240, 1.175);
 
         background-size: cover;
         background-position: center center;
