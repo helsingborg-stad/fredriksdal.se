@@ -5,6 +5,6 @@ class App
 {
     public function __construct()
     {
-		new \Dunkers\ChildTheme\Enqueue();
+		new \Dunkers\Theme\Enqueue();
     }
 }
