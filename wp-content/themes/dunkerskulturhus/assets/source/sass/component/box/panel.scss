@@ -1,4 +1,8 @@
 .box-panel {
+    background-color: $gray;
+    border: 1px solid $gray-dark;
+    padding: 10px;
+
     .box-title {
         background: #fff;
         color: $base-font-color;
