@@ -1,12 +1,32 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900,300);
+
+@import 'config/typography';
+@import 'config/icons';
+@import 'config/colors';
+
+@import 'mixin/positioning';
+@import 'mixin/icon';
+
+body.is-child-theme {
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    color: $base-font-color;
+}
 
 .is-child-theme {
-	@import 'config/colors.scss'; 
-
-	@import 'mixin/positioning';
-
-	@import 'layout/base'; 
+	@import 'layout/base';
 	@import 'layout/typography';
 	@import 'layout/header';
 	@import 'layout/mainmenu';
 	@import 'layout/footer';
+
+    @import 'typography/headings';
+
+    @import 'component/box/box';
+    @import 'component/box/panel';
+    @import 'component/box/news';
+
+    @import 'utility/creamy';
+    @import 'utility/link-item';
 }

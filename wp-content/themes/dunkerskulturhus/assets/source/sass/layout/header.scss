@@ -1,28 +1,20 @@
-#wrapper {
-    position: relative;
-}
-
 #site-header {
     display: table;
-    position: fixed;
+    position: absolute;
     z-index: 100;
     width: 100%;
     padding-top: 0;
-    top: 0;
+    top: 0px;
     left: 0;
+}
 
-    .navbar {
-        background-color: transparent;
-        padding: 15px 0;
+&.home .navbar {
+    background-color: transparent;
+    padding: 15px 0;
 
-        .current-page-ancestor a::after,
-        .current_page_item a::after {
-            display: none;
-        }
-    }
-
-    &.liquid-header {
-        background: #fff; 
+    .current-page-ancestor a::after,
+    .current_page_item a::after {
+        display: none;
     }
 }
 
@@ -31,7 +23,7 @@
     height: 100vh;
     overflow: hidden;
     background: url('http://www.planetware.com/photos-large/S/sweden-helsingborg-dunkers.jpg') center;
-    background-size: cover;  
+    background-size: cover;
 
     .search {
         @include center();
