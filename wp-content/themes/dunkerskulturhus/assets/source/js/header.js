@@ -9,14 +9,19 @@ DunkersKultur.Liquid.Liquid = (function ($) {
 
 	function Liquid() {
         jQuery(function(){
+            this.process();
         	jQuery(window).scroll(function(){
-        		if (jQuery(window).scrollTop() < TopOffset) {
-        			this.removeClass();
-        		} else {
-        			this.addClass();
-        		}
+        		this.process();
         	}.bind(this));
         }.bind(this));
+    }
+
+    Liquid.prototype.process = function () {
+        if (jQuery(window).scrollTop() < TopOffset) {
+            this.removeClass();
+        } else {
+            this.addClass();
+        }
     }
 
 	Liquid.prototype.addClass = function () {

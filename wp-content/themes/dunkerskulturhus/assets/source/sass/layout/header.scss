@@ -9,6 +9,7 @@
     transition: all 200ms;
 
     nav.navbar {
+        background-color: initial;
         transition: padding 200ms;
     }
 
@@ -117,6 +118,10 @@
                 transition: all 0.3s ease-in-out 0s;
             }
 
+            &:after {
+                display: none !important;
+            }
+
             &:hover {
                 background: none;
                 color: #fff;
@@ -189,7 +194,8 @@
         background-color: #fff;
 
         [class*=slider-nav-] {
-            background: rgba(#fff,.1);
+            transition: background 200ms;
+            background: rgba(#000,.15);
             border-radius: 0;
             border: 2px solid #fff;
             text-indent: -500px;
@@ -198,13 +204,53 @@
             height: 50px;
             padding: 0;
 
+            i {
+                display: none !important;
+            }
+
             &:after {
                 @include cover();
-                content: ">";
                 text-indent: initial;
-                line-height: 50px;
+                line-height: 48px !important;
+                transition: margin 200ms;
+            }
+
+            &:hover {
+                background-color: transparent;
+            }
+
+        }
+
+        .slider-nav-previous {
+            margin-left: 15px;
+            &:after {
+                margin-right: 3px;
+                @include hbg-icon($icon-chevron-left);
             }
         }
+
+        .slider-nav-next {
+            margin-right: 15px;
+            &:after {
+                margin-left: 3px;
+                @include hbg-icon($icon-chevron-right);
+            }
+        }
+
+        .slider-nav-previous:hover {
+            &:after {
+                margin-right: 7px;
+            }
+        }
+
+        .slider-nav-next:hover {
+            &:after {
+                margin-left: 7px;
+            }
+        }
+
+
+
     }
 
     .search {
@@ -255,12 +301,12 @@
         z-index: 99;
         bottom: 20px;
         font-size: 1em;
-        background-color: rgba(#fff, .5);
-        border-radius: 50px;
         padding: 10px 20px;
         line-height: 1;
-        color: #000;
+        color: rgba(#fff, .8);
         cursor: default;
+        text-transform: uppercase;
+        font-family: $dunkers-font-family;
     }
 
     .scroll-down-please-icon {
@@ -269,7 +315,7 @@
         margin-right: .5em;
         position: relative;
         margin-left: .4em;
-        color: #000;
+        color: rgba(#fff, .8);
         font-size: 1em;
         z-index: 9999;
         animation: 1500ms scroll-down-please infinite ease-in-out;
