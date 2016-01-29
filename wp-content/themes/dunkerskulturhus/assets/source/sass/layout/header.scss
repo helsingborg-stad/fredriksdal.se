@@ -210,4 +210,47 @@
     .stripe {
         display: none !important;
     }
+
+    .scroll-down-please {
+        @include center(true, false);
+        z-index: 999;
+        bottom: 20px;
+        font-size: 1.5em;
+        background-color: rgba(#fff, .5);
+        border-radius: 50px;
+        padding: 10px 20px 5px;
+        line-height: 1;
+        color: #000;
+    }
+
+    .scroll-down-please-icon {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: .5em;
+        position: relative;
+        margin-left: .4em;
+        color: #000;
+        font-size: 1em;
+        z-index: 9999;
+        animation: 1500ms scroll-down-please infinite ease-in-out;
+
+        &::after {
+            @include hbg-icon($icon-arrow-double-down);
+            @include center();
+        }
+    }
+}
+
+@keyframes scroll-down-please {
+    0% {
+        top: -4px;
+    }
+
+    50% {
+        top: 1px;
+    }
+
+    100% {
+        top: -4px;
+    }
 }
