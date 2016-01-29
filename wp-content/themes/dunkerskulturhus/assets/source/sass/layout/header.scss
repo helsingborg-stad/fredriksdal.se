@@ -85,19 +85,18 @@
 
 
 #main-menu {
-    ul {
-        text-align: right;
-        li {
-            display: inline-block;
-            a {
-                transition: color 200ms, background 200ms, border 200ms;
-            }
+    text-align: right;
+
+    li {
+        display: inline-block;
+        a {
+            transition: color 200ms, background 200ms, border 200ms;
         }
     }
 }
 
 #main-menu{
-    > ul > li {
+    li {
         padding: 0 10px;
 
         > a {
@@ -114,10 +113,7 @@
                 left: 0;
                 background-color: #fff;
                 visibility: hidden;
-                -webkit-transform: scaleX(0);
-                -ms-transform: scaleX(0);
                 transform: scaleX(0);
-                -webkit-transition: all 0.3s ease-in-out 0s;
                 transition: all 0.3s ease-in-out 0s;
             }
 
@@ -128,8 +124,6 @@
 
                 &:before {
                     visibility: visible;
-                    -webkit-transform: scaleX(1);
-                    -ms-transform: scaleX(1);
                     transform: scaleX(1);
                 }
             }
@@ -161,7 +155,7 @@
 }
 
 #site-header.liquid-header #main-menu {
-    ul li {
+    li {
         a {
             color: #1E1E1E;
 
