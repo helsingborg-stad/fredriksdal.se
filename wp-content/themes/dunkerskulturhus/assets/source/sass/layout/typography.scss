@@ -3,6 +3,7 @@ body.is-child-theme {
     font-size: $base-font-size;
     line-height: $base-line-height;
     color: $base-font-color;
+    font-smoothing: antialiased;
 
     article p {
         font-family: Verdana;
