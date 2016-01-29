@@ -1,6 +1,6 @@
 .box-panel {
     background-color: #fff;
-    border: 1px solid $gray-dark;
+    border: 2px solid $black;
     padding: 10px;
 
     .box-title {
@@ -25,5 +25,14 @@
     tr,
     td {
         border: none;
+    }
+}
+
+.box-panel-secondary {
+    .box-title {
+        background-color: $black !important;
+        color: #fff;
+        border-bottom: 0;
+        padding: 10px 15px;
     }
 }

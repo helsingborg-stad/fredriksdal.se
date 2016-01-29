@@ -37,7 +37,7 @@
                 border-radius: 2px;
                 padding: 10px;
                 background-color: #fff;
-                color: #1E1E1E;
+                color: $black;
                 text-transform: uppercase;
                 opacity: 1;
             }
@@ -52,12 +52,12 @@
     &.liquid-header {
         background-color: rgba(#fff,.92);
         border-bottom: 1px solid $gray-light;
-        box-shadow: 0 0 2px rgba(#1E1E1E, .1);
+        box-shadow: 0 0 2px rgba($black, .1);
 
         .logotype {
             svg path,
             svg use {
-                fill: #1E1E1E !important;
+                fill: $black !important;
             }
         }
 
@@ -140,7 +140,7 @@
             &:hover {
                 background: #fff;
                 border-color: #fff;
-                color: #1E1E1E;
+                color: $black;
             }
 
             &:before {
@@ -157,17 +157,17 @@
 #site-header.liquid-header #main-menu {
     li {
         a {
-            color: #1E1E1E;
+            color: $black;
 
             &:before {
-                background-color: #1E1E1E;
+                background-color: $black;
             }
         }
 
         &.current_page_item {
             a {
-                color: #1E1E1E;
-                border-color: #1E1E1E;
+                color: $black;
+                border-color: $black;
             }
         }
     }
