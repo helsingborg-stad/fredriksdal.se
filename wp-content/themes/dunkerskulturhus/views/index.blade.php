@@ -15,7 +15,7 @@
 <div class="container gutter-xl gutter-vertical">
     <div class="grid">
         <div class="grid-lg-12">
-            <h1 class="text-highlight">Detta händer på Dunkers idag</h1>
+            <h1 class="text-highlight text-center">Detta händer på Dunkers idag</h1>
         </div>
     </div>
 
