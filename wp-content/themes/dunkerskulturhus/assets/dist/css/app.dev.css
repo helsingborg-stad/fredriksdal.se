@@ -2,8 +2,8 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,900,300);
 body.is-child-theme {
   font-family: "Karbon", "Lato", "Roboto", "Helvetica", "Arial";
-  font-size: 17px;
-  line-height: 1.6;
+  font-size: 20px;
+  line-height: 1.4;
   color: #5e6a71;
   font-smoothing: antialiased; }
   body.is-child-theme article p {
@@ -14,8 +14,8 @@ body.is-child-theme {
 
 .is-child-theme body.is-child-theme {
   font-family: "Karbon", "Lato", "Roboto", "Helvetica", "Arial";
-  font-size: 17px;
-  line-height: 1.6;
+  font-size: 20px;
+  line-height: 1.4;
   color: #5e6a71;
   font-smoothing: antialiased; }
   .is-child-theme body.is-child-theme article p {
