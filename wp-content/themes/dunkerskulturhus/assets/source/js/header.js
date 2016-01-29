@@ -1,5 +1,4 @@
-
-var DunkersKultur; DunkersKultur = DunkersKultur || {};
+DunkersKultur = DunkersKultur || {};
 DunkersKultur.Liquid = DunkersKultur.Liquid || {};
 
 DunkersKultur.Liquid.Liquid = (function ($) {
@@ -18,7 +17,7 @@ DunkersKultur.Liquid.Liquid = (function ($) {
         		}
         	}.bind(this));
         }.bind(this));
-    };
+    }
 
 	Liquid.prototype.addClass = function () {
 	   jQuery(TargetElement).addClass(JqClassName);
