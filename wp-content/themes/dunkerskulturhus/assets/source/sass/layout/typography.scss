@@ -4,7 +4,9 @@ body.is-child-theme {
     line-height: $base-line-height;
     color: $base-font-color;
 
-    article p {
+    article p,
+    article ul,
+    article ol {
         font-family: Verdana;
     }
 }
