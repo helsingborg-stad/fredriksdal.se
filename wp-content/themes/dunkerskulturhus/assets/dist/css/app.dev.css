@@ -252,7 +252,6 @@ body.is-child-theme {
 .is-child-theme h4, .is-child-theme .h4,
 .is-child-theme h5, .is-child-theme .h5,
 .is-child-theme h6, .is-child-theme .h6 {
-  letter-spacing: .05em;
   font-size: "Karbon", "Lato", "Roboto", "Helvetica", "Arial"; }
 
 .is-child-theme h1, .is-child-theme .h1,
