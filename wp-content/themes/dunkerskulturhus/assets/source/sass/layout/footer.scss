@@ -2,5 +2,42 @@ footer.main-footer {
 	background: rgb(30,30,30);
     border-top: 1px solid $gray;
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 60px;
+
+    .icons-list {
+        margin-top: 20px;
+
+        a {
+            display: block;
+
+            &:hover i {
+                transition: all 200ms;
+                animation: swingAnimationFrames linear 1s;
+                animation-iteration-count: 1;
+                transform-origin: 50% 0%;
+            }
+        }
+
+    }
+}
+
+@keyframes swingAnimationFrames{
+  0% {
+    transform:  rotate(0deg) ;
+  }
+  20% {
+    transform:  rotate(7deg) ;
+  }
+  40% {
+    transform:  rotate(-5deg) ;
+  }
+  60% {
+    transform:  rotate(2.5deg) ;
+  }
+  80% {
+    transform:  rotate(-2.5deg) ;
+  }
+  100% {
+    transform:  rotate(0deg) ;
+  }
 }
