@@ -345,7 +345,8 @@ body.is-child-theme {
         -webkit-animation-iteration-count: 1;
                 animation-iteration-count: 1;
         -webkit-transform-origin: 50% 0%;
-                transform-origin: 50% 0%; }
+                transform-origin: 50% 0%;
+        color: #34B233; }
 
 @-webkit-keyframes swingAnimationFrames {
   0% {
