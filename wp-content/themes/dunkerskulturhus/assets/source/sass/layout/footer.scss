@@ -1,11 +1,27 @@
 footer.main-footer {
 	background: rgb(30,30,30);
     border-top: 1px solid $gray;
-    padding-top: 100px;
+    padding-top: 60px;
     padding-bottom: 60px;
 
+    .logotype {
+      img, svg {
+        height: 30px;
+        opacity: 1;
+
+        use, path {
+          fill: #fff !important;
+        }
+      }
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 300;
+      font-size: 1.8rem;
+    }
+
     .icons-list {
-        margin-top: 20px;
+        margin-top: 0;
 
         a {
             display: block;
@@ -19,6 +35,229 @@ footer.main-footer {
             }
         }
 
+    }
+
+    //General widgets
+    div[class^="widget_"], div[class*=" widget_"] {
+      margin-bottom: 40px;
+
+      &.grid-lg-4:nth-child(3n+1){
+          clear:left
+      }
+
+    }
+
+    //Tags, Categories, Archive
+    .widget_tag_cloud,
+    .widget_archive,
+    .widget_categories {
+      li {
+        display: inline;
+        font-size: .9em;
+        &:not(:last-child):after {
+          content: ", ";
+        }
+      }
+
+      .tagcloud a {
+        font-size: .9em !important;
+
+        &:not(:last-child):after {
+          content: ", ";
+        }
+      }
+    }
+
+    //Nav meny widget
+    .widget_nav_menu {
+      ul {
+        li {
+          &:before {
+            content: "- ";
+          }
+
+          ul.sub-menu {
+            padding-left: 1em;
+          }
+        }
+      }
+    }
+
+    //Text widget
+    .widget_text {
+      .textwidget p:first-child {
+        margin-top: -.5em;
+      }
+    }
+
+    //Rss widget
+    .widget_rss {
+      h2.footer-title {
+        a:first-child {
+          display: none;
+        }
+      }
+
+      ul {
+        li {
+          border: 1px solid #636363;
+          margin-bottom: 10px;
+          a {
+            padding: 10px;
+            display: block;
+            float: left;
+            width: 70%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+          span.rss-date {
+            float: right;
+            font-size: .8em;
+            padding: 10px;
+            line-height: 2em;
+            opacity: .7;
+          }
+          .rssSummary {
+            border-top: 1px solid #636363;
+            padding: 10px;
+            clear: both;
+            font-size: .8em;
+          }
+
+        }
+
+
+      }
+    }
+
+    //Search widget
+    .widget_search {
+      label {
+        display: none;
+      }
+
+      input[type="search"],
+      input[type="submit"],
+      .input-group-addon-btn {
+        background: none;
+        color: #fff;
+      }
+
+      input[type="search"],
+      input[type="submit"] {
+        border: 1px solid #636363;
+        height: 40px;
+        font-weight: 300;
+        font-size: 1em;
+      }
+
+      input[type="submit"] {
+        border-left: none;
+      }
+
+      input[type="search"] {
+        padding: 5px;
+      }
+
+      .input-group-lg,
+      .input-group-addon-btn {
+        height: 40px;
+      }
+
+    }
+
+    //Calendar widget
+    .widget_calendar {
+
+      h2 {
+        display: none;
+      }
+
+      caption {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 1.7em;
+        text-align: left;
+        font-weight: 300;
+        padding-bottom: .3em;
+      }
+
+      table {
+        width: 100%;
+        user-select: none;
+
+        thead, tbody, tfoot {
+
+          th, td {
+            padding: .5em;
+            text-align: center;
+            border: 1px solid #636363;
+            height: 40px;
+          }
+
+          #next, #prev {
+            text-transform: uppercase;
+            font-weight: 300;
+
+            a {
+              display: block;
+            }
+          }
+
+          #next {
+            border-left: none;
+          }
+
+          #prev {
+            border-right: none;
+          }
+
+        }
+
+        tfoot {
+          .pad:not(#prev):not(#next) {
+            border-left: none;
+            border-right: none;
+          }
+        }
+
+        tbody {
+          td {
+            background-color: rgba(#fff,.1);
+            position: relative;
+
+            &#today {
+              background-color: rgba(#fff,.2);
+            }
+
+            &.pad {
+              background-color: initial;
+            }
+
+            &:not(.pad):hover {
+              background-color: rgba(#fff,.2);
+            }
+
+            a {
+              cursor: hand;
+              cursor: pointer;
+              position: absolute;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              line-height: 39px;
+              transition: background 200ms;
+
+              &:hover {
+                background-color: rgba($green,.7);
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
     }
 }
 

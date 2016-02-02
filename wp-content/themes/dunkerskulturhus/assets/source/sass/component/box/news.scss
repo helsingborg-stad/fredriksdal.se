@@ -27,6 +27,7 @@
         position: relative;
 
         &::after {
+            filter: grayscale(100%);
             content: '';
             position: absolute;
             display: block;
@@ -69,6 +70,7 @@
         .box-image {
             filter: grayscale(0);
             &::after {
+                filter: grayscale(0);
                 transform: scale(1.1);
             }
         }
