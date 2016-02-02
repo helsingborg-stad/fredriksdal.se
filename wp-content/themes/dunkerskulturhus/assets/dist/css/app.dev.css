@@ -63,16 +63,24 @@ body.is-child-theme {
       .is-child-theme #site-header .logotype:hover:before {
         border-bottom-color: #fff;
         opacity: 1; }
-  .is-child-theme #site-header.liquid-header {
-    background-color: rgba(255, 255, 255, 0.92);
-    border-bottom: 1px solid #fafbfb;
-    box-shadow: 0 0 2px rgba(30, 30, 30, 0.1); }
-    .is-child-theme #site-header.liquid-header .logotype svg path,
-    .is-child-theme #site-header.liquid-header .logotype svg use {
-      fill: #1E1E1E !important; }
-    .is-child-theme #site-header.liquid-header nav.navbar {
-      padding-top: 10px;
-      padding-bottom: 10px; }
+
+.is-child-theme #site-header.liquid-header,
+.is-child-theme:not(.home) #site-header {
+  background-color: rgba(255, 255, 255, 0.92);
+  border-bottom: 1px solid #fafbfb;
+  box-shadow: 0 0 2px rgba(30, 30, 30, 0.1); }
+  .is-child-theme #site-header.liquid-header .logotype svg path,
+  .is-child-theme #site-header.liquid-header .logotype svg use,
+  .is-child-theme:not(.home) #site-header .logotype svg path,
+  .is-child-theme:not(.home) #site-header .logotype svg use {
+    fill: #1E1E1E !important; }
+  .is-child-theme #site-header.liquid-header nav.navbar,
+  .is-child-theme:not(.home) #site-header nav.navbar {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+
+.is-child-theme:not(.home) #wrapper {
+  padding-top: 69px; }
 
 .is-child-theme.admin-bar #site-header {
   margin-top: 32px; }
@@ -137,12 +145,15 @@ body.is-child-theme {
   .is-child-theme #main-menu li:last-child {
     padding-right: 0; }
 
-.is-child-theme #site-header.liquid-header #main-menu li a {
+.is-child-theme #site-header.liquid-header #main-menu li a,
+.is-child-theme:not(.home) #site-header #main-menu li a {
   color: #1E1E1E; }
-  .is-child-theme #site-header.liquid-header #main-menu li a:before {
+  .is-child-theme #site-header.liquid-header #main-menu li a:before,
+  .is-child-theme:not(.home) #site-header #main-menu li a:before {
     background-color: #1E1E1E; }
 
-.is-child-theme #site-header.liquid-header #main-menu li.current_page_item a {
+.is-child-theme #site-header.liquid-header #main-menu li.current_page_item a,
+.is-child-theme:not(.home) #site-header #main-menu li.current_page_item a {
   color: #1E1E1E;
   border-color: #1E1E1E; }
 
@@ -334,7 +345,7 @@ body.is-child-theme {
   padding-top: 60px;
   padding-bottom: 60px; }
   .is-child-theme footer.main-footer .logotype img, .is-child-theme footer.main-footer .logotype svg {
-    height: 30px;
+    height: 25px;
     opacity: 1; }
     .is-child-theme footer.main-footer .logotype img use, .is-child-theme footer.main-footer .logotype img path, .is-child-theme footer.main-footer .logotype svg use, .is-child-theme footer.main-footer .logotype svg path {
       fill: #fff !important; }
