@@ -10,8 +10,12 @@ body.is-child-theme {
   body.is-child-theme article ol {
     font-family: Verdana; }
 
+html {
+  background: #1E1E1E; }
+
 .is-child-theme #wrapper {
-  position: relative; }
+  position: relative;
+  background: #fff; }
 
 .is-child-theme body.is-child-theme {
   font-family: "Lato", "Roboto", "Helvetica", "Arial";
