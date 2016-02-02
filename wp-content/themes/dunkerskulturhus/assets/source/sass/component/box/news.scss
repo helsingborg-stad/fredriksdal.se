@@ -24,6 +24,8 @@
         background-size: 0;
         background-position: center center;
 
+        position: relative;
+
         &::after {
             content: '';
             position: absolute;
