@@ -23,7 +23,7 @@
         <div class="grid-md-3 grid-sm-6">
             <a href="#" class="box box-news">
                 <span class="box-image" style="background-image:url('http://gigguide.se/static/images/performers/661/markus-krunegard-1-original.jpeg');">
-                    <figure><img src="http://gigguide.se/static/images/performers/661/markus-krunegard-1-original.jpeg" alt="Kommunalanställd"></figure>
+                    <img src="http://gigguide.se/static/images/performers/661/markus-krunegard-1-original.jpeg" alt="Kommunalanställd">
                 </span>
                 <span class="box-content">
                     <h5 class="link-item link-item-light">Markus Krunegård</h5>
@@ -37,7 +37,7 @@
         <div class="grid-md-3 grid-sm-6">
             <a href="#" class="box box-news">
                 <span class="box-image" style="background-image:url('http://mittkulturkort.se/data/kulturkortet/media/news/image/92/13/46/7/5164/e64c22a79bb566db/thumbs/kk_691_518_DEFAULT_cropfit_NORTH.jpg');">
-                    <figure><img src="http://mittkulturkort.se/data/kulturkortet/media/news/image/92/13/46/7/5164/e64c22a79bb566db/thumbs/kk_691_518_DEFAULT_cropfit_NORTH.jpg" alt="Kommunalanställd"></figure>
+                    <img src="http://mittkulturkort.se/data/kulturkortet/media/news/image/92/13/46/7/5164/e64c22a79bb566db/thumbs/kk_691_518_DEFAULT_cropfit_NORTH.jpg" alt="Kommunalanställd">
                 </span>
                 <span class="box-content">
                     <h5 class="link-item link-item-light">Arty after work</h5>
@@ -51,7 +51,7 @@
         <div class="grid-md-3 grid-sm-6">
             <a href="#" class="box box-news">
                 <span class="box-image" style="background-image:url('http://vansterparlan.v-blog.se/files/2014/07/Athena.jpg');">
-                    <figure><img src="http://vansterparlan.v-blog.se/files/2014/07/Athena.jpg" alt="Kommunalanställd"></figure>
+                    <img src="http://vansterparlan.v-blog.se/files/2014/07/Athena.jpg" alt="Kommunalanställd">
                 </span>
                 <span class="box-content">
                     <h5 class="link-item link-item-light">Samtal på Dunkers</h5>
@@ -65,7 +65,7 @@
         <div class="grid-md-3 grid-sm-6">
             <a href="#" class="box box-news">
                 <span class="box-image" style="background-image:url('http://vansterparlan.v-blog.se/files/2014/07/Athena.jpg');">
-                    <figure><img src="http://vansterparlan.v-blog.se/files/2014/07/Athena.jpg" alt="Kommunalanställd"></figure>
+                    <img src="http://vansterparlan.v-blog.se/files/2014/07/Athena.jpg" alt="Kommunalanställd">
                 </span>
                 <span class="box-content">
                     <h5 class="link-item link-item-light">Samtal på Dunkers</h5>
