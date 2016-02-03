@@ -12,7 +12,7 @@
             @while(have_posts())
                 {!! the_post() !!}
 
-                @include('partials.article')
+                @include('partials.event')
             @endwhile
 
             {!! dynamic_sidebar('content-area') !!}
