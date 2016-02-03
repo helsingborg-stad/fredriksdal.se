@@ -18,6 +18,10 @@
             "url": "https://github.com/helsingborg-stad/Bootstrap-Theme.git"
         },
         {
+            "type": "vcs",
+            "url": "https://github.com/helsingborg-stad/xcap-import.git"
+        },
+        {
             "type":"composer",
             "url":"http://wpackagist.org"
         }
@@ -27,7 +31,8 @@
         "composer/installers": "~1.0",
         "johnpbloch/wordpress": "^4.4",
         "helsingborg-stad/Modularity": "dev-develop",
-        "helsingborg-stad/Bootstrap-Theme": "dev-develop"
+        "helsingborg-stad/Bootstrap-Theme": "dev-develop",
+        "helsingborg-stad/xcap-import": "dev-master"
     },
 
     "extra": {
