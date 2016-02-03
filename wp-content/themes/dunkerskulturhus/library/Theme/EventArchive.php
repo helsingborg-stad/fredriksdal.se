@@ -16,6 +16,8 @@ class EventArchive
         }
 
         if (is_post_type_archive('event')) {
+
+            // Meta query, upcoming events
             $query->set('meta_query', array(
                 'relation' => 'AND',
                 array(
@@ -25,8 +27,12 @@ class EventArchive
                 )
             ));
 
-            $query->set('orderby', 'meta_value');
+            // Posts per page
+            $query->set('posts_per_page', 12);
+
+            // Sort
             $query->set('meta_key', 'event-date-start');
+            $query->set('orderby', 'meta_value');
             $query->set('order', 'ASC');
         }
 

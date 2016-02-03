@@ -1,0 +1,23 @@
+.box-event {
+    padding: 0;
+    border: 2px solid #000;
+
+    .box-event-image {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-bottom: 2px solid #000;
+    }
+
+    .event-information {
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    .event-title {
+        font-weight: bold;
+        font-size: 1.1rem;
+        text-transform: none;
+        margin-bottom: 0px;
+    }
+}
