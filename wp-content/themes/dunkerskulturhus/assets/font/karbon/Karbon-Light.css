@@ -1,5 +1,5 @@
 /* Webfont: Karbon-Light */@font-face {
-    font-family: 'KarbonLight';
+    font-family: 'Karbon';
     src: url('Karbon-Light.eot'); /* IE9 Compat Modes */
     src: url('Karbon-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
          url('Karbon-Light.woff') format('woff'), /* Modern Browsers */
@@ -7,6 +7,4 @@
          url('Karbon-Light.svg#Karbon-Light') format('svg'); /* Legacy iOS */
     font-style: normal;
     font-weight: normal;
-    text-rendering: optimizeLegibility;
 }
-
