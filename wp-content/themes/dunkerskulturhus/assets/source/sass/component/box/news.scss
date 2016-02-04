@@ -36,7 +36,8 @@
             background-image: inherit;
             background-size: cover;
             background-position: center center;
-            transition: 300ms transform cubic-bezier(0.250, 0.250, 0.240, 1.175);
+            transition: 300ms transform cubic-bezier(0.250, 0.250, 0.240, 1.175)
+                        200ms filter ease-in-out;
         }
 
         img {
