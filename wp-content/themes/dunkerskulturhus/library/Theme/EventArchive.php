@@ -7,8 +7,22 @@ class EventArchive
     public function __construct()
     {
         add_action('pre_get_posts', array($this, 'modifyQuery'));
+        add_filter('posts_fields', array($this, 'sqlSelect'));
+        add_filter('posts_groupby', array($this, 'sqlGroupBy'));
         add_filter('nav_menu_link_attributes', array($this, 'filterEventCategoryLinks'), 10, 3);
         add_filter('nav_menu_css_class', array($this, 'setCurrentEventCategory'), 10, 2);
+    }
+
+    public function sqlSelect($select)
+    {
+        $select .= ', COUNT(ID) as occations_count';
+        return $select;
+    }
+
+    public function sqlGroupBy($groupBy)
+    {
+        $groupBy = 'wp_posts.post_title';
+        return $groupBy;
     }
 
     public function modifyQuery($query)
