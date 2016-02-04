@@ -8,7 +8,7 @@
             <span class="event-date-start">{{ date('Y-m-d \k\l\. H:i', strtotime(get_field('event-date-start'))) }}</span>
         </span>
         <span class="col event-action">
-            <a href="#" class="btn btn-circle btn-green"><span>Läs mer</span></a>
+            <a href="{{ the_permalink() }}" class="btn btn-circle btn-green"><span>Läs mer</span></a>
         </span>
     </div>
     <div class="event-lead">

@@ -16,7 +16,6 @@ class EventArchive
         }
 
         if (is_post_type_archive('event')) {
-
             // Meta query, upcoming events
             $query->set('meta_query', array(
                 'relation' => 'AND',

@@ -6,6 +6,7 @@ class App
     public function __construct()
     {
         new \Dunkers\Theme\Enqueue();
+        new \Dunkers\Theme\Navigation();
 
         add_action('parse_query', array($this, 'eventArchive'));
     }

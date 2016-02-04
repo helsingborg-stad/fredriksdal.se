@@ -707,7 +707,9 @@ html {
     text-transform: none;
     margin-bottom: 0px; }
   .is-child-theme .box-event .event-action {
-    width: 60px; }
+    width: 60px;
+    -webkit-transition: 400ms all ease-in-out;
+            transition: 400ms all ease-in-out; }
   .is-child-theme .box-event .event-lead {
     height: 0;
     opacity: 0;
@@ -735,6 +737,21 @@ html {
                 filter: grayscale(1); }
     .is-child-theme .box-event:hover .event-lead {
       opacity: 1; }
+
+.is-child-theme .navbar-event-categories {
+  background-color: #e0e1e2; }
+  .is-child-theme .navbar-event-categories a {
+    padding: 10px 15px;
+    color: #1E1E1E;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: .9em; }
+    .is-child-theme .navbar-event-categories a:hover {
+      background-color: #0099CC;
+      color: #fff;
+      text-decoration: none; }
+  .is-child-theme .navbar-event-categories li + li {
+    margin-left: 0; }
 
 .is-child-theme .btn-circle {
   position: relative;
