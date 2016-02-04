@@ -668,20 +668,7 @@ html {
   padding: 0;
   border: 2px solid #000;
   color: #1E1E1E;
-  /*
-    &:hover {
-        text-decoration: none;
-
-        .box-image {
-            filter: grayscale(0);
-
-            &::after {
-                filter: grayscale(0);
-                transform: scale(1.1);
-            }
-        }
-    }
-    */ }
+  overflow: hidden; }
   .is-child-theme .box-event .box-image {
     position: relative;
     display: block;
@@ -689,10 +676,11 @@ html {
     padding-bottom: 50%;
     border-bottom: 2px solid #000;
     background-size: cover;
-    overflow: hidden; }
+    background-position: center center;
+    overflow: hidden;
+    -webkit-transition: 200ms padding-bottom ease-in-out;
+            transition: 200ms padding-bottom ease-in-out; }
     .is-child-theme .box-event .box-image::after {
-      -webkit-filter: grayscale(100%);
-              filter: grayscale(100%);
       content: '';
       position: absolute;
       display: block;
@@ -701,8 +689,8 @@ html {
       background-image: inherit;
       background-size: cover;
       background-position: center center;
-      -webkit-transition: 300ms -webkit-transform cubic-bezier(0.25, 0.25, 0.24, 1.175), 200ms -webkit-filter ease-in-out, 300ms -webkit-transform cubic-bezier(0.25, 0.25, 0.24, 1.175), 200ms filter ease-in-out;
-              transition: 300ms transform cubic-bezier(0.25, 0.25, 0.24, 1.175), 200ms filter ease-in-out; }
+      -webkit-transition: 300ms -webkit-transform cubic-bezier(0.25, 0.25, 0.24, 1.175), 200ms -webkit-filter ease-in-out, 400ms opacity ease-in-out, 300ms -webkit-transform cubic-bezier(0.25, 0.25, 0.24, 1.175), 200ms filter ease-in-out, 400ms opacity ease-in-out;
+              transition: 300ms transform cubic-bezier(0.25, 0.25, 0.24, 1.175), 200ms filter ease-in-out, 400ms opacity ease-in-out; }
     .is-child-theme .box-event .box-image img {
       display: none; }
   .is-child-theme .box-event .event-information {
@@ -720,6 +708,33 @@ html {
     margin-bottom: 0px; }
   .is-child-theme .box-event .event-action {
     width: 60px; }
+  .is-child-theme .box-event .event-lead {
+    height: 0;
+    opacity: 0;
+    padding: 0 15px 0 15px;
+    -webkit-transition: 200ms all ease-in-out;
+            transition: 200ms all ease-in-out;
+    font-size: .9em; }
+    .is-child-theme .box-event .event-lead::after {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 50%;
+      content: '';
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(white));
+      background: -moz-linear-gradient(top, rgba(255, 255, 255, 0), white);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(255, 255, 255, 0)', endColorstr='white'); }
+  .is-child-theme .box-event:hover {
+    text-decoration: none; }
+    .is-child-theme .box-event:hover .box-image {
+      padding-bottom: 10%; }
+      .is-child-theme .box-event:hover .box-image::after {
+        -webkit-filter: grayscale(1);
+                filter: grayscale(1); }
+    .is-child-theme .box-event:hover .event-lead {
+      opacity: 1; }
 
 .is-child-theme .btn-circle {
   position: relative;

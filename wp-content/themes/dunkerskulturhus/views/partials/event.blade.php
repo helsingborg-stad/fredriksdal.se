@@ -11,4 +11,7 @@
             <a href="#" class="btn btn-circle btn-green"><span>Läs mer</span></a>
         </span>
     </div>
+    <div class="event-lead">
+        {!! the_excerpt() !!}
+    </div>
 </div>

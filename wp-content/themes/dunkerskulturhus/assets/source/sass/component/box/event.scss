@@ -4,6 +4,7 @@
     padding: 0;
     border: 2px solid #000;
     color: $black;
+    overflow: hidden;
 
     .box-image {
         position: relative;
@@ -12,10 +13,11 @@
         padding-bottom: 50%;
         border-bottom: 2px solid #000;
         background-size: cover;
+        background-position: center center;
         overflow: hidden;
+        transition: 200ms padding-bottom ease-in-out;
 
         &::after {
-            filter: grayscale(100%);
             content: '';
             position: absolute;
             display: block;
@@ -25,7 +27,8 @@
             background-size: cover;
             background-position: center center;
             transition: 300ms transform cubic-bezier(0.250, 0.250, 0.240, 1.175),
-                        200ms filter ease-in-out;
+                        200ms filter ease-in-out,
+                        400ms opacity ease-in-out;
         }
 
         img {
@@ -56,18 +59,38 @@
         width: 60px;
     }
 
-    /*
+    .event-lead {
+        height: 0;
+        opacity: 0;
+        padding: 0 15px 0 15px;
+        transition: 200ms all ease-in-out;
+        font-size: .9em;
+
+        &::after {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            content: '';
+            @include gradient(rgba(#fff, 0), rgba(#fff, 1));
+        }
+    }
+
     &:hover {
         text-decoration: none;
 
         .box-image {
-            filter: grayscale(0);
+            padding-bottom: 10%;
 
             &::after {
-                filter: grayscale(0);
-                transform: scale(1.1);
+                filter: grayscale(1);
             }
         }
+
+        .event-lead {
+            opacity: 1;
+        }
     }
-    */
 }
