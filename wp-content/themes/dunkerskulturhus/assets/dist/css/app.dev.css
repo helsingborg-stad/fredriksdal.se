@@ -751,6 +751,12 @@ html {
       background-color: #0099CC;
       color: #fff;
       text-decoration: none; }
+  .is-child-theme .navbar-event-categories .current_page_item a {
+    background-color: #0099CC;
+    text-decoration: none;
+    color: #fff; }
+    .is-child-theme .navbar-event-categories .current_page_item a::after {
+      display: none; }
   .is-child-theme .navbar-event-categories li + li {
     margin-left: 0; }
 

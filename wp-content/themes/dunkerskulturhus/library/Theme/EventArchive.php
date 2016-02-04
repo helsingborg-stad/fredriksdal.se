@@ -8,6 +8,7 @@ class EventArchive
     {
         add_action('pre_get_posts', array($this, 'modifyQuery'));
         add_filter('nav_menu_link_attributes', array($this, 'filterEventCategoryLinks'), 10, 3);
+        add_filter('nav_menu_css_class', array($this, 'setCurrentEventCategory'), 10, 2);
     }
 
     public function modifyQuery($query)
@@ -65,5 +66,20 @@ class EventArchive
         $attr['href'] = home_url('event/?filter=' . $term->slug);
 
         return $attr;
+    }
+
+    public function setCurrentEventCategory($classes, $item)
+    {
+        global $wp_query;
+
+        if ($item->type != 'taxonomy' || $item->object != 'event-types') {
+            return $classes;
+        }
+
+        if (strtolower($wp_query->query_vars['term']) == strtolower($item->title)) {
+            $classes[] = 'current_page_item';
+        }
+
+        return $classes;
     }
 }

@@ -16,6 +16,16 @@
         }
     }
 
+    .current_page_item a {
+        background-color: $blue;
+        text-decoration: none;
+        color: #fff;
+
+        &::after {
+            display: none;
+        }
+    }
+
     li + li {
         margin-left: 0;
     }
