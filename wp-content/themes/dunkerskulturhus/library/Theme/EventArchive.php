@@ -7,6 +7,7 @@ class EventArchive
     public function __construct()
     {
         add_action('pre_get_posts', array($this, 'modifyQuery'));
+        add_filter('nav_menu_link_attributes', array($this, 'filterEventCategoryLinks'), 10, 3);
     }
 
     public function modifyQuery($query)
@@ -33,8 +34,36 @@ class EventArchive
             $query->set('meta_key', 'event-date-start');
             $query->set('orderby', 'meta_value');
             $query->set('order', 'ASC');
+
+            if (isset($_GET['filter']) && !empty($_GET['filter'])) {
+                $filter = $_GET['filter'];
+                $query->set('event-types', $filter);
+            }
         }
 
         return $query;
+    }
+
+    /**
+     * Fixes urls in the event cateogy filter menu
+     * @param  array  $attr Item attributes
+     * @param  object $item Item object
+     * @param  array  $args Arguments
+     * @return array        Modified attributes
+     */
+    public function filterEventCategoryLinks($attr, $item, $args)
+    {
+        if (!isset($args->theme_location) || $args->theme_location != 'event-categories') {
+            return $attr;
+        }
+
+        if ($item->type != 'taxonomy' || $item->object != 'event-types') {
+            return $attr;
+        }
+
+        $term = get_term_by('name', $item->title, $item->object);
+        $attr['href'] = home_url('event/?filter=' . $term->slug);
+
+        return $attr;
     }
 }
