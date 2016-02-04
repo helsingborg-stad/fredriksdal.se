@@ -49,6 +49,16 @@
             </div>
         </div>
     </div>
+
+    <div class="grid">
+        <div class="grid-sm-12">
+            {!!
+                paginate_links(array(
+                    'type' => 'list'
+                ))
+            !!}
+        </div>
+    </div>
 </div>
 
 @stop
