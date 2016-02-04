@@ -14,6 +14,7 @@
     <div class="grid">
         <div class="grid-sm-12">
             <nav class="navbar navbar-event-categories">
+            <span class="event-categories-filter pull-left">Filtrera:</span>
             {!!
                 wp_nav_menu(array(
                     'theme_location' => 'event-categories',
