@@ -8,7 +8,6 @@ if (file_exists(dirname(ABSPATH) . '/vendor/autoload.php')) {
 }
 
 require_once DUNKERS_PATH . 'library/Vendor/Psr4ClassLoader.php';
-var_dump(DUNKERS_PATH . 'library/Vendor/Psr4ClassLoader.php');
 $loader = new Dunkers\Vendor\Psr4ClassLoader();
 $loader->addPrefix('Dunkers', DUNKERS_PATH . 'library');
 $loader->addPrefix('Dunkers', DUNKERS_PATH . 'source/php/');
