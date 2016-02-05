@@ -266,7 +266,8 @@ html {
     background-color: rgba(0, 0, 0, 0.21) !important;
     /* Larger font on first-row */ }
     .is-child-theme .hero .text-block::first-line {
-      font-size: 1.5em; }
+      font-size: 1.5em;
+      font-weight: 600; }
   .is-child-theme .hero .stripe {
     display: none !important; }
   .is-child-theme .hero .scroll-down-please {
@@ -584,6 +585,17 @@ html {
 .is-child-theme .creamy .box {
   background-color: #fff;
   border: 2px solid #1E1E1E; }
+
+.is-child-theme .box-filled h1,
+.is-child-theme .box-filled h2,
+.is-child-theme .box-filled h3,
+.is-child-theme .box-filled h4,
+.is-child-theme .box-filled h5,
+.is-child-theme .box-filled h6 {
+  color: #fff; }
+
+.is-child-theme .box-filled .link-item-light {
+  color: #fff; }
 
 .is-child-theme .box-panel {
   background-color: #fff;
