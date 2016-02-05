@@ -20,7 +20,7 @@ class EventArchive
      */
     public function sqlSelect($select)
     {
-        $select .= ', COUNT(ID) as occations_count';
+        $select .= ', COUNT(ID)-1 as occations_count';
         return $select;
     }
 
