@@ -543,7 +543,16 @@ html {
 .is-child-theme h4, .is-child-theme .h4,
 .is-child-theme h5, .is-child-theme .h5,
 .is-child-theme h6, .is-child-theme .h6 {
-  font-size: "Karbon", "Lato", "Roboto", "Helvetica", "Arial"; }
+  font-size: "Karbon", "Lato", "Roboto", "Helvetica", "Arial";
+  font-weight: 200;
+  color: #1E1E1E; }
+  .is-child-theme h1 strong, .is-child-theme .h1 strong,
+  .is-child-theme h2 strong, .is-child-theme .h2 strong,
+  .is-child-theme h3 strong, .is-child-theme .h3 strong,
+  .is-child-theme h4 strong, .is-child-theme .h4 strong,
+  .is-child-theme h5 strong, .is-child-theme .h5 strong,
+  .is-child-theme h6 strong, .is-child-theme .h6 strong {
+    font-weight: 600; }
 
 .is-child-theme h1, .is-child-theme .h1,
 .is-child-theme h2, .is-child-theme .h2,
