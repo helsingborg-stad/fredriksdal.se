@@ -1,12 +1,13 @@
 .navbar-event-categories {
     background-color: $gray;
+    font-size: 0;
 
     a {
-        padding: 10px 15px;
+        padding: 18px 15px;
         color: $black;
         font-weight: 400;
         text-transform: uppercase;
-        font-size: .9em;
+        font-size: 1rem;
         line-height: 1;
 
         &:hover {
@@ -17,7 +18,7 @@
     }
 
     .current_page_item a {
-        background-color: $blue;
+        background-color: darken($blue, 5%);
         text-decoration: none;
         color: #fff;
 
@@ -35,7 +36,8 @@
     font-weight: bold;
     font-size: .9em;
     line-height: 1;
-    padding: 10px 15px;
+    padding: 18px 15px;
     background: $gray-dark;
     text-transform: uppercase;
+    font-size: 1rem;
 }
