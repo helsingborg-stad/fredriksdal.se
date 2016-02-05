@@ -335,6 +335,10 @@
     }
 }
 
+.hero + .container {
+    margin-top: 80px;
+}
+
 @keyframes scroll-down-please {
     0% {
         top: -4px;
