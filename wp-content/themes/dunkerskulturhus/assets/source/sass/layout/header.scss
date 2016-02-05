@@ -7,6 +7,7 @@
     top: 0px;
     left: 0;
     transition: all 200ms;
+    font-family: $dunkers-font-family;
 
     nav.navbar {
         background-color: initial;
@@ -57,6 +58,7 @@
     background-color: rgba(#fff,.92);
     border-bottom: 1px solid $gray-light;
     box-shadow: 0 0 2px rgba($black, .1);
+    text-shadow: 0 0 .005em #000,0 0 .005em #000,0 0 .005em #000; // Fatten text a bit.
 
     .logotype {
         svg path,

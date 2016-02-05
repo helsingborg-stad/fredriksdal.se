@@ -36,7 +36,8 @@ html {
   top: 0px;
   left: 0;
   -webkit-transition: all 200ms;
-          transition: all 200ms; }
+          transition: all 200ms;
+  font-family: "Karbon", "Lato", "Roboto", "Helvetica", "Arial"; }
   .is-child-theme #site-header nav.navbar {
     background-color: initial;
     -webkit-transition: padding 200ms;
@@ -72,7 +73,8 @@ html {
 .is-child-theme:not(.home) #site-header {
   background-color: rgba(255, 255, 255, 0.92);
   border-bottom: 1px solid #fafbfb;
-  box-shadow: 0 0 2px rgba(30, 30, 30, 0.1); }
+  box-shadow: 0 0 2px rgba(30, 30, 30, 0.1);
+  text-shadow: 0 0 .005em #000,0 0 .005em #000,0 0 .005em #000; }
   .is-child-theme #site-header.liquid-header .logotype svg path,
   .is-child-theme #site-header.liquid-header .logotype svg use,
   .is-child-theme:not(.home) #site-header .logotype svg path,
@@ -344,6 +346,7 @@ html {
     color: #fff; }
 
 .is-child-theme footer.main-footer {
+  font-family: "Karbon", "Lato", "Roboto", "Helvetica", "Arial";
   background: #1e1e1e;
   border-top: 1px solid #e0e1e2;
   padding-top: 60px;
@@ -409,7 +412,8 @@ html {
       width: 70%;
       white-space: nowrap;
       overflow: hidden;
-      text-overflow: ellipsis; }
+      text-overflow: ellipsis;
+      font-weight: bold; }
     .is-child-theme footer.main-footer .widget_rss ul li span.rss-date {
       float: right;
       font-size: .8em;
@@ -543,7 +547,8 @@ html {
 .is-child-theme h4, .is-child-theme .h4,
 .is-child-theme h5, .is-child-theme .h5,
 .is-child-theme h6, .is-child-theme .h6 {
-  font-size: "Karbon", "Lato", "Roboto", "Helvetica", "Arial"; }
+  font-size: "Karbon", "Lato", "Roboto", "Helvetica", "Arial";
+  font-weight: normal; }
 
 .is-child-theme h1, .is-child-theme .h1,
 .is-child-theme h2, .is-child-theme .h2,
