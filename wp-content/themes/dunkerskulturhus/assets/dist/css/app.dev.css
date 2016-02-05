@@ -37,7 +37,8 @@ html {
   left: 0;
   -webkit-transition: all 200ms;
           transition: all 200ms;
-  font-family: "Karbon", "Lato", "Roboto", "Helvetica", "Arial"; }
+  font-family: "Karbon", "Lato", "Roboto", "Helvetica", "Arial";
+  text-rendering: geometricPrecision; }
   .is-child-theme #site-header nav.navbar {
     background-color: initial;
     -webkit-transition: padding 200ms;
@@ -73,8 +74,7 @@ html {
 .is-child-theme:not(.home) #site-header {
   background-color: rgba(255, 255, 255, 0.92);
   border-bottom: 1px solid #fafbfb;
-  box-shadow: 0 0 2px rgba(30, 30, 30, 0.1);
-  text-shadow: 0 0 .005em #000,0 0 .005em #000,0 0 .005em #000; }
+  box-shadow: 0 0 2px rgba(30, 30, 30, 0.1); }
   .is-child-theme #site-header.liquid-header .logotype svg path,
   .is-child-theme #site-header.liquid-header .logotype svg use,
   .is-child-theme:not(.home) #site-header .logotype svg path,
@@ -355,11 +355,12 @@ html {
   .is-child-theme footer.main-footer .logotype img, .is-child-theme footer.main-footer .logotype svg {
     height: 25px;
     opacity: 1; }
-    .is-child-theme footer.main-footer .logotype img use, .is-child-theme footer.main-footer .logotype img path, .is-child-theme footer.main-footer .logotype svg use, .is-child-theme footer.main-footer .logotype svg path {
+    .is-child-theme footer.main-footer .logotype img use, .is-child-theme footer.main-footer .logotype img path, .is-child-theme footer.main-footer .logotype img defs, .is-child-theme footer.main-footer .logotype img clippath, .is-child-theme footer.main-footer .logotype svg use, .is-child-theme footer.main-footer .logotype svg path, .is-child-theme footer.main-footer .logotype svg defs, .is-child-theme footer.main-footer .logotype svg clippath {
       fill: #fff !important; }
   .is-child-theme footer.main-footer h1, .is-child-theme footer.main-footer h2, .is-child-theme footer.main-footer h3, .is-child-theme footer.main-footer h4, .is-child-theme footer.main-footer h5, .is-child-theme footer.main-footer h6 {
     font-weight: 300;
-    font-size: 1.8rem; }
+    font-size: 1.8rem;
+    color: #fff; }
   .is-child-theme footer.main-footer .icons-list {
     margin-top: 0; }
     .is-child-theme footer.main-footer .icons-list a {
@@ -497,7 +498,8 @@ html {
         left: 0;
         line-height: 39px;
         -webkit-transition: background 200ms;
-                transition: background 200ms; }
+                transition: background 200ms;
+        font-weight: bold; }
         .is-child-theme footer.main-footer .widget_calendar table tbody td a:hover {
           background-color: rgba(52, 178, 51, 0.7);
           text-decoration: none; }
