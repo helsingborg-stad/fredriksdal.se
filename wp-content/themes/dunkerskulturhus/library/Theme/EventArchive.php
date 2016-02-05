@@ -90,7 +90,7 @@ class EventArchive
             return $classes;
         }
 
-        if (strtolower($wp_query->query_vars['term']) == strtolower($item->title)) {
+        if (isset($wp_query->query_vars['term']) && strtolower($wp_query->query_vars['term']) == strtolower($item->title)) {
             $classes[] = 'current_page_item';
         }
 
