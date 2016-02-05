@@ -7,7 +7,7 @@
         <ul>
             <li>
                 <div class="slider-image" style="background-image:url('{{ get_field('event-image_url') }}');">
-                    <span class="text-block">{{ the_title() }}</span>
+                    <span class="text-block">{{ the_title() }}<br>{{ \Dunkers\Helper\Dt::toStringFormat(strtotime(get_field('event-date-start'))) }}</span>
                 </div>
             </li>
         </ul>
