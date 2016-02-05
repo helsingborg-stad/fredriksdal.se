@@ -10,7 +10,7 @@ footer.main-footer {
         height: 25px;
         opacity: 1;
 
-        use, path {
+        use, path, defs, clippath {
           fill: #fff !important;
         }
       }
@@ -19,6 +19,7 @@ footer.main-footer {
     h1, h2, h3, h4, h5, h6 {
       font-weight: 300;
       font-size: 1.8rem;
+      color: #fff;
     }
 
     .icons-list {
@@ -128,8 +129,6 @@ footer.main-footer {
           }
 
         }
-
-
       }
     }
 
@@ -251,6 +250,7 @@ footer.main-footer {
               left: 0;
               line-height: 39px;
               transition: background 200ms;
+              font-weight: bold;
 
               &:hover {
                 background-color: rgba($green,.7);
@@ -283,4 +283,3 @@ footer.main-footer {
     transform:  rotate(0deg) ;
   }
 }
-
