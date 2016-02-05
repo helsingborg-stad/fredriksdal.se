@@ -13,18 +13,33 @@ class EventArchive
         add_filter('nav_menu_css_class', array($this, 'setCurrentEventCategory'), 10, 2);
     }
 
+    /**
+     * Add counter to query
+     * @param  string $select Original query
+     * @return string         Modified query
+     */
     public function sqlSelect($select)
     {
         $select .= ', COUNT(ID) as occations_count';
         return $select;
     }
 
+    /**
+     * Add group by to query
+     * @param  string $groupBy Original query
+     * @return string          Modified query
+     */
     public function sqlGroupBy($groupBy)
     {
         $groupBy = 'wp_posts.post_title';
         return $groupBy;
     }
 
+    /**
+     * Modify query
+     * @param  string $query  Original query
+     * @return string         Modified query
+     */
     public function modifyQuery($query)
     {
         if (is_admin() ||!$query->is_main_query()) {
@@ -82,6 +97,12 @@ class EventArchive
         return $attr;
     }
 
+    /**
+     * Marks the current filter event category in the navigation menu
+     * @param  string $classes Item classes
+     * @param  object $item    Item object
+     * @return string          New classes
+     */
     public function setCurrentEventCategory($classes, $item)
     {
         global $wp_query;
@@ -90,7 +111,7 @@ class EventArchive
             return $classes;
         }
 
-        if (isset($wp_query->query_vars['term']) && strtolower($wp_query->query_vars['term']) == strtolower($item->title)) {
+        if (isset($wp_query->query_vars['term']) && strtolower($wp_query->query_vars['term']) == sanitize_title(strtolower($item->title))) {
             $classes[] = 'current_page_item';
         }
 
