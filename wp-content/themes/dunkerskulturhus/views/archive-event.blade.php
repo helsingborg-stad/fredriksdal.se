@@ -7,7 +7,7 @@
 
     <div class="grid">
         <div class="grid-sm-12">
-            <h1>Kommande evenemang</h1>
+            <h1><strong>Kommande</strong> evenemang</h1>
         </div>
     </div>
 
@@ -30,6 +30,7 @@
                     'link_after' => '',
                     'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
                     'depth' => 1,
+                    'fallback_cb' => '__return_false'
                 ));
             !!}
             </nav>
@@ -39,6 +40,7 @@
     <div class="grid">
         <div class="grid-md-12">
             <div class="grid" data-equal-container>
+                <?php global $post; ?>
                 @while(have_posts())
                     {!! the_post() !!}
 
