@@ -13,26 +13,27 @@
 
     <div class="grid">
         <div class="grid-sm-12">
-            <nav class="navbar navbar-event-categories">
-            <span class="event-categories-filter pull-left">Filtrera:</span>
-            {!!
-                wp_nav_menu(array(
-                    'theme_location' => 'event-categories',
-                    'container' => false,
-                    'container_class' => 'menu-{menu-slug}-container',
-                    'container_id' => '',
-                    'menu_class' => 'nav nav-horizontal',
-                    'menu_id' => 'event-categories',
-                    'echo' => false,
-                    'before' => '',
-                    'after' => '',
-                    'link_before' => '',
-                    'link_after' => '',
-                    'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                    'depth' => 1,
-                    'fallback_cb' => '__return_false'
-                ));
-            !!}
+            <nav id="show-filters" class="navbar navbar-event-categories">
+                <a href="#show-filters" class="event-categories-filter">Filtrera</a>
+                <a href="#" class="event-categories-filter close">Dölj filter</a>
+                {!!
+                    wp_nav_menu(array(
+                        'theme_location' => 'event-categories',
+                        'container' => false,
+                        'container_class' => 'menu-{menu-slug}-container',
+                        'container_id' => '',
+                        'menu_class' => 'nav nav-horizontal',
+                        'menu_id' => 'event-categories',
+                        'echo' => false,
+                        'before' => '',
+                        'after' => '',
+                        'link_before' => '',
+                        'link_after' => '',
+                        'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                        'depth' => 1,
+                        'fallback_cb' => '__return_false'
+                    ));
+                !!}
             </nav>
         </div>
     </div>
@@ -44,7 +45,7 @@
                 @while(have_posts())
                     {!! the_post() !!}
 
-                    <div class="grid-md-4">
+                    <div class="grid-sm-6 grid-md-4">
                         @include('partials.event')
                     </div>
                 @endwhile
@@ -53,7 +54,7 @@
     </div>
 
     <div class="grid">
-        <div class="grid-sm-12">
+        <div class="grid-sm-12 text-center">
             {!!
                 paginate_links(array(
                     'type' => 'list'

@@ -3,6 +3,7 @@
 @import 'config/colors';
 @import 'config/icons';
 @import 'config/typography';
+@import 'config/grid';
 
 @import 'mixin/positioning';
 @import 'mixin/icon';
@@ -27,6 +28,7 @@
     @import 'component/box/event';
 
     @import 'component/navigation/navbar-event-categories';
+    @import 'component/navigation/pagination';
 
     @import 'component/button/button';
 

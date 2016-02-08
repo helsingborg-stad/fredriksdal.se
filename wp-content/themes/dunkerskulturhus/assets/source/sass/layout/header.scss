@@ -296,6 +296,7 @@
         /* Larger font on first-row */
         &::first-line {
             font-size: 1.5em;
+            font-weight: 600;
         }
     }
 
@@ -332,6 +333,10 @@
             @include center();
         }
     }
+}
+
+.hero + .container {
+    margin-top: 80px;
 }
 
 @keyframes scroll-down-please {
