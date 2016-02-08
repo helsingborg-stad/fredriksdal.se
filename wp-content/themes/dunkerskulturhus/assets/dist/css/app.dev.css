@@ -773,7 +773,8 @@ html {
 
 .is-child-theme .navbar-event-categories {
   background-color: #e0e1e2;
-  font-size: 0; }
+  font-size: 0;
+  margin-bottom: 10px; }
   .is-child-theme .navbar-event-categories a {
     padding: 18px 15px;
     color: #1E1E1E;
