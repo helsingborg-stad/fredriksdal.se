@@ -24,7 +24,9 @@
         </div>
 
         <aside class="grid-lg-3 grid-md-12">
-            <a href="#" class="btn btn-green btn-block btn-lg">Köp biljetter</a>
+            @if (get_field('event-ticket_url'))
+            <a href="{{ get_field('event-ticket_url') }}" class="btn btn-green btn-block btn-lg">Köp biljetter</a>
+            @endif
 
             <div class="box box-filled">
                 <div class="box-content">

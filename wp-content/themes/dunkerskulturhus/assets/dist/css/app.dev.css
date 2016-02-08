@@ -665,8 +665,8 @@ html {
       background-image: inherit;
       background-size: cover;
       background-position: center center;
-      -webkit-transition: 300ms -webkit-transform cubic-bezier(0.25, 0.25, 0.24, 1.175) 200ms -webkit-filter ease-in-out, 300ms -webkit-transform cubic-bezier(0.25, 0.25, 0.24, 1.175) 200ms filter ease-in-out;
-              transition: 300ms transform cubic-bezier(0.25, 0.25, 0.24, 1.175) 200ms filter ease-in-out; }
+      -webkit-transition: 300ms -webkit-transform cubic-bezier(0.25, 0.25, 0.24, 1.175), 200ms -webkit-filter ease-in-out, 300ms -webkit-transform cubic-bezier(0.25, 0.25, 0.24, 1.175), 200ms filter ease-in-out;
+              transition: 300ms transform cubic-bezier(0.25, 0.25, 0.24, 1.175), 200ms filter ease-in-out; }
     .is-child-theme .box-news .box-image img {
       display: none; }
   .is-child-theme .box-news img {
@@ -793,15 +793,37 @@ html {
       display: none; }
   .is-child-theme .navbar-event-categories li + li {
     margin-left: 0; }
+  @media screen and (max-width: 767px) {
+    .is-child-theme .navbar-event-categories ul {
+      display: none; }
+    .is-child-theme .navbar-event-categories:target ul {
+      display: block; }
+    .is-child-theme .navbar-event-categories:target .event-categories-filter {
+      display: none; }
+      .is-child-theme .navbar-event-categories:target .event-categories-filter.close {
+        display: block; } }
 
 .is-child-theme .event-categories-filter {
-  font-weight: bold;
+  font-weight: bold !important;
   font-size: .9em;
   line-height: 1;
   padding: 18px 15px;
   background: #cbcdce;
   text-transform: uppercase;
-  font-size: 1rem; }
+  font-size: 1rem;
+  float: left;
+  pointer-events: none; }
+  .is-child-theme .event-categories-filter.close {
+    display: none; }
+  .is-child-theme .event-categories-filter::after {
+    content: ':'; }
+  @media screen and (max-width: 767px) {
+    .is-child-theme .event-categories-filter {
+      display: block;
+      float: none;
+      pointer-events: all; }
+      .is-child-theme .event-categories-filter::after {
+        content: ''; } }
 
 .is-child-theme .pagination,
 .is-child-theme .page-numbers {
