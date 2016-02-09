@@ -230,6 +230,15 @@
             height: 50px;
             padding: 0;
 
+            @media screen #{$screen-below-sm} {
+                border: none;
+                width: 20px;
+                font-size: 1.5em;
+                line-height: 1.5em;
+                background: none;
+                text-shadow: 0 0 1px rgba(#000,.3);
+            }
+
             i {
                 display: none !important;
             }
@@ -249,6 +258,11 @@
 
         .slider-nav-previous {
             margin-left: 15px;
+
+            @media screen #{$screen-below-sm} {
+                margin-left: 5px;
+            }
+
             &:after {
                 margin-right: 3px;
                 @include hbg-icon($icon-chevron-left);
@@ -257,6 +271,11 @@
 
         .slider-nav-next {
             margin-right: 15px;
+
+            @media screen #{$screen-below-sm} {
+                margin-right: 5px;
+            }
+
             &:after {
                 margin-left: 3px;
                 @include hbg-icon($icon-chevron-right);
@@ -313,6 +332,11 @@
         &::first-line {
             font-size: 1.5em;
             font-weight: 600;
+        }
+
+        /* Mobile */
+        @media screen #{$screen-below-sm} {
+            font-size: 1.2em;
         }
     }
 

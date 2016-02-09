@@ -1,9 +1,13 @@
 footer.main-footer {
-  font-family: $dunkers-font-family;
-	 background: rgb(30,30,30);
+    font-family: $dunkers-font-family;
+	  background: rgb(30,30,30);
     border-top: 1px solid $gray;
     padding-top: 60px;
     padding-bottom: 60px;
+
+    @media screen and #{$screen-below-sm} {
+      padding-top: 30px;
+    }
 
     .logotype {
       img, svg {
@@ -13,14 +17,26 @@ footer.main-footer {
         use, path, defs, clippath {
           fill: #fff !important;
         }
+
+        @media screen and #{$screen-below-sm} {
+          width: 100%;
+          height: auto;
+          margin: 0 auto 30px auto;
+          display: block;
+        }
+
       }
     }
 
     h1, h2, h3, h4, h5, h6, caption, h2.footer-title {
       font-weight: 300;
-      font-size: 1.8rem;
+      font-size: 1.8em;
       color: #fff;
       text-transform: uppercase;
+
+      @media screen and #{$screen-below-sm} {
+          font-size: 1.4em;
+      }
     }
 
     .icons-list {
