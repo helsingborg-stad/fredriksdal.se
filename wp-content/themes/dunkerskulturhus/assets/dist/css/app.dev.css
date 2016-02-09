@@ -201,7 +201,7 @@ html {
       width: 50px;
       height: 50px;
       padding: 0; }
-      @media screen {
+      @media screen and (max-width: 469px) {
         .is-child-theme .hero .slider [class*=slider-nav-] {
           border: none;
           width: 20px;
@@ -225,7 +225,7 @@ html {
         background-color: transparent; }
     .is-child-theme .hero .slider .slider-nav-previous {
       margin-left: 15px; }
-      @media screen {
+      @media screen and (max-width: 469px) {
         .is-child-theme .hero .slider .slider-nav-previous {
           margin-left: 5px; } }
       .is-child-theme .hero .slider .slider-nav-previous:after {
@@ -242,7 +242,7 @@ html {
         -moz-osx-font-smoothing: grayscale; }
     .is-child-theme .hero .slider .slider-nav-next {
       margin-right: 15px; }
-      @media screen {
+      @media screen and (max-width: 469px) {
         .is-child-theme .hero .slider .slider-nav-next {
           margin-right: 5px; } }
       .is-child-theme .hero .slider .slider-nav-next:after {
@@ -299,7 +299,7 @@ html {
     .is-child-theme .hero .text-block::first-line {
       font-size: 1.5em;
       font-weight: 600; }
-    @media screen {
+    @media screen and (max-width: 469px) {
       .is-child-theme .hero .text-block {
         font-size: 1.2em; } }
   .is-child-theme .hero .stripe {
@@ -317,7 +317,8 @@ html {
     color: rgba(255, 255, 255, 0.8);
     cursor: default;
     text-transform: uppercase;
-    font-family: "Karbon", "Lato", "Roboto", "Helvetica", "Arial"; }
+    font-family: "Karbon", "Lato", "Roboto", "Helvetica", "Arial";
+    white-space: nowrap; }
   .is-child-theme .hero .scroll-down-please-icon {
     display: inline-block;
     vertical-align: middle;
