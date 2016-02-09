@@ -301,7 +301,8 @@ html {
     font-size: 2em;
     color: #fff;
     width: 90%;
-    z-index: 20;
+    z-index: 30;
+    background-color: transparent !important;
     /* Text shadows */
     text-shadow: 0 0 6px rgba(0, 0, 0, 0.28);
     /* Larger font on first-row */
