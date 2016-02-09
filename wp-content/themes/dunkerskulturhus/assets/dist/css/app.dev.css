@@ -389,7 +389,7 @@ html {
   border-top: 1px solid #e0e1e2;
   padding-top: 60px;
   padding-bottom: 60px; }
-  @media screen {
+  @media screen and (max-width: 469px) {
     .is-child-theme footer.main-footer {
       padding-top: 30px; } }
   .is-child-theme footer.main-footer .logotype img, .is-child-theme footer.main-footer .logotype svg {
@@ -397,7 +397,7 @@ html {
     opacity: 1; }
     .is-child-theme footer.main-footer .logotype img use, .is-child-theme footer.main-footer .logotype img path, .is-child-theme footer.main-footer .logotype img defs, .is-child-theme footer.main-footer .logotype img clippath, .is-child-theme footer.main-footer .logotype svg use, .is-child-theme footer.main-footer .logotype svg path, .is-child-theme footer.main-footer .logotype svg defs, .is-child-theme footer.main-footer .logotype svg clippath {
       fill: #fff !important; }
-    @media screen {
+    @media screen and (max-width: 469px) {
       .is-child-theme footer.main-footer .logotype img, .is-child-theme footer.main-footer .logotype svg {
         width: 100%;
         height: auto;
@@ -408,7 +408,7 @@ html {
     font-size: 1.8em;
     color: #fff;
     text-transform: uppercase; }
-    @media screen {
+    @media screen and (max-width: 469px) {
       .is-child-theme footer.main-footer h1, .is-child-theme footer.main-footer h2, .is-child-theme footer.main-footer h3, .is-child-theme footer.main-footer h4, .is-child-theme footer.main-footer h5, .is-child-theme footer.main-footer h6, .is-child-theme footer.main-footer caption, .is-child-theme footer.main-footer h2.footer-title {
         font-size: 1.4em; } }
   .is-child-theme footer.main-footer .icons-list {

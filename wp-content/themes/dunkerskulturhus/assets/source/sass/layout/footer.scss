@@ -5,7 +5,7 @@ footer.main-footer {
     padding-top: 60px;
     padding-bottom: 60px;
 
-    @media screen #{$screen-below-sm} {
+    @media screen and #{$screen-below-sm} {
       padding-top: 30px;
     }
 
@@ -18,7 +18,7 @@ footer.main-footer {
           fill: #fff !important;
         }
 
-        @media screen #{$screen-below-sm} {
+        @media screen and #{$screen-below-sm} {
           width: 100%;
           height: auto;
           margin: 0 auto 30px auto;
@@ -34,7 +34,7 @@ footer.main-footer {
       color: #fff;
       text-transform: uppercase;
 
-      @media screen #{$screen-below-sm} {
+      @media screen and #{$screen-below-sm} {
           font-size: 1.4em;
       }
     }
