@@ -1,4 +1,4 @@
-<div class="hero hidden-xs hidden-sm">
+<div class="hero">
     @if (is_active_sidebar('slider-area'))
         {{ dynamic_sidebar('slider-area') }}
     @endif
