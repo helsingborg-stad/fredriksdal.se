@@ -384,6 +384,9 @@ html {
   .is-child-theme .navbar-mainmenu a {
     color: #fff; }
 
+.is-child-theme .navbar .current-page-ancestor a {
+  text-decoration: none; }
+
 .is-child-theme footer.main-footer {
   font-family: "Karbon", "Lato", "Roboto", "Helvetica", "Arial";
   background: #1e1e1e;
@@ -525,6 +528,9 @@ html {
 
 .is-child-theme h6, .is-child-theme .h6 {
   font-size: 1.3rem; }
+
+.is-child-theme .lead {
+  font-weight: bold; }
 
 .is-child-theme .creamy .box {
   background-color: #fff;
