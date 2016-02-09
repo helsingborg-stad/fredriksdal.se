@@ -5,7 +5,7 @@
         $image = get_field('event-image_url', $post->ID);
     ?>
     <div class="grid-md-3">
-        <a href="#" class="box box-news">
+        <a href="<?php echo get_permalink($post->ID); ?>" class="box box-news">
             <span class="box-image" <?php if ($image) : ?>style="background-image:url('<?php echo $image; ?>');"<?php endif; ?>>
                 <?php if ($image) : ?>
                     <img src="<?php echo $image; ?>">
