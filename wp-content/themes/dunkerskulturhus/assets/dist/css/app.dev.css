@@ -185,7 +185,8 @@ html {
   overflow: hidden;
   background: #eee;
   background-size: cover; }
-  .is-child-theme .hero:after {
+  .is-child-theme .hero .slider-image:before,
+  .is-child-theme .hero .slider-video:before {
     position: absolute;
     top: 0;
     right: 0;

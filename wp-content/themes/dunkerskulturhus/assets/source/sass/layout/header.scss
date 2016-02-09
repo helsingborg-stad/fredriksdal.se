@@ -211,7 +211,8 @@
     background: #eee;
     background-size: cover;
 
-    &:after {
+    .slider-image:before,
+    .slider-video:before {
         @include cover();
         content: "";
         background: rgba(0, 0, 0, 0.25);
