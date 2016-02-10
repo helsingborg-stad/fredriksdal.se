@@ -11,7 +11,7 @@ DunkersKultur.Wording.Wording = (function ($) {
         var originalText = targetObject.text().trim().split(" ");
         var boldWording = originalText.splice(0,originalText.length / 2);
         targetObject.html((boldWording.length > 0 ? "<span class='bold-wording'>"+ boldWording.join(" ") + "</span> " : boldWording) + originalText.join(" "));
-    }
+    };
 
     return new Wording();
 
