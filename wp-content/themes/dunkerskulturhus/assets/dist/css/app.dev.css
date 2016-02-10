@@ -887,6 +887,3 @@ html {
 
 .is-child-theme h1 .bold-wording, .is-child-theme h2 .bold-wording, .is-child-theme h3 .bold-wording, .is-child-theme h4 .bold-wording, .is-child-theme h5 .bold-wording, .is-child-theme h6 .bold-wording {
   font-weight: 600; }
-
-.is-child-theme.admin-bar #site-header {
-  top: 32px !important; }
