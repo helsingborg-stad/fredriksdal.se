@@ -57,7 +57,8 @@
 }
 
 #site-header.liquid-header,
-&:not(.home) #site-header {
+&:not(.home) #site-header,
+&.menu-open #site-header {
     background-color: rgba(#fff,.92);
     border-bottom: 1px solid $gray-light;
     box-shadow: 0 0 2px rgba($black, .1);
@@ -93,10 +94,6 @@
     #wrapper {
         padding-top: 69px;
     }
-}
-
-&.admin-bar #site-header {
-    margin-top: 32px;
 }
 
 &.home .navbar {

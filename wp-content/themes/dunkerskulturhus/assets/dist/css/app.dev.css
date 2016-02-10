@@ -75,37 +75,40 @@ html {
                 transition: all 100ms; }
 
 .is-child-theme #site-header.liquid-header,
-.is-child-theme:not(.home) #site-header {
+.is-child-theme:not(.home) #site-header,
+.is-child-theme.menu-open #site-header {
   background-color: rgba(255, 255, 255, 0.92);
   border-bottom: 1px solid #fafbfb;
   box-shadow: 0 0 2px rgba(30, 30, 30, 0.1); }
   .is-child-theme #site-header.liquid-header .logotype svg path,
   .is-child-theme #site-header.liquid-header .logotype svg use,
   .is-child-theme:not(.home) #site-header .logotype svg path,
-  .is-child-theme:not(.home) #site-header .logotype svg use {
+  .is-child-theme:not(.home) #site-header .logotype svg use,
+  .is-child-theme.menu-open #site-header .logotype svg path,
+  .is-child-theme.menu-open #site-header .logotype svg use {
     fill: #1E1E1E !important; }
   .is-child-theme #site-header.liquid-header .logotype:hover:after,
-  .is-child-theme:not(.home) #site-header .logotype:hover:after {
+  .is-child-theme:not(.home) #site-header .logotype:hover:after,
+  .is-child-theme.menu-open #site-header .logotype:hover:after {
     background-color: rgba(0, 0, 0, 0.7);
     color: #fff;
     -webkit-transform: translate(-50%, 47px);
             transform: translate(-50%, 47px); }
   .is-child-theme #site-header.liquid-header .logotype:hover:before,
-  .is-child-theme:not(.home) #site-header .logotype:hover:before {
+  .is-child-theme:not(.home) #site-header .logotype:hover:before,
+  .is-child-theme.menu-open #site-header .logotype:hover:before {
     border-bottom-color: rgba(0, 0, 0, 0.7);
     opacity: 1;
     -webkit-transform: translate(-50%, 13px);
             transform: translate(-50%, 13px); }
   .is-child-theme #site-header.liquid-header nav.navbar,
-  .is-child-theme:not(.home) #site-header nav.navbar {
+  .is-child-theme:not(.home) #site-header nav.navbar,
+  .is-child-theme.menu-open #site-header nav.navbar {
     padding-top: 10px;
     padding-bottom: 10px; }
 
 .is-child-theme:not(.home) #wrapper {
   padding-top: 69px; }
-
-.is-child-theme.admin-bar #site-header {
-  margin-top: 32px; }
 
 .is-child-theme.home .navbar {
   background-color: transparent;
