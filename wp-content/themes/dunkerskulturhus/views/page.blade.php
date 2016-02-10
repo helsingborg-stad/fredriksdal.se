@@ -8,7 +8,7 @@
     <div class="grid no-margin-top">
         @include('partials.sidebar-left')
 
-        <div class="grid-md-8 grid-lg-6">
+        <div class="{{ is_active_sidebar('right-sidebar') ? 'grid-md-8 grid-lg-6' : 'grid-md-8' }}">
             @while(have_posts())
                 {!! the_post() !!}
 
@@ -18,7 +18,9 @@
             {!! dynamic_sidebar('content-area') !!}
         </div>
 
-        @include('partials.sidebar-right')
+        @if (is_active_sidebar('right-sidebar'))
+            @include('partials.sidebar-right')
+        @endif
     </div>
 </div>
 
