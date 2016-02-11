@@ -13,6 +13,10 @@ body.is-child-theme {
 html {
   background: #1E1E1E; }
 
+html.video-is-playing .scroll-down-please-icon,
+html.video-is-playing .scroll-down-please {
+  display: none !important; }
+
 .is-child-theme #wrapper {
   position: relative;
   background: #fff; }
