@@ -786,6 +786,60 @@ html {
       .is-child-theme .event-categories-filter::after {
         content: ''; } }
 
+.is-child-theme .menu-trigger[data-target="#mobile-menu"]::after {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  background-color: #fff;
+  -webkit-transition: 400ms all ease-in-out;
+          transition: 400ms all ease-in-out; }
+
+.is-child-theme .menu-trigger[data-target="#mobile-menu"].open {
+  z-index: 91; }
+  .is-child-theme .menu-trigger[data-target="#mobile-menu"].open .menu-icon {
+    z-index: 91; }
+  .is-child-theme .menu-trigger[data-target="#mobile-menu"].open::after {
+    z-index: 90;
+    width: 2000px;
+    height: 2000px;
+    background-color: rgba(255, 255, 255, 0.9); }
+  .is-child-theme .menu-trigger[data-target="#mobile-menu"].open .menu-icon::after,
+  .is-child-theme .menu-trigger[data-target="#mobile-menu"].open .menu-icon::before {
+    background-color: #000; }
+
+.is-child-theme .nav-mobile-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  background: transparent;
+  z-index: 99;
+  text-align: center; }
+
+.is-child-theme .nav-mobile {
+  background: transparent;
+  display: inline-block;
+  margin-top: 40px; }
+  .is-child-theme .nav-mobile a {
+    color: #1E1E1E;
+    font-size: 1.3em;
+    font-weight: bold; }
+    .is-child-theme .nav-mobile a:hover {
+      background-color: transparent;
+      color: #34B233 !important; }
+
 .is-child-theme .pagination,
 .is-child-theme .page-numbers {
   font-size: 0; }
