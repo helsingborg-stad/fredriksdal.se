@@ -15,6 +15,9 @@
         background-color: #fff;
 
         transition: 400ms all ease-in-out;
+
+        min-width: 0;
+        min-height: 0;
     }
 
     &.open {
@@ -26,9 +29,11 @@
 
         &::after {
             z-index: 90;
-            width: 2000px;
-            height: 2000px;
-            background-color: rgba(#fff, .9);
+            width: 250vh;
+            height: 250vh;
+            min-width: 2000px;
+            min-height: 2000px;
+            background-color: rgba(#fff, .98);
         }
 
         .menu-icon::after,
@@ -40,6 +45,7 @@
 
 .nav-mobile-menu {
     @include cover();
+    top: 120px;
     position: fixed;
     background: transparent;
     z-index: 99;
@@ -49,7 +55,6 @@
 .nav-mobile {
     background: transparent;
     display: inline-block;
-    margin-top: 40px;
 
     a {
         color: $black;

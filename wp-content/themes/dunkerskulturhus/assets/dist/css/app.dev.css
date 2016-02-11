@@ -17,6 +17,14 @@ html.video-is-playing .scroll-down-please-icon,
 html.video-is-playing .scroll-down-please {
   display: none !important; }
 
+@media screen and (max-width: 782px) {
+  .admin-bar #site-header {
+    margin-top: 46px; } }
+
+@media screen and (min-width: 783px) {
+  .admin-bar #site-header {
+    margin-top: 32px; } }
+
 .is-child-theme #wrapper {
   position: relative;
   background: #fff; }
@@ -806,7 +814,9 @@ html.video-is-playing .scroll-down-please {
   border-radius: 50%;
   background-color: #fff;
   -webkit-transition: 400ms all ease-in-out;
-          transition: 400ms all ease-in-out; }
+          transition: 400ms all ease-in-out;
+  min-width: 0;
+  min-height: 0; }
 
 .is-child-theme .menu-trigger[data-target="#mobile-menu"].open {
   z-index: 91; }
@@ -814,9 +824,11 @@ html.video-is-playing .scroll-down-please {
     z-index: 91; }
   .is-child-theme .menu-trigger[data-target="#mobile-menu"].open::after {
     z-index: 90;
-    width: 2000px;
-    height: 2000px;
-    background-color: rgba(255, 255, 255, 0.9); }
+    width: 250vh;
+    height: 250vh;
+    min-width: 2000px;
+    min-height: 2000px;
+    background-color: rgba(255, 255, 255, 0.98); }
   .is-child-theme .menu-trigger[data-target="#mobile-menu"].open .menu-icon::after,
   .is-child-theme .menu-trigger[data-target="#mobile-menu"].open .menu-icon::before {
     background-color: #000; }
@@ -827,6 +839,7 @@ html.video-is-playing .scroll-down-please {
   right: 0;
   bottom: 0;
   left: 0;
+  top: 120px;
   position: fixed;
   background: transparent;
   z-index: 99;
@@ -834,8 +847,7 @@ html.video-is-playing .scroll-down-please {
 
 .is-child-theme .nav-mobile {
   background: transparent;
-  display: inline-block;
-  margin-top: 40px; }
+  display: inline-block; }
   .is-child-theme .nav-mobile a {
     color: #1E1E1E;
     font-size: 1.3em;

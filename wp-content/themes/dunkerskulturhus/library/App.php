@@ -7,6 +7,7 @@ class App
     {
         new \Dunkers\Theme\Enqueue();
         new \Dunkers\Theme\Navigation();
+        new \Dunkers\Theme\Filters();
 
         add_action('parse_query', array($this, 'eventArchive'));
     }
