@@ -32,7 +32,7 @@ class EventArchive
     public function sqlGroupBy($groupBy)
     {
         global $wpdb;
-        $groupBy = $wpdb->prefix . '.post_title';
+        $groupBy = $wpdb->prefix . $wpdb->posts . '.post_title';
         return $groupBy;
     }
 
