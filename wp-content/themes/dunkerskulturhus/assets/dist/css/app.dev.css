@@ -840,6 +840,22 @@ html.video-is-playing .scroll-down-please {
   .is-child-theme .menu-trigger[data-target="#mobile-menu"].open .menu-icon::before {
     background-color: #000; }
 
+.is-child-theme #site-header.liquid-header .menu-icon,
+.is-child-theme #site-header.liquid-header .menu-icon:after,
+.is-child-theme #site-header.liquid-header .menu-icon:before,
+.is-child-theme:not(.home) #site-header .menu-icon,
+.is-child-theme:not(.home) #site-header .menu-icon:after,
+.is-child-theme:not(.home) #site-header .menu-icon:before,
+.is-child-theme.menu-open #site-header .menu-icon,
+.is-child-theme.menu-open #site-header .menu-icon:after,
+.is-child-theme.menu-open #site-header .menu-icon:before {
+  background: #1E1E1E; }
+
+.is-child-theme #site-header.liquid-header .menu-trigger.open .menu-icon,
+.is-child-theme:not(.home) #site-header .menu-trigger.open .menu-icon,
+.is-child-theme.menu-open #site-header .menu-trigger.open .menu-icon {
+  background-color: transparent; }
+
 .is-child-theme .nav-mobile-menu {
   position: absolute;
   top: 0;
@@ -855,10 +871,12 @@ html.video-is-playing .scroll-down-please {
 .is-child-theme .nav-mobile {
   background: transparent;
   display: inline-block; }
+  .is-child-theme .nav-mobile > li + li {
+    border-top: 1px solid rgba(30, 30, 30, 0.1); }
   .is-child-theme .nav-mobile a {
     color: #1E1E1E;
     font-size: 1.3em;
-    font-weight: bold; }
+    font-weight: normal; }
     .is-child-theme .nav-mobile a:hover {
       background-color: transparent;
       color: #34B233 !important; }

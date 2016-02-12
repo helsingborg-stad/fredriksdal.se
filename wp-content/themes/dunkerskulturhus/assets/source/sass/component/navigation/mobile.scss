@@ -43,6 +43,22 @@
     }
 }
 
+#site-header.liquid-header,
+&:not(.home) #site-header,
+&.menu-open #site-header {
+    .menu-icon,
+    .menu-icon:after,
+    .menu-icon:before {
+        background: $black;
+    }
+
+    .menu-trigger.open {
+        .menu-icon {
+            background-color: transparent;
+        }
+    }
+}
+
 .nav-mobile-menu {
     @include cover();
     top: 120px;
@@ -56,10 +72,14 @@
     background: transparent;
     display: inline-block;
 
+    > li+li {
+        border-top: 1px solid rgba($black, .1);
+    }
+
     a {
         color: $black;
         font-size: 1.3em;
-        font-weight: bold;
+        font-weight: normal;
 
         &:hover {
             background-color: transparent;
