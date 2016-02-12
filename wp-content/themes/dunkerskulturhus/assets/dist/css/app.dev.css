@@ -192,7 +192,7 @@ html.video-is-playing .scroll-down-please {
                 transform: scaleX(1); }
   .is-child-theme #main-menu li.current_page_item a {
     border: 2px solid #fff;
-    padding: 2px 15px;
+    padding: 1px 12px 2px;
     color: #fff;
     margin-top: 4px;
     margin-bottom: 4px;
