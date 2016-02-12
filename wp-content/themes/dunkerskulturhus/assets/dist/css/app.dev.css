@@ -5,10 +5,6 @@ body.is-child-theme {
   font-size: 17px;
   line-height: 1.6;
   color: #1E1E1E; }
-  body.is-child-theme article p,
-  body.is-child-theme article ul,
-  body.is-child-theme article ol {
-    font-family: Verdana; }
 
 html {
   background: #1E1E1E; }
@@ -34,10 +30,6 @@ html.video-is-playing .scroll-down-please {
   font-size: 17px;
   line-height: 1.6;
   color: #1E1E1E; }
-  .is-child-theme body.is-child-theme article p,
-  .is-child-theme body.is-child-theme article ul,
-  .is-child-theme body.is-child-theme article ol {
-    font-family: Verdana; }
 
 .is-child-theme #site-header {
   display: table;
