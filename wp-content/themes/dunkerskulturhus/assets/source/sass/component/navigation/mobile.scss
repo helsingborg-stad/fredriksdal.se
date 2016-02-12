@@ -70,13 +70,18 @@
 
 .nav-mobile {
     background: transparent;
-    display: inline-block;
+    display: block;
+    max-width: 90%;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
 
     > li+li {
         border-top: 1px solid rgba($black, .1);
     }
 
     a {
+        text-transform: uppercase;
         color: $black;
         font-size: 1.3em;
         font-weight: normal;
@@ -85,5 +90,27 @@
             background-color: transparent;
             color: $green !important;
         }
+    }
+
+    .sub-menu {
+       border: none;
+       padding: 0 10px 1em 10px;
+       li {
+        font-size: .6em;
+        display: inline-block;
+        padding: 0;
+        background: #eee;
+        border: 1px solid #e2e2e2;
+        line-height: 1;
+        margin: 0 .5em .5em 0;
+
+        a {
+            font-weight: bold;
+            display: block;
+            padding: .5em;
+            border-radius: 2px;
+            color: $black;
+        }
+       }
     }
 }
