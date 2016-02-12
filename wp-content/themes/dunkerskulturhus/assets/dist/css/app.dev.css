@@ -866,7 +866,8 @@ html.video-is-playing .scroll-down-please {
   position: fixed;
   background: transparent;
   z-index: 99;
-  text-align: center; }
+  text-align: center;
+  overflow: auto; }
 
 .is-child-theme .nav-mobile {
   background: transparent;
@@ -875,6 +876,8 @@ html.video-is-playing .scroll-down-please {
   text-align: left;
   margin-left: auto;
   margin-right: auto; }
+  .is-child-theme .nav-mobile > li a {
+    padding: 6px 0; }
   .is-child-theme .nav-mobile > li + li {
     border-top: 1px solid rgba(30, 30, 30, 0.1); }
   .is-child-theme .nav-mobile a {
@@ -887,7 +890,7 @@ html.video-is-playing .scroll-down-please {
       color: #34B233 !important; }
   .is-child-theme .nav-mobile .sub-menu {
     border: none;
-    padding: 0 10px 1em 10px; }
+    padding: 0 10px .5em 10px; }
     .is-child-theme .nav-mobile .sub-menu li {
       font-size: .6em;
       display: inline-block;

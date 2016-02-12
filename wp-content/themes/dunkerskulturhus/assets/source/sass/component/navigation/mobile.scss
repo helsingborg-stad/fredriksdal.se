@@ -66,6 +66,7 @@
     background: transparent;
     z-index: 99;
     text-align: center;
+    overflow: auto;
 }
 
 .nav-mobile {
@@ -75,6 +76,10 @@
     text-align: left;
     margin-left: auto;
     margin-right: auto;
+
+    > li a {
+        padding: 6px 0;
+    }
 
     > li+li {
         border-top: 1px solid rgba($black, .1);
@@ -94,7 +99,7 @@
 
     .sub-menu {
        border: none;
-       padding: 0 10px 1em 10px;
+       padding: 0 10px .5em 10px;
        li {
         font-size: .6em;
         display: inline-block;
