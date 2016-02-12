@@ -22,6 +22,10 @@
             "url": "https://github.com/helsingborg-stad/xcap-import.git"
         },
         {
+            "type": "vcs",
+            "url": "https://github.com/helsingborg-stad/lix-calculator.git"
+        },
+        {
             "type":"composer",
             "url":"http://wpackagist.org"
         }
@@ -33,7 +37,7 @@
         "helsingborg-stad/Modularity": "dev-develop",
         "helsingborg-stad/Bootstrap-Theme": "dev-develop",
         "helsingborg-stad/xcap-import": "dev-master",
-        "symfony/debug": "^3.0"
+        "helsingborg-stad/lix-calculator": "^1.0.1"
     },
 
     "extra": {
