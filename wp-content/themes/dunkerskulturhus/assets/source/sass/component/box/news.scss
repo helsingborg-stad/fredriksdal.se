@@ -18,6 +18,11 @@
         width: 70%;
         padding-bottom: 70%;
 
+        @media #{$screen-below-md} {
+            width: 50%;
+            padding-bottom: 50%;
+        }
+
         filter: grayscale(100%);
         transition: 200ms filter ease-in-out;
 
