@@ -32,7 +32,8 @@
         "johnpbloch/wordpress": "^4.4",
         "helsingborg-stad/Modularity": "dev-develop",
         "helsingborg-stad/Bootstrap-Theme": "dev-develop",
-        "helsingborg-stad/xcap-import": "dev-master"
+        "helsingborg-stad/xcap-import": "dev-master",
+        "symfony/debug": "^3.0"
     },
 
     "extra": {

@@ -250,8 +250,8 @@ html.video-is-playing .scroll-down-please {
       .is-child-theme footer.main-footer .icons-list a:hover i {
         -webkit-transition: all 200ms;
                 transition: all 200ms;
-        -webkit-animation: swingAnimationFrames linear 1s;
-                animation: swingAnimationFrames linear 1s;
+        -webkit-animation: footerSwingAnimation linear 1s;
+                animation: footerSwingAnimation linear 1s;
         -webkit-animation-iteration-count: 1;
                 animation-iteration-count: 1;
         -webkit-transform-origin: 50% 0%;
@@ -277,7 +277,7 @@ html.video-is-playing .scroll-down-please {
   .is-child-theme footer.main-footer .widget_search .input-group-addon-btn {
     border: none; }
 
-@-webkit-keyframes swingAnimationFrames {
+@-webkit-keyframes footerSwingAnimation {
   0% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg); }
@@ -297,7 +297,7 @@ html.video-is-playing .scroll-down-please {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg); } }
 
-@keyframes swingAnimationFrames {
+@keyframes footerSwingAnimation {
   0% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg); }

@@ -28,14 +28,14 @@ class AcfImportCleaner
                     continue;
                 }
 
-                $content = file($file);
+                $content = @file($file);
 
                 if (trim($content[0]) == '[') {
                     array_shift($content);
                     array_pop($content);
                 }
 
-                file_put_contents($file, $content);
+                @file_put_contents($file, $content);
             }
         }
 
