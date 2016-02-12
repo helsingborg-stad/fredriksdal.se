@@ -8,6 +8,7 @@ class Filters
     {
         add_action('Municipio/mobile_menu_breakpoint', array($this, 'mobileMenuBreakpoint'));
         add_action('Municipio/desktop_menu_breakpoint', array($this, 'desktopMenuBreakpoint'));
+        add_action('Municipio/header_grid_size', array($this, 'headerGridSize'));
     }
 
     /**
@@ -26,5 +27,14 @@ class Filters
     public function desktopMenuBreakpoint($classes)
     {
         return "hidden-xs hidden-sm hidden-md";
+    }
+
+    /**
+     * Width of header, make room for mobile menu in medium
+     * @return void
+     */
+    public function headerGridSize($classes)
+    {
+        return "grid-lg-12";
     }
 }
