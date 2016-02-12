@@ -420,6 +420,10 @@ html.video-is-playing .scroll-down-please {
     background-size: 0;
     background-position: center center;
     position: relative; }
+    @media (max-width: 767px) {
+      .is-child-theme .box-news .box-image {
+        width: 50%;
+        padding-bottom: 50%; } }
     .is-child-theme .box-news .box-image::after {
       -webkit-filter: grayscale(100%);
               filter: grayscale(100%);
