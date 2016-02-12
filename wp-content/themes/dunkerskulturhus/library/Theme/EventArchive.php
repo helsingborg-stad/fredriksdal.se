@@ -20,6 +20,10 @@ class EventArchive
      */
     public function sqlSelect($select)
     {
+        if (is_admin()) {
+            return $select;
+        }
+
         $select .= ', COUNT(ID)-1 as occations_count';
         return $select;
     }
@@ -31,6 +35,10 @@ class EventArchive
      */
     public function sqlGroupBy($groupBy)
     {
+        if (is_admin()) {
+            return $groupBy;
+        }
+
         global $wpdb;
         $groupBy = $wpdb->posts . '.post_title';
         return $groupBy;
