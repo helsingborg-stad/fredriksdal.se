@@ -129,8 +129,18 @@ html.video-is-playing .scroll-down-please {
     display: table-cell !important;
     vertical-align: middle;
     line-height: 1; }
+    @media (max-width: 469px) {
+      .is-child-theme .navbar-mainmenu .logotype {
+        padding-right: 20px; }
+        .is-child-theme .navbar-mainmenu .logotype img, .is-child-theme .navbar-mainmenu .logotype svg {
+          width: 100% !important;
+          height: auto !important;
+          max-width: 345px; } }
     .is-child-theme .navbar-mainmenu .logotype img {
       max-height: 30px; }
+  .is-child-theme .navbar-mainmenu .menu-trigger {
+    display: table-cell;
+    width: 1%; }
   .is-child-theme .navbar-mainmenu .nav {
     display: table-cell;
     vertical-align: middle;

@@ -8,9 +8,24 @@
         vertical-align: middle;
         line-height: 1;
 
+        @media #{$screen-below-sm} {
+            padding-right: 20px;
+
+            img, svg {
+                width: 100% !important;
+                height: auto !important;
+                max-width: 345px;
+            }
+        }
+
         img {
             max-height: 30px;
         }
+    }
+
+    .menu-trigger {
+        display: table-cell;
+        width: 1%;
     }
 
     .nav {
