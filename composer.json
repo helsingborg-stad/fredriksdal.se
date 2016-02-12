@@ -37,7 +37,7 @@
         "helsingborg-stad/Modularity": "dev-develop",
         "helsingborg-stad/Bootstrap-Theme": "dev-develop",
         "helsingborg-stad/xcap-import": "dev-master",
-        "helsingborg-stad/lix-calculator": "dev-master"
+        "helsingborg-stad/lix-calculator": "^1.0.1"
     },
 
     "extra": {
