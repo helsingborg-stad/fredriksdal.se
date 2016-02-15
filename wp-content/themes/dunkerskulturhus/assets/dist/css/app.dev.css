@@ -480,7 +480,8 @@ html.video-is-playing .scroll-down-please {
   height: 400px;
   padding: 0;
   overflow: hidden;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  background-color: #1E1E1E; }
   .is-child-theme .box-event .box-image {
     position: absolute;
     display: block;
