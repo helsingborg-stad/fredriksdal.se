@@ -67,7 +67,7 @@ class EventArchive
             ));
 
             // Posts per page
-            $query->set('posts_per_page', 12);
+            $query->set('posts_per_page', 13);
 
             // Sort
             $query->set('meta_key', 'event-date-start');

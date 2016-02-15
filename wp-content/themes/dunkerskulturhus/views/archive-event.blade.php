@@ -40,14 +40,14 @@
 
     <div class="grid">
         <div class="grid-md-12">
-            <div class="grid" data-equal-container>
+            <div class="grid">
                 <?php global $post; ?>
                 <?php $i = 0; ?>
                 @while(have_posts())
                     {!! the_post() !!}
                     <?php $i++; ?>
 
-                    <div class="{{ ($i == 1) ? 'grid-md-8' : 'grid-md-4' }} grid-sm-6">
+                    <div class="{{ ($i == 1 || $i == 7) ? 'grid-md-8' : 'grid-md-4' }} grid-sm-6">
                         @include('partials.event')
                     </div>
                 @endwhile
