@@ -47,7 +47,7 @@
                     {!! the_post() !!}
                     <?php $i++; ?>
 
-                    <div class="{{ ($i == 1 || $i == 7) ? 'grid-md-8' : 'grid-md-4' }} grid-sm-6">
+                    <div class="{{ ($i == 1 || $i == 7) ? 'grid-lg-8' : 'grid-lg-4' }} grid-md-6 grid-sm-12">
                         @include('partials.event')
                     </div>
                 @endwhile
