@@ -6,7 +6,7 @@
 <?php
 
     $attachmentId = get_post_thumbnail_id();
-    $image = wp_get_attachment_image_src($attachmentId, array(800, 400), false);
+    $image = wp_get_attachment_image_src($attachmentId, 'original');
     if (isset($image[0])) {
         $image = $image[0];
     }
