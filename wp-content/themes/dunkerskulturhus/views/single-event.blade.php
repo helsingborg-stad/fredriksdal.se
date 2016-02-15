@@ -3,17 +3,29 @@
 @section('content')
 {!! the_post() !!}
 
+<?php
+
+    $attachmentId = get_post_thumbnail_id();
+    $image = wp_get_attachment_image_src($attachmentId, array(800, 400), false);
+    if (isset($image[0])) {
+        $image = $image[0];
+    }
+
+?>
+
+@if ($image)
 <div class="hero hidden-xs hidden-sm">
     <div class="slider">
         <ul>
             <li>
-                <div class="slider-image" style="background-image:url('{{ get_field('event-image_url') }}');">
+                <div class="slider-image" style="background-image:url('{{ $image }}');">
                     <span class="text-block">{{ the_title() }}<br>{{ \Dunkers\Helper\Dt::toStringFormat(strtotime(get_field('event-date-start'))) }}</span>
                 </div>
             </li>
         </ul>
     </div>
 </div>
+@endif
 
 <div class="container">
     <div class="grid">
