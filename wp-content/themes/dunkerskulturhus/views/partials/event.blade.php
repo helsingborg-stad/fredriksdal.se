@@ -1,7 +1,16 @@
+<?php
+
+    $attachmentId = get_post_thumbnail_id();
+    $image = wp_get_attachment_image_src($attachmentId, array(800, 400), false);
+    if (isset($image[0])) {
+        $image = $image[0];
+    }
+
+?>
 <a href="{{ the_permalink() }}" class="box box-event">
-    @if (is_string(get_field('event-image_url')))
-    <span class="box-image" style="background-image:url('{{ get_field('event-image_url') }}');">
-        <img src="{{ get_field('event-image_url') }}" alt="{{ get_the_title() }}">
+    @if ($image)
+    <span class="box-image" style="background-image:url('{{ $image }}');">
+        <img src="{{ $image }}" alt="{{ get_the_title() }}">
     </span>
     @endif
 
