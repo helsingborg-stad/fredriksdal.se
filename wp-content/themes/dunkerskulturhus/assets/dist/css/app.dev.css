@@ -264,8 +264,10 @@ html.video-is-playing .scroll-down-please {
     margin-bottom: 40px; }
     .is-child-theme footer.main-footer div[class^="widget_"].grid-lg-4:nth-child(3n+1), .is-child-theme footer.main-footer div[class*=" widget_"].grid-lg-4:nth-child(3n+1) {
       clear: left; }
-  .is-child-theme footer.main-footer .widget_calendar table tbody td, .is-child-theme footer.main-footer .widget_calendar table tbody th, .is-child-theme footer.main-footer .widget_calendar table tfoot td, .is-child-theme footer.main-footer .widget_calendar table tfoot th, .is-child-theme footer.main-footer .widget_calendar table thead td, .is-child-theme footer.main-footer .widget_calendar table thead th {
+  .is-child-theme footer.main-footer .widget_calendar table {
     border-color: #424242; }
+    .is-child-theme footer.main-footer .widget_calendar table tbody td, .is-child-theme footer.main-footer .widget_calendar table tbody th, .is-child-theme footer.main-footer .widget_calendar table tfoot td, .is-child-theme footer.main-footer .widget_calendar table tfoot th, .is-child-theme footer.main-footer .widget_calendar table thead td, .is-child-theme footer.main-footer .widget_calendar table thead th {
+      border-color: #424242; }
   .is-child-theme footer.main-footer .widget_search input[type="search"],
   .is-child-theme footer.main-footer .widget_search input[type="submit"] {
     color: #fff;
