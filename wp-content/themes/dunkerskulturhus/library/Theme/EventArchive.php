@@ -11,6 +11,7 @@ class EventArchive
         add_filter('posts_groupby', array($this, 'sqlGroupBy'));
         add_filter('nav_menu_link_attributes', array($this, 'filterEventCategoryLinks'), 10, 3);
         add_filter('nav_menu_css_class', array($this, 'setCurrentEventCategory'), 10, 2);
+        add_filter('wp_nav_menu_items', array($this, 'filterEventItems'), 10, 2);
     }
 
     /**
@@ -81,6 +82,18 @@ class EventArchive
         }
 
         return $query;
+    }
+
+    public function filterEventItems($items, $args)
+    {
+        if ($args->theme_location != 'event-categories') {
+            return $items;
+        }
+
+        $class = !isset($_GET['filter']) || empty($_GET['filter']) ? 'current_page_item' : '';
+        $items = '<li class="' . $class . '"><a href="' . home_url('event') . '">Visa alla</a></li>' . $items;
+
+        return $items;
     }
 
     /**
