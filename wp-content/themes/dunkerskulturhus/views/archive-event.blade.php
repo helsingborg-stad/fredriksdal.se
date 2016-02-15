@@ -7,7 +7,7 @@
 
     <div class="grid">
         <div class="grid-sm-12">
-            <h1><strong>Kommande</strong> evenemang</h1>
+            <h1>Kommande evenemang</h1>
         </div>
     </div>
 
