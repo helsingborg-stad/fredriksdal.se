@@ -84,6 +84,12 @@ class EventArchive
         return $query;
     }
 
+    /**
+     * Add "show all" to the filter menu
+     * @param  array $items Items
+     * @param  array $args  Arguments
+     * @return void
+     */
     public function filterEventItems($items, $args)
     {
         if ($args->theme_location != 'event-categories') {
@@ -133,7 +139,8 @@ class EventArchive
             return $classes;
         }
 
-        if (isset($wp_query->query_vars['term']) && strtolower($wp_query->query_vars['term']) == sanitize_title(strtolower($item->title))) {
+        if (isset($wp_query->query_vars['term'])
+            && strtolower($wp_query->query_vars['term']) == sanitize_title(strtolower($item->title))) {
             $classes[] = 'current_page_item';
         }
 
