@@ -95,7 +95,7 @@
             }
         }
 
-        &.current_page_item a {
+        &.current-menu-item a {
             border: 2px solid #fff;
             padding: 1px 12px 2px;
             color: #fff;
@@ -131,7 +131,7 @@
             }
         }
 
-        &.current_page_item {
+        &.current-menu-item {
             a {
                 color: $black;
                 border-color: $black;
