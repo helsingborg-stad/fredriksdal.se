@@ -16,35 +16,6 @@
     <div class="grid">
         {{ dynamic_sidebar('content-area-bottom') }}
     </div>
-
-    <div class="grid">
-        <div class="grid-md-6">
-            <div class="box box-panel box-panel-secondary">
-                <h4 class="box-title"></h4>
-                <ul>
-                    <li><a href="#" class="link-item">Nyhet</a></li>
-                    <li><a href="#" class="link-item">Nyhet</a></li>
-                    <li><a href="#" class="link-item">Nyhet</a></li>
-                    <li><a href="#" class="link-item">Nyhet</a></li>
-                    <li><a href="#" class="link-item">Nyhet</a></li>
-                    <li><a href="#" class="link-item">Nyhet</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="grid-md-6">
-            <div class="box box-panel box-panel-secondary">
-                <h4 class="box-title"></h4>
-                <ul>
-                    <li><a href="#" class="link-item">Nyhet</a></li>
-                    <li><a href="#" class="link-item">Nyhet</a></li>
-                    <li><a href="#" class="link-item">Nyhet</a></li>
-                    <li><a href="#" class="link-item">Nyhet</a></li>
-                    <li><a href="#" class="link-item">Nyhet</a></li>
-                    <li><a href="#" class="link-item">Nyhet</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
 </div>
 
 @stop
