@@ -38,7 +38,8 @@
         "helsingborg-stad/Bootstrap-Theme": "dev-develop",
         "helsingborg-stad/xcap-import": "dev-master",
         "helsingborg-stad/lix-calculator": "^1.0.1",
-        "wpackagist-plugin/wp-editor-widget": "0.5.5"
+        "wpackagist-plugin/wp-editor-widget": "0.5.5",
+        "wpackagist-plugin/all-in-one-seo-pack": "2.2.7.5"
     },
 
     "extra": {
