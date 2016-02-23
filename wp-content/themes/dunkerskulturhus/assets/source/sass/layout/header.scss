@@ -1,0 +1,107 @@
+#site-header {
+    display: table;
+    position: fixed;
+    z-index: 200;
+    width: 100%;
+    padding-top: 0;
+    top: 0px;
+    left: 0;
+    transition: all 200ms;
+    font-family: $dunkers-font-family;
+
+    nav.navbar {
+        background-color: initial;
+        transition: padding 200ms;
+    }
+
+    .logotype {
+        transition: opacity 300ms;
+
+        svg, img {
+            height: 25px;
+        }
+
+        svg path,
+        svg use {
+            fill: #fff !important;
+            transition: fill 300ms;
+        }
+
+        &:after, &:before {
+            opacity: 0;
+            transition: 200ms opacity;
+        }
+
+        &:hover {
+            opacity: .9;
+
+            &:after {
+                border-radius: 2px;
+                padding: 10px;
+                background-color: #fff;
+                color: $black;
+                text-transform: uppercase;
+                opacity: 1;
+                height: 34px;
+                transition: all 100ms;
+            }
+
+            &:before {
+                border-bottom-color: #fff;
+                opacity: 1;
+                transition: all 100ms;
+            }
+        }
+    }
+
+}
+
+#site-header.liquid-header,
+&:not(.home) #site-header,
+&.menu-open #site-header {
+    background-color: rgba(#fff,.92);
+    border-bottom: 1px solid $gray-light;
+    box-shadow: 0 0 2px rgba($black, .1);
+
+    .logotype {
+        svg path,
+        svg use {
+            fill: $black !important;
+        }
+
+        &:hover {
+            &:after {
+                background-color: rgba(#000,.7);
+                color: #fff;
+                transform: translate(-50%,47px);
+            }
+
+            &:before {
+                border-bottom-color: rgba(#000,.7);
+                opacity: 1;
+                transform: translate(-50%,13px);
+            }
+        }
+    }
+
+    nav.navbar {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+&:not(.home) {
+    #wrapper {
+        padding-top: 69px;
+    }
+}
+
+&.home .navbar {
+    background-color: transparent;
+    padding: 15px 0;
+
+    .current-page-ancestor a::after,
+    .current_page_item a::after {
+        display: none;
+    }
+}

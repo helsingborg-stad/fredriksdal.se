@@ -1,0 +1,52 @@
+{
+    "name": "helsingborg-stad/dunkerskulturhus.se",
+    "license": "GNU",
+    "authors": [
+        {
+            "name": "Helsingborg Stad",
+            "email": "webbredaktionen@helsingborg.se"
+        }
+    ],
+    "minimum-stability" : "dev",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/helsingborg-stad/Modularity.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/helsingborg-stad/Bootstrap-Theme.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/helsingborg-stad/xcap-import.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/helsingborg-stad/lix-calculator.git"
+        },
+        {
+            "type":"composer",
+            "url":"http://wpackagist.org"
+        }
+    ],
+
+    "require": {
+        "composer/installers": "~1.0",
+        "johnpbloch/wordpress": "^4.4",
+        "helsingborg-stad/Modularity": "dev-develop",
+        "helsingborg-stad/Bootstrap-Theme": "dev-develop",
+        "helsingborg-stad/xcap-import": "dev-master",
+        "helsingborg-stad/lix-calculator": "^1.0.1",
+        "wpackagist-plugin/wp-editor-widget": "0.5.5",
+        "wpackagist-plugin/all-in-one-seo-pack": "2.2.7.5"
+    },
+
+    "extra": {
+        "wordpress-install-dir": "wp",
+        "installer-paths": {
+            "wp-content/plugins/{$name}": ["type:wordpress-plugin"],
+            "wp-content/themes/{$name}": ["type:wordpress-theme"]
+        }
+    }
+}

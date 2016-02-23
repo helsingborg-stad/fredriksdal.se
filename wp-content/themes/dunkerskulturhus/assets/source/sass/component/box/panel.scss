@@ -1,0 +1,38 @@
+.box-panel {
+    background-color: #fff;
+    border: 2px solid $black;
+    padding: 10px;
+
+    .box-title {
+        background: #fff;
+        color: $base-font-color;
+        text-transform: uppercase;
+        letter-spacing: .05em;
+        font-weight: bold;
+    }
+
+    .box-content {
+        background-color: #fff;
+        border: none;
+        padding-top: 0;
+    }
+
+    ul,
+    li,
+    table,
+    thead,
+    tfoot,
+    tr,
+    td {
+        border: none;
+    }
+}
+
+.box-panel-secondary {
+    .box-title {
+        background-color: $black !important;
+        color: #fff;
+        border-bottom: 0;
+        padding: 10px 15px;
+    }
+}

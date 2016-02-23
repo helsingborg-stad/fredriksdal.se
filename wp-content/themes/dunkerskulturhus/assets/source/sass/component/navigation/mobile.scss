@@ -1,0 +1,121 @@
+.menu-trigger[data-target="#mobile-menu"] {
+    &::after {
+        display: block;
+        content: '';
+
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        @include center();
+
+        width: 0px;
+        height: 0px;
+        border-radius: 50%;
+        background-color: #fff;
+
+        transition: 400ms all ease-in-out;
+
+        min-width: 0;
+        min-height: 0;
+    }
+
+    &.open {
+        z-index: 91;
+
+        .menu-icon {
+            z-index: 91;
+        }
+
+        &::after {
+            z-index: 90;
+            width: 250vh;
+            height: 250vh;
+            min-width: 2000px;
+            min-height: 2000px;
+            background-color: rgba(#fff, .98);
+        }
+
+        .menu-icon::after,
+        .menu-icon::before {
+            background-color: #000;
+        }
+    }
+}
+
+#site-header.liquid-header,
+&:not(.home) #site-header,
+&.menu-open #site-header {
+    .menu-icon,
+    .menu-icon:after,
+    .menu-icon:before {
+        background: $black;
+    }
+
+    .menu-trigger.open {
+        .menu-icon {
+            background-color: transparent;
+        }
+    }
+}
+
+.nav-mobile-menu {
+    @include cover();
+    top: 120px;
+    position: fixed;
+    background: transparent;
+    z-index: 99;
+    text-align: center;
+    overflow: auto;
+}
+
+.nav-mobile {
+    background: transparent;
+    display: block;
+    max-width: 90%;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+
+    > li a {
+        padding: 6px 0;
+    }
+
+    > li+li {
+        border-top: 1px solid rgba($black, .1);
+    }
+
+    a {
+        text-transform: uppercase;
+        color: $black;
+        font-size: 1.3em;
+        font-weight: normal;
+
+        &:hover {
+            background-color: transparent;
+            color: $green !important;
+        }
+    }
+
+    .sub-menu {
+       border: none;
+       padding: 0 10px .5em 10px;
+       li {
+        font-size: .6em;
+        display: inline-block;
+        padding: 0;
+        background: #eee;
+        border: 1px solid #e2e2e2;
+        line-height: 1;
+        margin: 0 .5em .5em 0;
+
+        a {
+            font-weight: bold;
+            display: block;
+            padding: .5em;
+            border-radius: 2px;
+            color: $black;
+        }
+       }
+    }
+}
