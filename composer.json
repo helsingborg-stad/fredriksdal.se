@@ -39,7 +39,8 @@
         "helsingborg-stad/xcap-import": "dev-master",
         "helsingborg-stad/lix-calculator": "^1.0.1",
         "wpackagist-plugin/wp-editor-widget": "0.5.5",
-        "wpackagist-plugin/all-in-one-seo-pack": "2.2.7.5"
+        "wpackagist-plugin/all-in-one-seo-pack": "2.2.7.5",
+        "wpackagist-plugin/varnish-http-purge": "3.7.2"
     },
 
     "extra": {
