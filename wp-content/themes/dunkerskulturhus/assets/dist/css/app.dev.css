@@ -677,7 +677,8 @@ html.video-is-playing .scroll-down-please {
   background: #eee;
   background-size: cover;
   height: initial;
-  min-height: 350px; }
+  min-height: 350px;
+  max-height: 100vh; }
   .is-child-theme .hero .slider-image:before,
   .is-child-theme .hero .slider-video:before {
     position: absolute;
