@@ -8,7 +8,7 @@ wp-config.php
 /wp-content/themes/*
 !/wp-content/themes/dunkerskulturhus
 /wp-content/themes/dunkerskulturhus/node_modules/
-/wp-content/themes/dunkerskulturhus/assets/dist/*/*
+!/wp-content/themes/dunkerskulturhus/assets/dist/*/*
 
 # Upload
 /wp-content/uploads/*
