@@ -699,7 +699,8 @@ html.video-is-playing .scroll-down-please {
       bottom: 0;
       left: 0; }
   .is-child-theme .hero .slider {
-    background-color: #fff; }
+    background-color: #fff;
+    max-height: 100vh; }
     .is-child-theme .hero .slider .player a {
       z-index: 10 !important; }
     .is-child-theme .hero .slider [class*=slider-nav-] {
