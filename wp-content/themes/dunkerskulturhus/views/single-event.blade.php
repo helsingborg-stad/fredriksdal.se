@@ -27,7 +27,7 @@
 </div>
 @endif
 
-<div class="container">
+<div class="container main-container">
     <div class="grid">
         <div class="grid-md-8 grid-lg-8">
             @include('partials.article')
