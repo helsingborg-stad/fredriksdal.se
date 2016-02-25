@@ -1,3 +1,4 @@
+@if (is_active_sidebar('slider-area') === true )
 <div class="hero">
     @if (is_active_sidebar('slider-area'))
         {{ dynamic_sidebar('slider-area') }}
@@ -14,3 +15,4 @@
         Scrolla ner
     </div>
 </div>
+@endif
