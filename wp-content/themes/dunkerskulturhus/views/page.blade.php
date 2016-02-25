@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container no-margin-top">
+<div class="container main-container">
     @include('partials.breadcrumbs')
 
     <main class="grid @if (wp_get_post_parent_id(get_the_id()) != 0) no-margin-top @endif">
