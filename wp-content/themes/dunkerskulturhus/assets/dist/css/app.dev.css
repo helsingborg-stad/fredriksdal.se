@@ -681,6 +681,9 @@ html.video-is-playing .scroll-down-please {
     .is-child-theme .box-event-alt:hover .event-lead {
       opacity: 1; }
 
+.is-child-theme:not(.home) .hero .slider {
+  max-height: 80vh; }
+
 .is-child-theme .hero {
   position: relative;
   overflow: hidden;
