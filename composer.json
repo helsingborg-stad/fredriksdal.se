@@ -26,6 +26,10 @@
             "url": "https://github.com/helsingborg-stad/lix-calculator.git"
         },
         {
+            "type": "vcs",
+            "url": "https://github.com/wp-premium/gravityforms.git"
+        },
+        {
             "type":"composer",
             "url":"http://wpackagist.org"
         }
@@ -40,7 +44,8 @@
         "helsingborg-stad/lix-calculator": "^1.0.1",
         "wpackagist-plugin/wp-editor-widget": "0.5.5",
         "wpackagist-plugin/all-in-one-seo-pack": "2.2.7.5",
-        "wpackagist-plugin/varnish-http-purge": "3.7.2"
+        "wpackagist-plugin/varnish-http-purge": "3.7.2",
+        "wpackagist-plugin/stream": "3.0.4"
     },
 
     "extra": {
