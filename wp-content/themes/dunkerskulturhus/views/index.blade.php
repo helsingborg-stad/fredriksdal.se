@@ -4,7 +4,7 @@
 
 @if (is_active_sidebar('content-area'))
 <section class="creamy creamy-border-bottom gutter-xl gutter-vertical">
-    <div class="container">
+    <div class="container main-container">
         <div class="grid">
             {{ dynamic_sidebar('content-area') }}
         </div>
