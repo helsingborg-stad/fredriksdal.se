@@ -13,7 +13,7 @@ if ( !defined( 'WP_CACHE_KEY_SALT' ) ) {
 	define( 'WP_CACHE_KEY_SALT', '' );
 }
 
-if ( class_exists( 'Memcached' ) ):
+if ( class_exists( 'Memcached' ) && defined('WP_USE_MEMCACHED') && WP_USE_MEMCACHED):
 
 function wp_cache_add( $key, $data, $group = '', $expire = 0 ) {
 	global $wp_object_cache;
