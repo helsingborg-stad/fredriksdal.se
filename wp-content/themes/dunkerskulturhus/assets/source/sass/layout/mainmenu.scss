@@ -40,6 +40,12 @@
     }
 }
 
+.nav-horizontal>li+li {
+    //@media screen and #{$screen-below-lg} {
+        margin-left: 7px;
+    //}
+}
+
 .navbar .current-page-ancestor a {
     text-decoration: none;
 }
@@ -97,11 +103,20 @@
 
         &.current-menu-item a {
             border: 2px solid #fff;
-            padding: 1px 12px 2px;
+            padding: 1px 6px 2px !important;
             color: #fff;
             margin-top: 4px;
             margin-bottom: 4px;
             text-decoration: none;
+
+            @media screen and #{$screen-lg} {
+                line-height: 1.3em;
+            }
+
+            @media screen and (min-width: #{$screen-lg-max}) {
+                padding: 1px 12px 2px !important;
+                line-height: 1.6em;
+            }
 
             &:hover {
                 background: #fff;
