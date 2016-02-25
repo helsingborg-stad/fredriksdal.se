@@ -720,8 +720,7 @@ html.video-is-playing .scroll-down-please {
     max-height: 100vh; }
     .is-child-theme .hero .slider .player a {
       z-index: 10 !important;
-      text-shadow: 0 0 9px rgba(0, 0, 0, 0.3);
-      opacity: .9; }
+      text-shadow: 0 0 9px rgba(0, 0, 0, 0.3); }
     .is-child-theme .hero .slider [class*=slider-nav-] {
       -webkit-transition: background 200ms;
               transition: background 200ms;
