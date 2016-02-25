@@ -1,7 +1,11 @@
 
 &:not(.home) .hero {
+    max-height: 80vh;
     .modularity-mod-slider {
-        max-height: 80vh;
+        max-height: inherit;
+        .slider {
+            max-height: inherit;
+        }
     }
 }
 
