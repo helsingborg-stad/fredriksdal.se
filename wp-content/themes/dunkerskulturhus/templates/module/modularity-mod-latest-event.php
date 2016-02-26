@@ -1,4 +1,9 @@
 <div class="grid">
+    <div class="grid-sm-12 text-center">
+        <h2><?php echo get_the_title($module->ID); ?></h2>
+    </div>
+</div>
+<div class="grid">
     <?php
     foreach ($posts as $post) :
 

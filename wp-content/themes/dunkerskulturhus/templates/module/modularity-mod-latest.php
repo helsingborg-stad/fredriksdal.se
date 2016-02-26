@@ -1,8 +1,3 @@
-<div class="grid">
-    <div class="grid-sm-12 text-center">
-        <h2><?php echo get_the_title($module->ID); ?></h2>
-    </div>
-</div>
 <?php
 
 $fields = json_decode(json_encode(get_fields($module->ID)));
