@@ -1,3 +1,14 @@
+.search-top {
+    background-color: $black;
+    padding: 20px 0;
+
+    form {
+        label {
+            display: none;
+        }
+    }
+}
+
 #site-header {
     display: table;
     position: fixed;
