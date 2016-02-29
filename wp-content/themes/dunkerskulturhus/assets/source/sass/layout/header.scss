@@ -69,7 +69,8 @@
 
 #site-header.liquid-header,
 &:not(.home) #site-header,
-&.menu-open #site-header {
+&.menu-open #site-header,
+&.no-js #site-header {
     background-color: rgba(#fff,.92);
     border-bottom: 1px solid $gray-light;
     box-shadow: 0 0 2px rgba($black, .1);

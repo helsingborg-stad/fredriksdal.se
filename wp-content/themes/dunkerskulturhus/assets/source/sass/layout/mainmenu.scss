@@ -136,7 +136,8 @@
 }
 
 #site-header.liquid-header #main-menu,
-&:not(.home) #site-header #main-menu {
+&:not(.home) #site-header #main-menu,
+&.no-js #site-header #main-menu {
     li {
         a {
             color: $black;
