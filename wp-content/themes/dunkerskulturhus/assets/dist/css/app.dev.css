@@ -495,7 +495,7 @@ html.video-is-playing .scroll-down-please {
         -webkit-transform: scale(1.1);
                 transform: scale(1.1); }
 
-.is-child-theme .box-news-horizontal {
+.is-child-theme .box-news.box-news-horizontal {
   text-align: left; }
 
 .is-child-theme .box-event {
