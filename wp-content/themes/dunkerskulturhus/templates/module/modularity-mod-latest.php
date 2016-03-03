@@ -3,15 +3,13 @@
 $fields = json_decode(json_encode(get_fields($module->ID)));
 $posts = array();
 
-$sort = explode('_', $fields->sorted_by);
-
 if ($fields->post_type == 'event') {
     $posts = get_posts(array(
         'post_type' => $fields->post_type,
         'posts_per_page' => $fields->number_of_posts,
         'meta_key' => 'event-date-start',
         'orderby' => 'meta_value',
-        'order' => $sort[1],
+        'order' => 'asc',
         'meta_query' => array(
             'relation' => 'AND',
             array(
@@ -27,8 +25,8 @@ if ($fields->post_type == 'event') {
     $posts = get_posts(array(
         'post_type' => $fields->post_type,
         'posts_per_page' => $fields->number_of_posts,
-        'orderby' => $sort[0],
-        'order' => $sort[1]
+        'orderby' => $fields->sorted_by,
+        'order' => $fields->order
     ));
 
     include 'modularity-mod-latest-default.php';
