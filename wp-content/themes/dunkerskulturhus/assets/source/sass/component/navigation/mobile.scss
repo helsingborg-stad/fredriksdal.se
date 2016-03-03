@@ -33,7 +33,7 @@
             height: 250vh;
             min-width: 2000px;
             min-height: 2000px;
-            background-color: rgba(#fff, .98);
+            background-color: rgba(#fff, .99);
         }
 
         .menu-icon::after,
@@ -88,7 +88,7 @@
     a {
         text-transform: uppercase;
         color: $black;
-        font-size: 1.3em;
+        font-size: 1.1em;
         font-weight: normal;
 
         &:hover {
@@ -99,22 +99,13 @@
 
     .sub-menu {
         border: none;
-        padding: 0 10px .5em 10px;
+        padding: 0 0 1em .5em;
 
         li {
-            font-size: .6em;
-            display: inline-block;
-            padding: 0;
-            background: #eee;
-            border: 1px solid #e2e2e2;
-            line-height: 1;
-            margin: 0 .5em .5em 0;
-
+            font-size: .9em;
             a {
-                font-weight: bold;
                 display: block;
-                padding: .5em;
-                border-radius: 2px;
+                padding: .2em 0;
                 color: $black;
             }
         }

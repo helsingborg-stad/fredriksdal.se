@@ -54,7 +54,8 @@ html.video-is-playing .scroll-down-please {
             transition: padding 200ms; }
   .is-child-theme #site-header .logotype {
     -webkit-transition: opacity 300ms;
-            transition: opacity 300ms; }
+            transition: opacity 300ms;
+    z-index: 800; }
     .is-child-theme #site-header .logotype svg, .is-child-theme #site-header .logotype img {
       height: 25px; }
     .is-child-theme #site-header .logotype svg path,
@@ -88,7 +89,7 @@ html.video-is-playing .scroll-down-please {
 .is-child-theme:not(.home) #site-header,
 .is-child-theme.menu-open #site-header,
 .is-child-theme.no-js #site-header {
-  background-color: rgba(255, 255, 255, 0.92);
+  background-color: rgba(255, 255, 255, 0.97);
   border-bottom: 1px solid #fafbfb;
   box-shadow: 0 0 2px rgba(30, 30, 30, 0.1); }
   .is-child-theme #site-header.liquid-header .logotype svg path,
@@ -1080,7 +1081,7 @@ html.video-is-playing .scroll-down-please {
     height: 250vh;
     min-width: 2000px;
     min-height: 2000px;
-    background-color: rgba(255, 255, 255, 0.98); }
+    background-color: rgba(255, 255, 255, 0.99); }
   .is-child-theme .menu-trigger[data-target="#mobile-menu"].open .menu-icon::after,
   .is-child-theme .menu-trigger[data-target="#mobile-menu"].open .menu-icon::before {
     background-color: #000; }
@@ -1128,27 +1129,19 @@ html.video-is-playing .scroll-down-please {
   .is-child-theme .nav-mobile a {
     text-transform: uppercase;
     color: #1E1E1E;
-    font-size: 1.3em;
+    font-size: 1.1em;
     font-weight: normal; }
     .is-child-theme .nav-mobile a:hover {
       background-color: transparent;
       color: #34B233 !important; }
   .is-child-theme .nav-mobile .sub-menu {
     border: none;
-    padding: 0 10px .5em 10px; }
+    padding: 0 0 1em .5em; }
     .is-child-theme .nav-mobile .sub-menu li {
-      font-size: .6em;
-      display: inline-block;
-      padding: 0;
-      background: #eee;
-      border: 1px solid #e2e2e2;
-      line-height: 1;
-      margin: 0 .5em .5em 0; }
+      font-size: .9em; }
       .is-child-theme .nav-mobile .sub-menu li a {
-        font-weight: bold;
         display: block;
-        padding: .5em;
-        border-radius: 2px;
+        padding: .2em 0;
         color: #1E1E1E; }
   .is-child-theme .nav-mobile .current {
     background-color: transparent; }

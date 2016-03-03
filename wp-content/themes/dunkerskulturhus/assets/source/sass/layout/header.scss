@@ -27,6 +27,7 @@
 
     .logotype {
         transition: opacity 300ms;
+        z-index: 800;
 
         svg, img {
             height: 25px;
@@ -71,7 +72,7 @@
 &:not(.home) #site-header,
 &.menu-open #site-header,
 &.no-js #site-header {
-    background-color: rgba(#fff,.92);
+    background-color: rgba(#fff,.97);
     border-bottom: 1px solid $gray-light;
     box-shadow: 0 0 2px rgba($black, .1);
 
