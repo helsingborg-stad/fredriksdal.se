@@ -23,7 +23,7 @@
                 <?php endif; ?>
 
                 <?php if ($fields->show_date) : ?>
-                    <p><?php echo \Dunkers\Helper\Dt::toStringFormat(strtotime(get_field('event-date-start', $post->ID))); ?></p>
+                    <p><?php echo \Municipio\Helper\Dt::toStringFormat(strtotime(get_field('event-date-start', $post->ID))); ?></p>
                 <?php endif; ?>
 
                 <?php if ($fields->show_excerpt) : ?>

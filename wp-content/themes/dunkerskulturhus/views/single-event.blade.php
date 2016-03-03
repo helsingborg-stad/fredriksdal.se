@@ -19,7 +19,7 @@
         <ul>
             <li>
                 <div class="slider-image" style="background-image:url('{{ $image }}');">
-                    <span class="text-block">{{ the_title() }}<br>{{ \Dunkers\Helper\Dt::toStringFormat(strtotime(get_field('event-date-start'))) }}</span>
+                    <span class="text-block">{{ the_title() }}<br>{{ \Municipio\Helper\Dt::toStringFormat(strtotime(get_field('event-date-start'))) }}</span>
                 </div>
             </li>
         </ul>
@@ -44,7 +44,7 @@
                 <div class="box-content">
                     <p>
                         <strong>Evenemanget äger rum:</strong><br>
-                        Den {{ \Dunkers\Helper\Dt::toStringFormat(strtotime(get_field('event-date-start'))) }}
+                        Den {{ \Municipio\Helper\Dt::toStringFormat(strtotime(get_field('event-date-start'))) }}
                     </p>
                 </div>
             </div>
@@ -60,7 +60,7 @@
                             <ul>
                                 @foreach ($occations as $occation)
                                     <li>
-                                        <a class="link-item link-item-light" href="{{ get_permalink($occation->ID) }}">{{ \Dunkers\Helper\Dt::dateWithTime(strtotime(get_field('event-date-start', $occation->ID))) }}</a>
+                                        <a class="link-item link-item-light" href="{{ get_permalink($occation->ID) }}">{{ \Municipio\Helper\Dt::dateWithTime(strtotime(get_field('event-date-start', $occation->ID))) }}</a>
                                     </li>
                                 @endforeach
                             </ul>
