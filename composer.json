@@ -26,6 +26,10 @@
             "url": "https://github.com/helsingborg-stad/lix-calculator.git"
         },
         {
+            "type": "vcs",
+            "url": "https://github.com/helsingborg-stad/open-hours.git"
+        },
+        {
             "type":"composer",
             "url":"http://wpackagist.org"
         }
