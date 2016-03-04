@@ -25,7 +25,7 @@
 
 <?php else : ?>
 
-    <?php var_dump(get_the_title($module->ID)); if (strlen(get_the_title($module->ID)) > 0) : ?>
+    <?php if (strlen(get_the_title($module->ID)) > 0) : ?>
     <div class="grid">
         <div class="grid-sm-12 text-center">
             <h2><?php echo get_the_title($module->ID); ?></h2>
