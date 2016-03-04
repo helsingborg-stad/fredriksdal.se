@@ -15,13 +15,12 @@
     @endif
 
     <div class="event-information">
-        <time class="event-date-start">
-            {{ date('Y-m-d \k\l\. H:i', strtotime(get_field('event-date-start'))) }}
-
+        <span class="event-date-start">
+            <time datetime="{{ date('Y-m-d H:i', strtotime(get_field('event-date-start'))) }}">{{ date('Y-m-d \k\l\. H:i', strtotime(get_field('event-date-start'))) }}</time>
             @if ($post->occations_count > 1)
             <em style="font-style:italic;">(och {{ $post->occations_count }} andra tillfällen)</em>
             @endif
-        </time>
+        </span>
         <h3 class="event-title">{{ the_title() }}</h3>
     </div>
     <div class="event-lead">
