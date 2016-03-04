@@ -25,11 +25,14 @@
 
 <?php else : ?>
 
+    <?php var_dump(get_the_title($module->ID)); if (strlen(get_the_title($module->ID)) > 0) : ?>
     <div class="grid">
         <div class="grid-sm-12 text-center">
             <h2><?php echo get_the_title($module->ID); ?></h2>
         </div>
     </div>
+    <?php endif; ?>
+
     <div class="grid">
     <?php
     foreach ($posts as $post) :
@@ -39,7 +42,7 @@
     <div class="grid-md-3">
         <a href="<?php echo get_permalink($post->ID); ?>" class="box box-news">
             <?php if ($image && $fields->show_picture) : ?>
-            <img src="<?php echo $image; ?>">
+            <img src="<?php echo $image; ?>" alt="<?php echo $post->post_title; ?>">
             <?php endif; ?>
             <div class="box-content">
                 <?php if ($fields->show_title) : ?>

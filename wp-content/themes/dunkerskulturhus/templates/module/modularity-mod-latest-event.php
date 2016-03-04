@@ -1,8 +1,10 @@
+<?php if (strlen(get_the_title($module->ID)) > 0) : ?>
 <div class="grid">
     <div class="grid-sm-12 text-center">
         <h2><?php echo get_the_title($module->ID); ?></h2>
     </div>
 </div>
+<?php endif; ?>
 <div class="grid">
     <?php
     foreach ($posts as $post) :
@@ -13,11 +15,11 @@
         <a href="<?php echo get_permalink($post->ID); ?>" class="box box-news">
             <span class="box-image" <?php if ($image) : ?>style="background-image:url('<?php echo $image; ?>');"<?php endif; ?>>
                 <?php if ($image) : ?>
-                    <img src="<?php echo $image; ?>">
+                    <img src="<?php echo $image; ?>" alt="<?php echo $post->post_title; ?>">
                 <?php endif; ?>
             </span>
 
-            <span class="box-content">
+            <div class="box-content">
                 <?php if ($fields->show_title) : ?>
                 <h5 class="link-item link-item-light"><?php echo apply_filters('the_title', $post->post_title); ?></h5>
                 <?php endif; ?>
@@ -29,7 +31,7 @@
                 <?php if ($fields->show_excerpt) : ?>
                     <p><?php echo isset(get_extended($post->ID)['main']) ? get_extended($post->ID)['main'] : ''; ?></p>
                 <?php endif; ?>
-            </span>
+            </div>
         </a>
     </div>
     <?php endforeach; ?>
