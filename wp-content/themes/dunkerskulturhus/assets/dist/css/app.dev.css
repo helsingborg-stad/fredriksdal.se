@@ -420,6 +420,8 @@ html.video-is-playing .scroll-down-please {
   .is-child-theme .box-panel tr,
   .is-child-theme .box-panel td {
     border: none; }
+  .is-child-theme .box-panel ul li a:hover .title::before {
+    color: #34B233; }
 
 .is-child-theme .box-panel-secondary .box-title {
   background-color: #1E1E1E !important;

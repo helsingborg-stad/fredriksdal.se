@@ -26,6 +26,10 @@
     td {
         border: none;
     }
+
+    ul li a:hover .title::before {
+        color: $green;
+    }
 }
 
 .box-panel-secondary {
