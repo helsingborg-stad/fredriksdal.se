@@ -103,12 +103,6 @@
     }
 }
 
-&:not(.home) {
-    #wrapper {
-        padding-top: 69px;
-    }
-}
-
 &.home .navbar {
     background-color: transparent;
     padding: 15px 0;

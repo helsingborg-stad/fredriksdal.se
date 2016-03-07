@@ -2,3 +2,9 @@
     position: relative;
     background: #fff;
 }
+
+&:not(.home) {
+    #wrapper {
+        padding-top: 69px;
+    }
+}

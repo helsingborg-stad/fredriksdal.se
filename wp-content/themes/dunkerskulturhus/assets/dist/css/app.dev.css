@@ -25,6 +25,9 @@ html.video-is-playing .scroll-down-please {
   position: relative;
   background: #fff; }
 
+.is-child-theme:not(.home) #wrapper {
+  padding-top: 69px; }
+
 .is-child-theme body.is-child-theme {
   font-family: "Lato", "Roboto", "Helvetica", "Arial";
   font-size: 17px;
@@ -123,9 +126,6 @@ html.video-is-playing .scroll-down-please {
   .is-child-theme.no-js #site-header nav.navbar {
     padding-top: 10px;
     padding-bottom: 10px; }
-
-.is-child-theme:not(.home) #wrapper {
-  padding-top: 69px; }
 
 .is-child-theme.home .navbar {
   background-color: transparent;
