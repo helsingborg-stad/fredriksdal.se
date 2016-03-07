@@ -49,7 +49,7 @@ html.video-is-playing .scroll-down-please {
           transition: all 200ms;
   font-family: "Karbon", "Lato", "Roboto", "Helvetica", "Arial"; }
   .is-child-theme #site-header nav.navbar {
-    background-color: initial;
+    background-color: transparent;
     -webkit-transition: padding 200ms;
             transition: padding 200ms; }
   .is-child-theme #site-header .logotype {
