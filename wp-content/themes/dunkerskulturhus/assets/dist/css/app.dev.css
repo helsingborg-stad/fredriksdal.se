@@ -692,7 +692,7 @@ html.video-is-playing .scroll-down-please {
   overflow: hidden;
   background: #eee;
   background-size: cover;
-  height: initial;
+  height: auto;
   min-height: 350px;
   max-height: 100vh;
   height: auto; }
@@ -749,7 +749,7 @@ html.video-is-playing .scroll-down-please {
         right: 0;
         bottom: 0;
         left: 0;
-        text-indent: initial;
+        text-indent: 0;
         line-height: 48px !important;
         -webkit-transition: margin 200ms;
                 transition: margin 200ms; }
@@ -817,8 +817,8 @@ html.video-is-playing .scroll-down-please {
     font-family: "Karbon", "Lato", "Roboto", "Helvetica", "Arial";
     text-transform: uppercase;
     text-align: center;
-    right: initial;
-    bottom: initial;
+    right: auto;
+    bottom: auto;
     letter-spacing: .01em;
     font-size: 2em;
     color: #fff;

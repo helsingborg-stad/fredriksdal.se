@@ -14,7 +14,7 @@
     overflow: hidden;
     background: #eee;
     background-size: cover;
-    height: initial;
+    height: auto;
     min-height: 350px;
     max-height: 100vh;
     height: auto;
@@ -71,7 +71,7 @@
 
             &:after {
                 @include cover();
-                text-indent: initial;
+                text-indent: 0;
                 line-height: 48px !important;
                 transition: margin 200ms;
             }
@@ -143,8 +143,8 @@
         font-family: $dunkers-font-family;
         text-transform: uppercase;
         text-align: center;
-        right: initial;
-        bottom: initial;
+        right: auto;
+        bottom: auto;
         letter-spacing: .01em;
         font-size: 2em;
         color: #fff;
