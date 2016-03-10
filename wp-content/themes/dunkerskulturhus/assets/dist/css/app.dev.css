@@ -436,6 +436,9 @@ html.video-is-playing .scroll-down-please {
   border-bottom: 0;
   padding: 10px 15px; }
 
+.is-child-theme .box-panel ul:not(.social-feed-gallery) li + li {
+  border-top: 0; }
+
 .is-child-theme .box-news {
   background-color: transparent;
   color: #000;
