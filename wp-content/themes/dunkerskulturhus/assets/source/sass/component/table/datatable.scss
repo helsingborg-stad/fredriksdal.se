@@ -6,12 +6,15 @@
 
     tr th:first-child,
     tr td:first-child,
-    .dataTables_info {
+    .dataTables_info,
+    .dataTables_length {
         padding-left: 25px;
     }
 
     tr th:last-child,
-    tr td:last-child {
+    tr td:last-child,
+    .dataTables_paginate,
+    .dataTables_filter {
         padding-right: 25px;
     }
 }
