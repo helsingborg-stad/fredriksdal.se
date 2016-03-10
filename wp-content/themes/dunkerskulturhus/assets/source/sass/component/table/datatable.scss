@@ -1,0 +1,17 @@
+.dataTables_wrapper {
+    border: 0;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: -10px;
+
+    tr th:first-child,
+    tr td:first-child,
+    .dataTables_info {
+        padding-left: 25px;
+    }
+
+    tr th:last-child,
+    tr td:last-child {
+        padding-right: 25px;
+    }
+}
