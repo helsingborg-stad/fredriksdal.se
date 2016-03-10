@@ -375,6 +375,13 @@ html.video-is-playing .scroll-down-please {
   .is-child-theme h6 strong, .is-child-theme .h6 strong {
     font-weight: 600; }
 
+.is-child-theme article h2, .is-child-theme article .h2,
+.is-child-theme article h3, .is-child-theme article .h3,
+.is-child-theme article h4, .is-child-theme article .h4,
+.is-child-theme article h5, .is-child-theme article .h5,
+.is-child-theme article h6, .is-child-theme article .h6 {
+  font-weight: 600; }
+
 .is-child-theme h1, .is-child-theme .h1,
 .is-child-theme h2, .is-child-theme .h2,
 .is-child-theme h3, .is-child-theme .h3 {
