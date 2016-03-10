@@ -1010,6 +1010,22 @@ html.video-is-playing .scroll-down-please {
             transform: scale(1.2);
     opacity: 0; } }
 
+.is-child-theme .dataTables_wrapper {
+  border: 0;
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-bottom: -10px; }
+  .is-child-theme .dataTables_wrapper tr th:first-child,
+  .is-child-theme .dataTables_wrapper tr td:first-child,
+  .is-child-theme .dataTables_wrapper .dataTables_info,
+  .is-child-theme .dataTables_wrapper .dataTables_length {
+    padding-left: 25px; }
+  .is-child-theme .dataTables_wrapper tr th:last-child,
+  .is-child-theme .dataTables_wrapper tr td:last-child,
+  .is-child-theme .dataTables_wrapper .dataTables_paginate,
+  .is-child-theme .dataTables_wrapper .dataTables_filter {
+    padding-right: 25px; }
+
 .is-child-theme .navbar-event-categories {
   background-color: transparent;
   font-size: 0;
