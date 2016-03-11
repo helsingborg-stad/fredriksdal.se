@@ -1065,6 +1065,23 @@ html.video-is-playing .scroll-down-please {
   .is-child-theme .dataTables_wrapper .dataTables_filter {
     padding-right: 25px; }
 
+.is-child-theme .bubble {
+  position: relative;
+  background-color: #1E1E1E;
+  color: #fff;
+  padding: 4em 2em;
+  border-radius: 1em; }
+  .is-child-theme .bubble::after {
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 2em solid #1E1E1E;
+    border-left: 1.53846em solid transparent;
+    position: absolute;
+    bottom: -2em;
+    right: 40px; }
+
 .is-child-theme .navbar-event-categories {
   background-color: transparent;
   font-size: 0;
