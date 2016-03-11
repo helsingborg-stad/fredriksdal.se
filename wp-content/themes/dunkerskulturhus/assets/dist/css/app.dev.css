@@ -6,6 +6,48 @@ body.is-child-theme {
   line-height: 1.6;
   color: #1E1E1E; }
 
+.error404 .stripe {
+  display: none; }
+
+.error404 .logotype {
+  max-width: 500px;
+  width: 100%; }
+  .error404 .logotype svg {
+    width: 100%;
+    height: auto; }
+
+.error404 h2 {
+  position: relative;
+  background-color: #1E1E1E;
+  color: #fff !important;
+  padding: 60px 40px;
+  font-size: 6em;
+  border-radius: 20px;
+  font-weight: bold !important;
+  line-height: 1; }
+  .error404 h2 em {
+    display: block;
+    font-weight: 200;
+    font-size: .5em;
+    line-height: 1.2;
+    margin-top: .3em; }
+  .error404 h2::after {
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 100px solid #1E1E1E;
+    border-left: 76.92308px solid transparent;
+    position: absolute;
+    bottom: -100px;
+    right: 40px; }
+
+.error404 .actions {
+  margin-top: 30px; }
+
+.error404 a:not(.btn) {
+  color: #1E1E1E; }
+
 html {
   background: #1E1E1E; }
 
