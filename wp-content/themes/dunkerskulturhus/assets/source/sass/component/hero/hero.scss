@@ -19,8 +19,8 @@
     max-height: 100vh;
     height: auto;
 
-    .has-text-block::before,
-    .has-text-block::before {
+    .has-text-block .slider-image:before,
+    .has-text-block .slider-video:before {
         @include cover();
         content: "";
         background: rgba(0, 0, 0, 0.25);
