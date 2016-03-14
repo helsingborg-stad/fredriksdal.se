@@ -1,12 +1,8 @@
 .nav-aside {
     background-color: $black;
     border: none;
-    border-radius: 5px;
+    border-radius: 2px;
     overflow: hidden;
-
-    a:hover {
-        text-decoration: underline;
-    }
 
     li + li {
         border-color: lighten($black, 10%);
@@ -21,6 +17,10 @@
         line-height: 1;
         font-weight: bold;
         letter-spacing: .5px;
+
+        &:hover {
+            background-color: lighten($black, 3%);
+        }
     }
 
     .current,
@@ -29,7 +29,9 @@
 
         &.has-children > a::after {
             @include hbg-icon('\f107');
+            font-size: 1.4em;
             color: $green;
+            top: 10px;
         }
 
         a:before {
@@ -48,10 +50,6 @@
         background-color: lighten($black, 10%);
         border: none;
 
-        ul {
-            padding-left: 10px;
-        }
-
         .current > a {
             color: $green !important;
         }
@@ -67,6 +65,16 @@
         a {
             color: #fff;
             padding: 7px 15px;
+
+            &:hover {
+                background-color: lighten($black, 13%);
+            }
+        }
+
+        ul {
+            a {
+                padding-left: 25px !important;
+            }
         }
     }
 }

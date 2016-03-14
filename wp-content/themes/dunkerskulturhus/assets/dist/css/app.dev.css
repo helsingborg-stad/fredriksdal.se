@@ -1320,10 +1320,8 @@ html.video-is-playing .scroll-down-please {
 .is-child-theme .nav-aside {
   background-color: #1E1E1E;
   border: none;
-  border-radius: 5px;
+  border-radius: 2px;
   overflow: hidden; }
-  .is-child-theme .nav-aside a:hover {
-    text-decoration: underline; }
   .is-child-theme .nav-aside li + li {
     border-color: #383838; }
   .is-child-theme .nav-aside > li > a {
@@ -1335,6 +1333,8 @@ html.video-is-playing .scroll-down-please {
     line-height: 1;
     font-weight: bold;
     letter-spacing: .5px; }
+    .is-child-theme .nav-aside > li > a:hover {
+      background-color: #262626; }
   .is-child-theme .nav-aside .current,
   .is-child-theme .nav-aside .current-node {
     background-color: transparent; }
@@ -1350,7 +1350,9 @@ html.video-is-playing .scroll-down-please {
       content: "";
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      color: #34B233; }
+      font-size: 1.4em;
+      color: #34B233;
+      top: 10px; }
     .is-child-theme .nav-aside .current a:before,
     .is-child-theme .nav-aside .current-node a:before {
       display: none; }
@@ -1362,9 +1364,6 @@ html.video-is-playing .scroll-down-please {
   .is-child-theme .nav-aside .sub-menu {
     background-color: #383838;
     border: none; }
-    .is-child-theme .nav-aside .children ul,
-    .is-child-theme .nav-aside .sub-menu ul {
-      padding-left: 10px; }
     .is-child-theme .nav-aside .children .current > a,
     .is-child-theme .nav-aside .sub-menu .current > a {
       color: #34B233 !important; }
@@ -1378,6 +1377,12 @@ html.video-is-playing .scroll-down-please {
     .is-child-theme .nav-aside .sub-menu a {
       color: #fff;
       padding: 7px 15px; }
+      .is-child-theme .nav-aside .children a:hover,
+      .is-child-theme .nav-aside .sub-menu a:hover {
+        background-color: #3f3f3f; }
+    .is-child-theme .nav-aside .children ul a,
+    .is-child-theme .nav-aside .sub-menu ul a {
+      padding-left: 25px !important; }
 
 .is-child-theme .btn-circle {
   position: relative;
