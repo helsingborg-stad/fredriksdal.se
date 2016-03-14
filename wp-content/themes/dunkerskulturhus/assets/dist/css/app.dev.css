@@ -742,6 +742,19 @@ html.video-is-playing .scroll-down-please {
     .is-child-theme .box-event-alt:hover .event-lead {
       opacity: 1; }
 
+.is-child-theme .box-index .box-content {
+  padding: 25px; }
+
+.is-child-theme .box-index h1, .is-child-theme .box-index h2, .is-child-theme .box-index h3, .is-child-theme .box-index h4, .is-child-theme .box-index h5, .is-child-theme .box-index h6 {
+  font-size: 1.2em;
+  margin-bottom: 5px; }
+
+.is-child-theme .box-index p {
+  font-size: .9em; }
+
+.is-child-theme .box-index:focus {
+  text-decoration: none; }
+
 .is-child-theme:not(.home) .hero {
   max-height: 80vh; }
   .is-child-theme:not(.home) .hero .modularity-mod-slider {
