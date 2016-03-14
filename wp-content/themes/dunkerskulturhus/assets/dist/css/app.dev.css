@@ -1317,6 +1317,64 @@ html.video-is-playing .scroll-down-please {
     display: block;
     font-size: .85em; }
 
+.is-child-theme .nav-aside {
+  background-color: #1E1E1E;
+  border: none;
+  border-radius: 5px;
+  overflow: hidden; }
+  .is-child-theme .nav-aside a:hover {
+    text-decoration: underline; }
+  .is-child-theme .nav-aside li + li {
+    border-color: #383838; }
+  .is-child-theme .nav-aside > li > a {
+    padding: 13px 15px 15px;
+    font-family: "Karbon", "Lato", "Roboto", "Helvetica", "Arial";
+    font-size: 1em;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1;
+    font-weight: bold; }
+  .is-child-theme .nav-aside .current,
+  .is-child-theme .nav-aside .current-node {
+    background-color: transparent; }
+    .is-child-theme .nav-aside .current.has-children > a::after,
+    .is-child-theme .nav-aside .current-node.has-children > a::after {
+      font-family: FontAwesome;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      content: "";
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      color: #34B233; }
+    .is-child-theme .nav-aside .current a:before,
+    .is-child-theme .nav-aside .current-node a:before {
+      display: none; }
+  .is-child-theme .nav-aside .has-children > a::after,
+  .is-child-theme .nav-aside .page_item_has_children > a::after {
+    top: 12px;
+    right: 15px; }
+  .is-child-theme .nav-aside .children,
+  .is-child-theme .nav-aside .sub-menu {
+    background-color: #383838;
+    border: none; }
+    .is-child-theme .nav-aside .children ul,
+    .is-child-theme .nav-aside .sub-menu ul {
+      padding-left: 10px; }
+    .is-child-theme .nav-aside .children .current > a,
+    .is-child-theme .nav-aside .sub-menu .current > a {
+      color: #34B233 !important; }
+    .is-child-theme .nav-aside .children li + li,
+    .is-child-theme .nav-aside .sub-menu li + li {
+      border-top: 1px solid #1E1E1E; }
+    .is-child-theme .nav-aside .children a,
+    .is-child-theme .nav-aside .sub-menu a {
+      color: #fff;
+      padding: 7px 15px; }
+
 .is-child-theme .btn-circle {
   position: relative;
   width: 50px;

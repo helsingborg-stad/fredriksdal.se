@@ -1,0 +1,67 @@
+.nav-aside {
+    background-color: $black;
+    border: none;
+    border-radius: 5px;
+    overflow: hidden;
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    li + li {
+        border-color: lighten($black, 10%);
+    }
+
+    > li > a {
+        padding: 13px 15px 15px;
+        font-family: $dunkers-font-family;
+        font-size: 1em;
+        color: #fff;
+        text-transform: uppercase;
+        line-height: 1;
+        font-weight: bold;
+    }
+
+    .current,
+    .current-node {
+        background-color: transparent;
+
+        &.has-children > a::after {
+            @include hbg-icon('\f107');
+            color: $green;
+        }
+
+        a:before {
+            display: none;
+        }
+    }
+
+    .has-children > a::after,
+    .page_item_has_children > a::after {
+        top: 12px;
+        right: 15px;
+    }
+
+    .children,
+    .sub-menu {
+        background-color: lighten($black, 10%);
+        border: none;
+
+        ul {
+            padding-left: 10px;
+        }
+
+        .current > a {
+            color: $green !important;
+        }
+
+        li + li {
+            border-top: 1px solid $black;
+        }
+
+        a {
+            color: #fff;
+            padding: 7px 15px;
+        }
+    }
+}
