@@ -82,7 +82,7 @@ html.video-is-playing .scroll-down-please {
   .is-child-theme .search-top form label {
     display: none; }
 
-.is-child-theme .navbar-mainmenu a svg {
+.is-child-theme .navbar-mainmenu a svg.hbg-icon {
   width: 28px; }
 
 .is-child-theme #site-header {
