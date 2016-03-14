@@ -9,6 +9,10 @@
     }
 }
 
+.navbar-mainmenu a svg {
+    width: 28px;
+}
+
 #site-header {
     display: table;
     position: fixed;
@@ -23,6 +27,29 @@
     nav.navbar {
         background-color: transparent;
         transition: padding 200ms;
+    }
+
+    nav.navbar svg {
+        opacity: 1;
+        fill: #fff;
+    }
+
+    nav.navbar [data-tooltip] {
+        &:after {
+            border-radius: 2px;
+            padding: 10px;
+            background-color: #fff;
+            color: $black;
+            text-transform: uppercase;
+            opacity: .9;
+            transition: all 100ms;
+        }
+
+        &:before {
+            border-bottom-color: #fff;
+            opacity: .9;
+            transition: all 100ms;
+        }
     }
 
     .logotype {
@@ -42,27 +69,6 @@
         &:after, &:before {
             opacity: 0;
             transition: 200ms opacity;
-        }
-
-        &:hover {
-            opacity: .9;
-
-            &:after {
-                border-radius: 2px;
-                padding: 10px;
-                background-color: #fff;
-                color: $black;
-                text-transform: uppercase;
-                opacity: 1;
-                height: 34px;
-                transition: all 100ms;
-            }
-
-            &:before {
-                border-bottom-color: #fff;
-                opacity: 1;
-                transition: all 100ms;
-            }
         }
     }
 
@@ -95,6 +101,11 @@
                 transform: translate(-50%,13px);
             }
         }
+    }
+
+    nav.navbar svg {
+        opacity: 1;
+        fill: $black;
     }
 
     nav.navbar {

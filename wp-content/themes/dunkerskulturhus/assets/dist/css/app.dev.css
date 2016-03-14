@@ -82,6 +82,9 @@ html.video-is-playing .scroll-down-please {
   .is-child-theme .search-top form label {
     display: none; }
 
+.is-child-theme .navbar-mainmenu a svg {
+  width: 28px; }
+
 .is-child-theme #site-header {
   display: table;
   position: fixed;
@@ -97,6 +100,23 @@ html.video-is-playing .scroll-down-please {
     background-color: transparent;
     -webkit-transition: padding 200ms;
             transition: padding 200ms; }
+  .is-child-theme #site-header nav.navbar svg {
+    opacity: 1;
+    fill: #fff; }
+  .is-child-theme #site-header nav.navbar [data-tooltip]:after {
+    border-radius: 2px;
+    padding: 10px;
+    background-color: #fff;
+    color: #1E1E1E;
+    text-transform: uppercase;
+    opacity: .9;
+    -webkit-transition: all 100ms;
+            transition: all 100ms; }
+  .is-child-theme #site-header nav.navbar [data-tooltip]:before {
+    border-bottom-color: #fff;
+    opacity: .9;
+    -webkit-transition: all 100ms;
+            transition: all 100ms; }
   .is-child-theme #site-header .logotype {
     -webkit-transition: opacity 300ms;
             transition: opacity 300ms;
@@ -112,23 +132,6 @@ html.video-is-playing .scroll-down-please {
       opacity: 0;
       -webkit-transition: 200ms opacity;
               transition: 200ms opacity; }
-    .is-child-theme #site-header .logotype:hover {
-      opacity: .9; }
-      .is-child-theme #site-header .logotype:hover:after {
-        border-radius: 2px;
-        padding: 10px;
-        background-color: #fff;
-        color: #1E1E1E;
-        text-transform: uppercase;
-        opacity: 1;
-        height: 34px;
-        -webkit-transition: all 100ms;
-                transition: all 100ms; }
-      .is-child-theme #site-header .logotype:hover:before {
-        border-bottom-color: #fff;
-        opacity: 1;
-        -webkit-transition: all 100ms;
-                transition: all 100ms; }
 
 .is-child-theme #site-header.liquid-header,
 .is-child-theme:not(.home) #site-header,
@@ -162,6 +165,12 @@ html.video-is-playing .scroll-down-please {
     opacity: 1;
     -webkit-transform: translate(-50%, 13px);
             transform: translate(-50%, 13px); }
+  .is-child-theme #site-header.liquid-header nav.navbar svg,
+  .is-child-theme:not(.home) #site-header nav.navbar svg,
+  .is-child-theme.menu-open #site-header nav.navbar svg,
+  .is-child-theme.no-js #site-header nav.navbar svg {
+    opacity: 1;
+    fill: #1E1E1E; }
   .is-child-theme #site-header.liquid-header nav.navbar,
   .is-child-theme:not(.home) #site-header nav.navbar,
   .is-child-theme.menu-open #site-header nav.navbar,
@@ -241,7 +250,7 @@ html.video-is-playing .scroll-down-please {
         background: none;
         color: #fff;
         text-decoration: none; }
-        .is-child-theme #main-menu li > a:hover:before, .is-child-theme #main-menu li > a:focus:before {
+        .is-child-theme #main-menu li > a:hover:not(.search-icon-btn):not(.translate-icon-btn)::before, .is-child-theme #main-menu li > a:focus:not(.search-icon-btn):not(.translate-icon-btn)::before {
           visibility: visible;
           -webkit-transform: scaleX(1);
                   transform: scaleX(1); }
