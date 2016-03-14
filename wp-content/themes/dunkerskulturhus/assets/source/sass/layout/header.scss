@@ -49,6 +49,7 @@
             border-bottom-color: #fff;
             opacity: .9;
             transition: all 100ms;
+            bottom: -8px;
         }
     }
 
@@ -87,23 +88,22 @@
         svg use {
             fill: $black !important;
         }
+    }
 
-        &:hover {
-            &:after {
-                background-color: rgba(#000,.7);
-                color: #fff;
-                transform: translate(-50%,47px);
-            }
+    nav.navbar [data-tooltip] {
+        &:after {
+            background-color: rgba(#000,.7);
+            color: #fff;
+        }
 
-            &:before {
-                border-bottom-color: rgba(#000,.7);
-                opacity: 1;
-                transform: translate(-50%,13px);
-            }
+        &:before {
+            border-bottom-color: rgba(#000,.7);
+            opacity: 1;
+            bottom: -8px;
         }
     }
 
-    nav.navbar svg {
+    nav.navbar svg.hbg-icon {
         opacity: 1;
         fill: $black;
     }
