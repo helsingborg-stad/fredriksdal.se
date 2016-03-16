@@ -2,10 +2,10 @@
 
 
     /*
-    Plugin Name: ACF Json Sync file doctor
-    Description: Checks if ACF json export files (that should be imported with Json Sync) is in correct format. If not, the plugin will try to fix any errors.
+    Plugin Name: Varnish Instant Cache Refresh
+    Description: Visits the page directly after save post. This will enshure that the page is fast at all times. Also works with any other page-cache out there.
     Version:     1.0
-    Author:      Kristoffer Svanmark
+    Author:      Sebastian Thulin
     */
 
     namespace VarnishInstantCacheRefresh;
@@ -28,21 +28,24 @@
 
                 //Check if is published && url is valid
                 if( get_post_status($post_id) == 'publish' ) {
+
                     $url = get_permalink($post_id);
+
                     if (!filter_var($url, FILTER_VALIDATE_URL) === false) {
-                        echo "
-                        <script>
-                            jQuery.ajax({
-                                type: 'GET',
-                                url: '".$url."',
-                                success: function () {
-                                    console.log('Redone cache: ".$url."');
-                                }
-                              });
-                        </script>
-                        ";
+
+                        if(function_exists('curl_init')) {
+                            $ch = curl_init();
+                            curl_setopt($ch, CURLOPT_URL, $url);
+                            curl_setopt($ch, CURLOPT_FRESH_CONNECT, true);
+                            curl_setopt($ch, CURLOPT_TIMEOUT_MS, 1);
+                            curl_exec($ch);
+                            curl_close($ch);
+                        }
+
                     }
+
                 }
+
             }
         }
 
