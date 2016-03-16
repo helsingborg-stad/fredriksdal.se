@@ -21,7 +21,7 @@
         {
 
             //Check if get parameter is valid
-            if(isset($_GET['post']) && is_numeric($_GET['post']) && isset($_GET['action']) && $_GET['action'] == "edit" && isset($_GET['message']) && $_GET['message'] == "1" ) {
+            if(isset($_GET['post']) && is_numeric($_GET['post']) && isset($_GET['action']) && $_GET['action'] == "edit" ) {
 
                 //Store post id to var
                 $post_id = $_GET['post'];
@@ -37,9 +37,10 @@
                             $ch = curl_init();
                             curl_setopt($ch, CURLOPT_URL, $url);
                             curl_setopt($ch, CURLOPT_FRESH_CONNECT, true);
-                            curl_setopt($ch, CURLOPT_TIMEOUT_MS, 1);
+                            curl_setopt($ch, CURLOPT_TIMEOUT_MS, 10);
                             curl_exec($ch);
                             curl_close($ch);
+                            echo '<!-- Cache redone for ' . $url . ' -->';
                         }
 
                     }
