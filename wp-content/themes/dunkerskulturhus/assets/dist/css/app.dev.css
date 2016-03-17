@@ -63,6 +63,9 @@ html.video-is-playing .scroll-down-please {
   .admin-bar #site-header {
     margin-top: 32px; } }
 
+html.translated-ltr #site-header {
+  top: 39px; }
+
 .is-child-theme #wrapper {
   position: relative;
   background: #fff; }
