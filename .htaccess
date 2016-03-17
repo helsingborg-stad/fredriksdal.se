@@ -48,3 +48,9 @@ RedirectMatch 301 /admin/(.*) /wp/wp-admin/$1
 <IfModule mod_headers.c>
     Header always append X-Frame-Options SAMEORIGIN
 </IfModule>
+
+#Forward Varnish ip to apache
+<IfModule mod_remoteip.c>
+   RemoteIPHeader X-Forwarded-For
+   RemoteIPInternalProxy 127.0.0.1
+</IfModule>
