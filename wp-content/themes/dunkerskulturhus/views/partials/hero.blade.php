@@ -1,5 +1,5 @@
 @if (is_active_sidebar('slider-area') === true )
-<div class="hero">
+<div class="hero sidebar-slider-area">
     @if (is_active_sidebar('slider-area'))
         {{ dynamic_sidebar('slider-area') }}
     @endif
