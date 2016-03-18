@@ -461,19 +461,21 @@ html.translated-ltr #site-header {
 .is-child-theme .lead {
   font-weight: bold; }
 
-.is-child-theme .box {
+.is-child-theme .box:not(.box-filled) {
   background-color: #fff;
   border: 2px solid #1E1E1E; }
-  .is-child-theme .box h1,
-  .is-child-theme .box h2,
-  .is-child-theme .box h3,
-  .is-child-theme .box h4,
-  .is-child-theme .box h5,
-  .is-child-theme .box h6 {
-    font-weight: bold;
-    text-transform: uppercase; }
-  .is-child-theme .box:hover .link-item::before {
-    color: #34B233; }
+
+.is-child-theme .box h1,
+.is-child-theme .box h2,
+.is-child-theme .box h3,
+.is-child-theme .box h4,
+.is-child-theme .box h5,
+.is-child-theme .box h6 {
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.is-child-theme .box:hover .link-item::before {
+  color: #34B233; }
 
 .is-child-theme .box-filled h1,
 .is-child-theme .box-filled h2,

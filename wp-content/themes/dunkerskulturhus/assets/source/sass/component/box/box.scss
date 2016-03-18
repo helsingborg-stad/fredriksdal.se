@@ -1,6 +1,9 @@
 .box {
-    background-color: #fff;
-    border: 2px solid $black;
+
+    &:not(.box-filled) {
+        background-color: #fff;
+        border: 2px solid $black;
+    }
 
     h1,
     h2,
