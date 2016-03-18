@@ -1,12 +1,28 @@
 <?php
 
-$fields = json_decode(json_encode(get_fields($module->ID)));
 $posts = array();
+$fields = json_decode(json_encode(get_fields($module->ID)));
+
+$getPostArgs = array(
+    'post_type' => $fields->post_type,
+    'posts_per_page' => $fields->number_of_posts,
+);
+
+if ($fields->taxonomy_filter === true) {
+    $getPostArgs['tax_query'] = array();
+
+    foreach ($fields->filter_posts_by_tag as $tag) {
+        $getPostArgs['tax_query'][] = array(
+            'taxonomy' => $fields->filter_posts_taxonomy_type,
+            'field'    => 'slug',
+            'terms'    => $tag,
+        );
+    }
+}
 
 if ($fields->post_type == 'event') {
-    $posts = get_posts(array(
-        'post_type' => $fields->post_type,
-        'posts_per_page' => $fields->number_of_posts,
+
+    $getPostArgs = array_merge($getPostArgs, array(
         'meta_key' => 'event-date-start',
         'orderby' => 'meta_value',
         'order' => 'asc',
@@ -19,16 +35,17 @@ if ($fields->post_type == 'event') {
             )
         )
     ));
+    $posts = get_posts($getPostArgs);
 
     include 'modularity-mod-latest-event.php';
+
 } else {
-    $posts = get_posts(array(
-        'post_type' => $fields->post_type,
-        'posts_per_page' => $fields->number_of_posts,
+
+    $getPostArgs = array_merge($getPostArgs, array(
         'orderby' => $fields->sorted_by,
         'order' => $fields->order
     ));
+    $posts = get_posts($getPostArgs);
 
     include 'modularity-mod-latest-default.php';
 }
-?>
