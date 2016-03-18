@@ -79,7 +79,7 @@ html.translated-ltr #site-header {
     .is-child-theme:not(.home) #wrapper {
       padding-top: 49px; } }
 
-.is-child-theme .home .sidebar-content-area.creamy-border-bottom {
+.is-child-theme #main-content .sidebar-content-area.creamy-border-bottom {
   border-bottom: 1px solid #F5F1F1; }
 
 .is-child-theme body.is-child-theme {
