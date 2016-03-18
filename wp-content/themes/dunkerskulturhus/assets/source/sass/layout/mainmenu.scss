@@ -3,6 +3,11 @@
     width: 100%;
     margin-top: 0;
 
+    @media screen and (max-width: #{$screen-lg-max}) and (min-width: #{$screen-lg-min}) {
+        text-align: center;
+        display: block;
+    }
+
     .logotype {
         display: table-cell !important;
         vertical-align: middle;
@@ -16,6 +21,11 @@
                 height: auto !important;
                 max-width: 345px;
             }
+        }
+
+        @media screen and (max-width: #{$screen-lg-max}) and (min-width: #{$screen-lg-min}) {
+            margin: 0 auto 15px auto;
+            display: inline-block !important;
         }
 
         img {
@@ -41,9 +51,7 @@
 }
 
 .nav-horizontal>li+li {
-    //@media screen and #{$screen-below-lg} {
-        margin-left: 7px;
-    //}
+    margin-left: 7px;
 }
 
 .navbar .current-page-ancestor a {
@@ -52,6 +60,12 @@
 
 #main-menu {
     text-align: right;
+
+    @media screen and (max-width: #{$screen-lg-max}) and (min-width: #{$screen-lg-min}) {
+        clear: both;
+        display: block;
+        text-align: center;
+    }
 
     li {
         display: inline-block;
