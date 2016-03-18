@@ -1376,6 +1376,7 @@ html.translated-ltr #site-header {
     right: 15px; }
   .is-child-theme .nav-aside .children,
   .is-child-theme .nav-aside .sub-menu {
+    display: none;
     background-color: #383838;
     border: none; }
     .is-child-theme .nav-aside .children .current > a,
@@ -1397,6 +1398,9 @@ html.translated-ltr #site-header {
     .is-child-theme .nav-aside .children ul a,
     .is-child-theme .nav-aside .sub-menu ul a {
       padding-left: 25px !important; }
+  .is-child-theme .nav-aside .current > .sub-menu,
+  .is-child-theme .nav-aside .current-node > .sub-menu {
+    display: block; }
 
 .is-child-theme .btn-circle {
   position: relative;

@@ -47,6 +47,7 @@
 
     .children,
     .sub-menu {
+        display: none;
         background-color: lighten($black, 10%);
         border: none;
 
@@ -76,5 +77,10 @@
                 padding-left: 25px !important;
             }
         }
+    }
+
+    .current > .sub-menu,
+    .current-node > .sub-menu {
+        display: block;
     }
 }
