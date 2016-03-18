@@ -16,7 +16,7 @@
             @endwhile
 
             @if (is_active_sidebar('content-area'))
-            <div class="grid gutter gutter-lg gutter-top">
+            <div class="grid gutter gutter-lg gutter-top sidebar-content-area">
                 {!! dynamic_sidebar('content-area') !!}
             </div>
             @endif

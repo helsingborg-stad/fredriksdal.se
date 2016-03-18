@@ -32,10 +32,14 @@
         <div class="grid-md-8 grid-lg-8">
             @include('partials.article')
 
-            {!! dynamic_sidebar('content-area') !!}
+            @if (is_active_sidebar('content-area'))
+            <div class="sidebar-content-area">
+                {!! dynamic_sidebar('content-area') !!}
+            </div>
+            @endif
         </div>
 
-        <aside class="grid-lg-3 grid-md-12">
+        <aside class="grid-lg-3 grid-md-12 sidebar-right-sidebar">
             @if (is_string(get_field('event-ticket_url')) && get_field('event-ticket_url'))
             <a href="{{ get_field('event-ticket_url') }}" target="_blank" class="btn btn-green btn-block btn-lg">Köp biljetter</a>
             @endif
