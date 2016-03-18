@@ -1,6 +1,6 @@
 .box {
 
-    &:not(.box-filled) {
+    &:not(.box-filled):not(.box-news) {
         background-color: #fff;
         border: 2px solid $black;
     }
