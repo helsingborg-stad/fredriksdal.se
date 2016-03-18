@@ -442,9 +442,19 @@ html.translated-ltr #site-header {
 .is-child-theme .lead {
   font-weight: bold; }
 
-.is-child-theme .creamy .box {
+.is-child-theme .box {
   background-color: #fff;
   border: 2px solid #1E1E1E; }
+  .is-child-theme .box h1,
+  .is-child-theme .box h2,
+  .is-child-theme .box h3,
+  .is-child-theme .box h4,
+  .is-child-theme .box h5,
+  .is-child-theme .box h6 {
+    font-weight: bold;
+    text-transform: uppercase; }
+  .is-child-theme .box:hover .link-item::before {
+    color: #34B233; }
 
 .is-child-theme .box-filled h1,
 .is-child-theme .box-filled h2,
@@ -495,7 +505,8 @@ html.translated-ltr #site-header {
   background-color: transparent;
   color: #000;
   text-align: center;
-  padding: 0; }
+  padding: 0;
+  border: none; }
   .is-child-theme .box-news h1, .is-child-theme .box-news h2, .is-child-theme .box-news h3, .is-child-theme .box-news h4, .is-child-theme .box-news h5, .is-child-theme .box-news h6 {
     margin: 0;
     padding: 0;
