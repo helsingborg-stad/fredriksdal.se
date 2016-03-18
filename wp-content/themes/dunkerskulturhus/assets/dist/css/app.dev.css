@@ -72,6 +72,9 @@ html.translated-ltr #site-header {
 
 .is-child-theme:not(.home) #wrapper {
   padding-top: 69px; }
+  @media screen and (max-width: 1280px) and (min-width: 959px) {
+    .is-child-theme:not(.home) #wrapper {
+      padding-top: 105px; } }
 
 .is-child-theme body.is-child-theme {
   font-family: "Lato", "Roboto", "Helvetica", "Arial";
