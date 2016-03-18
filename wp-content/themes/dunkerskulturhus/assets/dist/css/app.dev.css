@@ -207,7 +207,7 @@ html.translated-ltr #site-header {
           max-width: 345px; } }
     @media screen and (max-width: 1280px) and (min-width: 959px) {
       .is-child-theme .navbar-mainmenu .logotype {
-        margin: 0 auto 15px auto;
+        margin: 5px auto;
         display: inline-block !important; } }
     .is-child-theme .navbar-mainmenu .logotype img {
       max-height: 30px; }
