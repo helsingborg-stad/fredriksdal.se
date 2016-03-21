@@ -70,8 +70,25 @@ html.translated-ltr #site-header {
   position: relative;
   background: #fff; }
 
+<<<<<<< Updated upstream
 .is-child-theme:not(.home) #wrapper {
   padding-top: 69px; }
+=======
+@media screen and (min-width: 1280px) {
+  .is-child-theme:not(.home) #wrapper {
+    padding-top: 69px; } }
+
+@media screen and (max-width: 1280px) and (min-width: 959px) {
+  .is-child-theme:not(.home) #wrapper {
+    padding-top: 105px; } }
+
+@media screen and (max-width: 959px) {
+  .is-child-theme:not(.home) #wrapper {
+    padding-top: 49px; } }
+
+.is-child-theme #main-content .sidebar-content-area.creamy-border-bottom {
+  border-bottom: 1px solid #F5F1F1; }
+>>>>>>> Stashed changes
 
 .is-child-theme body.is-child-theme {
   font-family: "Lato", "Roboto", "Helvetica", "Arial";
@@ -455,6 +472,13 @@ html.translated-ltr #site-header {
 .is-child-theme .lead {
   font-weight: bold; }
 
+<<<<<<< Updated upstream
+=======
+.is-child-theme .box:not(.box-filled):not(.box-news) {
+  background-color: #fff;
+  border: 2px solid #1E1E1E; }
+
+>>>>>>> Stashed changes
 .is-child-theme .box h1,
 .is-child-theme .box h2,
 .is-child-theme .box h3,
@@ -1460,6 +1484,16 @@ html.translated-ltr #site-header {
 .is-child-theme h1 .bold-wording, .is-child-theme h2 .bold-wording, .is-child-theme h3 .bold-wording, .is-child-theme h4 .bold-wording, .is-child-theme h5 .bold-wording, .is-child-theme h6 .bold-wording {
   font-weight: 600; }
 
+<<<<<<< Updated upstream
+=======
+.is-child-theme .gform_confirmation_message {
+  border: 2px solid #000;
+  padding: 15px;
+  margin: 20px 0;
+  background: #eee;
+  text-align: center; }
+
+>>>>>>> Stashed changes
 .home .sidebar-content-area .box {
   background-color: #fff;
   border: 2px solid #1E1E1E; }
