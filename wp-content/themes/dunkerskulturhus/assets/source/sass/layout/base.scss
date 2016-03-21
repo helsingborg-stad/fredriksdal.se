@@ -5,9 +5,6 @@
 
 &:not(.home) {
     #wrapper {
-<<<<<<< Updated upstream
-        padding-top: 69px;
-=======
         @media screen and (min-width: #{$screen-lg-max}) {
             padding-top: 69px;
         }
@@ -19,6 +16,5 @@
         @media screen and (max-width: #{$screen-lg-min}) {
             padding-top: 49px;
         }
->>>>>>> Stashed changes
     }
 }
