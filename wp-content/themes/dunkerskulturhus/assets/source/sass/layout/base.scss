@@ -5,7 +5,14 @@
 
 &:not(.home) {
     #wrapper {
+<<<<<<< HEAD
         padding-top: 69px;
+=======
+        @media screen and (min-width: #{$screen-lg-max}) {
+            padding-top: 69px;
+        }
+
+>>>>>>> develop
         @media screen and (max-width: #{$screen-lg-max}) and (min-width: #{$screen-lg-min}) {
             padding-top: 105px;
         }
