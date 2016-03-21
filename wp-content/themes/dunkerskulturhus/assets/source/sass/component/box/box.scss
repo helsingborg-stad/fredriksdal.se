@@ -1,10 +1,13 @@
 .box {
+<<<<<<< HEAD
 
     &:not(.box-filled):not(.box-news) {
         background-color: #fff;
         border: 2px solid $black;
     }
 
+=======
+>>>>>>> develop
     h1,
     h2,
     h3,
@@ -14,7 +17,9 @@
         font-weight: bold;
         text-transform: uppercase;
     }
+}
 
+a.box {
     &:hover {
         .link-item::before {
             color: $green;

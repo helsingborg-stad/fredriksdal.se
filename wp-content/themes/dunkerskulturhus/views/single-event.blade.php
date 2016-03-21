@@ -17,7 +17,7 @@
 <div class="hero hidden-xs hidden-sm">
     <div class="slider">
         <ul>
-            <li>
+            <li class="has-text-block">
                 <div class="slider-image" style="background-image:url('{{ $image }}');">
                     <span class="text-block">{{ the_title() }}<br>{{ \Municipio\Helper\Dt::toStringFormat(strtotime(get_field('event-date-start'))) }}</span>
                 </div>

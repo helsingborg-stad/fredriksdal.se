@@ -44,3 +44,8 @@
     @import 'utility/headings';
     @import 'utility/forms';
 }
+
+.home .sidebar-content-area .box {
+    background-color: #fff;
+    border: 2px solid $black;
+}
