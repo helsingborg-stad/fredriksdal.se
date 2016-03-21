@@ -466,8 +466,9 @@ html.translated-ltr #site-header {
   .is-child-theme .box h6 {
     font-weight: bold;
     text-transform: uppercase; }
-  .is-child-theme .box:hover .link-item::before {
-    color: #34B233; }
+
+.is-child-theme a.box:hover .link-item::before {
+  color: #34B233; }
 
 .is-child-theme .box-filled h1,
 .is-child-theme .box-filled h2,
