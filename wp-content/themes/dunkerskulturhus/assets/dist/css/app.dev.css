@@ -455,17 +455,14 @@ html.translated-ltr #site-header {
 .is-child-theme .lead {
   font-weight: bold; }
 
-.is-child-theme .box {
-  background-color: #fff;
-  border: 2px solid #1E1E1E; }
-  .is-child-theme .box h1,
-  .is-child-theme .box h2,
-  .is-child-theme .box h3,
-  .is-child-theme .box h4,
-  .is-child-theme .box h5,
-  .is-child-theme .box h6 {
-    font-weight: bold;
-    text-transform: uppercase; }
+.is-child-theme .box h1,
+.is-child-theme .box h2,
+.is-child-theme .box h3,
+.is-child-theme .box h4,
+.is-child-theme .box h5,
+.is-child-theme .box h6 {
+  font-weight: bold;
+  text-transform: uppercase; }
 
 .is-child-theme a.box:hover .link-item::before {
   color: #34B233; }
@@ -482,8 +479,7 @@ html.translated-ltr #site-header {
   color: #fff; }
 
 .is-child-theme .box-panel {
-  background-color: #fff;
-  border: 2px solid #1E1E1E;
+  border: 1px solid #ddd;
   padding: 10px; }
   .is-child-theme .box-panel .box-title {
     background: #fff;
@@ -1463,3 +1459,7 @@ html.translated-ltr #site-header {
 
 .is-child-theme h1 .bold-wording, .is-child-theme h2 .bold-wording, .is-child-theme h3 .bold-wording, .is-child-theme h4 .bold-wording, .is-child-theme h5 .bold-wording, .is-child-theme h6 .bold-wording {
   font-weight: 600; }
+
+.home .sidebar-content-area .box {
+  background-color: #fff;
+  border: 2px solid #1E1E1E; }
