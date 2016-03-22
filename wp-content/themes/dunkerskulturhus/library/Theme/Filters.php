@@ -13,7 +13,7 @@ class Filters
         add_action('Municipio/header_grid_size', array($this, 'headerGridSize'));
 
         //Reset image filters
-        add_filter('modularity/image/slider', array($this, 'filterHeroImageSize'), 150, 2);
+        remove_filter('modularity/image/slider', '\Municipio\Theme\ImageSizeFilter::filterHeroImageSize', 100);
     }
 
     /**
@@ -41,21 +41,5 @@ class Filters
     public function headerGridSize($classes)
     {
         return "grid-lg-12";
-    }
-
-    /**
-     * REset hero images to 16:9 format
-     * @return void
-     */
-    public function filterHeroImageSize($orginal_size, $args)
-    {
-
-        //If slider is shown in top area
-        if ($args['id'] == "sidebar-slider-area") {
-            return array(1140,641);
-        }
-
-        //Default value
-        return $orginal_size;
     }
 }
