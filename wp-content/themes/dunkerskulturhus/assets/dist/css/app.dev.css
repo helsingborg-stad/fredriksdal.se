@@ -464,10 +464,6 @@ html.translated-ltr #site-header {
 .is-child-theme .lead {
   font-weight: bold; }
 
-.is-child-theme .box:not(.box-filled):not(.box-news) {
-  background-color: #fff;
-  border: 2px solid #1E1E1E; }
-
 .is-child-theme .box h1,
 .is-child-theme .box h2,
 .is-child-theme .box h3,
