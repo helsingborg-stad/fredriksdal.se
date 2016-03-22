@@ -6,9 +6,14 @@ class Filters
 {
     public function __construct()
     {
+
+        //Add filters
         add_action('Municipio/mobile_menu_breakpoint', array($this, 'mobileMenuBreakpoint'));
         add_action('Municipio/desktop_menu_breakpoint', array($this, 'desktopMenuBreakpoint'));
         add_action('Municipio/header_grid_size', array($this, 'headerGridSize'));
+
+        //Reset image filters
+        remove_filter('modularity/image/slider', '\Municipio\Theme\ImageSizeFilter::filterHeroImageSize', 100);
     }
 
     /**
