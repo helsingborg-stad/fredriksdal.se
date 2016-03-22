@@ -7,13 +7,22 @@ class Filters
     public function __construct()
     {
 
-        //Add filters
+        //Add filter
         add_action('Municipio/mobile_menu_breakpoint', array($this, 'mobileMenuBreakpoint'));
         add_action('Municipio/desktop_menu_breakpoint', array($this, 'desktopMenuBreakpoint'));
         add_action('Municipio/header_grid_size', array($this, 'headerGridSize'));
 
-        //Reset image filters
-        remove_filter('modularity/image/slider', '\Municipio\Theme\ImageSizeFilter::filterHeroImageSize', 100);
+        //Remove base-theme filters
+        add_action('init', array($this, 'unregisterMunicipioImageFilter'));
+    }
+
+    /**
+     * Unregister built in image sizes. Use modularity
+     * @return void
+     */
+    public function unregisterMunicipioImageFilter()
+    {
+        \Municipio\Theme\ImageSizeFilter::removeFilter('modularity/image/slider', 'filterHeroImageSize', 100);
     }
 
     /**
