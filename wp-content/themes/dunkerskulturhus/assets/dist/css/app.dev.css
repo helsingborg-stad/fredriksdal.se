@@ -146,6 +146,9 @@ html.translated-ltr #site-header {
       -webkit-transition: 200ms opacity;
               transition: 200ms opacity; }
 
+.is-child-theme .site-header.header-casual {
+  background-color: transparent; }
+
 .is-child-theme #site-header.liquid-header,
 .is-child-theme:not(.home) #site-header,
 .is-child-theme.menu-open #site-header,
