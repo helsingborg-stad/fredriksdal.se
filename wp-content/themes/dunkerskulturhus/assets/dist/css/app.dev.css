@@ -318,6 +318,10 @@ html.translated-ltr #site-header {
   color: #1E1E1E;
   border-color: #1E1E1E; }
 
+.is-child-theme .menu-item-translate,
+.is-child-theme .menu-item-search {
+  margin-left: 10px; }
+
 .is-child-theme footer.main-footer {
   font-family: "Karbon", "Lato", "Roboto", "Helvetica", "Arial";
   background: #1e1e1e;
@@ -817,7 +821,12 @@ html.translated-ltr #site-header {
     left: 0;
     content: "";
     background: rgba(0, 0, 0, 0.25);
-    z-index: 10; }
+    z-index: 10;
+    /* Mobile */ }
+    @media screen and (max-width: 469px) {
+      .is-child-theme .hero .has-text-block .slider-image:before,
+      .is-child-theme .hero .has-text-block .slider-video:before {
+        background: rgba(0, 0, 0, 0.4); } }
   .is-child-theme .hero .modularity-mod-slider {
     padding-top: 56.25%;
     position: relative; }
@@ -946,7 +955,8 @@ html.translated-ltr #site-header {
       font-weight: 600; }
     @media screen and (max-width: 469px) {
       .is-child-theme .hero .text-block {
-        font-size: 1.2em; } }
+        font-size: 1.2em;
+        font-weight: bold; } }
   .is-child-theme .hero .stripe {
     display: none !important; }
   .is-child-theme .hero .scroll-down-please {

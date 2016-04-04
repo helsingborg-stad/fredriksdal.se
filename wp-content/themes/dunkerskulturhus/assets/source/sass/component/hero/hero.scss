@@ -25,6 +25,11 @@
         content: "";
         background: rgba(0, 0, 0, 0.25);
         z-index: 10;
+
+        /* Mobile */
+        @media screen and #{$screen-below-sm} {
+            background: rgba(0, 0, 0, 0.4);
+        }
     }
 
     .modularity-mod-slider {
@@ -164,6 +169,7 @@
         /* Mobile */
         @media screen and #{$screen-below-sm} {
             font-size: 1.2em;
+            font-weight: bold;
         }
     }
 
