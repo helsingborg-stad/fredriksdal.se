@@ -49,7 +49,7 @@
     .menu-icon,
     .menu-icon:after,
     .menu-icon:before {
-        background: $black;
+        background-color: $black !important;
     }
 
     .menu-trigger.open {
@@ -124,6 +124,8 @@
     max-width: 90%;
     margin: 0 auto;
     margin-bottom: 20px;
+    padding: 0;
+    background-color: transparent;
 
     label {
         display: none;

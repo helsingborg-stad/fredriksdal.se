@@ -1240,7 +1240,7 @@ html.translated-ltr #site-header {
 .is-child-theme.menu-open #site-header .menu-icon,
 .is-child-theme.menu-open #site-header .menu-icon:after,
 .is-child-theme.menu-open #site-header .menu-icon:before {
-  background: #1E1E1E; }
+  background-color: #1E1E1E !important; }
 
 .is-child-theme #site-header.liquid-header .menu-trigger.open .menu-icon,
 .is-child-theme:not(.home) #site-header .menu-trigger.open .menu-icon,
@@ -1296,7 +1296,9 @@ html.translated-ltr #site-header {
 .is-child-theme .nav-mobile-menu .search {
   max-width: 90%;
   margin: 0 auto;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  padding: 0;
+  background-color: transparent; }
   .is-child-theme .nav-mobile-menu .search label {
     display: none; }
 
