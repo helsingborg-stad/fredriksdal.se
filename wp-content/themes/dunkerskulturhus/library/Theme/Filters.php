@@ -12,8 +12,22 @@ class Filters
         add_action('Municipio/desktop_menu_breakpoint', array($this, 'desktopMenuBreakpoint'));
         add_action('Municipio/header_grid_size', array($this, 'headerGridSize'));
 
+        // Search
+        add_filter('Municipio/search_result/date', array($this, 'eventDate'), 10, 2);
+
         //Remove base-theme filters
         add_action('init', array($this, 'unregisterMunicipioImageFilter'));
+    }
+
+    public function eventDate($date, $post)
+    {
+        if ($post->post_type != 'event') {
+            return $date;
+        }
+
+        $date = date('Y-m-d \k\l\. H:i', strtotime(get_field('event-date-start', $post->ID)));
+
+        return $date;
     }
 
     /**
