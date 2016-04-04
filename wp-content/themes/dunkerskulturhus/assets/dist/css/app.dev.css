@@ -146,6 +146,10 @@ html.translated-ltr #site-header {
       -webkit-transition: 200ms opacity;
               transition: 200ms opacity; }
 
+.is-child-theme.mobile-menu-open #site-header .logotype svg path,
+.is-child-theme.mobile-menu-open #site-header .logotype svg use {
+  fill: #1E1E1E !important; }
+
 .is-child-theme .site-header.header-casual {
   background-color: transparent; }
 
