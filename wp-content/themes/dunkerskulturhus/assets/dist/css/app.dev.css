@@ -1255,7 +1255,7 @@ html.translated-ltr #site-header {
 .is-child-theme #site-header.liquid-header .menu-trigger.open .menu-icon,
 .is-child-theme:not(.home) #site-header .menu-trigger.open .menu-icon,
 .is-child-theme.menu-open #site-header .menu-trigger.open .menu-icon {
-  background-color: transparent; }
+  background-color: transparent !important; }
 
 .is-child-theme .nav-mobile-menu {
   position: absolute;
