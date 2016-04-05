@@ -17,6 +17,14 @@ class Filters
 
         //Remove base-theme filters
         add_action('init', array($this, 'unregisterMunicipioImageFilter'));
+
+        add_filter('Modularity/Module/Classes', function ($classes, $moduleType, $sidebarArgs) {
+            if ($key = array_search('box-filled', $classes)) {
+                unset($classes[$key]);
+                $classes[] = 'box-panel';
+            }
+            return $classes;
+        }, 100, 3);
     }
 
     public function eventDate($date, $post)
