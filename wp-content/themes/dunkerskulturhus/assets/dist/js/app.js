@@ -67,7 +67,13 @@ pong.players.a.addControls({
 });
 
 // Add behaviour for player B
-Fö
+pong.on('update', function () {
+    if (pong.players.b.y < pong.balls[0].y + Math.floor(Math.random() * 50) + 1) {
+        pong.players.b.move(1);
+    } else if (pong.players.b.y > pong.balls[0].y - Math.floor(Math.random() * 50) + 1) {
+        pong.players.b.move(-1);
+    }
+});
 
 /*
 pong.on('update', function () {
