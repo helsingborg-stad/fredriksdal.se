@@ -2,33 +2,13 @@
 
 @section('content')
 
-<div class="container main-container">
-    <div class="grid no-margin-top">
-        <div class="grid-lg-6 grid-md-8 grid-sm-12">
-            <h2>404 <em>{{ get_field('404_error_message', 'option') ? get_field('404_error_message', 'option') : 'The page could not be found' }}</em></h2>
-
-            <ul class="actions">
-                @if (is_array(get_field('404_display', 'option')) && in_array('search', get_field('404_display', 'option')))
-                <li>
-                    <a rel="nofollow" href="{{ home_url() }}?s={{ $keyword }}" class="link-item">{{ sprintf(get_field('404_display', 'option') ? get_field('404_search_link_text', 'option') : 'Search "%s"', $keyword) }}</a>
-                </li>
-                @endif
-
-                @if (is_array(get_field('404_display', 'option')) && in_array('home', get_field('404_display', 'option')))
-                <li><a href="{{ home_url() }}" class="link-item">{{ get_field('404_home_link_text', 'option') ? get_field('404_home_link_text', 'option') : 'Go to home' }}</a></li>
-                @endif
-            </ul>
-
-            {!! get_field('404_error_info', 'option') ? get_field('404_error_info', 'option') : '' !!}
-
-            @if (is_array(get_field('404_display', 'option')) && in_array('back', get_field('404_display', 'option')))
-            <p>
-                <a href="javascript:history.go(-1);" class="btn btn-primary">
-                    <i class="fa fa-arrow-circle-o-left"></i>
-                    {{ get_field('404_back_button_text', 'option') ? get_field('404_back_button_text', 'option') : 'Go back' }}
-                </a>
-            </p>
-            @endif
+<div class="container hidden-xs hidden-sm">
+    <div class="grid">
+        <div class="grid-sm-12">
+            <div id="pong-game"></div>
+            <div class="pong-controls">
+                Använd piltangenterna (<img src="{{ get_stylesheet_directory_uri() }}/assets/dist/images/arrow-up.svg" alt="upp" height="15">,<img src="{{ get_stylesheet_directory_uri() }}/assets/dist/images/arrow-down.svg" alt="upp" height="15">) för att styra.
+            </div>
         </div>
     </div>
 </div>

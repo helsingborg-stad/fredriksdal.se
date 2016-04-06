@@ -6,47 +6,87 @@ body.is-child-theme {
   line-height: 1.6;
   color: #1E1E1E; }
 
-.error404 .stripe {
-  display: none; }
-
-.error404 .logotype {
-  max-width: 500px;
-  width: 100%; }
-  .error404 .logotype svg {
-    width: 100%;
-    height: auto; }
-
-.error404 h2 {
-  position: relative;
-  background-color: #1E1E1E;
-  color: #fff !important;
-  padding: 60px 40px;
-  font-size: 6em;
-  border-radius: 20px;
-  font-weight: bold !important;
-  line-height: 1; }
-  .error404 h2 em {
-    display: block;
-    font-weight: 200;
-    font-size: .5em;
-    line-height: 1.2;
-    margin-top: .3em; }
-  .error404 h2::after {
-    display: block;
-    content: '';
-    width: 0;
-    height: 0;
-    border-top: 100px solid #1E1E1E;
-    border-left: 76.92308px solid transparent;
-    position: absolute;
-    bottom: -100px;
-    right: 40px; }
-
-.error404 .actions {
-  margin-top: 30px; }
-
-.error404 a:not(.btn) {
-  color: #1E1E1E; }
+.error404 {
+  background-color: #1E1E1E !important; }
+  .error404 #wrapper {
+    background: transparent !important; }
+  .error404 #pong-game {
+    height: 500px;
+    margin-bottom: 15px;
+    border: 3px solid #fff; }
+  .error404 .logo {
+    font-family: 'Press Start 2P';
+    color: gray;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin-top: 10px; }
+    @media screen and (max-width: 500px) {
+      .error404 .logo {
+        font-size: 1em;
+        margin-bottom: 15px; } }
+    .error404 .logo em {
+      color: #fff; }
+  .error404 .pong-controls {
+    font-family: 'Press Start 2P';
+    font-size: .8em;
+    color: #fff; }
+  .error404 .pong-error-message {
+    font-family: 'Press Start 2P';
+    font-size: 1em;
+    color: #fff; }
+    .error404 .pong-error-message .actions {
+      font-size: .7em;
+      margin-top: 0; }
+      @media screen and (max-width: 500px) {
+        .error404 .pong-error-message .actions {
+          margin-top: 15px; } }
+      .error404 .pong-error-message .actions li {
+        display: inline-block; }
+      .error404 .pong-error-message .actions a {
+        color: #1E1E1E;
+        background-color: #fff;
+        display: inline-block; }
+        .error404 .pong-error-message .actions a:hover {
+          color: #fff;
+          background-color: #34B233;
+          text-decoration: none; }
+  .error404 .stripe {
+    display: none; }
+  .error404 .logotype {
+    max-width: 500px;
+    width: 100%; }
+    .error404 .logotype svg {
+      width: 100%;
+      height: auto; }
+  .error404 h2 {
+    position: relative;
+    background-color: #1E1E1E;
+    color: #fff !important;
+    padding: 60px 40px;
+    font-size: 6em;
+    border-radius: 20px;
+    font-weight: bold !important;
+    line-height: 1; }
+    .error404 h2 em {
+      display: block;
+      font-weight: 200;
+      font-size: .5em;
+      line-height: 1.2;
+      margin-top: .3em; }
+    .error404 h2::after {
+      display: block;
+      content: '';
+      width: 0;
+      height: 0;
+      border-top: 100px solid #1E1E1E;
+      border-left: 76.92308px solid transparent;
+      position: absolute;
+      bottom: -100px;
+      right: 40px; }
+  .error404 .actions {
+    margin-top: 30px; }
+  .error404 a:not(.btn) {
+    color: #1E1E1E; }
 
 html {
   background: #1E1E1E; }

@@ -1,4 +1,74 @@
 .error404 {
+    background-color: $black !important;
+
+    #wrapper {
+        background: transparent !important;
+    }
+
+    #pong-game {
+        height: 500px;
+        margin-bottom: 15px;
+        border: 3px solid #fff;
+
+        canvas {
+
+        }
+    }
+
+    .logo {
+        font-family: 'Press Start 2P';
+        color: darken(#fff, 50%);
+        font-size: 1.5em;
+        text-transform: uppercase;
+        margin-top: 10px;
+
+        @media screen and (max-width: 500px) {
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        em {
+            color: #fff;
+        }
+    }
+
+    .pong-controls {
+        font-family: 'Press Start 2P';
+        font-size: .8em;
+        color: #fff;
+    }
+
+    .pong-error-message {
+        font-family: 'Press Start 2P';
+        font-size: 1em;
+        color: #fff;
+
+        .actions {
+            font-size: .7em;
+            margin-top: 0;
+
+            @media screen and (max-width: 500px) {
+                margin-top: 15px;
+            }
+
+            li {
+                display: inline-block;
+            }
+
+            a {
+                color: $black;
+                background-color: #fff;
+                display: inline-block;
+
+                &:hover {
+                    color: #fff;
+                    background-color: $green;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
     .stripe {
         display: none;
     }
