@@ -18,15 +18,26 @@
  * @package WordPress
  */
 
+require_once 'config/cache.php';
+require_once 'config/cookie.php';
+require_once 'config/content.php';
 require_once 'config/database.php';
 require_once 'config/salts.php';
-require_once 'config/content.php';
-require_once 'config/upload.php';
+require_once 'config/plugins.php';
 require_once 'config/update.php';
+require_once 'config/upload.php';
 
-//require_once 'config/multisite.php';
+/**
+ * Multisite settings
+ *
+ * To enable this site as a multisite please rename the config/multisite-example.php file to
+ * multisite.php, then go ahead and edit the configurations
+ */
+if (file_exists('config/multisite.php')) {
+    require_once 'config/multisite.php';
+}
 
-/*
+/**
  * Developer settings
  *
  * You can create a file called "developer.php" in the config dir and
