@@ -17,9 +17,3 @@ define('WP_USE_MEMCACHED', true);
 * @var string
 */
 define('WP_CACHE_KEY_SALT', NONCE_KEY);
-
- /**
- * Activate wp cache
- * @var bool
- */
-define('WP_CACHE', true);
