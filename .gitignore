@@ -1,5 +1,7 @@
 # Config
-wp-config.php
+/config/database.php
+/config/salts.php
+/config/developer.php
 
 # Plugins
 /wp-content/plugins/*
