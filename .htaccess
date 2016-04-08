@@ -11,6 +11,12 @@ RedirectMatch 301 /admin/(.*) /wp/wp-admin/$1
     RewriteRule . /index.php [L]
 </IfModule>
 
+# Protect wp-config.php
+<Files wp-config.php>
+    Order Deny,Allow
+    Deny from all
+</Files>
+
 # Prevent spam form submit
 <IfModule mod_rewrite.c>
     RewriteEngine On

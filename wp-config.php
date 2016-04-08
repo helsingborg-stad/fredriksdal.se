@@ -20,9 +20,11 @@
 
 require_once 'config/database.php';
 require_once 'config/salts.php';
-require_once 'config/wp-content.php';
+require_once 'config/content.php';
 require_once 'config/upload.php';
 require_once 'config/update.php';
+
+//require_once 'config/multisite.php';
 
 /*
  * Developer settings

@@ -1,8 +1,7 @@
 <?php
 
 /**
-* Set the maximum upload size
-* @var bool
+* Set memory limit
 */
 
-define('WP_MEMORY_LIMIT', '32M');
+define('WP_MEMORY_LIMIT', '64M');
