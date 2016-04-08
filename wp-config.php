@@ -53,7 +53,7 @@ if (file_exists('config/developer.php')) {
  * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix  = 'wp_';
+$table_prefix  = 'dunkers_';
 
 
 /* That's all, stop editing! Happy blogging. */
