@@ -5,7 +5,7 @@
 <div class="container main-container clearfix">
     @include('partials.breadcrumbs')
 
-    <main class="grid @if (wp_get_post_parent_id(get_the_id()) != 0) no-margin-top @endif">
+    <main class="grid {{ wp_get_post_parent_id(get_the_id()) !== 0 ? 'no-margin-top' : '' }}">
         @include('partials.sidebar-left')
 
         <div class="{{ is_active_sidebar('right-sidebar') ? 'grid-md-8 grid-lg-6' : 'grid-md-8' }}">
