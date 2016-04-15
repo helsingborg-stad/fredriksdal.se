@@ -24,7 +24,7 @@
         <h3 class="event-title">{{ the_title() }}</h3>
     </div>
     <div class="event-lead">
-        {!! the_content() !!}
+        {!! preg_replace('#<a.*?>.*?</a>#i', '', get_the_content()) !!}
     </div>
     <span class="event-action btn btn-circle btn-green"><span>Läs mer</span></span>
 </a>
