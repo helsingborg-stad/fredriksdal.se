@@ -44,7 +44,7 @@ class Filters
      */
     public function unregisterMunicipioImageFilter()
     {
-        \Municipio\Theme\ImageSizeFilter::removeFilter('modularity/slider/image', 'filterHeroImageSize', 100);
+        \Municipio\Theme\ImageSizeFilter::removeFilter('Modularity/slider/image', 'filterHeroImageSize', 100);
     }
 
     /**
