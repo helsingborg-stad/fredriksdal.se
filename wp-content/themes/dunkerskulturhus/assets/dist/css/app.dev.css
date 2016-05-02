@@ -447,6 +447,9 @@ html.translated-ltr #site-header {
     .is-child-theme footer.main-footer .widget_rss ul li .rssSummary {
       border-color: #424242; }
 
+.is-child-theme .main-footer .icons-list {
+  text-align: center; }
+
 @-webkit-keyframes footerSwingAnimation {
   0% {
     -webkit-transform: rotate(0deg);

@@ -126,6 +126,10 @@ footer.main-footer {
     }
 }
 
+.main-footer .icons-list {
+    text-align: center;
+}
+
 @keyframes footerSwingAnimation{
   0% {
     transform:  rotate(0deg) ;
