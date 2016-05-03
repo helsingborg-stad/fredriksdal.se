@@ -1,7 +1,7 @@
 {
   "name": "Dunkers-Kulturhus",
   "version": "1.0.0",
-  "description": "Childtheme for bootstrap-theme theme",
+  "description": "Childtheme for Municipio theme",
   "main": "gulpfile.js",
   "dependencies": {},
   "devDependencies": {
