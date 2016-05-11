@@ -46,4 +46,4 @@ class VarnishCacheInstantRefresh
     }
 }
 
-//new \VarnishInstantCacheRefresh\VarnishInstantCacheRefresh();
+new \VarnishInstantCacheRefresh\VarnishCacheInstantRefresh();
