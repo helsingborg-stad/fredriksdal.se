@@ -44,9 +44,22 @@ class EventArchive
     {
         global $wpdb;
 
-        $where = " AND eventStart.meta_key = 'event-date-start' AND eventEnd.meta_key = 'event-date-end' " . $where;
-        $where = str_replace($wpdb->posts . '.post_date >=', 'eventStart.meta_value >=', $where);
-        $where = str_replace($wpdb->posts . '.post_date <=', 'eventEnd.meta_value <=', $where);
+        $from = null;
+        $to = null;
+
+        if (isset($_GET['from']) && !empty($_GET['from'])) {
+            $from = sanitize_text_field($_GET['from']);
+        }
+
+        if (isset($_GET['to']) && !empty($_GET['to'])) {
+            $to = sanitize_text_field($_GET['to']);
+        }
+
+        if (!is_null($from) || !is_null($to)) {
+            $where = " AND eventStart.meta_key = 'event-date-start' AND eventEnd.meta_key = 'event-date-end' " . $where;
+            $where = str_replace($wpdb->posts . '.post_date >=', 'eventStart.meta_value >=', $where);
+            $where = str_replace($wpdb->posts . '.post_date <=', 'eventEnd.meta_value <=', $where);
+        }
 
         return $where;
     }
