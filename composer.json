@@ -41,7 +41,7 @@
 
     "require": {
         "composer/installers": "~1.0",
-        "johnpbloch/wordpress": "4.5.1",
+        "johnpbloch/wordpress": "4.5.2",
         "helsingborg-stad/modularity": ">=1.0.0",
         "helsingborg-stad/municipio": ">=1.0.0",
         "helsingborg-stad/xcap-import": ">=1.0.0",
