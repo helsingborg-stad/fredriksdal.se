@@ -184,7 +184,9 @@ html.translated-ltr #site-header {
             transition: opacity 300ms;
     z-index: 800; }
     .is-child-theme #site-header .logotype svg, .is-child-theme #site-header .logotype img {
-      height: 25px; }
+      height: 25px;
+      width: auto;
+      max-width: none; }
     .is-child-theme #site-header .logotype svg path,
     .is-child-theme #site-header .logotype svg use {
       fill: #fff !important;
