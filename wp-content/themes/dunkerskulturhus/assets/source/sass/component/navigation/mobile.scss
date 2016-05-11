@@ -111,7 +111,10 @@
         }
     }
 
-    .current {
+    .current,
+    .current-node,
+    .current-menu-item
+    {
         background-color: transparent;
 
         > a {

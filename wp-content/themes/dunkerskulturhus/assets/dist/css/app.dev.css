@@ -1370,9 +1370,13 @@ html.translated-ltr #site-header {
         display: block;
         padding: .2em 0;
         color: #1E1E1E; }
-  .is-child-theme .nav-mobile .current {
+  .is-child-theme .nav-mobile .current,
+  .is-child-theme .nav-mobile .current-node,
+  .is-child-theme .nav-mobile .current-menu-item {
     background-color: transparent; }
-    .is-child-theme .nav-mobile .current > a {
+    .is-child-theme .nav-mobile .current > a,
+    .is-child-theme .nav-mobile .current-node > a,
+    .is-child-theme .nav-mobile .current-menu-item > a {
       color: #34B233 !important; }
 
 .is-child-theme .nav-mobile-menu .search {
