@@ -21,3 +21,12 @@
 #main-content .sidebar-content-area.creamy-border-bottom {
     border-bottom: 1px solid #F5F1F1;
 }
+
+.archive-filters {
+    background-color: $black;
+    padding: 10px 20px 15px 20px;
+
+    label {
+        color: #fff;
+    }
+}
