@@ -7,7 +7,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/1.0-alpha-1100\n"
+"X-Generator: GlotPress/2.1.0-alpha\n"
 "Project-Id-Version: Stable (latest release)\n"
 
 #: views/config.php:32
@@ -517,7 +517,7 @@ msgstr "Akismet godkände den här kommentaren under en automatisk skanning."
 msgid "View comment history"
 msgstr "Visa kommentarshistorik"
 
-#. #-#-#-#-#  tmp-akismet.pot (Akismet 3.1.7)  #-#-#-#-#
+#. #-#-#-#-#  tmp-akismet.pot (Akismet 3.1.10)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
 #: class.akismet-admin.php:93 class.akismet-admin.php:95
 #: class.akismet-admin.php:850 views/config.php:3
@@ -608,7 +608,7 @@ msgstr "Uppgradera"
 msgid "Click the Use this Key button."
 msgstr "Klicka på knappen Använd denna nyckel."
 
-#: class.akismet.php:1037
+#: class.akismet.php:1090
 msgid "Akismet %s requires WordPress %s or higher."
 msgstr "Akismet %s kräver WordPress %s eller senare."
 
@@ -680,7 +680,7 @@ msgstr[1] "Det finns <a href=\"%2$s\">%1$s kommentarer</a> markerade som skräp 
 msgid "There&#8217;s nothing in your <a href='%s'>spam queue</a> at the moment."
 msgstr "Det finns inga poster markerade som <a href='%s'>skräppost</a> för tillfället."
 
-#: class.akismet.php:1037 views/notice.php:24
+#: class.akismet.php:1090 views/notice.php:24
 msgid "Please <a href=\"%1$s\">upgrade WordPress</a> to a current version, or <a href=\"%2$s\">downgrade to version 2.4 of the Akismet plugin</a>."
 msgstr "Vänligen <a href=\"%1$s\">uppdatera WordPress</a> till aktuell version eller <a href=\"%2$s\">använd version 2.4 av tillägget Akismet</a>."
 
