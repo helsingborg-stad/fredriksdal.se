@@ -11,6 +11,8 @@
         </div>
     </div>
 
+    @include('partials.archive-filters')
+
     <div class="grid">
         <div class="grid-sm-12">
             <nav id="show-filters" class="navbar navbar-event-categories">

@@ -12,6 +12,43 @@ class EventArchive
         add_filter('nav_menu_link_attributes', array($this, 'filterEventCategoryLinks'), 10, 3);
         add_filter('nav_menu_css_class', array($this, 'setCurrentEventCategory'), 10, 2);
         add_filter('wp_nav_menu_items', array($this, 'filterEventItems'), 10, 2);
+
+        add_filter('posts_join', array($this, 'eventDateFilterJoin'));
+        add_filter('Municipio/archive/date_filter', array($this, 'eventDateFilterWhere'), 10, 3);
+    }
+
+    public function eventDateFilterJoin($join)
+    {
+        global $wpdb;
+
+        $from = null;
+        $to = null;
+
+        if (isset($_GET['from']) && !empty($_GET['from'])) {
+            $from = sanitize_text_field($_GET['from']);
+        }
+
+        if (isset($_GET['to']) && !empty($_GET['to'])) {
+            $to = sanitize_text_field($_GET['to']);
+        }
+
+        if (!is_null($from) || !is_null($to)) {
+            $join .= " LEFT JOIN {$wpdb->postmeta} AS eventStart ON eventStart.post_id = {$wpdb->posts}.ID";
+            $join .= " LEFT JOIN {$wpdb->postmeta} AS eventEnd ON eventEnd.post_id = {$wpdb->posts}.ID";
+        }
+
+        return $join;
+    }
+
+    public function eventDateFilterWhere($where, $from, $to)
+    {
+        global $wpdb;
+
+        $where = " AND eventStart.meta_key = 'event-date-start' AND eventEnd.meta_key = 'event-date-end' " . $where;
+        $where = str_replace($wpdb->posts . '.post_date >=', 'eventStart.meta_value >=', $where);
+        $where = str_replace($wpdb->posts . '.post_date <=', 'eventEnd.meta_value <=', $where);
+
+        return $where;
     }
 
     /**

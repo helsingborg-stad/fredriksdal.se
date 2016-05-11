@@ -10,6 +10,12 @@ class App
         new \Dunkers\Theme\Filters();
 
         add_action('parse_query', array($this, 'eventArchive'));
+        add_filter('Municipio/blade/controller', function ($controller) {
+            if (is_post_type_archive('event')) {
+                return \Municipio\Helper\Controller::locateController(get_stylesheet_directory() . '/library/Controller/ArchiveEvent.php');
+            }
+            return $controller;
+        });
     }
 
     public function eventArchive()
