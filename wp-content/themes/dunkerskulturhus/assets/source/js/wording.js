@@ -1,3 +1,4 @@
+/*
 DunkersKultur = DunkersKultur || {};
 DunkersKultur.Wording = DunkersKultur.Wording || {};
 
@@ -16,3 +17,4 @@ DunkersKultur.Wording.Wording = (function ($) {
     return new Wording();
 
 })(jQuery);
+*/

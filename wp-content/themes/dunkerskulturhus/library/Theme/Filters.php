@@ -25,6 +25,28 @@ class Filters
             }
             return $classes;
         }, 100, 3);
+
+        // Titles
+        add_filter('the_title', array($this, 'theTitle'), 1);
+        add_filter('wp_title', array($this, 'wpTitle'), 1);
+    }
+
+    public function wpTitle($title)
+    {
+        return str_replace(array('{', '}', '&#8211;', '-'), '', $title);
+    }
+
+    public function theTitle($title)
+    {
+        if (!in_the_loop()) {
+            $title = str_replace(array('{', '}', '-'), '', $title);
+            return $title;
+        }
+
+        $title = preg_replace('/(.*)?[-](.*)?/', '<strong>$1</strong> $2', $title);
+        $title = preg_replace('/{(.*)?}/', '<strong>$1</strong>', $title);
+
+        return trim($title);
     }
 
     public function eventDate($date, $post)
