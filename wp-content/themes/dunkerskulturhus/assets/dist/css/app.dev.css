@@ -125,12 +125,6 @@ html.translated-ltr #site-header {
 .is-child-theme #main-content .sidebar-content-area.creamy-border-bottom {
   border-bottom: 1px solid #F5F1F1; }
 
-.is-child-theme .archive-filters {
-  background-color: #1E1E1E;
-  padding: 10px 20px 15px 20px; }
-  .is-child-theme .archive-filters label {
-    color: #fff; }
-
 .is-child-theme body.is-child-theme {
   font-family: "Lato", "Roboto", "Helvetica", "Arial";
   font-size: 17px;

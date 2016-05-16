@@ -16,7 +16,7 @@
 
                     @if (in_array('date_range', $enabledHeaderFilters))
                     <div class="grid-md-{{ 10/count($enabledHeaderFilters) }}">
-                        <label for="filter-date-from" class="text-sm"><strong><?php (is_post_type_archive('event')) ? _e('Date', 'municipio') : _e('Date published', 'municipio'); ?>:</strong></label>
+                        <label for="filter-date-from" class="text-sm"><strong><?php _e('Date', 'municipio'); ?>:</strong></label>
                         <div class="input-group">
                             <span class="input-group-addon"><?php _e('From', 'municipio'); ?>:</span>
                             <input type="text" name="from" placeholder="<?php _e('From date', 'municipio'); ?>…" id="filter-date-from" class="form-control datepicker-range datepicker-range-from" value="{{ isset($_GET['from']) && !empty($_GET['from']) ? sanitize_text_field($_GET['from']) : '' }}" readonly>
@@ -28,7 +28,7 @@
 
                     <div class="grid-md-2">
                          <label for="filter-date-from" class="text-sm">&nbsp;</label>
-                        <input type="submit" value="<?php _e('Filter', 'municipio'); ?>" class="btn btn-primary btn-block">
+                        <input type="submit" value="<?php _e('Search', 'municipio'); ?>" class="btn btn-primary btn-block">
                     </div>
                 </div>
             </form>
