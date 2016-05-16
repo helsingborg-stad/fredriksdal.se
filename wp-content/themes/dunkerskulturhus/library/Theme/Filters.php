@@ -29,6 +29,28 @@ class Filters
         // Titles
         add_filter('the_title', array($this, 'theTitle'), 1);
         add_filter('wp_title', array($this, 'wpTitle'), 1);
+
+        // Sidebar WpWidget module
+        add_filter('Modularity/Module/WpWidget/before', array($this, 'wpWidgetBefore'), 11, 3);
+    }
+
+    public function wpWidgetBefore($before, $sidebarArgs, $module)
+    {
+        if (get_field('mod_standard_widget_type', $module->ID) == 'WP_Widget_Search') {
+            return '<div>';
+        }
+
+        // Box panel in content area and content area bottom
+        if (in_array($sidebarArgs['id'], array('content-area', 'content-area-bottom')) && !is_front_page()) {
+            $before = '<div class="box box-panel box-panel-secondary">';
+        }
+
+        // Sidebar boxes (should be filled)
+        if (in_array($sidebarArgs['id'], array('left-sidebar-bottom', 'left-sidebar', 'right-sidebar'))) {
+            $before = '<div class="box box-panel">';
+        }
+
+        return $before;
     }
 
     public function wpTitle($title)

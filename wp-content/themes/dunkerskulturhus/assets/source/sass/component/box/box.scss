@@ -1,10 +1,18 @@
 .box {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
+    .box-title,
+    .widgettitle,
+    > h1,
+    > h2,
+    > h3,
+    > h4,
+    > h5,
+    > h6,
+    .widget > h1,
+    .widget > h2,
+    .widget > h3,
+    .widget > h4,
+    .widget > h5,
+    .widget > h6 {
         font-weight: bold;
         text-transform: uppercase;
     }
@@ -19,12 +27,20 @@ a.box {
 }
 
 .box-filled {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
+    .box-title,
+    .widgettitle,
+    > h1,
+    > h2,
+    > h3,
+    > h4,
+    > h5,
+    > h6,
+    .widget > h1,
+    .widget > h2,
+    .widget > h3,
+    .widget > h4,
+    .widget > h5,
+    .widget > h6 {
         color: #fff;
     }
 

@@ -1,0 +1,20 @@
+.box-panel .widgettitle .rsswidget:first-child {
+    display: none;
+}
+
+.box-panel ul:not(.social-feed-gallery) li,
+.sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) ul:not(.social-feed-gallery) li,
+.sidebar-content-area [class^="widget_"]:not(.widget_calendar) ul:not(.social-feed-gallery) li {
+    padding: 15px 0;
+}
+
+.box-panel ul:not(.social-feed-gallery) li:first-child,
+.sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) ul:not(.social-feed-gallery) li:first-child,
+.sidebar-content-area [class^="widget_"]:not(.widget_calendar) ul:not(.social-feed-gallery) li:first-child {
+    padding-top: 0;
+}
+
+.sidebar-left-sidebar .widget_rss .rssSummary,
+.sidebar-right-sidebar .widget_rss .rssSummary {
+    border-left: 3px solid $gray;
+}
