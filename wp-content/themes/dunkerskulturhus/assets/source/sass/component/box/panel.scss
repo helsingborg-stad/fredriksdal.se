@@ -43,6 +43,7 @@
         border: none;
     }
 
+    /*
     li a {
         color: $blue;
         display: inline-block !important;
@@ -55,6 +56,7 @@
             text-decoration: underline;
         }
     }
+    */
 
     ul li a:hover .title::before {
         color: $green;
@@ -83,6 +85,6 @@
     }
 }
 
-.box-panel :not(.widget) ul:not(.social-feed-gallery) li + li {
+.box-panel ul:not(.social-feed-gallery) li + li {
     border-top: 0;
 }
