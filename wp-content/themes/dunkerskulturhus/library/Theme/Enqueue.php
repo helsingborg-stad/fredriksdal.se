@@ -23,7 +23,7 @@ class Enqueue
             wp_enqueue_style('press-start-2p');
         }
 
-        wp_register_style('hbg-prime', 'http://hbgprime.dev/dist/css/hbg-prime.min.css', '', '1.0.0');
+        wp_register_style('hbg-prime', 'http://helsingborg-stad.github.io/styleguide-web-cdn/styleguide.dev/dist/css/hbg-prime.min.css', '', '1.0.1');
         wp_enqueue_style('hbg-prime');
         wp_enqueue_style('dunkers-css', get_stylesheet_directory_uri(). '/assets/dist/css/app.min.css', '', filemtime(get_stylesheet_directory() . '/assets/dist/css/app.min.css'));
     }
