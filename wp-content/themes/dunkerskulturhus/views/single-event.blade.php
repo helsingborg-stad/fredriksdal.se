@@ -56,7 +56,6 @@
             @if (isset($occations) && count($occations) > 0)
                 <div class="box box-filled">
                     <div class="box-content">
-                        <h4>Fler datum för detta evenemang</h4>
                         <p>
                             <strong>{{ the_title() }}</strong> kan även ses på följande datum:
                         </p>
