@@ -1107,7 +1107,6 @@ html.translated-ltr #site-header {
     padding: 10px 20px;
     line-height: 1;
     color: rgba(255, 255, 255, 0.8);
-    cursor: default;
     text-transform: uppercase;
     font-family: "Karbon", "Lato", "Roboto", "Helvetica", "Arial";
     white-space: nowrap; }

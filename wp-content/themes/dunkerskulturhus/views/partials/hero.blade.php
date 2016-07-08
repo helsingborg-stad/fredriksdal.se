@@ -10,9 +10,9 @@
         {{ get_search_form() }}
     @endif
 
-    <div class="scroll-down-please">
+    <a href="#main-content" class="scroll-down-please">
         <div class="scroll-down-please-icon"></div>
         Scrolla ner
-    </div>
+    </a>
 </div>
 @endif
