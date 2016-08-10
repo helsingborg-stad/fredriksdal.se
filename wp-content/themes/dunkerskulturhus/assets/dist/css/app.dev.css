@@ -1285,38 +1285,38 @@ html.translated-ltr #site-header {
     bottom: -2em;
     right: 40px; }
 
-.is-child-theme .navbar-event-categories {
+.is-child-theme .navbar-event-categories:not(.navbar-creamy) {
   background-color: transparent;
   font-size: 0;
   border: 2px solid #1E1E1E;
   margin-bottom: 10px; }
-  .is-child-theme .navbar-event-categories a {
+  .is-child-theme .navbar-event-categories:not(.navbar-creamy) a {
     padding: 18px 15px;
     color: #1E1E1E;
     font-weight: 400;
     text-transform: uppercase;
     font-size: 1rem;
     line-height: 1; }
-    .is-child-theme .navbar-event-categories a:hover {
+    .is-child-theme .navbar-event-categories:not(.navbar-creamy) a:hover {
       background-color: #64b1cc;
       color: #fff;
       text-decoration: none; }
-  .is-child-theme .navbar-event-categories .current_page_item a {
+  .is-child-theme .navbar-event-categories:not(.navbar-creamy) .current_page_item a {
     background-color: #51a7c6;
     text-decoration: none;
     color: #fff; }
-    .is-child-theme .navbar-event-categories .current_page_item a::after {
+    .is-child-theme .navbar-event-categories:not(.navbar-creamy) .current_page_item a::after {
       display: none; }
-  .is-child-theme .navbar-event-categories li + li {
+  .is-child-theme .navbar-event-categories:not(.navbar-creamy) li + li {
     margin-left: 0; }
   @media screen and (max-width: 767px) {
-    .is-child-theme .navbar-event-categories ul {
+    .is-child-theme .navbar-event-categories:not(.navbar-creamy) ul {
       display: none; }
-    .is-child-theme .navbar-event-categories:target ul {
+    .is-child-theme .navbar-event-categories:not(.navbar-creamy):target ul {
       display: block; }
-    .is-child-theme .navbar-event-categories:target .event-categories-filter {
+    .is-child-theme .navbar-event-categories:not(.navbar-creamy):target .event-categories-filter {
       display: none; }
-      .is-child-theme .navbar-event-categories:target .event-categories-filter.close {
+      .is-child-theme .navbar-event-categories:not(.navbar-creamy):target .event-categories-filter.close {
         display: block; } }
 
 .is-child-theme .event-categories-filter {
