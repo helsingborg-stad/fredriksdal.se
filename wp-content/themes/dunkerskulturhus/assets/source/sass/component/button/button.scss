@@ -21,7 +21,7 @@
     color: #fff;
 }
 
-.btn, .read-more {
+.btn:not(.btn-circle), .read-more {
     border: none;
     border-radius: 0;
 }

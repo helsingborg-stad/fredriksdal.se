@@ -1599,7 +1599,7 @@ html.translated-ltr #site-header {
   background-color: #34B233;
   color: #fff; }
 
-.is-child-theme .btn, .is-child-theme .read-more {
+.is-child-theme .btn:not(.btn-circle), .is-child-theme .read-more {
   border: none;
   border-radius: 0; }
 
