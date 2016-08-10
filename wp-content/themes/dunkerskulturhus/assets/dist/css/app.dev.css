@@ -1599,6 +1599,10 @@ html.translated-ltr #site-header {
   background-color: #34B233;
   color: #fff; }
 
+.is-child-theme .btn, .is-child-theme .read-more {
+  border: none;
+  border-radius: 0; }
+
 .is-child-theme .box-panel .widgettitle .rsswidget:first-child {
   display: none; }
 
