@@ -8,8 +8,8 @@ class Enqueue
     {
         // Enqueue scripts and styles
         add_action('wp_enqueue_scripts', array($this, 'style'));
-        add_action('wp_enqueue_scripts', array($this, 'script'));
         add_action('wp_enqueue_scripts', array($this, 'font'));
+        add_action('wp_enqueue_scripts', array($this, 'script'),900);
     }
 
     /**
@@ -23,8 +23,6 @@ class Enqueue
             wp_enqueue_style('press-start-2p');
         }
 
-        wp_register_style('hbg-prime', 'http://helsingborg-stad.github.io/styleguide-web-cdn/styleguide.dev/dist/css/hbg-prime.min.css', '', '1.0.1');
-        wp_enqueue_style('hbg-prime');
         wp_enqueue_style('dunkers-css', get_stylesheet_directory_uri(). '/assets/dist/css/app.min.css', '', filemtime(get_stylesheet_directory() . '/assets/dist/css/app.min.css'));
     }
 
@@ -41,8 +39,6 @@ class Enqueue
 
         wp_enqueue_script('dunkers-js', get_stylesheet_directory_uri(). '/assets/dist/js/app.min.js', '', filemtime(get_stylesheet_directory() . '/assets/dist/js/app.min.js'), true);
 
-        wp_register_script('hbg-prime', 'http://helsingborg-stad.github.io/styleguide-web-cdn/styleguide.dev/dist/js/hbg-prime.min.js', '', '1.0.0', true);
-        wp_enqueue_script('hbg-prime');
     }
 
     /**
