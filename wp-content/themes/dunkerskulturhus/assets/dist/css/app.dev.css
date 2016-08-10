@@ -1577,21 +1577,22 @@ html.translated-ltr #site-header {
   .is-child-theme .nav-aside .current-node > .sub-menu {
     display: block; }
 
-.is-child-theme .btn-circle {
+.is-child-theme .btn.btn-circle {
   position: relative;
   width: 50px;
   height: 50px;
   line-height: 1;
   border-radius: 1000px;
   -webkit-transition: 200ms all ease-in-out;
-          transition: 200ms all ease-in-out; }
-  .is-child-theme .btn-circle span {
+          transition: 200ms all ease-in-out;
+  border: none; }
+  .is-child-theme .btn.btn-circle span {
     position: absolute;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%); }
-  .is-child-theme .btn-circle:hover {
+  .is-child-theme .btn.btn-circle:hover {
     background-color: #288a28;
     text-decoration: none; }
 
