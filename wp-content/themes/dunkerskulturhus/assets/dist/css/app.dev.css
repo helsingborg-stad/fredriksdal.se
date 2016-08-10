@@ -240,11 +240,11 @@ html.translated-ltr #site-header {
     padding-top: 10px;
     padding-bottom: 10px; }
 
-.is-child-theme.home .navbar {
+.is-child-theme.home .site-header.header-casual .navbar-mainmenu.navbar {
   background-color: transparent;
   padding: 15px 0; }
-  .is-child-theme.home .navbar .current-page-ancestor a::after,
-  .is-child-theme.home .navbar .current_page_item a::after {
+  .is-child-theme.home .site-header.header-casual .navbar-mainmenu.navbar .current-page-ancestor a::after,
+  .is-child-theme.home .site-header.header-casual .navbar-mainmenu.navbar .current_page_item a::after {
     display: none; }
 
 .is-child-theme .navbar-mainmenu {
