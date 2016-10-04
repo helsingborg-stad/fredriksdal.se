@@ -1,10 +1,14 @@
 {
-    "name": "(#composer_project#)",
-    "license": "(#composer_license#)",
+    "name": "Fredriksdal.se",
+    "license": "GPL2",
     "authors": [
         {
-            "name": "(#composer_author_name#)",
-            "email": "(#composer_author_email#)"
+            "name": "Sebastian Thulin",
+            "email": "sebastian.thulin@helsingborg.se"
+        },
+        {
+            "name": "Kristoffer Svanmark",
+            "email": "kristoffer.svanmark@lexiconitkonsult.se"
         }
     ],
     "minimum-stability" : "stable",
