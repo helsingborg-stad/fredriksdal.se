@@ -28,3 +28,7 @@ RedirectMatch 301 /admin/(.*) /wp/wp-admin/$1
 <IfModule mod_headers.c>
     Header always append X-Frame-Options SAMEORIGIN
 </IfModule>
+
+# BEGIN WordPress
+
+# END WordPress
