@@ -22,6 +22,7 @@ composer.lock
 wp-content/themes/*
 !wp-content/themes
 !wp-content/themes/fredriksdal
+wp-content/themes/fredriksdal/node_modules
 
 
 # Compiled source #
