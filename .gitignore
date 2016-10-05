@@ -19,6 +19,8 @@ composer.lock
 
 # Themes dependencies #
 ##########################
+wp-content/themes/*
+!wp-content/themes
 !wp-content/themes/fredriksdal
 
 
