@@ -17,6 +17,11 @@ wp-content/*
 composer.lock
 
 
+# Themes dependencies #
+##########################
+!wp-content/themes/fredriksdal
+
+
 # Compiled source #
 ###################
 *.com
