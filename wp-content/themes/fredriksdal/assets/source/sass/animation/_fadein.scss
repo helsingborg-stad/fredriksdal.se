@@ -1,0 +1,15 @@
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes fadeinUpHeroText {
+    from {
+        opacity: 0;
+        top: 55%;
+    }
+    to   {
+        opacity: 1;
+        top: 50%;
+    }
+}

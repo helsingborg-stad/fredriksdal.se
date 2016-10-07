@@ -6,5 +6,6 @@ class App
     public function __construct()
     {
         new \Fredriksdal\Theme\Enqueue();
+        new \Fredriksdal\Theme\Filters();
     }
 }

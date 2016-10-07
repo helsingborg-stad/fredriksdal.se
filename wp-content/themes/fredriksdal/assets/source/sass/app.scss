@@ -1,6 +1,31 @@
+
+/* Configurations */
+@import 'config/colors';
+@import 'config/grid';
+@import 'config/icons';
+@import 'config/typography';
+
+/* Mixins */
+@import 'mixin/positioning';
+@import 'mixin/icon';
+@import 'mixin/gradient';
+@import 'mixin/typeface';
+
+/* Animations */
+@import 'animation/fadein';
+
+/* Master*/
 @import 'master';
 
 .is-child-theme {
-    @import 'config/colors';
-	//@import 'layout/base';
+
+    /* Layout */
+    @import 'layout/base';
+    @import 'layout/header';
+    @import 'layout/mainmenu';
+    @import 'layout/footer';
+
+    /* Components */
+    @import 'component/button';
+    @import 'component/hero';
 }
