@@ -1,4 +1,8 @@
 
 footer.main-footer {
     background-color: $palette-2;
+    color: #000;
+    a,a:hover,a:active,a:visited {
+        color: #000;
+    }
 }

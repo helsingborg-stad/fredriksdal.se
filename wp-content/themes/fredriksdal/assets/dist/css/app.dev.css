@@ -48,6 +48,11 @@ html.translated-ltr #site-header {
 .stripe {
   display: none !important; }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  font-family: "Verlag A", "Verlag B";
+  text-transform: uppercase; }
+
 .is-child-theme {
   /* Layout */
   /* Components */ }
@@ -310,7 +315,10 @@ html.translated-ltr #site-header {
   .is-child-theme .menu-item-search {
     margin-left: 10px; }
   .is-child-theme footer.main-footer {
-    background-color: #e9e5d6; }
+    background-color: #e9e5d6;
+    color: #000; }
+    .is-child-theme footer.main-footer a, .is-child-theme footer.main-footer a:hover, .is-child-theme footer.main-footer a:active, .is-child-theme footer.main-footer a:visited {
+      color: #000; }
   .is-child-theme .btn,
   .is-child-theme .read-more {
     font-family: "Verlag A", "Verlag B";
