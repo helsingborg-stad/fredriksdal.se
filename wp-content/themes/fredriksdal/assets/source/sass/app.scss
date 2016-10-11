@@ -23,9 +23,11 @@
     @import 'layout/base';
     @import 'layout/header';
     @import 'layout/mainmenu';
+    @import 'layout/mobilemenu';
     @import 'layout/footer';
 
     /* Components */
     @import 'component/button';
     @import 'component/hero';
+    @import 'component/search';
 }

@@ -1,3 +1,10 @@
+
+.menu-icon:not(.open),
+.menu-icon:before,
+.menu-icon:after {
+    background-color: #fff;
+}
+
 .navbar-mainmenu {
     display: table;
     width: 100%;
@@ -8,30 +15,6 @@
         display: block;
     }
 
-    .logotype {
-        display: table-cell !important;
-        vertical-align: middle;
-        line-height: 1;
-
-        @media #{$screen-below-sm} {
-            padding-right: 20px;
-
-            img, svg {
-                width: 100% !important;
-                height: auto !important;
-                max-width: 345px;
-            }
-        }
-
-        @media screen and (max-width: #{$screen-lg-max}) and (min-width: #{$screen-lg-min}) {
-            margin: 5px auto;
-            display: inline-block !important;
-        }
-
-        img {
-            max-height: 30px;
-        }
-    }
 
     .menu-trigger {
         display: table-cell;
@@ -120,23 +103,35 @@
     }
 }
 
-#site-header.liquid-header #main-menu,
-&:not(.home) #site-header #main-menu,
-&.no-js #site-header #main-menu {
-    li {
-        a {
-            color: $black;
+#site-header.liquid-header,
+&:not(.home) #site-header,
+&.no-js #site-header {
 
-            &:before {
-                background-color: $black;
-            }
-        }
-
-        &.current-menu-item {
+    #main-menu {
+        li {
             a {
                 color: $black;
-                border-color: $black;
+
+                &:before {
+                    background-color: $black;
+                }
             }
+
+            &.current-menu-item {
+                a {
+                    color: $black;
+                    border-color: $black;
+                }
+            }
+        }
+    }
+
+    #mobile-menu,
+    a[href="#mobile-menu"] {
+        &:not(.open) .menu-icon,
+        .menu-icon:after,
+        .menu-icon:before {
+            background-color: #000;
         }
     }
 }
