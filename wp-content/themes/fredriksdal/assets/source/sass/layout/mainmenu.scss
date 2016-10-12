@@ -15,17 +15,8 @@
         display: block;
     }
 
-
-    .menu-trigger {
-        display: table-cell;
-        width: 1%;
-    }
-
     .nav {
-        display: table-cell;
-        vertical-align: middle;
-        text-align: right;
-        width: 100%;
+        text-align: left;
     }
 
     a {
@@ -33,17 +24,13 @@
     }
 }
 
-.nav-horizontal>li+li {
-    margin-left: 7px;
-}
-
 .navbar .current-page-ancestor a {
     text-decoration: none;
 }
 
 #main-menu {
-    text-align: right;
-
+    transition: margin 200ms;
+    margin-top: 0;
     @media screen and (max-width: #{$screen-lg-max}) and (min-width: #{$screen-lg-min}) {
         clear: both;
         display: block;
@@ -56,13 +43,12 @@
 
         > a {
             @include textrendering();
-            text-rendering: geometricPrecision;
             text-transform: uppercase;
             text-decoration: none;
-            font-weight: 400;
+            font-weight: 600;
             font-size: 1em;
             color: #fff;
-            margin: 10px 0;
+            margin: 0;
             padding: 3px 0;
             position: relative;
             transition: color 200ms, background 200ms, border 200ms, margin 200ms;
@@ -108,12 +94,16 @@
 &.no-js #site-header {
 
     #main-menu {
+        margin-top: 27px;
         li {
+
             a {
                 color: $black;
+                line-height: 1;
 
                 &:before {
                     background-color: $black;
+                    bottom: 0;
                 }
             }
 
