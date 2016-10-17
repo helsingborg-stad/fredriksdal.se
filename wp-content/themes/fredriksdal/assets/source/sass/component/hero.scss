@@ -170,11 +170,11 @@
 
         /* Mobile */
         @media screen and #{$screen-below-sm} {
-            font-size: 1.2em;
             font-weight: bold;
 
             span {
                 max-width: 90%;
+                font-size: 5vw;
             }
         }
 
@@ -201,6 +201,10 @@
         font-family: $base-font-family;
         white-space: nowrap;
         letter-spacing: .1em;
+
+        @media screen and #{$screen-below-sm} {
+            font-size: .8em;
+        }
     }
 
     .scroll-down-please-icon {
