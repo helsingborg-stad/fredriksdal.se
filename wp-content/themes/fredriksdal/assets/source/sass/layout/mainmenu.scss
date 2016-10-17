@@ -94,7 +94,14 @@
 &.no-js #site-header {
 
     #main-menu {
-        margin-top: 27px;
+        @media screen and (min-width: #{$screen-lg-max}) {
+            margin-top: 27px;
+        }
+
+        @media screen and (max-width: #{$screen-lg-max}) {
+            margin-top: 10px;
+        }
+
         li {
 
             a {
