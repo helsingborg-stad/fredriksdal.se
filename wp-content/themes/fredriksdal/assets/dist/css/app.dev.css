@@ -340,8 +340,8 @@ h1, h2, h3, h4, h5, h6 {
   .is-child-theme .menu-item-search {
     margin-left: 10px; }
   .is-child-theme nav#mobile-menu {
-    -webkit-animation: fadeinUp 200ms;
-            animation: fadeinUp 200ms; }
+    -webkit-animation: fadeinUp 500ms;
+            animation: fadeinUp 500ms; }
     .is-child-theme nav#mobile-menu ul {
       background-color: #919823; }
       .is-child-theme nav#mobile-menu ul li + li {
