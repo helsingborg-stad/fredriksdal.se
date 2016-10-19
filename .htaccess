@@ -26,6 +26,10 @@
     Header always append X-Frame-Options SAMEORIGIN
 </IfModule>
 
+# Force SSL
+RewriteCond %{SERVER_PORT} !^443$
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
