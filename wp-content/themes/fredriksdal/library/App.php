@@ -7,5 +7,7 @@ class App
     {
         new \Fredriksdal\Theme\Enqueue();
         new \Fredriksdal\Theme\Filters();
+
+        new \Fredriksdal\Controller\RemoveOnePageMetaBox();
     }
 }

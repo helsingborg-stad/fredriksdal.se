@@ -1,0 +1,46 @@
+.modularity-onepage-section {
+    padding: 60px 0;
+    position: relative;
+
+    .grid + .grid {
+        margin-top: 60px;
+    }
+
+    article {
+        margin: 0 20%;
+        width: 60%;
+        max-width: initial;
+        text-align: center;
+
+        h1, h2, h3, h4, h5, h6, p, ul, ol {
+            max-width: 900px;
+        }
+
+        p, ol, ul {
+            line-height: 1.4em;
+        }
+    }
+
+    &:nth-child(3n+1) {
+        background: $palette-2;
+    }
+    &:nth-child(3n+2) {
+        background: $palette-3;
+    }
+    &:nth-child(3n+3) {
+        background: #fff;
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 5px;
+        @include gradient(rgba(#000,.3), rgba(#000,0));
+    }
+}
+
+.modularity-onepage-section + .modularity-onepage-section  {
+    margin-top: 0;
+}
