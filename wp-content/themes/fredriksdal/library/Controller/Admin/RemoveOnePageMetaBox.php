@@ -13,7 +13,7 @@ class RemoveOnePageMetaBox
     public function __construct()
     {
         add_action('current_screen', array($this,'removeSeoFrameWorks'),999);
-        add_action('current_screen', array($this,'visualHideMeta'),999);
+        add_action('admin_head', array($this,'visualHideMeta'),999);
     }
 
     public function removeSeoFrameWorks() {
