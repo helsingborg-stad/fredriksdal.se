@@ -1,6 +1,6 @@
 <?php
 
-namespace Fredriksdal\Controller;
+namespace Fredriksdal\Controller\Admin;
 
 /**
  * Remove one page Metaboxes
