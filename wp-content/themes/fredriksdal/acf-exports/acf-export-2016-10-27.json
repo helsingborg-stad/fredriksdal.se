@@ -1,0 +1,62 @@
+    {
+        "key": "group_5810c4152dd10",
+        "title": "Section settings",
+        "fields": [
+            {
+                "key": "field_5810c42cd50a8",
+                "label": "Enable horizontal scroll",
+                "name": "horizontal_scroll",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "Yes. Enable horisontal scrolling.",
+                "default_value": 1
+            },
+            {
+                "key": "field_5810c45c25a2d",
+                "label": "Select background color",
+                "name": "background_color",
+                "type": "radio",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "white": "White",
+                    "green": "Green",
+                    "lgren": "Light Green"
+                },
+                "other_choice": 0,
+                "save_other_choice": 0,
+                "default_value": "white",
+                "layout": "horizontal"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "onepage"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "left",
+        "instruction_placement": "field",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    }

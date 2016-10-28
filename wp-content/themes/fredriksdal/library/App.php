@@ -9,5 +9,7 @@ class App
         new \Fredriksdal\Theme\Filters();
 
         new \Fredriksdal\Controller\Admin\RemoveOnePageMetaBox();
+
+        new \Fredriksdal\Theme\OnePage();
     }
 }
