@@ -112,7 +112,8 @@ Fredriksdal.VerticalScroll.VerticalScroll = (function ($) {
     var VerticalScrollSettigs = {
         cellAlign: 'left',
         contain: true,
-        percentPosition: true
+        percentPosition: true,
+        groupCells: true
     };
 
     function VerticalScroll() {
