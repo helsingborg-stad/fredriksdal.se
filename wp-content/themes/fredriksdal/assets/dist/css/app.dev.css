@@ -554,7 +554,8 @@ h1, h2, h3, h4, h5, h6, p {
     .is-child-theme .box.box-news.box-news-horizontal .box-image-container {
       position: relative;
       border-radius: 50%;
-      overflow: hidden; }
+      overflow: hidden;
+      width: 20%; }
       .is-child-theme .box.box-news.box-news-horizontal .box-image-container:after {
         content: "";
         border-radius: 50%;
