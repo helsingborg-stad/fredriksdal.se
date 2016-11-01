@@ -40,6 +40,14 @@ h1, h2, h3, h4, h5, h6, p {
     color: $palette-1;
     text-align: center;
 
+    a {
+        color: $palette-1;
+    }
+
+    a:hover, a:active, a:visited {
+        color: $gray-dark;
+    }
+
     &.link-item {
         left: 0;
         padding-left: 0;
