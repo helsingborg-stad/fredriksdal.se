@@ -10,6 +10,7 @@
 @import 'mixin/icon';
 @import 'mixin/gradient';
 @import 'mixin/typeface';
+@import 'mixin/rounded';
 
 /* Animations */
 @import 'animation/fadein';
@@ -27,9 +28,13 @@
     @import 'layout/footer';
     @import 'layout/onepage';
 
+    /* Post components */
+    @import 'component/posts/post-items';
+
     /* Components */
     @import 'component/button';
     @import 'component/hero';
     @import 'component/search';
     @import 'component/tabs';
+    @import 'component/social';
 }

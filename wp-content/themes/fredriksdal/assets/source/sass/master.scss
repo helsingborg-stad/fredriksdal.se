@@ -38,4 +38,15 @@ h1, h2, h3, h4, h5, h6 {
 
 h1, h2, h3, h4, h5, h6, p {
     color: $palette-1;
+    text-align: center;
+
+    &.link-item {
+        left: 0;
+        padding-left: 0;
+    }
+
+    &.link-item:before {
+        display: none;
+
+    }
 }

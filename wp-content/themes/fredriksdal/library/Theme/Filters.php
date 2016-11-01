@@ -35,6 +35,13 @@ class Filters
 
         //Body classes (removing material design, this is flat)
         add_filter('body_class', array($this, 'wpAddBodyClass'));
+
+        //Make 16:9 to sqare
+        foreach (array(
+            'modularity/image/latest/box'
+        ) as $imageFilter) {
+            add_filter($imageFilter, array($this, 'imageAspectRatioSquare'), 50, 2);
+        }
     }
 
     /**
@@ -132,5 +139,11 @@ class Filters
     public function headerGridSize($classes)
     {
         return "grid-lg-12";
+    }
+
+    public function imageAspectRatioSquare($size, $args)
+    {
+        $size[1] = $size[0];
+        return $size;
     }
 }
