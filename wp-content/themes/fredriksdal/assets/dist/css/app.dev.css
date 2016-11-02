@@ -495,6 +495,9 @@ h1, h2, h3, h4, h5, h6, p {
       background: none; }
       .is-child-theme .modularity-onepage-section .flickity-prev-next-button:focus {
         outline: none; }
+      .is-child-theme .modularity-onepage-section .flickity-prev-next-button:after {
+        -webkit-transition: margin 200ms;
+                transition: margin 200ms; }
       .is-child-theme .modularity-onepage-section .flickity-prev-next-button:active {
         opacity: 0.6; }
       .is-child-theme .modularity-onepage-section .flickity-prev-next-button:disabled {
@@ -513,6 +516,8 @@ h1, h2, h3, h4, h5, h6, p {
           -moz-osx-font-smoothing: grayscale;
           vertical-align: -15%;
           content: ""; }
+      .is-child-theme .modularity-onepage-section .flickity-prev-next-button.next:not(:disabled):hover:after {
+        margin-right: -5px; }
       .is-child-theme .modularity-onepage-section .flickity-prev-next-button.previous {
         left: 0; }
         .is-child-theme .modularity-onepage-section .flickity-prev-next-button.previous:after {
@@ -524,6 +529,8 @@ h1, h2, h3, h4, h5, h6, p {
           -moz-osx-font-smoothing: grayscale;
           vertical-align: -15%;
           content: ""; }
+      .is-child-theme .modularity-onepage-section .flickity-prev-next-button.previous:not(:disabled):hover:after {
+        margin-left: -5px; }
     .is-child-theme .modularity-onepage-section .flickity-page-dots {
       width: 100%;
       padding: 20px 0 0 0;

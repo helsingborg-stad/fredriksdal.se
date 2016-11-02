@@ -3,7 +3,7 @@ Fredriksdal.OffGrid = Fredriksdal.OffGrid || {};
 
 Fredriksdal.OffGrid.OffGrid = (function ($) {
 
-    var basicAdjustment = 20;
+    var basicAdjustment = 45;
 
     function OffGrid() {
         this.adjustArrows();

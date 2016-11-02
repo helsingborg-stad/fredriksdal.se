@@ -112,6 +112,10 @@
             outline: none;
         }
 
+        &:after {
+            transition: margin 200ms;
+        }
+
         &:active {
             opacity: 0.6;
         }
@@ -133,12 +137,20 @@
             }
         }
 
+        &.next:not(:disabled):hover:after {
+            margin-right: -5px;
+        }
+
         &.previous {
             left: 0;
             &:after {
                 content: "";
                 @include pricon('\EA2D');
             }
+        }
+
+        &.previous:not(:disabled):hover:after {
+            margin-left: -5px;
         }
     }
 
