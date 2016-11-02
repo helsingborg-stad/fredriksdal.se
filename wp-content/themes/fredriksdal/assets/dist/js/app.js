@@ -65,6 +65,90 @@ Fredriksdal.Liquid.Liquid = (function ($) {
 })(jQuery);
 
 Fredriksdal = Fredriksdal || {};
+Fredriksdal.HorizontalScroll = Fredriksdal.HorizontalScroll || {};
+
+Fredriksdal.HorizontalScroll.HorizontalScroll = (function ($) {
+
+    var HorizontalScrollWrapper = '.modularity-onepage-section.section-horizontal-scroll';
+
+    var HorizontalScrollTargets = [
+        '.widget-slider.grid .modularity-mod-posts .grid',
+        '.widget-slider.grid .modularity-mod-index .grid',
+        '.widget-slider.grid .modularity-mod-social ul.social-feed-instagram'
+    ];
+
+    var HorizontalScrollSettigs = {
+        cellAlign: 'left',
+        contain: true,
+        percentPosition: true,
+        groupCells: true
+    };
+
+    function HorizontalScroll() {
+        this.htmlWrapper();
+        HorizontalScrollTargets.forEach(function(element) {
+            jQuery(HorizontalScrollWrapper + ' ' + element).flickity(HorizontalScrollSettigs);
+        }.bind(this));
+    }
+
+    HorizontalScroll.prototype.htmlWrapper = function () {
+       jQuery('html').addClass('no-flexbox');
+    };
+
+    new HorizontalScroll();
+
+})(jQuery);
+
+Fredriksdal = Fredriksdal || {};
+Fredriksdal.OffGrid = Fredriksdal.OffGrid || {};
+
+Fredriksdal.OffGrid.OffGrid = (function ($) {
+
+    var basicAdjustment = 20;
+
+    function OffGrid() {
+        this.adjustArrows();
+
+        jQuery(window).on("resize",function(){
+            this.adjustArrows();
+        }.bind(this));
+
+        jQuery(window).on("orientationchange",function(){
+            this.adjustArrows();
+        }.bind(this));
+    }
+
+    OffGrid.prototype.adjustArrows = function () {
+        jQuery('.flickity-prev-next-button.next').each(function(index,element) {
+            this.adjustTargetObject(element, 'right', -Math.abs(this.sectionOffsetSize())+basicAdjustment);
+        }.bind(this));
+        jQuery('.flickity-prev-next-button.previous').each(function(index,element) {
+            this.adjustTargetObject(element, 'left', -Math.abs(this.sectionOffsetSize())+basicAdjustment);
+        }.bind(this));
+    };
+
+
+    OffGrid.prototype.adjustTargetObject = function (object,edge,offset) {
+        if(jQuery(object) && (edge == 'left' || edge == 'right' )) {
+            jQuery(object).css(edge,offset);
+        }
+    };
+
+    OffGrid.prototype.sectionOffsetSize = function () {
+        var outerWidth = jQuery("section.modularity-onepage-section").outerWidth();
+        var innerWidth = jQuery("section.modularity-onepage-section > .container").width();
+
+        if(outerWidth !== 0 && innerWidth !== 0)  {
+            return Math.floor((outerWidth-innerWidth)/2);
+        }
+        return false;
+    };
+
+    new OffGrid();
+
+})(jQuery);
+
+Fredriksdal = Fredriksdal || {};
 Fredriksdal.ScrollPlease = Fredriksdal.ScrollPlease || {};
 
 Fredriksdal.ScrollPlease.ScrollPlease = (function ($) {
@@ -93,40 +177,5 @@ Fredriksdal.ScrollPlease.ScrollPlease = (function ($) {
     }
 
     return new ScrollPlease();
-
-})(jQuery);
-
-Fredriksdal = Fredriksdal || {};
-Fredriksdal.VerticalScroll = Fredriksdal.VerticalScroll || {};
-
-Fredriksdal.VerticalScroll.VerticalScroll = (function ($) {
-
-    var VertialScrollWrapper = '.modularity-onepage-section.section-horizontal-scroll';
-
-    var VerticalScrollTargets = [
-        '.widget-slider.grid .modularity-mod-posts .grid',
-        '.widget-slider.grid .modularity-mod-index .grid',
-        '.widget-slider.grid .modularity-mod-social ul.social-feed-instagram'
-    ];
-
-    var VerticalScrollSettigs = {
-        cellAlign: 'left',
-        contain: true,
-        percentPosition: true,
-        groupCells: true
-    };
-
-    function VerticalScroll() {
-        this.htmlWrapper();
-        VerticalScrollTargets.forEach(function(element) {
-            jQuery(VertialScrollWrapper + ' ' + element).flickity(VerticalScrollSettigs);
-        }.bind(this));
-    }
-
-    VerticalScroll.prototype.htmlWrapper = function () {
-       jQuery('html').addClass('no-flexbox');
-    };
-
-    new VerticalScroll();
 
 })(jQuery);

@@ -28,7 +28,7 @@
         background: $palette-2;
     }
     &.background-white {
-        background: #fff;
+        background: $white;
     }
     &:before {
         content: "";
@@ -99,15 +99,14 @@
     /* Prev next */
     .flickity-prev-next-button {
         transition: 300ms opacity;
-        background: none;
+        color: $gray;
         position: absolute;
         top: 50%;
         border: none;
-        border-radius: 50%;
         cursor: pointer;
         transform: translateY(-50%);
-        font-size: 2em;
-        color: #fff;
+        font-size: 2.5em;
+        background: none;
 
         &:focus {
             outline: none;
@@ -123,14 +122,14 @@
         }
 
         svg {
-            display: none;
+            display: none !important;
         }
 
         &.next {
             right: 0;
             &:after {
                 content: "";
-                @include hbg-icon($icon-chevron-right);
+                @include pricon('\EA2C');
             }
         }
 
@@ -138,11 +137,10 @@
             left: 0;
             &:after {
                 content: "";
-                @include hbg-icon($icon-chevron-left);
+                @include pricon('\EA2D');
             }
         }
     }
-
 
     /* Page dots */
 

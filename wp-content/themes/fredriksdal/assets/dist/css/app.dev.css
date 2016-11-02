@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* Configurations */
 /* Mixins */
+/* Mixin */
 /* Animations */
 @-webkit-keyframes fadein {
   from {
@@ -483,16 +484,15 @@ h1, h2, h3, h4, h5, h6, p {
     .is-child-theme .modularity-onepage-section .flickity-prev-next-button {
       -webkit-transition: 300ms opacity;
               transition: 300ms opacity;
-      background: none;
+      color: #666666;
       position: absolute;
       top: 50%;
       border: none;
-      border-radius: 50%;
       cursor: pointer;
       -webkit-transform: translateY(-50%);
               transform: translateY(-50%);
-      font-size: 2em;
-      color: #fff; }
+      font-size: 2.5em;
+      background: none; }
       .is-child-theme .modularity-onepage-section .flickity-prev-next-button:focus {
         outline: none; }
       .is-child-theme .modularity-onepage-section .flickity-prev-next-button:active {
@@ -501,35 +501,29 @@ h1, h2, h3, h4, h5, h6, p {
         opacity: 0.3;
         cursor: auto; }
       .is-child-theme .modularity-onepage-section .flickity-prev-next-button svg {
-        display: none; }
+        display: none !important; }
       .is-child-theme .modularity-onepage-section .flickity-prev-next-button.next {
         right: 0; }
         .is-child-theme .modularity-onepage-section .flickity-prev-next-button.next:after {
           content: "";
-          font-family: FontAwesome;
-          speak: none;
-          font-style: normal;
-          font-weight: normal;
-          font-variant: normal;
-          text-transform: none;
+          font-family: hbg-pricons;
           line-height: 1;
-          content: "";
+          text-rendering: auto;
           -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale; }
+          -moz-osx-font-smoothing: grayscale;
+          vertical-align: -15%;
+          content: ""; }
       .is-child-theme .modularity-onepage-section .flickity-prev-next-button.previous {
         left: 0; }
         .is-child-theme .modularity-onepage-section .flickity-prev-next-button.previous:after {
           content: "";
-          font-family: FontAwesome;
-          speak: none;
-          font-style: normal;
-          font-weight: normal;
-          font-variant: normal;
-          text-transform: none;
+          font-family: hbg-pricons;
           line-height: 1;
-          content: "";
+          text-rendering: auto;
           -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale; }
+          -moz-osx-font-smoothing: grayscale;
+          vertical-align: -15%;
+          content: ""; }
     .is-child-theme .modularity-onepage-section .flickity-page-dots {
       width: 100%;
       padding: 20px 0 0 0;
