@@ -40,6 +40,22 @@
                 "save_other_choice": 0,
                 "default_value": "white",
                 "layout": "horizontal"
+            },
+            {
+                "key": "field_5819c24499e97",
+                "label": "Do not link to source page",
+                "name": "ajax_loading",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "Yes. Load content on the same page (only applies on modules with support).",
+                "default_value": 0
             }
         ],
         "location": [
