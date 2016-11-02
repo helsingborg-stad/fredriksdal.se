@@ -46,6 +46,16 @@
     margin-top: 0;
 }
 
+/* Centered content */
+.modularity-onepage-section {
+    .modularity-mod-text {
+        ul, ol, p, h1, h2, h3, h4, h5, h6 {
+            text-align: center;
+        }
+    }
+}
+
+
 /* Slider functionality */
 
 .modularity-onepage-section {

@@ -92,8 +92,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase; }
 
 h1, h2, h3, h4, h5, h6, p {
-  color: #000;
-  text-align: center; }
+  color: #000; }
   h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, p a {
     color: #000; }
   h1 a:hover, h1 a:active, h1 a:visited, h2 a:hover, h2 a:active, h2 a:visited, h3 a:hover, h3 a:active, h3 a:visited, h4 a:hover, h4 a:active, h4 a:visited, h5 a:hover, h5 a:active, h5 a:visited, h6 a:hover, h6 a:active, h6 a:visited, p a:hover, p a:active, p a:visited {
@@ -106,6 +105,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .is-child-theme {
   /* Layout */
+  /* Centered content */
   /* Slider functionality */
   /* Post components */
   /* Components */ }
@@ -452,6 +452,8 @@ h1, h2, h3, h4, h5, h6, p {
       background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent); }
   .is-child-theme .modularity-onepage-section + .modularity-onepage-section {
     margin-top: 0; }
+  .is-child-theme .modularity-onepage-section .modularity-mod-text ul, .is-child-theme .modularity-onepage-section .modularity-mod-text ol, .is-child-theme .modularity-onepage-section .modularity-mod-text p, .is-child-theme .modularity-onepage-section .modularity-mod-text h1, .is-child-theme .modularity-onepage-section .modularity-mod-text h2, .is-child-theme .modularity-onepage-section .modularity-mod-text h3, .is-child-theme .modularity-onepage-section .modularity-mod-text h4, .is-child-theme .modularity-onepage-section .modularity-mod-text h5, .is-child-theme .modularity-onepage-section .modularity-mod-text h6 {
+    text-align: center; }
   .is-child-theme .modularity-onepage-section {
     /* Prev next */
     /* Page dots */ }
@@ -547,6 +549,8 @@ h1, h2, h3, h4, h5, h6, p {
         cursor: pointer; }
         .is-child-theme .modularity-onepage-section .flickity-page-dots .dot.is-selected {
           opacity: 1; }
+  .is-child-theme article h1 + p {
+    margin-top: 20px; }
   .is-child-theme .box.box-news {
     background-color: transparent;
     background: none !important; }
