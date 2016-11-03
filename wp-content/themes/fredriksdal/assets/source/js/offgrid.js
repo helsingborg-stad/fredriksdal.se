@@ -19,13 +19,21 @@ Fredriksdal.OffGrid.OffGrid = (function ($) {
 
     OffGrid.prototype.adjustArrows = function () {
         jQuery('.flickity-prev-next-button.next').each(function(index,element) {
-            this.adjustTargetObject(element, 'right', -Math.abs(this.sectionOffsetSize())+basicAdjustment);
+            this.adjustTargetObject(element, 'right', -Math.abs(this.sectionOffsetSize())+this.offsetBySize());
         }.bind(this));
         jQuery('.flickity-prev-next-button.previous').each(function(index,element) {
-            this.adjustTargetObject(element, 'left', -Math.abs(this.sectionOffsetSize())+basicAdjustment);
+            this.adjustTargetObject(element, 'left', -Math.abs(this.sectionOffsetSize())+this.offsetBySize());
         }.bind(this));
     };
 
+    OffGrid.prototype.offsetBySize = function () {
+        if(this.sectionOffsetSize() < basicAdjustment && this.sectionOffsetSize() > Math.floor(basicAdjustment/2)) {
+            return Math.floor(basicAdjustment/2);
+        } else if (this.sectionOffsetSize() < Math.floor(basicAdjustment/2)) {
+            return Math.floor(basicAdjustment/3);
+        }
+        return basicAdjustment;
+    }
 
     OffGrid.prototype.adjustTargetObject = function (object,edge,offset) {
         if(jQuery(object) && (edge == 'left' || edge == 'right' )) {

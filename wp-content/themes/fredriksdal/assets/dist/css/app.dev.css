@@ -633,13 +633,10 @@ h1, h2, h3, h4, h5, h6, p {
       .is-child-theme .hero .slider [class*=slider-nav-] {
         background: none;
         border-radius: 50%;
-        text-indent: -500px;
         overflow: hidden;
-        width: 50px;
-        height: 50px;
         padding: 0;
         z-index: 20;
-        font-size: 2em; }
+        font-size: 2.5em; }
         @media screen and (max-width: 469px) {
           .is-child-theme .hero .slider [class*=slider-nav-] {
             border: none;
@@ -649,55 +646,26 @@ h1, h2, h3, h4, h5, h6, p {
             background: none;
             text-shadow: 0 0 1px rgba(0, 0, 0, 0.3); } }
         .is-child-theme .hero .slider [class*=slider-nav-] i {
-          display: none !important; }
-        .is-child-theme .hero .slider [class*=slider-nav-]:after {
-          position: absolute;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
-          text-indent: 0;
-          line-height: 48px !important;
-          -webkit-transition: margin 200ms;
-                  transition: margin 200ms; }
+          -webkit-transition: 200ms margin;
+                  transition: 200ms margin; }
       .is-child-theme .hero .slider .slider-nav-previous {
         margin-left: 25px; }
         @media screen and (max-width: 469px) {
           .is-child-theme .hero .slider .slider-nav-previous {
             margin-left: 5px; } }
-        .is-child-theme .hero .slider .slider-nav-previous:after {
-          margin-right: 3px;
-          font-family: FontAwesome;
-          speak: none;
-          font-style: normal;
-          font-weight: normal;
-          font-variant: normal;
-          text-transform: none;
-          line-height: 1;
-          content: "";
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale; }
+        .is-child-theme .hero .slider .slider-nav-previous i {
+          margin-left: 3px; }
       .is-child-theme .hero .slider .slider-nav-next {
         margin-right: 25px; }
         @media screen and (max-width: 469px) {
           .is-child-theme .hero .slider .slider-nav-next {
             margin-right: 5px; } }
-        .is-child-theme .hero .slider .slider-nav-next:after {
-          margin-left: 3px;
-          font-family: FontAwesome;
-          speak: none;
-          font-style: normal;
-          font-weight: normal;
-          font-variant: normal;
-          text-transform: none;
-          line-height: 1;
-          content: "";
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale; }
-      .is-child-theme .hero .slider .slider-nav-previous:hover:after {
-        margin-right: 7px; }
-      .is-child-theme .hero .slider .slider-nav-next:hover:after {
-        margin-left: 7px; }
+        .is-child-theme .hero .slider .slider-nav-next i {
+          margin-right: 3px; }
+      .is-child-theme .hero .slider .slider-nav-previous:hover i {
+        margin-left: 0; }
+      .is-child-theme .hero .slider .slider-nav-next:hover i {
+        margin-right: 0; }
     .is-child-theme .hero .search {
       position: absolute;
       top: 50%;
