@@ -4,6 +4,7 @@ Fredriksdal.OffGrid = Fredriksdal.OffGrid || {};
 Fredriksdal.OffGrid.OffGrid = (function ($) {
 
     var basicAdjustment = 45;
+    var maxAdjustment = 300;
 
     function OffGrid() {
         this.adjustArrows();
@@ -46,7 +47,12 @@ Fredriksdal.OffGrid.OffGrid = (function ($) {
         var innerWidth = jQuery("section.modularity-onepage-section > .container").width();
 
         if(outerWidth !== 0 && innerWidth !== 0)  {
-            return Math.floor((outerWidth-innerWidth)/2);
+            if(Math.floor((outerWidth-innerWidth)/2) < maxAdjustment) {
+                return Math.floor((outerWidth-innerWidth)/2);
+            } else {
+                return maxAdjustment;
+            }
+
         }
         return false;
     };
