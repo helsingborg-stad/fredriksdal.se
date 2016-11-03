@@ -11,5 +11,6 @@ class App
         new \Fredriksdal\Controller\Admin\RemoveOnePageMetaBox();
 
         new \Fredriksdal\Theme\OnePage();
+        new \Fredriksdal\Theme\OnePageMenu();
     }
 }
