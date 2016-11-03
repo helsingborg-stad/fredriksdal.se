@@ -1,3 +1,52 @@
+[
+    {
+        "key": "group_581b2c1c5fb02",
+        "title": "OnePage Menu",
+        "fields": [
+            {
+                "key": "field_581b2c28304ea",
+                "label": "Link to menu item",
+                "name": "section_menu_item",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    ": Default": ": Default"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 1,
+                "ajax": 0,
+                "placeholder": "",
+                "disabled": 0,
+                "readonly": 0
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "onepage"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "side",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
     {
         "key": "group_5810c4152dd10",
         "title": "Section settings",
@@ -43,7 +92,7 @@
             },
             {
                 "key": "field_5819c24499e97",
-                "label": "Do not link to source page",
+                "label": "Keep the user on the same page",
                 "name": "ajax_loading",
                 "type": "true_false",
                 "instructions": "",
@@ -55,6 +104,22 @@
                     "id": ""
                 },
                 "message": "Yes. Load content on the same page (only applies on modules with support).",
+                "default_value": 0
+            },
+            {
+                "key": "field_581b13c74652e",
+                "label": "Cover whole section",
+                "name": "cover_section",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "Yes. Allow modules to cover the whole section (use with caution!)",
                 "default_value": 0
             }
         ],
@@ -76,3 +141,4 @@
         "active": 1,
         "description": ""
     }
+]
