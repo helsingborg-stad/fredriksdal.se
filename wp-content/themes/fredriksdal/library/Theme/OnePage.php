@@ -6,11 +6,16 @@ class OnePage
 {
     public function __construct()
     {
+
+        //Section
         add_filter('ModularityOnePage/section_class', array($this, 'addCustomClass'), 10, 3);
+        add_filter('ModularityOnePage/section_id', array($this, 'setSectionId'), 100, 3);
 
-        add_action('ModularityOnePage\after_modules', array($this, 'addWidgetContentAfter'));
-        add_action('ModularityOnePage\before_modules', array($this, 'addWidgetContentBefore'));
+        //Module
+        add_action('ModularityOnePage/after_modules', array($this, 'addWidgetContentAfter'));
+        add_action('ModularityOnePage/before_modules', array($this, 'addWidgetContentBefore'));
 
+        //No titles
         add_filter('get_post_metadata', array($this, 'removeAllModuleTitles'), 100, 4);
     }
 
@@ -19,6 +24,8 @@ class OnePage
         $post_data = array();
         $post_data[] = get_field('horizontal_scroll', $postId) ? 'section-horizontal-scroll' : '';
         $post_data[] = get_field('background_color', $postId) ? 'background-'.get_field('background_color', $postId) : '';
+        $post_data[] = get_field('ajax_loading', $postId) ? 'async-loading' : '';
+
         return array_filter(array_merge($input, (array) $post_data));
     }
 
@@ -40,5 +47,11 @@ class OnePage
             }
         }
         return $metadata;
+    }
+
+    public function setSectionId($input, $postId)
+    {
+        var_dump(get_field('section_menu_item', $postId));
+        return !empty(get_field('section_menu_item', $postId)) ? get_field('section_menu_item', $postId) : $input;
     }
 }
