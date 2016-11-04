@@ -95,7 +95,7 @@ Fredriksdal.AnchorScroll.AnchorScroll = (function ($) {
     }
 
     AnchorScroll.prototype.isAnchorLink = function (href) {
-        if(/^#/.test(href) === true && href.length != > 1) {
+        if(/^#/.test(href) === true && href.length > 1) {
             return true;
         } else {
             return false;
