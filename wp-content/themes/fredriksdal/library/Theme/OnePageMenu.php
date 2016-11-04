@@ -56,7 +56,7 @@ class OnePageMenu
 
     public function filterMenuItems()
     {
-        $filteredMenuItems = array();
+        $filteredMenuItems = array('');
         foreach ((array) $this->getMainMenu() as $menuItem) {
             if (isset($menuItem->url) && $this->isAnchorLink($menuItem->url)) {
                 $filterMenuItems[] = $menuItem;
