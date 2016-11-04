@@ -51,7 +51,6 @@ class OnePage
 
     public function setSectionId($input, $postId)
     {
-        var_dump(get_field('section_menu_item', $postId));
         return !empty(get_field('section_menu_item', $postId)) ? get_field('section_menu_item', $postId) : $input;
     }
 }

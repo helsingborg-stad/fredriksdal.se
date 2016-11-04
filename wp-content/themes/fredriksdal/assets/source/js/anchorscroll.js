@@ -25,7 +25,7 @@ Fredriksdal.AnchorScroll.AnchorScroll = (function ($) {
     }
 
     AnchorScroll.prototype.isAnchorLink = function (href) {
-        if(/^#/.test(href) === true) {
+        if(/^#/.test(href) === true && href.length != > 1) {
             return true;
         } else {
             return false;
