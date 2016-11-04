@@ -128,6 +128,23 @@ Fredriksdal.AnchorScroll.AnchorScroll = (function ($) {
 var Fredriksdal;
 
 Fredriksdal = Fredriksdal || {};
+Fredriksdal.AsyncContentLoader = Fredriksdal.AsyncContentLoader || {};
+
+Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
+    function AsyncContentLoader() {
+    }
+
+    AsyncContentLoader.prototype.loadContent = function () {
+    };
+
+    AsyncContentLoader.prototype.createEndpointSlug = function () {
+    };
+
+    new AsyncContentLoader();
+
+})(jQuery);
+
+Fredriksdal = Fredriksdal || {};
 Fredriksdal.Liquid = Fredriksdal.Liquid || {};
 
 Fredriksdal.Liquid.Liquid = (function ($) {
