@@ -22,6 +22,7 @@ class OnePageMenu
     public function populateSelectItems($field)
     {
         $field['choices'] = array();
+        $field['choices'][''] = __("No link");
         foreach ($this->filterMenuItems() as $choice) {
             $field['choices'][str_replace("#", "", $choice->url)] = $choice->post_title;
         }
@@ -56,7 +57,7 @@ class OnePageMenu
 
     public function filterMenuItems()
     {
-        $filteredMenuItems = array('');
+        $filteredMenuItems = array();
         foreach ((array) $this->getMainMenu() as $menuItem) {
             if (isset($menuItem->url) && $this->isAnchorLink($menuItem->url)) {
                 $filterMenuItems[] = $menuItem;
