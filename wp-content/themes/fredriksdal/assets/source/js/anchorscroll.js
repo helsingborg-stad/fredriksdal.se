@@ -1,4 +1,4 @@
-Fredriksdal = Fredriksdal || {};
+/*Fredriksdal = Fredriksdal || {};
 Fredriksdal.AnchorScroll = Fredriksdal.AnchorScroll || {};
 
 Fredriksdal.AnchorScroll.AnchorScroll = (function ($) {
@@ -53,4 +53,4 @@ Fredriksdal.AnchorScroll.AnchorScroll = (function ($) {
 
     new AnchorScroll();
 
-})(jQuery);
+})(jQuery);*/
