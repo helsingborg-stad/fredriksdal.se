@@ -40,6 +40,14 @@
         @include gradient(rgba(#000,.3), rgba(#000,0));
     }
 
+    .ajax-response {
+        border: 1px solid rgba(0, 0, 0, 0.24);
+        padding: 25px 10px;
+        margin-top: 40px;
+        border-radius: 2px;
+        background: rgba(0,0,0,.1);
+    }
+
 }
 
 .modularity-onepage-section + .modularity-onepage-section  {

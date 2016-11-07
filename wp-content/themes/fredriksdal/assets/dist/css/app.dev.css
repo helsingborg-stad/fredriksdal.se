@@ -451,6 +451,12 @@ h1, h2, h3, h4, h5, h6, p {
       height: 5px;
       background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3), transparent);
       background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent); }
+    .is-child-theme .modularity-onepage-section .ajax-response {
+      border: 1px solid rgba(0, 0, 0, 0.24);
+      padding: 25px 10px;
+      margin-top: 40px;
+      border-radius: 2px;
+      background: rgba(0, 0, 0, 0.1); }
   .is-child-theme .modularity-onepage-section + .modularity-onepage-section {
     margin-top: 0; }
   .is-child-theme .modularity-onepage-section .modularity-mod-text ul, .is-child-theme .modularity-onepage-section .modularity-mod-text ol, .is-child-theme .modularity-onepage-section .modularity-mod-text p, .is-child-theme .modularity-onepage-section .modularity-mod-text h1, .is-child-theme .modularity-onepage-section .modularity-mod-text h2, .is-child-theme .modularity-onepage-section .modularity-mod-text h3, .is-child-theme .modularity-onepage-section .modularity-mod-text h4, .is-child-theme .modularity-onepage-section .modularity-mod-text h5, .is-child-theme .modularity-onepage-section .modularity-mod-text h6 {

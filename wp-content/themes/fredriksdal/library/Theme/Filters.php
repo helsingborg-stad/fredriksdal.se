@@ -26,6 +26,11 @@ class Filters
             return $classes;
         }, 100, 3);
 
+
+        add_action('init', function () {
+
+        });
+
         // Titles
         add_filter('the_title', array($this, 'theTitle'), 1);
         add_filter('wp_title', array($this, 'wpTitle'), 1);
