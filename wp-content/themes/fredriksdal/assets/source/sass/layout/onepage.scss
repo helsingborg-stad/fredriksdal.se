@@ -140,6 +140,14 @@
         font-size: 2.5em;
         background: none;
 
+        @media screen and #{$screen-below-sm} {
+            display: none;
+        }
+
+        @media screen and #{$screen-below-md} {
+            font-size: 5vw;
+        }
+
         &:focus {
             outline: none;
         }

@@ -109,6 +109,9 @@ h1, h2, h3, h4, h5, h6, p {
 
 .is-child-theme {
   /* Layout */
+  /*div[class^="grid-"], div[class*=" grid-"] {
+    width: 100%;
+}*/
   /* Centered content */
   /* Full screen layout */
   /* Slider functionality */
@@ -198,16 +201,17 @@ h1, h2, h3, h4, h5, h6, p {
   .is-child-theme.no-js #site-header {
     background-color: rgba(233, 229, 214, 0.97);
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.7); }
-    .is-child-theme #site-header.liquid-header .logotype svg, .is-child-theme #site-header.liquid-header .logotype img,
-    .is-child-theme:not(.home) #site-header .logotype svg,
-    .is-child-theme:not(.home) #site-header .logotype img,
-    .is-child-theme.menu-open #site-header .logotype svg,
-    .is-child-theme.menu-open #site-header .logotype img,
-    .is-child-theme.no-js #site-header .logotype svg,
-    .is-child-theme.no-js #site-header .logotype img {
-      height: 50px;
-      width: auto;
-      max-width: none; }
+    @media screen and (min-width: 767px) {
+      .is-child-theme #site-header.liquid-header .logotype svg, .is-child-theme #site-header.liquid-header .logotype img,
+      .is-child-theme:not(.home) #site-header .logotype svg,
+      .is-child-theme:not(.home) #site-header .logotype img,
+      .is-child-theme.menu-open #site-header .logotype svg,
+      .is-child-theme.menu-open #site-header .logotype img,
+      .is-child-theme.no-js #site-header .logotype svg,
+      .is-child-theme.no-js #site-header .logotype img {
+        height: 50px;
+        width: auto;
+        max-width: none; } }
     .is-child-theme #site-header.liquid-header .logotype svg path,
     .is-child-theme #site-header.liquid-header .logotype svg use,
     .is-child-theme:not(.home) #site-header .logotype svg path,
@@ -363,8 +367,8 @@ h1, h2, h3, h4, h5, h6, p {
   .is-child-theme .menu-item-search {
     margin-left: 10px; }
   .is-child-theme nav#mobile-menu {
-    -webkit-animation: fadeinUp 500ms;
-            animation: fadeinUp 500ms; }
+    -webkit-animation: fadeinDown 500ms;
+            animation: fadeinDown 500ms; }
     .is-child-theme nav#mobile-menu ul {
       background-color: #919823; }
       .is-child-theme nav#mobile-menu ul li + li {
@@ -519,6 +523,12 @@ h1, h2, h3, h4, h5, h6, p {
               transform: translateY(-50%);
       font-size: 2.5em;
       background: none; }
+      @media screen and (max-width: 469px) {
+        .is-child-theme .modularity-onepage-section .flickity-prev-next-button {
+          display: none; } }
+      @media screen and (max-width: 767px) {
+        .is-child-theme .modularity-onepage-section .flickity-prev-next-button {
+          font-size: 5vw; } }
       .is-child-theme .modularity-onepage-section .flickity-prev-next-button:focus {
         outline: none; }
       .is-child-theme .modularity-onepage-section .flickity-prev-next-button:after {
@@ -666,7 +676,7 @@ h1, h2, h3, h4, h5, h6, p {
         @media screen and (max-width: 469px) {
           .is-child-theme .hero .slider [class*=slider-nav-] {
             border: none;
-            width: 20px;
+            width: 30px;
             font-size: 1.5em;
             line-height: 1.5em;
             background: none;

@@ -105,11 +105,12 @@
     box-shadow: 0 0 4px rgba($black, .7);
 
     .logotype {
-
-        svg, img {
-            height: 50px;
-            width: auto;
-            max-width: none;
+        @media screen and (min-width: #{$screen-md-min}) {
+            svg, img {
+                height: 50px;
+                width: auto;
+                max-width: none;
+            }
         }
 
         svg path,
