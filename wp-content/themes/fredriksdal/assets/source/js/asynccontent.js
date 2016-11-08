@@ -7,10 +7,11 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
 
     var AsyncContentEndpoint = '/wp-json/wp/v2/';
 
-    var AsyncContentTempalte = '<div class="container ajax-response"><div class="grid"><div class="grid-xs-12"><h2>{{title}}</h2>{{content}}</div></div></div>';
+    var AsyncContentTempalte = '<div class="container ajax-response"><div class="grid"><div class="grid-xs-12"><div class="frame"><h2>{{title}}</h2>{{content}}</div></div></div></div>';
 
     var AsyncContentTrigger = [
-        '.modularity-mod-posts a'
+        '.modularity-mod-posts a',
+        '.modularity-mod-index a'
     ];
 
     var AsyncContentReplaceVars = [
@@ -20,7 +21,7 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
 
     function AsyncContentLoader() {
         jQuery.each(AsyncContentTrigger,function(index,targetObject) {
-            jQuery(targetObject).click(function(lastClicked){
+            jQuery(targetObject).click(function(lastClicked) {
                 event.preventDefault();
                 lastClickedObject = jQuery(lastClicked.target);
                 this.loadContent("post", 83);
