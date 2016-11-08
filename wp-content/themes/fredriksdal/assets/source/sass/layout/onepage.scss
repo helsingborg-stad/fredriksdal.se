@@ -85,8 +85,11 @@
     article {
         display: none;
     }
-}
 
+    .modularity-mod-iframe iframe {
+        max-height: 80vh;
+    }
+}
 
 /* Slider functionality */
 

@@ -485,6 +485,8 @@ h1, h2, h3, h4, h5, h6, p {
       padding: 0; }
     .is-child-theme .modularity-onepage-section.full-screen article {
       display: none; }
+    .is-child-theme .modularity-onepage-section.full-screen .modularity-mod-iframe iframe {
+      max-height: 80vh; }
   .is-child-theme .modularity-onepage-section {
     /* Prev next */
     /* Page dots */ }
