@@ -28,6 +28,10 @@ html.translated-ltr #site-header {
 
 h1 {
     font-size: 3em;
+
+    @media screen and (max-width: #{$screen-md-max}) {
+        font-size: 6vw;
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
