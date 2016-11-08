@@ -65,6 +65,23 @@
     }
 }
 
+/* Full screen layout */
+.modularity-onepage-section.full-screen {
+    padding: 0;
+    .container,
+    .grid,
+    .grid [class*="grid-"],
+    .box {
+        max-width: initial;
+        margin: 0;
+        padding: 0;
+    }
+
+    article {
+        display: none;
+    }
+}
+
 
 /* Slider functionality */
 

@@ -23,7 +23,8 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
         jQuery.each(AsyncContentTrigger,function(index,targetObject) {
             jQuery(targetObject).click(function(lastClicked) {
                 event.preventDefault();
-                lastClickedObject = jQuery(lastClicked.target);
+                lastClickedObject = jQuery(lastClicked.currentTarget);
+                console.log(jQuery(lastClickedObject));
                 this.loadContent("post", 83);
             }.bind(this));
         }.bind(this));
@@ -68,6 +69,10 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
         } else {
             alert("Error: Target is missing.");
         }
+    };
+
+    AsyncContentLoader.prototype.parsePostName = function(url) {
+        return url.split('/').pop();
     };
 
     new AsyncContentLoader();

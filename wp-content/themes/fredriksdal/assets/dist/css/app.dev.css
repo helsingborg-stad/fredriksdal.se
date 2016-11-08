@@ -107,6 +107,7 @@ h1, h2, h3, h4, h5, h6, p {
 .is-child-theme {
   /* Layout */
   /* Centered content */
+  /* Full screen layout */
   /* Slider functionality */
   /* Post components */
   /* Components */ }
@@ -462,6 +463,17 @@ h1, h2, h3, h4, h5, h6, p {
     margin-top: 0; }
   .is-child-theme .modularity-onepage-section .modularity-mod-text ul, .is-child-theme .modularity-onepage-section .modularity-mod-text ol, .is-child-theme .modularity-onepage-section .modularity-mod-text p, .is-child-theme .modularity-onepage-section .modularity-mod-text h1, .is-child-theme .modularity-onepage-section .modularity-mod-text h2, .is-child-theme .modularity-onepage-section .modularity-mod-text h3, .is-child-theme .modularity-onepage-section .modularity-mod-text h4, .is-child-theme .modularity-onepage-section .modularity-mod-text h5, .is-child-theme .modularity-onepage-section .modularity-mod-text h6 {
     text-align: center; }
+  .is-child-theme .modularity-onepage-section.full-screen {
+    padding: 0; }
+    .is-child-theme .modularity-onepage-section.full-screen .container,
+    .is-child-theme .modularity-onepage-section.full-screen .grid,
+    .is-child-theme .modularity-onepage-section.full-screen .grid [class*="grid-"],
+    .is-child-theme .modularity-onepage-section.full-screen .box {
+      max-width: initial;
+      margin: 0;
+      padding: 0; }
+    .is-child-theme .modularity-onepage-section.full-screen article {
+      display: none; }
   .is-child-theme .modularity-onepage-section {
     /* Prev next */
     /* Page dots */ }
