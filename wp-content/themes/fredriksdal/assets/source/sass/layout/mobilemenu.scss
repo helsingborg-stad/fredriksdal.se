@@ -21,6 +21,10 @@ nav#mobile-menu {
                     height: .8em;
                     margin-right: .5em;
                 }
+
+                &:hover {
+                    background: darken($palette-3,5%);
+                }
             }
         }
     }

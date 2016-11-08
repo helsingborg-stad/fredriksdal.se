@@ -392,6 +392,8 @@ h1, h2, h3, h4, h5, h6, p {
           width: .8em;
           height: .8em;
           margin-right: .5em; }
+        .is-child-theme nav#mobile-menu ul li a:hover {
+          background: #a5ac28; }
   .is-child-theme footer.main-footer {
     background-color: #e9e5d6;
     color: #000;
