@@ -46,6 +46,10 @@ nav.event-dates {
     width: 100%;
     margin: 0 auto;
 
+    p + p {
+        margin-top: 15px;
+    }
+
     @media #{$screen-md-up} {
         padding: 30px;
     }

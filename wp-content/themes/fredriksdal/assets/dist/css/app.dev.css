@@ -681,6 +681,8 @@ h1, h2, h3, h4, h5, h6, p {
     max-width: 1000px;
     width: 100%;
     margin: 0 auto; }
+    .is-child-theme .event-list p + p {
+      margin-top: 15px; }
     @media (min-width: 767px) {
       .is-child-theme .event-list {
         padding: 30px; } }
