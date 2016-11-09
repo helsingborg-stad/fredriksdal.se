@@ -12,12 +12,12 @@ Fredriksdal.MobileMenuAnchorClose.MobileMenuAnchorClose = (function ($) {
     ];
 
     function MobileMenuAnchorClose() {
-        AnchorScrollTargets.forEach(function(element) {
-            jQuery("li a", element).click(function(){
-                if(this.isAnchorLink(jQuery(element).attr('href'))) {
-                    alert("anchoir");
+        MobileMenuWrapper.forEach(function(element) {
+            jQuery("li a",element).each(function(index,item) {
+                if(this.isAnchorLink(jQuery(item).attr('href')) && this.anchorLinkExists(jQuery(item).attr('href'))) {
+                    this.bindAnchorClose(item,jQuery(item).attr('href'));
                 }
-            });
+            }.bind(this));
         }.bind(this));
     }
 
@@ -38,6 +38,13 @@ Fredriksdal.MobileMenuAnchorClose.MobileMenuAnchorClose = (function ($) {
             }
         }.bind(this));
         return linkExist;
+    };
+
+    MobileMenuAnchorClose.prototype.bindAnchorClose = function (trigger,target) {
+        jQuery(trigger).on('click',function(event){
+            event.preventDefault();
+            jQuery('a[href="#mobile-menu"]').trigger('click');
+        }.bind(this));
     };
 
     new MobileMenuAnchorClose();
