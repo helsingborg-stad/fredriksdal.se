@@ -856,6 +856,9 @@ h1, h2, h3, h4, h5, h6, p {
       .is-child-theme .hero .text-block .title {
         font-size: .9em;
         font-weight: 600; }
+      .is-child-theme .hero .text-block time {
+        font-size: .6em;
+        font-weight: normal; }
       @media screen and (max-width: 469px) {
         .is-child-theme .hero .text-block {
           font-weight: bold; }
