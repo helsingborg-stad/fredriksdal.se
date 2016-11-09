@@ -177,6 +177,8 @@ h1, h2, h3, h4, h5, h6, p {
   .is-child-theme #wrapper {
     position: relative;
     background: #fff; }
+  .is-child-theme .header-gutter {
+    padding-top: 80px; }
   .is-child-theme #site-header {
     position: fixed;
     z-index: 200;
@@ -517,12 +519,6 @@ h1, h2, h3, h4, h5, h6, p {
         max-width: 2000px; }
       .is-child-theme .modularity-onepage-section article p, .is-child-theme .modularity-onepage-section article ol, .is-child-theme .modularity-onepage-section article ul {
         line-height: 1.4em; }
-    .is-child-theme .modularity-onepage-section.background-green {
-      background: #b9c12d; }
-    .is-child-theme .modularity-onepage-section.background-lgren {
-      background: #e9e5d6; }
-    .is-child-theme .modularity-onepage-section.background-white {
-      background: #fff; }
     .is-child-theme .modularity-onepage-section:before {
       content: "";
       position: absolute;
@@ -539,6 +535,12 @@ h1, h2, h3, h4, h5, h6, p {
       margin-top: 40px;
       border-radius: 2px;
       background: rgba(0, 0, 0, 0.1); }
+  .is-child-theme .background-green {
+    background: #b9c12d; }
+  .is-child-theme .background-lgren {
+    background: #e9e5d6; }
+  .is-child-theme .background-white {
+    background: #fff; }
   .is-child-theme .modularity-onepage-section + .modularity-onepage-section {
     margin-top: 0; }
   .is-child-theme .modularity-onepage-section .modularity-mod-text ul, .is-child-theme .modularity-onepage-section .modularity-mod-text ol, .is-child-theme .modularity-onepage-section .modularity-mod-text p, .is-child-theme .modularity-onepage-section .modularity-mod-text h1, .is-child-theme .modularity-onepage-section .modularity-mod-text h2, .is-child-theme .modularity-onepage-section .modularity-mod-text h3, .is-child-theme .modularity-onepage-section .modularity-mod-text h4, .is-child-theme .modularity-onepage-section .modularity-mod-text h5, .is-child-theme .modularity-onepage-section .modularity-mod-text h6 {
@@ -670,6 +672,51 @@ h1, h2, h3, h4, h5, h6, p {
           opacity: 1; }
   .is-child-theme article h1 + p {
     margin-top: 20px; }
+  .is-child-theme .events-wrapper {
+    background-color: #fff;
+    padding-top: 100px; }
+    .is-child-theme .events-wrapper .modularity-mod-slider {
+      margin-bottom: 0; }
+  .is-child-theme nav.event-dates {
+    background-color: #b9c12d;
+    font-family: "Verlag A", "Verlag B";
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 0;
+    margin-bottom: 15px;
+    line-height: 1; }
+    .is-child-theme nav.event-dates li + li {
+      margin-left: 30px; }
+    .is-child-theme nav.event-dates a {
+      color: #000; }
+      .is-child-theme nav.event-dates a .year {
+        display: block;
+        font-size: .8em; }
+      .is-child-theme nav.event-dates a:hover {
+        text-decoration: none; }
+        .is-child-theme nav.event-dates a:hover .months {
+          text-decoration: underline; }
+  .is-child-theme .event-list {
+    text-align: center;
+    padding: 20px;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto; }
+    .is-child-theme .event-list p + p {
+      margin-top: 15px; }
+    @media (min-width: 767px) {
+      .is-child-theme .event-list {
+        padding: 30px; } }
+    @media (min-width: 959px) {
+      .is-child-theme .event-list {
+        padding: 50px; } }
+    .is-child-theme .event-list li {
+      padding: 20px 0; }
+    .is-child-theme .event-list li + li {
+      border-top: 2px solid #b9c12d; }
+    .is-child-theme .event-list li:first-of-type {
+      padding-top: 0; }
   .is-child-theme .box.box-news {
     background-color: transparent;
     background: none !important; }
@@ -831,6 +878,9 @@ h1, h2, h3, h4, h5, h6, p {
       .is-child-theme .hero .text-block .title {
         font-size: .9em;
         font-weight: 600; }
+      .is-child-theme .hero .text-block time {
+        font-size: .6em;
+        font-weight: normal; }
       @media screen and (max-width: 469px) {
         .is-child-theme .hero .text-block {
           font-weight: bold; }

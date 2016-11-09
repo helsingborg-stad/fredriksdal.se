@@ -156,6 +156,11 @@
             font-weight: 600;
         }
 
+        time {
+            font-size: .6em;
+            font-weight: normal;
+        }
+
         /* Mobile */
         @media screen and #{$screen-below-sm} {
             font-weight: bold;
