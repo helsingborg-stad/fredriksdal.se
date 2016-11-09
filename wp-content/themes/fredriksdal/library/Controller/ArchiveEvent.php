@@ -52,4 +52,17 @@ class ArchiveEvent extends \Municipio\Controller\BaseController
         $quaters = json_decode(json_encode($quaters));
         return $quaters;
     }
+
+    public static function getEventDate($eventId)
+    {
+        $start = date('Y-m-d H:i:s', strtotime(get_field('event-date-start', $eventId)));
+        $end = date('Y-m-d H:i:s', strtotime(get_field('event-date-end', $eventId)));
+        $date = mysql2date('j F Y', $start, true) . ' kl. ' . mysql2date('H:i', $start, true) . ' till ' . mysql2date('j F Y', $end, true) . ' kl. ' . mysql2date('H:i', $end, true);
+
+        if (date('Y-m-d', strtotime($start)) == date('Y-m-d', strtotime($end))) {
+            $date = mysql2date('j F Y', $start, true) . ' kl. ' . mysql2date('H:i', $start, true) . ' - ' . mysql2date('H:i', $end, true);
+        }
+
+        return $date;
+    }
 }

@@ -56,7 +56,10 @@ nav.event-dates {
 
     li {
         padding: 20px 0;
-        border-bottom: 2px solid $palette-3;
+    }
+
+    li + li {
+        border-top: 2px solid $palette-3;
     }
 
     li:first-of-type {

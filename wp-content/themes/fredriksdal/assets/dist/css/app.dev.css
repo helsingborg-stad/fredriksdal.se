@@ -688,8 +688,9 @@ h1, h2, h3, h4, h5, h6, p {
       .is-child-theme .event-list {
         padding: 50px; } }
     .is-child-theme .event-list li {
-      padding: 20px 0;
-      border-bottom: 2px solid #b9c12d; }
+      padding: 20px 0; }
+    .is-child-theme .event-list li + li {
+      border-top: 2px solid #b9c12d; }
     .is-child-theme .event-list li:first-of-type {
       padding-top: 0; }
   .is-child-theme .box.box-news {
