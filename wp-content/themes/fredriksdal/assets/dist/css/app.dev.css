@@ -576,6 +576,11 @@ h1, h2, h3, h4, h5, h6, p {
     /* Page dots */ }
     .is-child-theme .modularity-onepage-section .flickity-enabled {
       position: relative; }
+      @media screen and (min-width: 469px) {
+        .is-child-theme .modularity-onepage-section .flickity-enabled {
+          width: 90%;
+          margin-left: 5%;
+          margin-right: 5%; } }
       .is-child-theme .modularity-onepage-section .flickity-enabled:focus {
         outline: none; }
     .is-child-theme .modularity-onepage-section .flickity-viewport {
