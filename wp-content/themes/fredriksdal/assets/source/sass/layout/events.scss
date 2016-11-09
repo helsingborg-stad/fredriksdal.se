@@ -69,4 +69,15 @@ nav.event-dates {
     li:first-of-type {
         padding-top: 0;
     }
+
+    li a {
+        display: block;
+
+        &:hover {
+            h2 {
+                text-decoration: underline;
+            }
+            text-decoration: none;
+        }
+    }
 }
