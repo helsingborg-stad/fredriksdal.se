@@ -147,13 +147,14 @@
         /* Smaller font on first-row */
         span {
             font-size: 3.5vw;
-            font-weight: 600;
+            font-weight: 800;
             max-width: 90%;
         }
 
         .title {
+            font-family: $condensed-font-family;
             font-size: .9em;
-            font-weight: 600;
+            font-weight: 800;
         }
 
         time {
