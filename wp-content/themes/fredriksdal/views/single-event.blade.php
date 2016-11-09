@@ -35,9 +35,9 @@
 @endif
 
 <section class="background-green">
-<div class="container main-container">
+<div class="container">
     <div class="grid gutter gutter-vertical gutter-xl">
-        <div class="grid-md-8 grid-lg-8">
+        <div class="grid-md-8 grid-lg-8 grid-sm-12">
             @include('partials.article')
 
             @if (is_active_sidebar('content-area'))
@@ -47,7 +47,7 @@
             @endif
         </div>
 
-        <aside class="grid-lg-3 grid-md-12 sidebar-right-sidebar">
+        <aside class="grid-lg-3 grid-md-4 grid-sm-12 sidebar-right-sidebar">
             @if (is_string(get_field('event-ticket_url')) && get_field('event-ticket_url'))
             <a href="{{ get_field('event-ticket_url') }}" target="_blank" class="btn btn-green btn-block btn-lg">Köp biljetter</a>
             @endif
