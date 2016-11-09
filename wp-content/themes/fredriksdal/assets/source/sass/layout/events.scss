@@ -76,7 +76,9 @@ nav.event-dates {
         &:hover {
             h2 {
                 text-decoration: underline;
+                color: $palette-3;
             }
+
             text-decoration: none;
         }
     }
