@@ -114,6 +114,7 @@ h1, h2, h3, h4, h5, h6, p {
 }*/
   /* Centered content */
   /* Full screen layout */
+  /* Disabled iframe functionality */
   /* Slider functionality */
   /* Post components */
   /* Components */
@@ -555,6 +556,18 @@ h1, h2, h3, h4, h5, h6, p {
       display: none; }
     .is-child-theme .modularity-onepage-section.full-screen .modularity-mod-iframe iframe {
       max-height: 80vh; }
+  .is-child-theme .disabled-iframe {
+    position: relative; }
+    .is-child-theme .disabled-iframe:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      cursor: hand;
+      cursor: poiter;
+      content: "";
+      background-color: rgba(255, 255, 255, 0.2); }
   .is-child-theme .modularity-onepage-section {
     /* Prev next */
     /* Page dots */ }

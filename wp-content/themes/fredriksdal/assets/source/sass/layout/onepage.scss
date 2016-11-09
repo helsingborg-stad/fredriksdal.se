@@ -91,6 +91,18 @@
     }
 }
 
+/* Disabled iframe functionality */
+.disabled-iframe {
+    position: relative;
+    &:after {
+        @include cover();
+        cursor: hand;
+        cursor: poiter;
+        content: "";
+        background-color: rgba(#fff,.2);
+    }
+}
+
 /* Slider functionality */
 
 .modularity-onepage-section {
