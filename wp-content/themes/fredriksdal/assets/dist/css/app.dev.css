@@ -661,8 +661,27 @@ h1, h2, h3, h4, h5, h6, p {
     text-transform: uppercase;
     padding: 10px 0;
     line-height: 1; }
+    .is-child-theme nav.event-dates li + li {
+      margin-left: 30px; }
     .is-child-theme nav.event-dates a {
       color: #000; }
+  .is-child-theme .event-list {
+    text-align: center;
+    padding: 20px;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto; }
+    @media (min-width: 767px) {
+      .is-child-theme .event-list {
+        padding: 30px; } }
+    @media (min-width: 959px) {
+      .is-child-theme .event-list {
+        padding: 50px; } }
+    .is-child-theme .event-list li {
+      padding: 20px 0;
+      border-bottom: 2px solid #b9c12d; }
+    .is-child-theme .event-list li:first-of-type {
+      padding-top: 0; }
   .is-child-theme .box.box-news {
     background-color: transparent;
     background: none !important; }

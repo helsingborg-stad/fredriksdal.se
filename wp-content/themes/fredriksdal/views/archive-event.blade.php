@@ -22,6 +22,15 @@
                         </ul>
                     </nav>
 
+                    <ul class="event-list">
+                        <?php global $post; ?>
+                        <?php $i = 0; ?>
+                        @while(have_posts())
+                            {!! the_post() !!}
+                            @include('partials.event')
+                        @endwhile
+                    </ul>
+
                 </div>
 
             </div>
