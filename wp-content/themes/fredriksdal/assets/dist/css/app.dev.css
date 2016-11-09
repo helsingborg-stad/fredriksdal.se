@@ -365,11 +365,11 @@ h1, h2, h3, h4, h5, h6, p {
                   transition: all 0.3s ease-in-out 0s; }
         .is-child-theme #main-menu li > a:after {
           display: none !important; }
-        .is-child-theme #main-menu li > a:hover, .is-child-theme #main-menu li > a:focus {
+        .is-child-theme #main-menu li > a:hover {
           background: none;
           color: #fff;
           text-decoration: none; }
-          .is-child-theme #main-menu li > a:hover:not(.search-icon-btn):not(.translate-icon-btn)::before, .is-child-theme #main-menu li > a:focus:not(.search-icon-btn):not(.translate-icon-btn)::before {
+          .is-child-theme #main-menu li > a:hover:not(.search-icon-btn):not(.translate-icon-btn)::before {
             visibility: visible;
             -webkit-transform: scaleX(1);
                     transform: scaleX(1); }

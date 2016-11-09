@@ -365,6 +365,8 @@ Fredriksdal.ScrollHighlight.ScrollHighlight = (function ($) {
 
     var ScrollTopValue = 0;
 
+    var ScrollTopOffset = 100;
+
     var ScrollMenuWrapperActiveClass = 'active current-menu-item';
 
     var ScrollHighlightTrigger = 'section.modularity-onepage-section';
@@ -377,13 +379,14 @@ Fredriksdal.ScrollHighlight.ScrollHighlight = (function ($) {
         ScrollTopValue = jQuery(window).scrollTop();
         jQuery(window).on('scroll', function (e) {
             var scrolledToItem = null;
-            ScrollTopValue = jQuery(window).scrollTop();
+            ScrollTopValue = jQuery(window).scrollTop() + ScrollTopOffset;
             jQuery(ScrollHighlightTrigger).each(function (index,item) {
                 if(ScrollTopValue >= jQuery(item).offset().top) {
                     scrolledToItem = item;
                     return;
                 }
             });
+            this.cleanHighlight();
             this.highlightMenuItem("#" + jQuery(scrolledToItem).attr('id'));
         }.bind(this));
     }
@@ -415,7 +418,7 @@ Fredriksdal.ScrollHighlight.ScrollHighlight = (function ($) {
         return linkExist;
     };
 
-    ScrollHighlight.prototype.cleanHighlight = function (id) {
+    ScrollHighlight.prototype.cleanHighlight = function () {
         ScrollMenuWrapper.forEach(function(element) {
             jQuery("li",element).removeClass(ScrollMenuWrapperActiveClass);
         }.bind(this));
