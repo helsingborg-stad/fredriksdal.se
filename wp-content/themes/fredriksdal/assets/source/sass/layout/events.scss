@@ -1,6 +1,10 @@
 .events-wrapper {
     background-color: #fff;
     padding-top: 100px;
+
+    .modularity-mod-slider {
+        margin-bottom: 0;
+    }
 }
 
 nav.event-dates {
@@ -10,6 +14,7 @@ nav.event-dates {
     font-weight: bold;
     text-transform: uppercase;
     padding: 10px 0;
+    margin-bottom: 15px;
     line-height: 1;
 
     li + li {

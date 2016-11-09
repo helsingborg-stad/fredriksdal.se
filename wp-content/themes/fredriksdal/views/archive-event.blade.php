@@ -22,6 +22,12 @@
                         </ul>
                     </nav>
 
+                    @if (is_active_sidebar('content-area-top'))
+                    <div class="grid">
+                        <?php dynamic_sidebar('content-area-top'); ?>
+                    </div>
+                    @endif
+
                     <ul class="event-list">
                         <?php global $post; ?>
                         <?php $i = 0; ?>

@@ -653,6 +653,8 @@ h1, h2, h3, h4, h5, h6, p {
   .is-child-theme .events-wrapper {
     background-color: #fff;
     padding-top: 100px; }
+    .is-child-theme .events-wrapper .modularity-mod-slider {
+      margin-bottom: 0; }
   .is-child-theme nav.event-dates {
     background-color: #b9c12d;
     font-family: "Verlag A", "Verlag B";
@@ -660,6 +662,7 @@ h1, h2, h3, h4, h5, h6, p {
     font-weight: bold;
     text-transform: uppercase;
     padding: 10px 0;
+    margin-bottom: 15px;
     line-height: 1; }
     .is-child-theme nav.event-dates li + li {
       margin-left: 30px; }
