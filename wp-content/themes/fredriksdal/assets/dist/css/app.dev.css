@@ -448,7 +448,9 @@ h1, h2, h3, h4, h5, h6, p {
                 transform: translate3d(0, 0, 0);
         font-family: "Verlag A", "Verlag B";
         font-size: 1.2em;
-        font-weight: 300; }
+        font-weight: 300;
+        -webkit-transition: background 200ms;
+                transition: background 200ms; }
         .is-child-theme nav#mobile-menu ul li a:before {
           content: "";
           display: inline-block;
