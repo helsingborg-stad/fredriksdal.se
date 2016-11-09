@@ -10,7 +10,7 @@
 # Municipio dependencies #
 ##########################
 wp/
-vendor/
+/vendor/
 wp-content/*
 !wp-content/mu-plugins
 !wp-content/mu-plugins/*

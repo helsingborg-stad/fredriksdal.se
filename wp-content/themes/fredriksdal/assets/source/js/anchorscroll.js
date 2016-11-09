@@ -4,7 +4,8 @@ Fredriksdal.AnchorScroll = Fredriksdal.AnchorScroll || {};
 Fredriksdal.AnchorScroll.AnchorScroll = (function ($) {
 
     var AnchorScrollTriggers = [
-        '#main-menu li a'
+        '#main-menu li a',
+        '#mobile-menu li a'
     ];
 
     var AnchorScrollTargets = [

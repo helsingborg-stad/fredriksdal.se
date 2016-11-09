@@ -19,7 +19,10 @@
             position: relative;
             border-radius: 50%;
             overflow: hidden;
-            width: 20%;
+
+            @media screen and #{$screen-md-up} {
+                width: 20%;
+            }
 
             &:after {
                 content: "";

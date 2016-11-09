@@ -116,7 +116,63 @@ h1, h2, h3, h4, h5, h6, p {
   /* Full screen layout */
   /* Slider functionality */
   /* Post components */
-  /* Components */ }
+  /* Components */
+  /*
+.social-feed.social-feed-instagram {
+    background: none;
+    border: none;
+    text-align: center;
+
+    :not(.flickity-page-dots) li {
+        padding: 5%;
+    }
+
+    .mod-social-image {
+        @include rounded();
+
+        .mod-social-user,
+        .mod-social-story {
+            @include center();
+            display: block;
+            transition: opacity 300ms;
+        }
+
+        .mod-social-user {
+            .mod-social-attachment-image {
+                display: inline-block;
+            }
+        }
+
+        .mod-social-story {
+            @include cover();
+
+            :first-child {
+                @include cover();
+            }
+            :not(:first-child) {
+                display: none;
+            }
+        }
+
+        .mod-social-story {
+            opacity: 0;
+
+            > p {
+                font-size: $base-font-size;
+            }
+        }
+
+        &:hover {
+            .mod-social-user {
+                opacity: 0;
+            }
+            .mod-social-story {
+                opacity: 1;
+            }
+        }
+    }
+}
+*/ }
   .is-child-theme #wrapper {
     position: relative;
     background: #fff; }
@@ -603,8 +659,10 @@ h1, h2, h3, h4, h5, h6, p {
     .is-child-theme .box.box-news.box-news-horizontal .box-image-container {
       position: relative;
       border-radius: 50%;
-      overflow: hidden;
-      width: 20%; }
+      overflow: hidden; }
+      @media screen and (min-width: 767px) {
+        .is-child-theme .box.box-news.box-news-horizontal .box-image-container {
+          width: 20%; } }
       .is-child-theme .box.box-news.box-news-horizontal .box-image-container:after {
         content: "";
         border-radius: 50%;
@@ -978,56 +1036,3 @@ h1, h2, h3, h4, h5, h6, p {
   .is-child-theme.no-js #site-header #header-tabs {
     height: 0;
     opacity: 0; }
-  .is-child-theme .social-feed.social-feed-instagram {
-    background: none;
-    border: none;
-    text-align: center; }
-    .is-child-theme .social-feed.social-feed-instagram :not(.flickity-page-dots) li {
-      padding: 5%; }
-    .is-child-theme .social-feed.social-feed-instagram .mod-social-image {
-      overflow: hidden;
-      border-radius: 50%;
-      position: relative; }
-      .is-child-theme .social-feed.social-feed-instagram .mod-social-image:after {
-        border-radius: 50%;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        content: "";
-        box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.7); }
-      .is-child-theme .social-feed.social-feed-instagram .mod-social-image .mod-social-user,
-      .is-child-theme .social-feed.social-feed-instagram .mod-social-image .mod-social-story {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
-        display: block;
-        -webkit-transition: opacity 300ms;
-                transition: opacity 300ms; }
-      .is-child-theme .social-feed.social-feed-instagram .mod-social-image .mod-social-user .mod-social-attachment-image {
-        display: inline-block; }
-      .is-child-theme .social-feed.social-feed-instagram .mod-social-image .mod-social-story {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0; }
-        .is-child-theme .social-feed.social-feed-instagram .mod-social-image .mod-social-story :first-child {
-          position: absolute;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0; }
-        .is-child-theme .social-feed.social-feed-instagram .mod-social-image .mod-social-story :not(:first-child) {
-          display: none; }
-      .is-child-theme .social-feed.social-feed-instagram .mod-social-image .mod-social-story {
-        opacity: 0; }
-        .is-child-theme .social-feed.social-feed-instagram .mod-social-image .mod-social-story > p {
-          font-size: 17px; }
-      .is-child-theme .social-feed.social-feed-instagram .mod-social-image:hover .mod-social-user {
-        opacity: 0; }
-      .is-child-theme .social-feed.social-feed-instagram .mod-social-image:hover .mod-social-story {
-        opacity: 1; }
