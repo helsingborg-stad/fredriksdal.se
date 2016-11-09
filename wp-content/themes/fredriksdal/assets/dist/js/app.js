@@ -89,9 +89,11 @@ Fredriksdal.AnchorScroll.AnchorScroll = (function ($) {
 
     function AnchorScroll() {
         AnchorScrollTriggers.forEach(function(element) {
-            if(this.isAnchorLink(jQuery(element).attr('href')) && this.anchorLinkExists(jQuery(element).attr('href'))) {
-                this.bindAnchorScroll(element,jQuery(element).attr('href'));
-            }
+            jQuery(element).each(function(index,item) {
+                if(this.isAnchorLink(jQuery(item).attr('href')) && this.anchorLinkExists(jQuery(item).attr('href'))) {
+                    this.bindAnchorScroll(item,jQuery(item).attr('href'));
+                }
+            }.bind(this));
         }.bind(this));
     }
 
@@ -379,7 +381,7 @@ Fredriksdal.ScrollHighlight.ScrollHighlight = (function ($) {
         ScrollTopValue = jQuery(window).scrollTop();
         jQuery(window).on('scroll', function (e) {
             var scrolledToItem = null;
-            ScrollTopValue = jQuery(window).scrollTop() + ScrollTopOffset;
+            ScrollTopValue = jQuery(window).scrollTop() + ScrollTopOffset + jQuery("#site-header").outerHeight();
             jQuery(ScrollHighlightTrigger).each(function (index,item) {
                 if(ScrollTopValue >= jQuery(item).offset().top) {
                     scrolledToItem = item;

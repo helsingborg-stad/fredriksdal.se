@@ -19,9 +19,11 @@ Fredriksdal.AnchorScroll.AnchorScroll = (function ($) {
 
     function AnchorScroll() {
         AnchorScrollTriggers.forEach(function(element) {
-            if(this.isAnchorLink(jQuery(element).attr('href')) && this.anchorLinkExists(jQuery(element).attr('href'))) {
-                this.bindAnchorScroll(element,jQuery(element).attr('href'));
-            }
+            jQuery(element).each(function(index,item) {
+                if(this.isAnchorLink(jQuery(item).attr('href')) && this.anchorLinkExists(jQuery(item).attr('href'))) {
+                    this.bindAnchorScroll(item,jQuery(item).attr('href'));
+                }
+            }.bind(this));
         }.bind(this));
     }
 

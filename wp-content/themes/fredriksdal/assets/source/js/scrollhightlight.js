@@ -19,7 +19,7 @@ Fredriksdal.ScrollHighlight.ScrollHighlight = (function ($) {
         ScrollTopValue = jQuery(window).scrollTop();
         jQuery(window).on('scroll', function (e) {
             var scrolledToItem = null;
-            ScrollTopValue = jQuery(window).scrollTop() + ScrollTopOffset;
+            ScrollTopValue = jQuery(window).scrollTop() + ScrollTopOffset + jQuery("#site-header").outerHeight();
             jQuery(ScrollHighlightTrigger).each(function (index,item) {
                 if(ScrollTopValue >= jQuery(item).offset().top) {
                     scrolledToItem = item;
