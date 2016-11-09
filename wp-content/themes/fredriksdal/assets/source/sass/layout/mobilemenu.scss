@@ -26,6 +26,14 @@ nav#mobile-menu {
                     background: darken($palette-3,5%);
                 }
             }
+
+            &.active,
+            &.current-menu-item {
+                background: rgba(#fff,.1);
+                a {
+                    background: darken($palette-3,5%);
+                }
+            }
         }
     }
 }

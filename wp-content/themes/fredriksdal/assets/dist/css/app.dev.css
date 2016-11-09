@@ -456,6 +456,10 @@ h1, h2, h3, h4, h5, h6, p {
           margin-right: .5em; }
         .is-child-theme nav#mobile-menu ul li a:hover {
           background: #a5ac28; }
+      .is-child-theme nav#mobile-menu ul li.active, .is-child-theme nav#mobile-menu ul li.current-menu-item {
+        background: rgba(255, 255, 255, 0.1); }
+        .is-child-theme nav#mobile-menu ul li.active a, .is-child-theme nav#mobile-menu ul li.current-menu-item a {
+          background: #a5ac28; }
   .is-child-theme footer.main-footer {
     background-color: #e9e5d6;
     color: #000;

@@ -12,7 +12,8 @@ Fredriksdal.ScrollHighlight.ScrollHighlight = (function ($) {
     var ScrollHighlightTrigger = 'section.modularity-onepage-section';
 
     var ScrollMenuWrapper = [
-        '#main-menu'
+        '#main-menu',
+        '#mobile-menu'
     ];
 
     function ScrollHighlight() {
