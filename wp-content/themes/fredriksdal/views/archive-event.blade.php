@@ -14,7 +14,7 @@
                         <ul class="nav-horizontal">
                             @foreach($quaters as $quater)
                             <li>
-                                <a href="#">
+                                <a href="?s=&amp;from={{ $quater->start_date }}&amp;to={{ $quater->end_date }}">
                                     <span class="start-month">{{ $quater->start_month }}</span> - <span class="end-month">{{ $quater->end_month }}</span>
                                 </a>
                             </li>
