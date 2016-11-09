@@ -29,13 +29,19 @@ class ArchiveEvent extends \Municipio\Controller\BaseController
             $endMonth = $i * 3;
             $startMonth = $endMonth - 2;
 
-            $startDate = mysql2date('Y-m-d', date('Y-m-d', mktime(0, 0, 0, $startMonth, 1, date('Y'))), true);
-            $endDate = mysql2date('Y-m-d', date('Y-m-t', mktime(0, 0, 0, $endMonth, 1, date('Y'))), true);
+            $year = date('Y');
+            if (date('m') > $endMonth) {
+                $year++;
+            }
 
-            $startMonth = mysql2date('F', date('Y-m-d', mktime(0, 0, 0, $startMonth, 1, date('Y'))), true);
-            $endMonth = mysql2date('F', date('Y-m-d', mktime(0, 0, 0, $endMonth, 1, date('Y'))), true);
+            $startDate = mysql2date('Y-m-d', date('Y-m-d', mktime(0, 0, 0, $startMonth, 1, $year)), true);
+            $endDate = mysql2date('Y-m-d', date('Y-m-t', mktime(0, 0, 0, $endMonth, 1, $year)), true);
+
+            $startMonth = mysql2date('F', date('Y-m-d', mktime(0, 0, 0, $startMonth, 1, $year)), true);
+            $endMonth = mysql2date('F', date('Y-m-d', mktime(0, 0, 0, $endMonth, 1, $year)), true);
 
             $quaters[] = array(
+                'year' => $year,
                 'start_date' => $startDate,
                 'start_month' => $startMonth,
                 'end_date' => $endDate,

@@ -668,6 +668,13 @@ h1, h2, h3, h4, h5, h6, p {
       margin-left: 30px; }
     .is-child-theme nav.event-dates a {
       color: #000; }
+      .is-child-theme nav.event-dates a .year {
+        display: block;
+        font-size: .8em; }
+      .is-child-theme nav.event-dates a:hover {
+        text-decoration: none; }
+        .is-child-theme nav.event-dates a:hover .months {
+          text-decoration: underline; }
   .is-child-theme .event-list {
     text-align: center;
     padding: 20px;

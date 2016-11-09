@@ -23,6 +23,19 @@ nav.event-dates {
 
     a {
         color: $base-font-color;
+
+        .year {
+            display: block;
+            font-size: .8em;
+        }
+
+        &:hover {
+            text-decoration: none;
+
+            .months {
+                text-decoration: underline;
+            }
+        }
     }
 }
 
