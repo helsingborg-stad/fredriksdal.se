@@ -118,6 +118,11 @@
                 a {
                     color: $black;
                     border-color: $black;
+
+                    &::before {
+                        visibility: visible;
+                        transform: scaleX(1);
+                    }
                 }
             }
         }

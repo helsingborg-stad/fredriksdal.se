@@ -400,6 +400,12 @@ h1, h2, h3, h4, h5, h6, p {
   .is-child-theme.no-js #site-header #main-menu li.current-menu-item a {
     color: #000;
     border-color: #000; }
+    .is-child-theme #site-header.liquid-header #main-menu li.current-menu-item a::before,
+    .is-child-theme:not(.home) #site-header #main-menu li.current-menu-item a::before,
+    .is-child-theme.no-js #site-header #main-menu li.current-menu-item a::before {
+      visibility: visible;
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1); }
   .is-child-theme #site-header.liquid-header #mobile-menu:not(.open) .menu-icon,
   .is-child-theme #site-header.liquid-header #mobile-menu .menu-icon:after,
   .is-child-theme #site-header.liquid-header #mobile-menu .menu-icon:before,
