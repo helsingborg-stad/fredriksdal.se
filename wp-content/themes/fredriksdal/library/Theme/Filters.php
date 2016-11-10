@@ -34,11 +34,15 @@ class Filters
                 $input = '<div>' . __("Open today: ", 'fredriksdal') . '</div>' . $input;
             }
             return '<time class="open-hours-label button opaque">' . $input . '</time>';
-        });
+        }, 10, 2);
 
+        // Make posts compatible with flickity
+        add_filter('acf/load_value/name=posts_columns', function ($value, $post_id, $field) {
+            if (!is_admin()) {
+                return 'grid-xs-12 grid-sm-6 '.$value;
+            }
 
-        add_action('init', function () {
-
+            return $value;
         });
 
         // Titles
