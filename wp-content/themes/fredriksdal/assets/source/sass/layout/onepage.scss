@@ -111,6 +111,12 @@
     .flickity-enabled {
         position: relative;
 
+        @media screen and #{$screen-sm-up} {
+            width: 90%;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+
         &:focus {
             outline: none;
         }

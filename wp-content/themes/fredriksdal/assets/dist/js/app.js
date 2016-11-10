@@ -384,7 +384,7 @@ Fredriksdal.OffGrid = Fredriksdal.OffGrid || {};
 
 Fredriksdal.OffGrid.OffGrid = (function ($) {
 
-    var basicAdjustment = 45;
+    var basicAdjustment = -20;
     var maxAdjustment = 300;
 
     function OffGrid() {

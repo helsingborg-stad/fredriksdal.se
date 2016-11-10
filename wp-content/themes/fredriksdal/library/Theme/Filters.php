@@ -26,6 +26,16 @@ class Filters
             return $classes;
         }, 100, 3);
 
+        add_filter('openhours/shortcode', function ($input, $isException) {
+            if (empty($input)) {
+                return "";
+            }
+            if (!$isException) {
+                $input = '<div>' . __("Open today: ", 'fredriksdal') . '</div>' . $input;
+            }
+            return '<time class="open-hours-label button opaque">' . $input . '</time>';
+        });
+
 
         add_action('init', function () {
 

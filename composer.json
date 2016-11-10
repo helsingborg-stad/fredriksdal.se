@@ -66,6 +66,10 @@
             "url": "https://github.com/helsingborg-stad/modularity-onepage.git"
         },
         {
+            "type": "vcs",
+            "url": "https://github.com/helsingborg-stad/open-hours.git"
+        },
+        {
             "type":"composer",
             "url":"https://wpackagist.org"
         },
@@ -98,6 +102,7 @@
         "helsingborg-stad/force-ssl": ">=1.0.0",
         "helsingborg-stad/modularity-onepage": ">=0.1.0",
         "helsingborg-stad/xcap-import": ">=1.0.0",
+        "helsingborg-stad/open-hours": ">=1.0.0",
         "wpackagist-plugin/wp-editor-widget": "^0.5.5",
         "wpackagist-plugin/varnish-http-purge": "^3.7.2",
         "wpackagist-plugin/stream": "^3.0.4",

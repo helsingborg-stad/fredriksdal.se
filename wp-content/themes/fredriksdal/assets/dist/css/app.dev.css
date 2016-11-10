@@ -576,6 +576,11 @@ h1, h2, h3, h4, h5, h6, p {
     /* Page dots */ }
     .is-child-theme .modularity-onepage-section .flickity-enabled {
       position: relative; }
+      @media screen and (min-width: 469px) {
+        .is-child-theme .modularity-onepage-section .flickity-enabled {
+          width: 90%;
+          margin-left: 5%;
+          margin-right: 5%; } }
       .is-child-theme .modularity-onepage-section .flickity-enabled:focus {
         outline: none; }
     .is-child-theme .modularity-onepage-section .flickity-viewport {
@@ -814,6 +819,20 @@ h1, h2, h3, h4, h5, h6, p {
         right: 0;
         bottom: 0;
         left: 0; }
+    .is-child-theme .hero time {
+      font-family: "Verlag Cond A", "Verlag Cond B";
+      padding: 7px 12px;
+      border: 2px solid #fff;
+      background: rgba(255, 255, 255, 0.5);
+      color: #000;
+      text-shadow: none;
+      font-size: .5em;
+      margin-top: 25px;
+      display: inline-block;
+      font-weight: 600; }
+      .is-child-theme .hero time div {
+        display: inline;
+        font-weight: 800; }
     .is-child-theme .hero .slider {
       background-color: #b9c12d;
       max-height: 95vh; }
