@@ -24,6 +24,10 @@
         p, ol, ul {
             line-height: 1.4em;
         }
+
+        a, a:active, a:hover {
+            color: $palette-1;
+        }
     }
 
     &:before {

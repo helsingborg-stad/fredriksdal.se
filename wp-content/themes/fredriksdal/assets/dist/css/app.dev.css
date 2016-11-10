@@ -521,6 +521,8 @@ h1, h2, h3, h4, h5, h6, p {
         max-width: 2000px; }
       .is-child-theme .modularity-onepage-section .grid > div > article p, .is-child-theme .modularity-onepage-section .grid > div > article ol, .is-child-theme .modularity-onepage-section .grid > div > article ul {
         line-height: 1.4em; }
+      .is-child-theme .modularity-onepage-section .grid > div > article a, .is-child-theme .modularity-onepage-section .grid > div > article a:active, .is-child-theme .modularity-onepage-section .grid > div > article a:hover {
+        color: #000; }
     .is-child-theme .modularity-onepage-section:before {
       content: "";
       position: absolute;
