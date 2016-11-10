@@ -1,5 +1,22 @@
 
 .box.box-news {
+    .box-image-container {
+        position: relative;
+        border-radius: 50%;
+        overflow: hidden;
+
+        &:after {
+            content: "";
+            border-radius: 50%;
+            @include cover();
+            padding-top: 50%;
+            box-shadow: inset 0 0 3px rgba(#000,.7);
+        }
+    }
+}
+
+
+.box.box-news {
     background-color: transparent;
     background: none !important;
 
@@ -26,20 +43,8 @@
 
     &.box-news-horizontal {
         .box-image-container {
-            position: relative;
-            border-radius: 50%;
-            overflow: hidden;
-
             @media screen and #{$screen-md-up} {
                 width: 20%;
-            }
-
-            &:after {
-                content: "";
-                border-radius: 50%;
-                @include cover();
-                padding-top: 50%;
-                box-shadow: inset 0 0 3px rgba(#000,.7);
             }
         }
     }
