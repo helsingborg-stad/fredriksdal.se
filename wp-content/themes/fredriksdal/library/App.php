@@ -13,5 +13,7 @@ class App
         new \Fredriksdal\Theme\EventArchive();
         new \Fredriksdal\Theme\OnePage();
         new \Fredriksdal\Theme\OnePageMenu();
+
+        new \Fredriksdal\Theme\CustomTemplates();
     }
 }

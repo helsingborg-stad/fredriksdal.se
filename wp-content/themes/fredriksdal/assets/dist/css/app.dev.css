@@ -745,6 +745,12 @@ h1, h2, h3, h4, h5, h6, p {
         .is-child-theme .event-list li a:hover h2 {
           text-decoration: underline;
           color: #b9c12d; }
+  .is-child-theme #campaign-wrapper .modularity-mod-slider {
+    margin-bottom: 0;
+    padding-bottom: 0; }
+  .is-child-theme #campaign-wrapper .sidebar-content-area-top [class*="grid-"] {
+    margin: 0;
+    padding: 0; }
   .is-child-theme .box.box-news {
     background-color: transparent;
     background: none !important; }
