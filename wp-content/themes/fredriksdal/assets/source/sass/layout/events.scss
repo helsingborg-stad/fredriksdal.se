@@ -21,7 +21,25 @@ nav.event-dates {
         margin-left: 30px;
     }
 
+    @media #{$screen-below-md} {
+        padding: 0;
+
+        li {
+            display: block;
+
+            a {
+                padding: 10px 0;
+            }
+        }
+
+        li + li {
+            margin: 0;
+            border-top: 1px solid darken($palette-3, 5%);
+        }
+    }
+
     a {
+        display: block;
         color: $base-font-color;
 
         .year {
@@ -45,6 +63,10 @@ nav.event-dates {
     max-width: 1000px;
     width: 100%;
     margin: 0 auto;
+
+    @media #{$screen-below-md} {
+        text-align: left;
+    }
 
     p + p {
         margin-top: 15px;
