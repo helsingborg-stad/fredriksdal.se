@@ -1198,3 +1198,5 @@ figure.image-placeholder {
       padding: 1.5em; }
   .is-child-theme .background-green .box-index {
     border-bottom: 3px solid #e9e5d6; }
+  .is-child-theme .image-gallery .box-index {
+    border: none !important; }
