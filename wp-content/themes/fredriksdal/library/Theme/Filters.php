@@ -43,7 +43,7 @@ class Filters
             }
 
             return $value;
-        });
+        }, 10, 3);
 
         // Titles
         add_filter('the_title', array($this, 'theTitle'), 1);
