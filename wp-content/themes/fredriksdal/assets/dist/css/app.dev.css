@@ -107,6 +107,9 @@ h1, h2, h3, h4, h5, h6, p {
   h1.link-item:before, h2.link-item:before, h3.link-item:before, h4.link-item:before, h5.link-item:before, h6.link-item:before, p.link-item:before {
     display: none; }
 
+figure.image-placeholder {
+  padding-bottom: 100%; }
+
 .is-child-theme {
   /* Layout */
   /*div[class^="grid-"], div[class*=" grid-"] {
