@@ -1183,6 +1183,11 @@ figure.image-placeholder {
     height: 0;
     opacity: 0; }
   .is-child-theme .box-index {
-    border-bottom: 3px solid #b9c12d; }
+    border: none;
+    border-bottom: 3px solid #b9c12d;
+    padding: 0; }
+    .is-child-theme .box-index .box-content {
+      margin: 0;
+      padding: 1.5em; }
   .is-child-theme .background-green .box-index {
     border-bottom: 3px solid #e9e5d6; }

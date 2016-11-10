@@ -1,5 +1,12 @@
 .box-index {
+    border: none;
     border-bottom: 3px solid $palette-3;
+    padding: 0;
+
+    .box-content {
+        margin: 0;
+        padding: 1.5em;
+    }
 }
 
 .background-green {
