@@ -690,7 +690,18 @@ h1, h2, h3, h4, h5, h6, p {
     line-height: 1; }
     .is-child-theme nav.event-dates li + li {
       margin-left: 30px; }
+    @media (max-width: 767px) {
+      .is-child-theme nav.event-dates {
+        padding: 0; }
+        .is-child-theme nav.event-dates li {
+          display: block; }
+          .is-child-theme nav.event-dates li a {
+            padding: 10px 0; }
+        .is-child-theme nav.event-dates li + li {
+          margin: 0;
+          border-top: 1px solid #a5ac28; } }
     .is-child-theme nav.event-dates a {
+      display: block;
       color: #000; }
       .is-child-theme nav.event-dates a .year {
         display: block;
@@ -705,6 +716,9 @@ h1, h2, h3, h4, h5, h6, p {
     max-width: 1000px;
     width: 100%;
     margin: 0 auto; }
+    @media (max-width: 767px) {
+      .is-child-theme .event-list {
+        text-align: left; } }
     .is-child-theme .event-list p + p {
       margin-top: 15px; }
     @media (min-width: 767px) {
