@@ -23,6 +23,9 @@ Fredriksdal.AnchorScroll.AnchorScroll = (function ($) {
                 if(this.isAnchorLink(jQuery(item).attr('href')) && this.anchorLinkExists(jQuery(item).attr('href'))) {
                     this.bindAnchorScroll(item,jQuery(item).attr('href'));
                 }
+                if(this.isAnchorLink(jQuery(item).attr('href')) && !this.anchorLinkExists(jQuery(item).attr('href'))) {
+                    jQuery(item).attr('href', location.protocol + "//" + window.location.hostname  + "/" + jQuery(item).attr('href'));
+                }
             }.bind(this));
         }.bind(this));
     }
