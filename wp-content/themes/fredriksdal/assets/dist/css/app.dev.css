@@ -841,7 +841,7 @@ figure.image-placeholder {
           color: #b9c12d; }
   @media screen and (min-width: 1280px) {
     .is-child-theme .box-index-event {
-      margin: 0 40px;
+      margin: 0 20px;
       width: auto; } }
   .is-child-theme #campaign-wrapper .modularity-mod-slider {
     margin-bottom: 0;
