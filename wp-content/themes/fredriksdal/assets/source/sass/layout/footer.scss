@@ -1,3 +1,41 @@
+.footer-scroller {
+    position: relative;
+    background-image: url('/footer-test.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    backgorund-position: center center;
+    height: 400px;
+
+    .scroll-elevator {
+        position: absolute;
+        bottom: 10px;
+        right: 0;
+        left: 0;
+        text-align: center;
+
+        a {
+            display: inline-block;
+            background-color: transparent;
+            height: auto;
+            box-shadow: none;
+            border-radius: 0;
+            color: #fff;
+            font-family: $condensed-font-family;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            font-weight: bold;
+
+            i {
+
+            }
+
+            span {
+                display: block;
+            }
+        }
+    }
+}
+
 
 footer.main-footer {
     background-color: $palette-2;
@@ -5,7 +43,10 @@ footer.main-footer {
     margin-top: 0;
     box-shadow: none;
 
-    a,a:hover,a:active,a:visited {
+    a,
+    a:hover,
+    a:active,
+    a:visited {
         color: #000;
     }
 
