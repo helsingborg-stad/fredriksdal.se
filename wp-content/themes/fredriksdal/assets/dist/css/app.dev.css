@@ -617,6 +617,16 @@ figure.image-placeholder {
         .is-child-theme .modularity-onepage-section .ajax-response .frame {
           max-width: 80%;
           margin: 0 10%; } }
+      .is-child-theme .modularity-onepage-section .ajax-response .frame h1 + .grid,
+      .is-child-theme .modularity-onepage-section .ajax-response .frame h2 + .grid,
+      .is-child-theme .modularity-onepage-section .ajax-response .frame h3 + .grid,
+      .is-child-theme .modularity-onepage-section .ajax-response .frame h4 + .grid,
+      .is-child-theme .modularity-onepage-section .ajax-response .frame h5 + .grid,
+      .is-child-theme .modularity-onepage-section .ajax-response .frame h6 + .grid,
+      .is-child-theme .modularity-onepage-section .ajax-response .frame p + .grid,
+      .is-child-theme .modularity-onepage-section .ajax-response .frame ul + .grid,
+      .is-child-theme .modularity-onepage-section .ajax-response .frame ol + .grid {
+        margin-top: 40px; }
       .is-child-theme .modularity-onepage-section .ajax-response .container {
         margin-top: 40px; }
     .is-child-theme .modularity-onepage-section.background-green .ajax-response {
