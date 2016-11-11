@@ -21,7 +21,7 @@ class EventArchive
 
     public function eventPostsModule($template, $module, $fields)
     {
-        if (!$fields->posts_data_source === 'posttype' || !$fields->posts_data_post_type === 'event') {
+        if ($fields->posts_data_source !== 'posttype' || ($fields->posts_data_source === 'posttype' && $fields->posts_data_post_type !== 'event')) {
             return $template;
         }
 
