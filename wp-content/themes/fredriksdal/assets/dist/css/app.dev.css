@@ -619,6 +619,8 @@ figure.image-placeholder {
           margin: 0 10%; } }
       .is-child-theme .modularity-onepage-section .ajax-response .container {
         margin-top: 40px; }
+    .is-child-theme .modularity-onepage-section.background-green .ajax-response {
+      background-color: #e9e5d6; }
   .is-child-theme .background-green {
     background: #b9c12d; }
   .is-child-theme .background-lgren {

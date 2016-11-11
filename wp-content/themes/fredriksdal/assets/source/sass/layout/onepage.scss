@@ -70,6 +70,12 @@
             margin-top: 40px;
         }
     }
+
+    &.background-green {
+        .ajax-response {
+            background-color: $palette-2;
+        }
+    }
 }
 
 .background-green {
