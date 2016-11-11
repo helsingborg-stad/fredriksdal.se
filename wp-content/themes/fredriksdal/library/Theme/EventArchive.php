@@ -15,6 +15,17 @@ class EventArchive
 
         add_filter('posts_join', array($this, 'eventDateFilterJoin'));
         add_filter('Municipio/archive/date_filter', array($this, 'eventDateFilterWhere'), 10, 3);
+
+        add_filter('Modularity/Module/Posts/template', array($this, 'eventPostsModule'), 10, 3);
+    }
+
+    public function eventPostsModule($template, $module, $fields)
+    {
+        if (!$fields->posts_data_source === 'posttype' || !$fields->posts_data_post_type === 'event') {
+            return $template;
+        }
+
+        return \Modularity\Helper\Wp::getTemplate('mod-posts-events', 'module', false);
     }
 
     public function eventDateFilterJoin($join)

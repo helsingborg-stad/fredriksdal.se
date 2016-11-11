@@ -14,10 +14,52 @@
 
 .background-green {
     .box-index {
-        border-bottom: 3px solid $palette-2;
+        border-bottom: 3px solid darken($palette-3, 10%);
     }
 }
 
 .image-gallery .box-index {
     border: none !important;
+}
+
+.box-index-event {
+    .box-image-container {
+        position: relative;
+
+        time {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            background-color: rgba($palette-3, .9);
+            color: #fff;
+            text-align: center;
+            line-height: 1;
+            font-family: $condensed-font-family;
+            font-weight: bold;
+            text-transform: uppercase;
+
+            $size: 70px;
+            width: $size;
+            height: $size;
+
+            div {
+                @include center();
+            }
+
+            span {
+                display: block;
+            }
+
+            .day {
+                font-size: 1.8em;
+            }
+        }
+    }
+
+    .datestring {
+        display: block;
+        line-height: 1.3;
+        font-size: .8em;
+        margin-bottom: 15px;
+    }
 }
