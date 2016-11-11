@@ -107,7 +107,7 @@ nav.event-dates {
 }
 
 .box-index-event {
-    @media screen and (min-width: #{$screen-md-min}) {
+    @media screen and (min-width: #{$screen-lg-min}) {
         margin: 0 40px;
         width: auto;
     }
