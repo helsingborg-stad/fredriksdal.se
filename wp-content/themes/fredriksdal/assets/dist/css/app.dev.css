@@ -470,7 +470,7 @@ figure.image-placeholder {
           background: #a5ac28; }
   .is-child-theme .footer-scroller {
     position: relative;
-    background-image: url("/footer-test.jpg");
+    background-color: #fff;
     background-repeat: no-repeat;
     background-size: cover;
     backgorund-position: center center;
