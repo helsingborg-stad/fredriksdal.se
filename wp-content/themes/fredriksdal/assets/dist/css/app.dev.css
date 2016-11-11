@@ -839,6 +839,10 @@ figure.image-placeholder {
         .is-child-theme .event-list li a:hover h2 {
           text-decoration: underline;
           color: #b9c12d; }
+  @media screen and (min-width: 767px) {
+    .is-child-theme .box-index-event {
+      margin: 0 40px;
+      width: auto; } }
   .is-child-theme #campaign-wrapper .modularity-mod-slider {
     margin-bottom: 0;
     padding-bottom: 0; }
