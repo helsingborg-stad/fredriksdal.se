@@ -152,7 +152,6 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
     function AsyncContentLoader() {
         jQuery.each(AsyncContentTrigger,function(index,targetObject) {
             jQuery(targetObject).click(function(event) {
-console.log(this.isLocalLink(jQuery(event.target).closest('a').attr('href')));
                 if(this.isLocalLink(jQuery(event.target).closest('a').attr('href'))) {
                     event.preventDefault();
                     this.loadContent(jQuery(event.target).closest('a'));
@@ -167,7 +166,7 @@ console.log(this.isLocalLink(jQuery(event.target).closest('a').attr('href')));
 
         jQuery.get(this.createEndpointSlug(jQuery(clickedObject).attr('href')), function(dataResponse){
 
-            jQuery('.ajax-response', jQuery(clickedObject).parents("section")).remove();
+            jQuery('.ajax-response').remove();
 
             jQuery(clickedObject).parents("section").append(
                 this.responseTemplate(AsyncContentTempalte, dataResponse)
