@@ -25,7 +25,6 @@ class OnePage
         $post_data[] = get_field('horizontal_scroll', $postId) ? 'section-horizontal-scroll' : '';
         $post_data[] = get_field('background_color', $postId) ? 'background-'.get_field('background_color', $postId) : '';
         $post_data[] = get_field('ajax_loading', $postId) ? 'async-loading' : '';
-
         $post_data[] = get_field('cover_section', $postId) ? 'full-screen' : '';
 
         return array_filter(array_merge($input, (array) $post_data));

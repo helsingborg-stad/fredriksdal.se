@@ -22,8 +22,9 @@ class OnePageMenu
     public function populateSelectItems($field)
     {
         $field['choices'] = array();
-        $field['choices'][''] = __("No link");
+        $field['choices'][''] = __("No link", 'fredriksdal');
         foreach ($this->filterMenuItems() as $choice) {
+            $field['choices'][str_replace("/#", "", $choice->url)] = $choice->post_title;
             $field['choices'][str_replace("#", "", $choice->url)] = $choice->post_title;
         }
 
