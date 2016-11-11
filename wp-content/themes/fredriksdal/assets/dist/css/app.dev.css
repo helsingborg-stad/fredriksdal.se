@@ -549,6 +549,10 @@ figure.image-placeholder {
         right: 0;
         height: 5px;
         display: block; }
+      @media screen and (min-width: 767px) {
+        .is-child-theme .modularity-onepage-section .ajax-response .frame {
+          max-width: 80%;
+          margin: 0 10%; } }
       .is-child-theme .modularity-onepage-section .ajax-response .container {
         margin-top: 40px; }
   .is-child-theme .background-green {

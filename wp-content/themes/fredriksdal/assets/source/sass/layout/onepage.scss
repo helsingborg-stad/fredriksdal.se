@@ -55,6 +55,13 @@
             display: block;
         }
 
+        .frame {
+            @media screen and (min-width: #{$screen-md-min}) {
+                max-width: 80%;
+                margin: 0 10%;
+            }
+        }
+
         .container {
             margin-top: 40px;
         }

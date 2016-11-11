@@ -3,11 +3,9 @@ Fredriksdal.AsyncContentLoader = Fredriksdal.AsyncContentLoader || {};
 
 Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
 
-    var lastClickedObject;
+    var AsyncContentEndpoint = '/wp-json/wp/v2/page?filter[name]=';
 
-    var AsyncContentEndpoint = '/wp-json/wp/v2/';
-
-    var AsyncContentTempalte = '<div class="ajax-response"><div class="container"><div class="grid"><div class="grid-xs-12"><div class="frame"><h2>{{title}}</h2>{{content}}</div></div></div></div></div>';
+    var AsyncContentTempalte = '<div id="ajax-response" class="ajax-response"><div class="container"><div class="grid"><div class="grid-xs-12"><div class="frame"><h2>{{title}}</h2>{{content}}</div></div></div></div></div>';
 
     var AsyncContentTrigger = [
         '.modularity-mod-posts a',
@@ -21,26 +19,34 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
 
     function AsyncContentLoader() {
         jQuery.each(AsyncContentTrigger,function(index,targetObject) {
-            jQuery(targetObject).click(function(lastClicked) {
+            jQuery(targetObject).click(function(event) {
                 event.preventDefault();
-                lastClickedObject = jQuery(lastClicked.currentTarget);
-                console.log(jQuery(lastClickedObject));
-                this.loadContent("post", 83);
+                this.loadContent(jQuery(event.target).closest('a'));
             }.bind(this));
         }.bind(this));
     };
 
-    AsyncContentLoader.prototype.loadContent = function (postType, postId) {
-        jQuery.get(this.createEndpointSlug(postType,postId), function(dataResponse){
-            jQuery('.ajax-response', jQuery(lastClickedObject).parents("section")).remove();
-            jQuery(lastClickedObject).parents("section").append(
+    AsyncContentLoader.prototype.loadContent = function (clickedObject) {
+
+        //this.startSpinner(clickedObject);
+        console.log(this.createEndpointSlug(jQuery(clickedObject).attr('href')));
+
+/*        jQuery.get(this.createEndpointSlug(jQuery(clickedObject).attr('href')), function(dataResponse){
+
+            jQuery('.ajax-response', jQuery(clickedObject).parents("section")).remove();
+
+            jQuery(clickedObject).parents("section").append(
                 this.responseTemplate(AsyncContentTempalte, dataResponse)
             );
-        }.bind(this));
+
+            this.stopSpinner();
+            this.scrollToResult();
+
+        }.bind(this));*/
     };
 
-    AsyncContentLoader.prototype.createEndpointSlug = function (postType, postId) {
-        return location.protocol + "//" + window.location.hostname + AsyncContentEndpoint + postType + "s/" + postId;
+    AsyncContentLoader.prototype.createEndpointSlug = function (url) {
+        return location.protocol + "//" + window.location.hostname + AsyncContentEndpoint + this.parsePostName(url) + '&[posts_per_page]=1';
     };
 
     AsyncContentLoader.prototype.responseTemplate = function (contentTemplate, dataResponse) {
@@ -72,7 +78,19 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
     };
 
     AsyncContentLoader.prototype.parsePostName = function(url) {
-        return url.split('/').pop();
+        return url.split('/').filter(function(e){return e}).pop();
+    };
+
+    AsyncContentLoader.prototype.startSpinner = function(targetItem) {
+        targetItem.addClass("do-spin");
+    };
+
+    AsyncContentLoader.prototype.stopSpinner = function(targetItem) {
+        targetItem.removeClass("do-spin");
+    };
+
+    AsyncContentLoader.prototype.scrollToResult = function() {
+        jQuery('html, body').animate({scrollTop: Math.abs(jQuery("#ajax-response").offset().top -jQuery("#site-header").outerHeight())}, 700, jQuery.bez([0.815, 0.020, 0.080, 1.215]));
     };
 
     new AsyncContentLoader();
