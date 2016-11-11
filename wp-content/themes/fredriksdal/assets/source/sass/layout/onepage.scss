@@ -64,10 +64,28 @@
                 max-width: 80%;
                 margin: 0 10%;
             }
+
+            h1 + .grid,
+            h2 + .grid,
+            h3 + .grid,
+            h4 + .grid,
+            h5 + .grid,
+            h6 + .grid,
+            p + .grid,
+            ul + .grid,
+            ol + .grid {
+                margin-top: 40px;
+            }
         }
 
         .container {
             margin-top: 40px;
+        }
+    }
+
+    &.background-green {
+        .ajax-response {
+            background-color: $palette-2;
         }
     }
 }
