@@ -434,6 +434,28 @@ figure.image-placeholder {
   .is-child-theme .menu-item-translate,
   .is-child-theme .menu-item-search {
     margin-left: 10px; }
+  .is-child-theme .menu-item-search {
+    padding: 0 5px; }
+  .is-child-theme #main-menu li.menu-item-social {
+    float: right;
+    margin: 0;
+    padding: 0;
+    margin-left: 5px; }
+    .is-child-theme #main-menu li.menu-item-social a:hover::after, .is-child-theme #main-menu li.menu-item-social a:hover::before {
+      display: none; }
+    .is-child-theme #main-menu li.menu-item-social svg {
+      max-height: 25px;
+      opacity: 1 !important; }
+    .is-child-theme #main-menu li.menu-item-social svg,
+    .is-child-theme #main-menu li.menu-item-social svg * {
+      -webkit-transition: 200ms all;
+              transition: 200ms all;
+      fill: #fff; }
+  .is-child-theme .liquid-header #main-menu li.menu-item-social svg,
+  .is-child-theme .liquid-header #main-menu li.menu-item-social svg * {
+    fill: #000; }
+  .is-child-theme #main-menu li.menu-item-social + li.menu-item-search {
+    padding-right: 3px !important; }
   .is-child-theme nav#mobile-menu {
     -webkit-animation: fadeinDown 500ms;
             animation: fadeinDown 500ms; }

@@ -11,6 +11,8 @@ class Filters
         add_action('Municipio/mobile_menu_breakpoint', array($this, 'mobileMenuBreakpoint'));
         add_action('Municipio/desktop_menu_breakpoint', array($this, 'desktopMenuBreakpoint'));
         add_action('Municipio/header_grid_size', array($this, 'headerGridSize'));
+        add_filter('wp_nav_menu_items', array($this, 'addSocialIconsToMenu'), 10, 2);
+        add_filter('Municipio/main_menu/items', array($this, 'addSocialIconsToMenu'), 10, 2);
 
         // Search
         add_filter('Municipio/search_result/date', array($this, 'eventDate'), 10, 2);
@@ -62,6 +64,26 @@ class Filters
         ) as $imageFilter) {
             add_filter($imageFilter, array($this, 'imageAspectRatioSquare'), 50, 2);
         }
+    }
+
+    public function addSocialIconsToMenu($items, $args = null)
+    {
+        if ($args && $args->theme_location != apply_filters('Municipio/main_menu_theme_location', 'main-menu')) {
+            return $items;
+        }
+
+        //Not in child (if inherited from main)
+        if ($args && (isset($args->child_menu) && $args->child_menu == true) && $args->theme_location == "main-menu") {
+            return $items;
+        }
+
+        $socialIcons = (array) get_field('fredriksdal_social_icons', 'option');
+        foreach ($socialIcons as $icon) {
+            $svg = \Municipio\Helper\Svg::extract($icon['icon']['url']);
+            $items .= '<li class="menu-item-social"><a href="' . $icon['link'] . '"><span data-tooltip="' . $icon['tooltip'] .'">' . $svg . '</span></a></li>' . "\n";
+        }
+
+        return $items;
     }
 
     /**
