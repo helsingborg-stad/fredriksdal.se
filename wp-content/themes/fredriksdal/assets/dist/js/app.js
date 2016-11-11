@@ -140,8 +140,8 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
     var AsyncContentTempalte = '<div id="ajax-response" class="ajax-response"><div class="container"><div class="grid"><div class="grid-xs-12"><article class="frame"><h2>{{title}}</h2>{{content}}</article></div></div></div></div>';
 
     var AsyncContentTrigger = [
-        '.modularity-mod-posts a',
-        '.modularity-mod-index a'
+        '.modularity-onepage-section.async-loading .modularity-mod-posts a',
+        '.modularity-onepage-section.async-loading .modularity-mod-index a'
     ];
 
     var AsyncContentReplaceVars = [
