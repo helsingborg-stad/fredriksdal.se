@@ -141,3 +141,43 @@
 .menu-item-search {
     margin-left: 10px;
 }
+
+.menu-item-search {
+    padding: 0 5px;
+}
+
+#main-menu li.menu-item-social {
+    float: right;
+    margin: 0;
+    padding: 0;
+    margin-left: 5px;
+
+    a:hover {
+        &::after,
+        &::before {
+            display: none;
+        }
+    }
+
+    svg {
+        max-height: 25px;
+        opacity: 1 !important;
+    }
+
+    svg,
+    svg * {
+        transition: 200ms all;
+        fill: #fff;
+    }
+}
+
+.liquid-header #main-menu li.menu-item-social {
+    svg,
+    svg * {
+        fill: $black;
+    }
+}
+
+#main-menu li.menu-item-social + li.menu-item-search {
+    padding-right: 3px !important;
+}
