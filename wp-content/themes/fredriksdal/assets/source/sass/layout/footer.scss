@@ -5,13 +5,20 @@
     background-size: cover;
     backgorund-position: center center;
     height: 400px;
+    overflow: hidden;
 
     .scroll-elevator {
+        display: block;
         position: absolute;
-        bottom: 10px;
+        bottom: 0;
         right: 0;
         left: 0;
         text-align: center;
+        transform: translateY(100%);
+        transition: transform 1s;
+
+        @include gradient(rgba(#000, 0), rgba(#000, .8));
+        padding: 20px 0;
 
         a {
             display: inline-block;
@@ -26,13 +33,31 @@
             font-weight: bold;
 
             i {
-
+                animation: 1000ms float ease-in-out infinite;
+                position: relative;
+                display: block;
             }
 
             span {
                 display: block;
             }
         }
+    }
+}
+
+&.show-scroll-elevator .footer-scroller .scroll-elevator {
+    transform: translateY(0);
+}
+
+@keyframes float {
+    0% {
+        top: -4px;
+    }
+    50% {
+        top: 0;
+    }
+    100% {
+        top: -4px;
     }
 }
 

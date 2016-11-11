@@ -474,13 +474,22 @@ figure.image-placeholder {
     background-repeat: no-repeat;
     background-size: cover;
     backgorund-position: center center;
-    height: 400px; }
+    height: 400px;
+    overflow: hidden; }
     .is-child-theme .footer-scroller .scroll-elevator {
+      display: block;
       position: absolute;
-      bottom: 10px;
+      bottom: 0;
       right: 0;
       left: 0;
-      text-align: center; }
+      text-align: center;
+      -webkit-transform: translateY(100%);
+              transform: translateY(100%);
+      -webkit-transition: -webkit-transform 1s;
+              transition: transform 1s;
+      background: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.8));
+      background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8));
+      padding: 20px 0; }
       .is-child-theme .footer-scroller .scroll-elevator a {
         display: inline-block;
         background-color: transparent;
@@ -492,8 +501,32 @@ figure.image-placeholder {
         font-size: 1.2em;
         text-transform: uppercase;
         font-weight: bold; }
+        .is-child-theme .footer-scroller .scroll-elevator a i {
+          -webkit-animation: 1000ms float ease-in-out infinite;
+                  animation: 1000ms float ease-in-out infinite;
+          position: relative;
+          display: block; }
         .is-child-theme .footer-scroller .scroll-elevator a span {
           display: block; }
+  .is-child-theme.show-scroll-elevator .footer-scroller .scroll-elevator {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+
+@-webkit-keyframes float {
+  0% {
+    top: -4px; }
+  50% {
+    top: 0; }
+  100% {
+    top: -4px; } }
+
+@keyframes float {
+  0% {
+    top: -4px; }
+  50% {
+    top: 0; }
+  100% {
+    top: -4px; } }
   .is-child-theme footer.main-footer {
     background-color: #e9e5d6;
     color: #000;
