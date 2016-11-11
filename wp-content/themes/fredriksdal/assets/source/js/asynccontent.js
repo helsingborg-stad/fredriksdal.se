@@ -3,7 +3,7 @@ Fredriksdal.AsyncContentLoader = Fredriksdal.AsyncContentLoader || {};
 
 Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
 
-    var AsyncContentEndpoint = '/wp-json/wp/v2/page?filter[name]=';
+    var AsyncContentEndpoint = '/wp-json/wp/v2/all?slug=';
 
     var AsyncContentTempalte = '<div id="ajax-response" class="ajax-response"><div class="container"><div class="grid"><div class="grid-xs-12"><div class="frame"><h2>{{title}}</h2>{{content}}</div></div></div></div></div>';
 
@@ -20,18 +20,20 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
     function AsyncContentLoader() {
         jQuery.each(AsyncContentTrigger,function(index,targetObject) {
             jQuery(targetObject).click(function(event) {
-                event.preventDefault();
-                this.loadContent(jQuery(event.target).closest('a'));
+console.log(this.isLocalLink(jQuery(event.target).closest('a').attr('href')));
+                if(this.isLocalLink(jQuery(event.target).closest('a').attr('href'))) {
+                    event.preventDefault();
+                    this.loadContent(jQuery(event.target).closest('a'));
+                }
             }.bind(this));
         }.bind(this));
     };
 
     AsyncContentLoader.prototype.loadContent = function (clickedObject) {
 
-        //this.startSpinner(clickedObject);
-        console.log(this.createEndpointSlug(jQuery(clickedObject).attr('href')));
+        this.startSpinner(clickedObject);
 
-/*        jQuery.get(this.createEndpointSlug(jQuery(clickedObject).attr('href')), function(dataResponse){
+        jQuery.get(this.createEndpointSlug(jQuery(clickedObject).attr('href')), function(dataResponse){
 
             jQuery('.ajax-response', jQuery(clickedObject).parents("section")).remove();
 
@@ -39,34 +41,22 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
                 this.responseTemplate(AsyncContentTempalte, dataResponse)
             );
 
-            this.stopSpinner();
+            this.stopSpinner(clickedObject);
             this.scrollToResult();
 
-        }.bind(this));*/
+        }.bind(this));
     };
 
     AsyncContentLoader.prototype.createEndpointSlug = function (url) {
-        return location.protocol + "//" + window.location.hostname + AsyncContentEndpoint + this.parsePostName(url) + '&[posts_per_page]=1';
+        console.log(url);
+        return location.protocol + "//" + window.location.hostname + AsyncContentEndpoint + this.parsePostName(url);
     };
 
     AsyncContentLoader.prototype.responseTemplate = function (contentTemplate, dataResponse) {
-
         AsyncContentReplaceVars.forEach(function(item) {
-
-            var dynamicTarget;
-
-            if( dataResponse[item]['rendered'] ) {
-                dynamicTarget = dataResponse[item]['rendered'];
-            } else {
-                dynamicTarget = dataResponse[item];
-            }
-
-            contentTemplate = contentTemplate.replace("{{" + item + "}}", dynamicTarget);
-
+            contentTemplate = contentTemplate.replace("{{" + item + "}}", dataResponse[item]);
         }.bind(this));
-
         return contentTemplate;
-
     };
 
     AsyncContentLoader.prototype.displayTarget = function(markup, target) {
@@ -78,7 +68,14 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
     };
 
     AsyncContentLoader.prototype.parsePostName = function(url) {
-        return url.split('/').filter(function(e){return e}).pop();
+        return url.replace(location.protocol + "//" + window.location.hostname, "");
+    };
+
+    AsyncContentLoader.prototype.isLocalLink = function(url) {
+        if(url.indexOf(window.location.hostname) !== -1) {
+            return true;
+        }
+        return false;
     };
 
     AsyncContentLoader.prototype.startSpinner = function(targetItem) {

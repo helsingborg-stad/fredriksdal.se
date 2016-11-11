@@ -40,6 +40,10 @@
         @include gradient(rgba(#000,.3), rgba(#000,0));
     }
 
+    .do-spin {
+        opacity: 0.5;
+    }
+
     .ajax-response {
         background: $palette-3;
         margin-top: 40px;

@@ -15,5 +15,7 @@ class App
         new \Fredriksdal\Theme\OnePageMenu();
 
         new \Fredriksdal\Theme\CustomTemplates();
+
+        new \Fredriksdal\Theme\Api();
     }
 }
