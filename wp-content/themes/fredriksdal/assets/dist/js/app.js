@@ -137,7 +137,7 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
 
     var AsyncContentEndpoint = '/wp-json/wp/v2/all?slug=';
 
-    var AsyncContentTempalte = '<div id="ajax-response" class="ajax-response"><div class="container"><div class="grid"><div class="grid-xs-12"><div class="frame"><h2>{{title}}</h2>{{content}}</div></div></div></div></div>';
+    var AsyncContentTempalte = '<div id="ajax-response" class="ajax-response"><div class="container"><div class="grid"><div class="grid-xs-12"><article class="frame"><h2>{{title}}</h2>{{content}}</article></div></div></div></div>';
 
     var AsyncContentTrigger = [
         '.modularity-mod-posts a',
