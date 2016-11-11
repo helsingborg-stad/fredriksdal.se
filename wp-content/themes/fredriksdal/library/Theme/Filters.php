@@ -57,7 +57,8 @@ class Filters
 
         //Make 16:9 to sqare
         foreach (array(
-            'modularity/image/latest/box'
+            'modularity/image/posts/items',
+            'modularity/image/posts/news'
         ) as $imageFilter) {
             add_filter($imageFilter, array($this, 'imageAspectRatioSquare'), 50, 2);
         }
@@ -162,7 +163,9 @@ class Filters
 
     public function imageAspectRatioSquare($size, $args)
     {
-        $size[1] = $size[0];
+        if (round($size[0] / $size[1], 2) == 1.78) {
+            $size[1] = $size[0];
+        }
         return $size;
     }
 }
