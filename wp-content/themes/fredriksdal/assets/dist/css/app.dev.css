@@ -903,7 +903,7 @@ figure.image-placeholder {
               transform: rotate(0); }
   .is-child-theme .box.box-news {
     background-color: transparent;
-    background: none !important; }
+    background: none; }
     .is-child-theme .box.box-news .box-content {
       background: none; }
     .is-child-theme .box.box-news h5.link-item {

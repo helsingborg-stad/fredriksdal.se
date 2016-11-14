@@ -78,6 +78,12 @@
             }
 
             .box.box-news {
+
+                @media screen and (max-width: #{$screen-sm-max}) {
+                    @include material-shadow();
+                    background-color: #fff;
+                }
+
                 .box-image-container {
                     padding-left: 25%;
                     padding-right: 25%;
