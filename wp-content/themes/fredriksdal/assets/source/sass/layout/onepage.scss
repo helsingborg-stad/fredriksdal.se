@@ -59,7 +59,7 @@
             display: block;
         }
 
-        .frame {
+        article.frame {
             @media screen and (min-width: #{$screen-md-min}) {
                 max-width: 80%;
                 margin: 0 10%;
@@ -75,6 +75,34 @@
             ul + .grid,
             ol + .grid {
                 margin-top: 40px;
+            }
+
+            .box.box-news {
+                .box-image-container {
+                    padding-left: 25%;
+                    padding-right: 25%;
+
+                    @media screen and (min-width: #{$screen-sm-max}) {
+                        display: none;
+                    }
+                }
+
+                img,
+                .box-image-container {
+                    border-radius: none;
+                    &:after {
+                        display: none;
+                    }
+                }
+
+                .box-content {
+
+                    @media screen and (min-width: #{$screen-sm-max}) {
+                        h1, h2, h3, h4, h5, h6, p, ol, ul {
+                            text-align: left;
+                        }
+                    }
+                }
             }
         }
 
