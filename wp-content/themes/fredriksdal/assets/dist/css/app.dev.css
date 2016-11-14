@@ -654,7 +654,7 @@ figure.image-placeholder {
             display: none; } }
       .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news img,
       .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news .box-image-container {
-        border-radius: none; }
+        border-radius: 0; }
         .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news img:after,
         .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news .box-image-container:after {
           display: none; }
