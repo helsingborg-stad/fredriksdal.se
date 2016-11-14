@@ -79,9 +79,10 @@
 
             .box.box-news {
 
-                @media screen and (max-width: #{$screen-sm-max}) {
-                    @include material-shadow();
-                    background-color: #fff;
+                &:not(:last-child) {
+                    @media screen and (max-width: #{$screen-sm-max}) {
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+                    }
                 }
 
                 .box-image-container {
