@@ -647,8 +647,8 @@ figure.image-placeholder {
       .is-child-theme .modularity-onepage-section .ajax-response article.frame ol + .grid {
         margin-top: 40px; }
       @media screen and (max-width: 768px) {
-        .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news:not(:last-child) {
-          border-bottom: 1px solid rgba(0, 0, 0, 0.08); } }
+        .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news {
+          border-top: 1px solid rgba(0, 0, 0, 0.08); } }
       .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news .box-image-container {
         padding-left: 25%;
         padding-right: 25%; }
