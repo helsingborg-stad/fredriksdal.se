@@ -551,7 +551,7 @@ figure.image-placeholder {
     background-color: #fff;
     background-repeat: no-repeat;
     background-size: cover;
-    backgorund-position: center center;
+    background-position: center center;
     height: 400px;
     overflow: hidden; }
     .is-child-theme .footer-scroller .scroll-elevator {
