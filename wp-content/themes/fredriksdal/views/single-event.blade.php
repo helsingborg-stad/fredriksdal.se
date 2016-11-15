@@ -114,6 +114,8 @@
                     <div class="tickets">
                     @if (is_string(get_field('event-ticket_url')) && get_field('event-ticket_url'))
                         <a href="{{ get_field('event-ticket_url') }}" target="_blank">Köp biljetter</a>
+                    @else
+
                     @endif
                     </div>
                 </div>

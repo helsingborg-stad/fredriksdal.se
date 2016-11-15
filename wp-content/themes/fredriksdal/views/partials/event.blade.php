@@ -1,30 +1,15 @@
-<div class="grid-md-4">
-    <a href="{{ the_permalink() }}" class="box box-ticket">
-        <h3 class="box-title">
-            {{ the_title() }}
-            <small class="block-level">Fredriksdal Museer och trädgårdar</small>
-        </h3>
-        <div class="box-content">
-            <div class="excerpt">
-                {{ the_excerpt() }}
-            </div>
-            <div class="date">
-                <label><?php _e('Date', 'fredriksdal'); ?></label>
-                <span class="value">{{ mysql2date('Y-m-d', get_post_meta(get_the_id(), 'event-date-start', true)) }}</span>
-            </div>
-            <div class="time clearfix">
-                <div class="time-start">
-                    <label><?php _e('From', 'fredriksdal'); ?></label>
-                    <div class="value">{{ mysql2date('H:i', get_post_meta(get_the_id(), 'event-date-start', true)) }}</div>
-                </div>
-                <div class="time-end">
-                    <label><?php _e('To', 'fredriksdal'); ?></label>
-                    <div class="value">{{ mysql2date('H:i', get_post_meta(get_the_id(), 'event-date-end', true)) }}</div>
-                </div>
-            </div>
+<li>
+    <a href="{{ the_permalink() }}">
+        <time datetime="{{ mysql2date('Y-m-d H:i', date('Y-m-d H:i', strtotime(get_field('event-date-start')))) }}">{{ \Fredriksdal\Controller\ArchiveEvent::getEventDate($post->ID) }}</time>
+        <h2>{{ the_title() }}</h2>
+        <div class="hidden-sm hidden-xs">
+        {{ the_content() }}
         </div>
-        <div class="tickets">
-           <?php _e('Read more', 'fredriksdal'); ?>
+        <div class="hidden-md hidden-lg hidden-xl">
+            {{ the_excerpt() }}
+        </div>
+        <div class="gutter gutter-top hidden-md hidden-lg hidden-xl">
+            <span class="btn btn-primary">Visa mer</span>
         </div>
     </a>
-</div>
+</li>

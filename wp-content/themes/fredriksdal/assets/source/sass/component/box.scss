@@ -50,15 +50,6 @@
     padding: 0;
     text-align: center;
 
-    &:hover {
-        text-decoration: none;
-
-        .tickets,
-        .tickets a {
-            text-decoration: underline;
-        }
-    }
-
     .box-title {
         line-height: 1.2;
         padding: 15px;
@@ -91,25 +82,6 @@
         text-transform: uppercase;
         line-height: 1;
         font-weight: bold;
-        color: $black;
-    }
-
-    .excerpt {
-        position: relative;
-        height: 100px;
-        overflow: hidden;
-        margin-bottom: 15px;
-
-        &::after {
-            content: '';
-            display: block;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            @include gradient(rgba($palette-2, 1), rgba($palette-2, 0), to top)
-        }
     }
 
     .date {
@@ -138,16 +110,15 @@
         padding: 15px;
         border-top: 1px dashed darken($palette-2, 20%);
         background-color: darken($palette-2, 5%);
-        text-align: center;
-        text-transform: uppercase;
-        font-family: $base-font-family;
-        font-size: 1.2em;
-        color: #000;
-        font-weight: bold;
 
         a {
             display: block;
-            color: inherit;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: $base-font-family;
+            font-size: 1.2em;
+            color: #000;
+            font-weight: bold;
         }
 
         $circle: 20px;
