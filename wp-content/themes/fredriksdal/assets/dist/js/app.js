@@ -247,6 +247,7 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
         jQuery("section").on('click', '.ajax-response .close',function(event){
             event.preventDefault();
             jQuery(".ajax-response").remove();
+            jQuery("a").removeClass('ajax-is-active');
         });
     };
 
