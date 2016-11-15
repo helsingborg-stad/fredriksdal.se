@@ -119,6 +119,16 @@
 
         .container {
             margin-top: 40px;
+            position: relative;
+        }
+
+        .close {
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 1.5em;
+            line-height: 0;
+            color: rgba(255,255,255,.5);
         }
     }
 

@@ -5,7 +5,7 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
 
     var AsyncContentEndpoint = '/wp-json/wp/v2/all?slug=';
 
-    var AsyncContentTempalte = '<div id="ajax-response" class="ajax-response"><div class="container"><div class="grid"><div class="grid-xs-12"><article class="frame"><h2>{{title}}</h2>{{content}}</article></div></div></div></div>';
+    var AsyncContentTempalte = '<div id="ajax-response" class="ajax-response"><div class="container"><div class="grid"><div class="grid-xs-12"><a class="close" href="#close"><i class="pricon pricon-close"></i></a><article class="frame"><h2>{{title}}</h2>{{content}}</article></div></div></div></div>';
 
     var AsyncContentTrigger = [
         '.modularity-onepage-section.async-loading .modularity-mod-posts a',
@@ -23,6 +23,7 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
                 if(this.isLocalLink(jQuery(event.target).closest('a').attr('href'))) {
                     event.preventDefault();
                     this.loadContent(jQuery(event.target).closest('a'));
+                    window.location.hash = '#' + this.crateIdFromHref(jQuery(event.target).closest('a').attr('href'));
                 }
             }.bind(this));
         }.bind(this));
@@ -47,7 +48,6 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
     };
 
     AsyncContentLoader.prototype.createEndpointSlug = function (url) {
-        console.log(url);
         return location.protocol + "//" + window.location.hostname + AsyncContentEndpoint + this.parsePostName(url);
     };
 
@@ -77,6 +77,8 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
         return false;
     };
 
+    /* Spinner */
+
     AsyncContentLoader.prototype.startSpinner = function(targetItem) {
         targetItem.addClass("do-spin");
     };
@@ -85,8 +87,16 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
         targetItem.removeClass("do-spin");
     };
 
+    /* Scrolling */
+
     AsyncContentLoader.prototype.scrollToResult = function() {
         jQuery('html, body').animate({scrollTop: Math.abs(jQuery("#ajax-response").offset().top -jQuery("#site-header").outerHeight())}, 700, jQuery.bez([0.815, 0.020, 0.080, 1.215]));
+    };
+
+    /* Href */
+
+    AsyncContentLoader.prototype.crateIdFromHref = function(url) {
+        return this.parsePostName(url).replace(new RegExp("/", 'g'),"-").replace('-blog-',"");
     };
 
     new AsyncContentLoader();
