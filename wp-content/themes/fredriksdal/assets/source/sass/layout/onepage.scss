@@ -61,6 +61,11 @@
 
         article.frame {
 
+            animation-delay: 1s;
+            animation-name: fadein;
+            animation-duration: 750ms;
+            animation-fill-mode: both;
+
             @media screen and (min-width: #{$screen-md-min}) {
                 max-width: 80%;
                 margin: 0 10%;
@@ -128,17 +133,17 @@
             top: 0;
             font-size: 1.5em;
             line-height: 0;
-            color: rgba(#000,.5);
+            color: #000;
+            animation-delay: 2s;
+            animation-name: bounceIn;
+            animation-duration: 750ms;
+            animation-fill-mode: both;
         }
     }
 
     &.background-green {
         .ajax-response {
             background-color: $palette-2;
-        }
-
-        .close {
-            color: rgba(#fff,.5);
         }
     }
 }

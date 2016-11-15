@@ -24,8 +24,7 @@ class OnePageMenu
         $field['choices'] = array();
         $field['choices'][''] = __("No link", 'fredriksdal');
         foreach ($this->filterMenuItems() as $choice) {
-            $field['choices'][str_replace("/#", "", $choice->url)] = $choice->post_title;
-            $field['choices'][str_replace("#", "", $choice->url)] = $choice->post_title;
+            $field['choices'][str_replace(array("/#", "#"), "", $choice->url)] = $choice->post_title;
         }
 
         return $field;

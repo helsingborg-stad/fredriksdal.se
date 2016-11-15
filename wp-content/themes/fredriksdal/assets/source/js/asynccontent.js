@@ -18,13 +18,14 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
     ];
 
     function AsyncContentLoader() {
+        this.triggerAjaxOpenHash();
         this.watchAjaxClose();
         jQuery.each(AsyncContentTrigger,function(index,targetObject) {
             jQuery(targetObject).click(function(event) {
                 if(this.isLocalLink(jQuery(event.target).closest('a').attr('href'))) {
                     event.preventDefault();
                     this.loadContent(jQuery(event.target).closest('a'));
-                    window.location.hash = '#' + this.crateIdFromHref(jQuery(event.target).closest('a').attr('href'));
+                    window.location.hash = '#' + this.createIdFromHref(jQuery(event.target).closest('a').attr('href'));
                 }
             }.bind(this));
         }.bind(this));
@@ -96,8 +97,8 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
 
     /* Href */
 
-    AsyncContentLoader.prototype.crateIdFromHref = function(url) {
-        return this.parsePostName(url).replace(new RegExp("/", 'g'),"-").replace('-blog-',"").replace(/\-$/, '');
+    AsyncContentLoader.prototype.createIdFromHref = function(url) {
+        return this.parsePostName(url).replace(new RegExp("/", 'g'),"-").replace('-blog-',"").replace(/\-$/, '').replace(/^\-/, '');
     };
 
     /* Close */
@@ -107,6 +108,19 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
             event.preventDefault();
             jQuery(".ajax-response").remove();
         });
+    };
+
+    /* Onload trigger */
+    AsyncContentLoader.prototype.triggerAjaxOpenHash = function() {
+        jQuery.each(AsyncContentTrigger,function(index,targetObject) {
+            console.log("main");
+            jQuery(targetObject).each(function(linkindex, link){
+                if("#" + this.createIdFromHref(jQuery(link).attr('href')) === window.location.hash) {
+                    jQuery(link).trigger('click');
+                    return true;
+                }
+            }.bind(this));
+        }.bind(this));
     };
 
     new AsyncContentLoader();
