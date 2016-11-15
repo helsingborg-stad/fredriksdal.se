@@ -5,3 +5,11 @@
     text-transform: uppercase;
     font-weight: 400;
 }
+
+.btn-green {
+    background-color: $palette-3;
+
+    &:hover {
+        background-color: darken($palette-3, 5%);
+    }
+}

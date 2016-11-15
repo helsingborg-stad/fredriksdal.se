@@ -14,76 +14,128 @@
 ?>
 
 @if ($image)
-<div class="hero hidden-xs hidden-sm">
-    <div class="slider ratio-16-9">
-        <ul>
-            <li class="has-text-block">
-                <div class="slider-image" style="background-image:url('{{ $image }}');">
-                    <span class="text-block text-block-center">
-                        <span>
-                            <em class="title text-xl block-level">
-                                {{ the_title() }}
-                            </em>
-                            <time>{{ \Fredriksdal\Controller\ArchiveEvent::getEventDate(get_the_id()) }}</time>
-                        </span>
-                    </span>
-                </div>
-            </li>
-        </ul>
-    </div>
-</div>
-@endif
 
-<section class="background-green">
-<div class="container">
-    <div class="grid gutter gutter-vertical gutter-xl">
-        <div class="grid-md-8 grid-lg-8 grid-sm-12">
-            @include('partials.article')
-
-            @if (is_active_sidebar('content-area'))
-            <div class="sidebar-content-area">
-                {!! dynamic_sidebar('content-area') !!}
-            </div>
-            @endif
+    <div class="hero event-hero">
+        <div class="slider ratio-16-9">
+            <ul>
+                <li>
+                    <div class="slider-image" style="background-image:url('{{ $image }}');"></div>
+                </li>
+            </ul>
         </div>
 
-        <aside class="grid-lg-3 grid-md-4 grid-sm-12 sidebar-right-sidebar">
-            @if (is_string(get_field('event-ticket_url')) && get_field('event-ticket_url'))
-            <a href="{{ get_field('event-ticket_url') }}" target="_blank" class="btn btn-green btn-block btn-lg">Köp biljetter</a>
-            @endif
+        <div class="event-information">
+            <div class="container">
+                <div class="grid">
+                    <div class="grid-sm-12">
+                        <time datetime="{{ get_post_meta(get_the_id(), 'event-date-start', true) }}">
+                            <div>
+                                <span class="day">{{ mysql2date('j', get_post_meta(get_the_id(), 'event-date-start', true)) }}</span>
+                                <span class="month">{{ mysql2date('M', get_post_meta(get_the_id(), 'event-date-start', true)) }}</span>
+                            </div>
+                        </time>
 
-            <div class="box box-filled background-white">
-                <div class="box-content">
-                    <p>
-                        <strong>Evenemanget äger rum:</strong><br>
-                        {{ \Fredriksdal\Controller\ArchiveEvent::getEventDate(get_the_id()) }}
-                    </p>
-                </div>
-            </div>
-
-            @if (isset($occations) && count($occations) > 0)
-                <div class="box box-filled background-white">
-                    <div class="box-content">
-                        <p>
-                            <strong>{{ the_title() }}</strong> kan även ses på följande datum:
-                        </p>
-                        <p>
-                            <ul>
-                                @foreach ($occations as $occation)
-                                    <li>
-                                        <a class="link-item link-item-light" href="{{ get_permalink($occation->ID) }}">{{ \Municipio\Helper\Dt::dateWithTime(strtotime(get_field('event-date-start', $occation->ID))) }}</a>
-                                    </li>
-                                @endforeach
-                            </ul>
-                        </p>
+                        <h1>{{ the_title() }}</h1>
                     </div>
                 </div>
-            @endif
-
-            {!! dynamic_sidebar('right-sidebar') !!}
-        </aside>
+            </div>
+        </div>
     </div>
-</div>
+
+@endif
+
+<section class="background-white gutter gutter-vertical gutter-xl">
+    <div class="container">
+        <div class="grid gutter gutter-vertical gutter-xl">
+            <div class="grid-md-8 grid-lg-8 grid-sm-12">
+                <?php global $post; ?>
+                <article class="clearfix">
+                    @if (!$image)
+                    <h1>{{ the_title() }}</h1>
+                    @endif
+
+                    @if (isset(get_extended($post->post_content)['main']) && strlen(get_extended($post->post_content)['main']) > 0 && isset(get_extended($post->post_content)['extended']) && strlen(get_extended($post->post_content)['extended']) > 0)
+
+                        {!! apply_filters('the_lead', get_extended($post->post_content)['main']) !!}
+                        {!! apply_filters('the_content', get_extended($post->post_content)['extended']) !!}
+
+                    @else
+                        @if (substr($post->post_content, -11) == '<!--more-->')
+                        {!! apply_filters('the_lead', get_extended($post->post_content)['main']) !!}
+                        @else
+                        {!! the_content() !!}
+                        @endif
+
+                    @endif
+
+                    <footer>
+                        @include('partials.accessibility-menu')
+                    </footer>
+
+                </article>
+
+                @if (is_active_sidebar('content-area'))
+                <div class="sidebar-content-area">
+                    {!! dynamic_sidebar('content-area') !!}
+                </div>
+                @endif
+            </div>
+
+            <aside class="grid-lg-3 grid-md-4 grid-sm-12 sidebar-right-sidebar">
+                <div class="box box-ticket background-white">
+                    <h3 class="box-title">
+                        {{ the_title() }}
+                        <small class="block-level">Fredriksdal Museer och trädgårdar</small>
+                    </h3>
+                    <div class="box-content">
+                        <div class="date">
+                            <label><?php _e('Date', 'fredriksdal'); ?></label>
+                            <span class="value">{{ mysql2date('Y-m-d', get_post_meta(get_the_id(), 'event-date-start', true)) }}</span>
+                        </div>
+                        <div class="time clearfix">
+                            <div class="time-start">
+                                <label><?php _e('From', 'fredriksdal'); ?></label>
+                                <div class="value">{{ mysql2date('H:i', get_post_meta(get_the_id(), 'event-date-start', true)) }}</div>
+                            </div>
+                            <div class="time-end">
+                                <label><?php _e('To', 'fredriksdal'); ?></label>
+                                <div class="value">{{ mysql2date('H:i', get_post_meta(get_the_id(), 'event-date-end', true)) }}</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tickets">
+                    @if (is_string(get_field('event-ticket_url')) && get_field('event-ticket_url'))
+                        <a href="{{ get_field('event-ticket_url') }}" target="_blank">Köp biljetter</a>
+                    @else
+
+                    @endif
+                    </div>
+                </div>
+
+                @if (isset($occations) && count($occations) > 0)
+                    <div class="box box-filled background-white">
+                        <div class="box-content">
+                            <p>
+                                <strong>{{ the_title() }}</strong> kan även ses på följande datum:
+                            </p>
+                            <p>
+                                <ul>
+                                    @foreach ($occations as $occation)
+                                        <li>
+                                            <a class="link-item link-item-light" href="{{ get_permalink($occation->ID) }}">{{ \Municipio\Helper\Dt::dateWithTime(strtotime(get_field('event-date-start', $occation->ID))) }}</a>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                @endif
+
+                {!! dynamic_sidebar('right-sidebar') !!}
+            </aside>
+        </div>
+    </div>
 </section>
 
 @stop
