@@ -1,13 +1,5 @@
 <header id="site-header" class="site-header header-casual">
-    <div class="search-top {!! apply_filters('Municipio/desktop_menu_breakpoint','hidden-sm'); !!}" id="search">
-        <div class="container">
-            <div class="grid">
-                <div class="grid-sm-12">
-                    {{ get_search_form() }}
-                </div>
-            </div>
-        </div>
-    </div>
+    @include('partials.search.top-search')
 
     <nav class="navbar navbar-mainmenu">
         <div class="container">

@@ -6,7 +6,7 @@
     transition: opacity 200ms, height 200ms;
 
     @media screen and (max-width: #{$screen-lg-max}) {
-        display: none;
+        text-align: center;
     }
 
     ul.navbar {
