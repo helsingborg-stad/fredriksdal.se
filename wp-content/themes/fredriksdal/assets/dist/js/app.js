@@ -168,16 +168,21 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
 
     AsyncContentLoader.prototype.loadContent = function (clickedObject) {
 
+        jQuery("a").removeClass('ajax-is-active');
+
         this.startSpinner(clickedObject);
 
         jQuery.get(this.createEndpointSlug(jQuery(clickedObject).attr('href')), function(dataResponse){
 
+            //Clear area
             jQuery('.ajax-response').remove();
 
+            //New content
             jQuery(clickedObject).parents("section").append(
                 this.responseTemplate(AsyncContentTempalte, dataResponse)
             );
 
+            //Content loaded
             this.stopSpinner(clickedObject);
             this.scrollToResult();
 
@@ -217,11 +222,11 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
     /* Spinner */
 
     AsyncContentLoader.prototype.startSpinner = function(targetItem) {
-        targetItem.addClass("do-spin");
+        targetItem.addClass("ajax-do-spin ajax-is-active");
     };
 
     AsyncContentLoader.prototype.stopSpinner = function(targetItem) {
-        targetItem.removeClass("do-spin");
+        targetItem.removeClass("ajax-do-spin");
     };
 
     /* Scrolling */
