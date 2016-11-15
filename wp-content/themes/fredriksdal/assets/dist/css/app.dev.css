@@ -1033,6 +1033,10 @@ figure.image-placeholder {
     font-family: "Verlag A", "Verlag B";
     text-transform: uppercase;
     font-weight: 400; }
+  .is-child-theme .btn-green {
+    background-color: #b9c12d; }
+    .is-child-theme .btn-green:hover {
+      background-color: #a5ac28; }
   .is-child-theme:not(.home) .hero {
     max-height: 80vh; }
     .is-child-theme:not(.home) .hero .modularity-mod-slider {
@@ -1072,7 +1076,7 @@ figure.image-placeholder {
         right: 0;
         bottom: 0;
         left: 0; }
-    .is-child-theme .hero time {
+    .is-child-theme .hero.sidebar-slider-area time {
       font-family: "Verlag Cond A", "Verlag Cond B";
       padding: 7px 12px;
       border: 2px solid #fff;
@@ -1083,7 +1087,7 @@ figure.image-placeholder {
       margin-top: 25px;
       display: inline-block;
       font-weight: 600; }
-      .is-child-theme .hero time div {
+      .is-child-theme .hero.sidebar-slider-area time div {
         display: inline;
         font-weight: 800; }
     .is-child-theme .hero .slider {
@@ -1450,3 +1454,125 @@ figure.image-placeholder {
     line-height: 1.3;
     font-size: .8em;
     margin-bottom: 15px; }
+  .is-child-theme .box-ticket {
+    position: relative;
+    background-color: #e9e5d6;
+    padding: 0;
+    text-align: center; }
+    .is-child-theme .box-ticket .box-title {
+      line-height: 1.2;
+      padding: 15px;
+      padding-bottom: 0; }
+    .is-child-theme .box-ticket .box-content {
+      padding: 15px; }
+    .is-child-theme .box-ticket .box-title small {
+      font-weight: normal;
+      font-size: .7em !important;
+      letter-spacing: .5px; }
+    .is-child-theme .box-ticket label {
+      display: block;
+      font-size: .8em;
+      text-transform: uppercase;
+      font-family: "Verlag A", "Verlag B";
+      color: #b9c12d; }
+    .is-child-theme .box-ticket .value {
+      display: block;
+      font-family: "Verlag Cond A", "Verlag Cond B";
+      font-size: 2em;
+      text-transform: uppercase;
+      line-height: 1;
+      font-weight: bold; }
+    .is-child-theme .box-ticket .date {
+      border-top: 1px solid #d7d0b5;
+      padding: 10px 0; }
+    .is-child-theme .box-ticket .time {
+      border-top: 1px solid #d7d0b5; }
+      .is-child-theme .box-ticket .time .time-start {
+        border-right: 1px solid #d7d0b5; }
+      .is-child-theme .box-ticket .time .time-start,
+      .is-child-theme .box-ticket .time .time-end {
+        padding: 10px 0;
+        width: 50%;
+        float: left; }
+    .is-child-theme .box-ticket .tickets {
+      position: relative;
+      margin-top: -15px;
+      padding: 15px;
+      border-top: 1px dashed #c5bb94;
+      background-color: #e0dac5; }
+      .is-child-theme .box-ticket .tickets a {
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: "Verlag A", "Verlag B";
+        font-size: 1.2em;
+        color: #000;
+        font-weight: bold; }
+      .is-child-theme .box-ticket .tickets::after, .is-child-theme .box-ticket .tickets::before {
+        position: absolute;
+        top: -11px;
+        display: block;
+        content: '';
+        height: 20px;
+        width: 10px;
+        background-color: #fff; }
+      .is-child-theme .box-ticket .tickets::before {
+        left: 0;
+        border-radius: 0 20px 20px 0; }
+      .is-child-theme .box-ticket .tickets::after {
+        right: 0;
+        border-radius: 20px 0 0 20px; }
+  .is-child-theme .event-hero {
+    position: relative; }
+    .is-child-theme .event-hero .slider {
+      min-height: 100%; }
+    .is-child-theme .event-hero .slider-image {
+      background-position: center center;
+      height: 100%; }
+    .is-child-theme .event-hero .event-information {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 99;
+      padding: 20px 0 0 0;
+      color: #fff;
+      background: -webkit-linear-gradient(top, transparent, black);
+      background: linear-gradient(to bottom, transparent, black); }
+      .is-child-theme .event-hero .event-information h1 {
+        display: inline-block;
+        vertical-align: middle;
+        color: #fff;
+        padding: 0;
+        margin: 0;
+        margin-left: .5em; }
+      .is-child-theme .event-hero .event-information time {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        background-color: white;
+        color: #b9c12d;
+        text-align: center;
+        line-height: 1;
+        font-family: "Verlag Cond A", "Verlag Cond B";
+        font-weight: bold;
+        text-transform: uppercase;
+        width: 4em;
+        height: 4em;
+        font-size: 1.5em; }
+        .is-child-theme .event-hero .event-information time div {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%); }
+        .is-child-theme .event-hero .event-information time span {
+          display: block; }
+        .is-child-theme .event-hero .event-information time .day {
+          font-size: 1.8em; }
+  .is-child-theme.single-event article p:first-of-type {
+    margin-top: 0; }
+  .is-child-theme.single-event article h1 + p:first-of-type {
+    margin-top: 15px; }
+  .is-child-theme.single-event article footer {
+    margin-top: 30px; }
