@@ -24,7 +24,7 @@ class DisableComments
      */
     public function disableComments()
     {
-        $postTypes = apply_filters('Fredriksdal/disable_comments_for_post_types', get_post_types());
+        $postTypes = get_post_types();
 
         foreach ($postTypes as $postType) {
             remove_post_type_support($postType, 'comments');
