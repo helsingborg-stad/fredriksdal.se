@@ -63,6 +63,22 @@
 }
 
 .box-news {
+
+    .box-image-container {
+
+        @media screen and #{$screen-sm-up} {
+            max-width: 250px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media screen and #{$screen-xs} {
+            max-width: 150px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
     .box-image-container img {
         transition: transform 400ms;
         transform: scale(1) rotate(0deg);

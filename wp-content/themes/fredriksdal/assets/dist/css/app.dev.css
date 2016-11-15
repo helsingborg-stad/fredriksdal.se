@@ -1034,6 +1034,16 @@ figure.image-placeholder {
     color: #000; }
   .is-child-theme .box-panel .box-content {
     border: none; }
+  @media screen and (min-width: 469px) {
+    .is-child-theme .box-news .box-image-container {
+      max-width: 250px;
+      margin-left: auto;
+      margin-right: auto; } }
+  @media screen and (min-width: 0) and (max-width: 468px) {
+    .is-child-theme .box-news .box-image-container {
+      max-width: 150px;
+      margin-left: auto;
+      margin-right: auto; } }
   .is-child-theme .box-news .box-image-container img {
     -webkit-transition: -webkit-transform 400ms;
             transition: transform 400ms;
