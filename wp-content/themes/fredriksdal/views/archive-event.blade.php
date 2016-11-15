@@ -29,14 +29,16 @@
                     </div>
                     @endif
 
-                    <ul class="event-list">
-                        <?php global $post; ?>
-                        <?php $i = 0; ?>
+                    <?php global $post; ?>
+                    <?php $i = 0; ?>
+                    <div class="gutter gutter-xl">
+                        <div class="grid">
                         @while(have_posts())
                             {!! the_post() !!}
                             @include('partials.event')
                         @endwhile
-                    </ul>
+                        </div>
+                    </div>
 
                 </div>
 

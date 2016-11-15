@@ -1466,6 +1466,11 @@ figure.image-placeholder {
     background-color: #e9e5d6;
     padding: 0;
     text-align: center; }
+    .is-child-theme .box-ticket:hover {
+      text-decoration: none; }
+      .is-child-theme .box-ticket:hover .tickets,
+      .is-child-theme .box-ticket:hover .tickets a {
+        text-decoration: underline; }
     .is-child-theme .box-ticket .box-title {
       line-height: 1.2;
       padding: 15px;
@@ -1489,7 +1494,23 @@ figure.image-placeholder {
       font-size: 2em;
       text-transform: uppercase;
       line-height: 1;
-      font-weight: bold; }
+      font-weight: bold;
+      color: #000; }
+    .is-child-theme .box-ticket .excerpt {
+      position: relative;
+      height: 100px;
+      overflow: hidden;
+      margin-bottom: 15px; }
+      .is-child-theme .box-ticket .excerpt::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: -webkit-linear-gradient(bottom, #e9e5d6, rgba(233, 229, 214, 0));
+        background: linear-gradient(to top, #e9e5d6, rgba(233, 229, 214, 0)); }
     .is-child-theme .box-ticket .date {
       border-top: 1px solid #d7d0b5;
       padding: 10px 0; }
@@ -1507,15 +1528,16 @@ figure.image-placeholder {
       margin-top: -15px;
       padding: 15px;
       border-top: 1px dashed #c5bb94;
-      background-color: #e0dac5; }
+      background-color: #e0dac5;
+      text-align: center;
+      text-transform: uppercase;
+      font-family: "Verlag A", "Verlag B";
+      font-size: 1.2em;
+      color: #000;
+      font-weight: bold; }
       .is-child-theme .box-ticket .tickets a {
         display: block;
-        text-align: center;
-        text-transform: uppercase;
-        font-family: "Verlag A", "Verlag B";
-        font-size: 1.2em;
-        color: #000;
-        font-weight: bold; }
+        color: inherit; }
       .is-child-theme .box-ticket .tickets::after, .is-child-theme .box-ticket .tickets::before {
         position: absolute;
         top: -11px;
