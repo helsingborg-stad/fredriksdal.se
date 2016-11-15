@@ -693,8 +693,10 @@ figure.image-placeholder {
       height: 5px;
       background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3), transparent);
       background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent); }
-    .is-child-theme .modularity-onepage-section .do-spin {
+    .is-child-theme .modularity-onepage-section .ajax-do-spin {
       opacity: 0.5; }
+    .is-child-theme .modularity-onepage-section .ajax-is-active {
+      opacity: 0.7; }
     .is-child-theme .modularity-onepage-section .ajax-response {
       background: #b9c12d;
       margin-top: 40px;

@@ -40,8 +40,12 @@
         @include gradient(rgba(#000,.3), rgba(#000,0));
     }
 
-    .do-spin {
+    .ajax-do-spin {
         opacity: 0.5;
+    }
+
+    .ajax-is-active {
+        opacity: 0.7;
     }
 
     .ajax-response {
