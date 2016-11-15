@@ -97,7 +97,9 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
     /* Scrolling */
 
     AsyncContentLoader.prototype.scrollToResult = function() {
-        jQuery('html, body').animate({scrollTop: Math.abs(jQuery("#ajax-response").offset().top -jQuery("#site-header").outerHeight())}, 700, jQuery.bez([0.815, 0.020, 0.080, 1.215]));
+        if(!this.isInViewport('#ajax-response')) {
+            jQuery('html, body').animate({scrollTop: Math.abs(jQuery("#ajax-response").offset().top -jQuery("#site-header").outerHeight())}, 700, jQuery.bez([0.815, 0.020, 0.080, 1.215]));
+        }
     };
 
     /* Href */
@@ -127,6 +129,14 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
                 }
             }.bind(this));
         }.bind(this));
+    };
+
+    /* Is in viewport */
+    AsyncContentLoader.prototype.isInViewport = function(element) {
+        if(jQuery(element).offset().top < jQuery(document).scrollTop() + (jQuery(window).height() * 0.7)) {
+            return true;
+        }
+        return false;
     };
 
     new AsyncContentLoader();
