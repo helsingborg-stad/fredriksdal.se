@@ -232,7 +232,7 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
     /* Href */
 
     AsyncContentLoader.prototype.crateIdFromHref = function(url) {
-        return this.parsePostName(url).replace(new RegExp("/", 'g'),"-").replace('-blog-',"").replace(/\-$/, '').replace("#-","#");
+        return this.parsePostName(url).replace(new RegExp("/", 'g'),"-").replace('-blog-',"").replace(/\-$/, '').replace(/^\-/, '');
     };
 
     /* Close */
