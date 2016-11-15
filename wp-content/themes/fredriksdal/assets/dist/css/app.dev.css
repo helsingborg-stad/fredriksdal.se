@@ -695,6 +695,8 @@ figure.image-placeholder {
           border-bottom: 1px solid rgba(0, 0, 0, 0.08);
           border-top: 1px solid rgba(238, 238, 238, 0.18);
           padding: 10px 0; }
+          .is-child-theme .modularity-onepage-section .grid > div > article ul li:before, .is-child-theme .modularity-onepage-section .grid > div > article ol li:before {
+            display: none; }
         .is-child-theme .modularity-onepage-section .grid > div > article ul li:last-child, .is-child-theme .modularity-onepage-section .grid > div > article ol li:last-child {
           border-bottom: none; }
       .is-child-theme .modularity-onepage-section .grid > div > article a, .is-child-theme .modularity-onepage-section .grid > div > article a:active, .is-child-theme .modularity-onepage-section .grid > div > article a:hover {
