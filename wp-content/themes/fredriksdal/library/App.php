@@ -13,6 +13,7 @@ class App
         new \Fredriksdal\Theme\EventArchive();
         new \Fredriksdal\Theme\OnePage();
         new \Fredriksdal\Theme\OnePageMenu();
+        new \Fredriksdal\Theme\DisableComments();
 
         new \Fredriksdal\Theme\CustomTemplates();
         new \Fredriksdal\Theme\Api();

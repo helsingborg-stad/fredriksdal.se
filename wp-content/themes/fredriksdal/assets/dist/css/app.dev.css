@@ -1449,29 +1449,13 @@ figure.image-placeholder {
     border: none !important; }
   .is-child-theme .box-index-event .box-image-container {
     position: relative; }
-    .is-child-theme .box-index-event .box-image-container time.date-box {
+    .is-child-theme .box-index-event .box-image-container .date-box {
       position: absolute;
       top: 5px;
       left: 5px;
       background-color: rgba(185, 193, 45, 0.9);
       color: #fff;
-      text-align: center;
-      line-height: 1;
-      font-family: "Verlag Cond A", "Verlag Cond B";
-      font-weight: bold;
-      text-transform: uppercase;
-      width: 70px;
-      height: 70px; }
-      .is-child-theme .box-index-event .box-image-container time.date-box div {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%); }
-      .is-child-theme .box-index-event .box-image-container time.date-box span {
-        display: block; }
-      .is-child-theme .box-index-event .box-image-container time.date-box .day {
-        font-size: 1.8em; }
+      font-size: 1em; }
   .is-child-theme .box-index-event .datestring {
     display: block;
     line-height: 1.3;

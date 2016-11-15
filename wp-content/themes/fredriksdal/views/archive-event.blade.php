@@ -3,7 +3,7 @@
 
 @section('content')
 
-<section class="background-lgren">
+<section class="background-lgren gutter gutter-bottom gutter-xl">
     <div class="container">
         <div class="grid">
             <div class="grid-sm-12">
