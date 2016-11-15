@@ -91,7 +91,8 @@
         font-size: .8em;
         text-transform: uppercase;
         font-family: $base-font-family;
-        color: $palette-3;
+        color: darken($palette-2, 40%);
+        letter-spacing: .5px;
     }
 
     .value {

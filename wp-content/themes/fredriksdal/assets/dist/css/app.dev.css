@@ -1487,7 +1487,8 @@ figure.image-placeholder {
       font-size: .8em;
       text-transform: uppercase;
       font-family: "Verlag A", "Verlag B";
-      color: #b9c12d; }
+      color: #9e8f55;
+      letter-spacing: .5px; }
     .is-child-theme .box-ticket .value {
       display: block;
       font-family: "Verlag Cond A", "Verlag Cond B";
