@@ -128,17 +128,16 @@
             top: 0;
             font-size: 1.5em;
             line-height: 0;
-            color: rgba(#000,.5);
+            color: #000;
+            animation-name: bounceIn;
+            animation-duration: 750ms;
+            animation-fill-mode: both;
         }
     }
 
     &.background-green {
         .ajax-response {
             background-color: $palette-2;
-        }
-
-        .close {
-            color: rgba(#fff,.5);
         }
     }
 }
