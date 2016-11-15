@@ -765,8 +765,8 @@ figure.image-placeholder {
         font-size: 1.5em;
         line-height: 0;
         color: #000;
-        -webkit-animation-delay: 2s;
-                animation-delay: 2s;
+        -webkit-animation-delay: 1.5s;
+                animation-delay: 1.5s;
         -webkit-animation-name: bounceIn;
                 animation-name: bounceIn;
         -webkit-animation-duration: 750ms;
