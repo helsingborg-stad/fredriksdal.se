@@ -133,7 +133,7 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
 
     /* Is in viewport */
     AsyncContentLoader.prototype.isInViewport = function(element) {
-        if(jQuery(element).offset().top < jQuery(document).scrollTop() + (jQuery(window).height() * 0.7)) {
+        if(jQuery(element).offset().top < jQuery(document).scrollTop() + (jQuery(window).height() * 0.85)) {
             return true;
         }
         return false;
