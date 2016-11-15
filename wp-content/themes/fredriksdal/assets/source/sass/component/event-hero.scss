@@ -1,5 +1,6 @@
-.event-hero {
+.hero.event-hero {
     position: relative;
+    min-height: 0;
 
     .slider {
         min-height: 100%;
@@ -29,37 +30,6 @@
             margin: 0;
             margin-left: .5em;
         }
-
-        time {
-            position: relative;
-            display: inline-block;
-            vertical-align: middle;
-            background-color: rgba(#fff, 1);
-            color: $palette-3;
-            text-align: center;
-            line-height: 1;
-            font-family: $condensed-font-family;
-            font-weight: bold;
-            text-transform: uppercase;
-
-            $size: 4em;
-            width: $size;
-            height: $size;
-
-            font-size: 1.5em;
-
-            div {
-                @include center();
-            }
-
-            span {
-                display: block;
-            }
-
-            .day {
-                font-size: 1.8em;
-            }
-        }
     }
 }
 
@@ -67,10 +37,51 @@
     margin-top: 0;
 }
 
-&.single-event article h1 + p:first-of-type {
-    margin-top: 15px;
+&.single-event article h1 {
+    margin-bottom: 15px;
+}
+
+&.single-event article h1 .date-box {
+    font-size: .5em;
+    background-color: $palette-3;
+    color: #fff;
+    margin-right: .5em;
+    vertical-align: middle;
+    position: relative;
+    margin-top: -10px;
 }
 
 &.single-event article footer {
     margin-top: 30px;
+}
+
+time.date-box {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: rgba(#fff, 1);
+    color: $palette-3;
+    text-align: center;
+    line-height: 1;
+    font-family: $condensed-font-family;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    $size: 4em;
+    width: $size;
+    height: $size;
+
+    font-size: 1.5em;
+
+    div {
+        @include center();
+    }
+
+    span {
+        display: block;
+    }
+
+    .day {
+        font-size: 1.8em;
+    }
 }

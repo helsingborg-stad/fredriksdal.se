@@ -24,11 +24,11 @@
             </ul>
         </div>
 
-        <div class="event-information">
+        <div class="event-information hidden-xs hidden-sm">
             <div class="container">
                 <div class="grid">
                     <div class="grid-sm-12">
-                        <time datetime="{{ get_post_meta(get_the_id(), 'event-date-start', true) }}">
+                        <time class="date-box" datetime="{{ get_post_meta(get_the_id(), 'event-date-start', true) }}">
                             <div>
                                 <span class="day">{{ mysql2date('j', get_post_meta(get_the_id(), 'event-date-start', true)) }}</span>
                                 <span class="month">{{ mysql2date('M', get_post_meta(get_the_id(), 'event-date-start', true)) }}</span>
@@ -50,9 +50,16 @@
             <div class="grid-md-8 grid-lg-8 grid-sm-12">
                 <?php global $post; ?>
                 <article class="clearfix">
-                    @if (!$image)
-                    <h1>{{ the_title() }}</h1>
-                    @endif
+                    <h1 {!! $image ? 'class="hidden-md hidden-lg"' : '' !!}>
+                        <time class="date-box" datetime="{{ get_post_meta(get_the_id(), 'event-date-start', true) }}">
+                            <div>
+                                <span class="day">{{ mysql2date('j', get_post_meta(get_the_id(), 'event-date-start', true)) }}</span>
+                                <span class="month">{{ mysql2date('M', get_post_meta(get_the_id(), 'event-date-start', true)) }}</span>
+                            </div>
+                        </time>
+
+                        {{ the_title() }}
+                    </h1>
 
                     @if (isset(get_extended($post->post_content)['main']) && strlen(get_extended($post->post_content)['main']) > 0 && isset(get_extended($post->post_content)['extended']) && strlen(get_extended($post->post_content)['extended']) > 0)
 
