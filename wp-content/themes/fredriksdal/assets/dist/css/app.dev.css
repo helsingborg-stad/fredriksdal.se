@@ -1240,60 +1240,58 @@ figure.image-placeholder {
     bottom: 0;
     left: 0;
     position: fixed;
-    background-color: rgba(15, 15, 4, 0.9);
-    padding: 20px 0;
+    background-color: rgba(185, 193, 45, 0.98);
+    padding: 20px;
     -webkit-animation: fadeIn;
             animation: fadeIn;
     -webkit-animation-duration: 200ms;
             animation-duration: 200ms;
-    backdrop-filter: blur(5px); }
-    .is-child-theme .search-top .container {
+    z-index: 99999; }
+    .is-child-theme .search-top .toggle-search-top {
+      color: #fff;
+      font-size: 1.3em;
+      margin-bottom: 10px;
+      float: right; }
+      .is-child-theme .search-top .toggle-search-top::before {
+        vertical-align: -15%;
+        margin-right: .5em; }
+      .is-child-theme .search-top .toggle-search-top:hover {
+        text-decoration: underline; }
+    .is-child-theme .search-top label {
+      display: block;
+      font-family: "Verlag A", "Verlag B";
+      color: #fff;
+      text-align: center;
+      display: block;
+      font-size: 2.5em;
+      margin-bottom: 10px; }
+    .is-child-theme .search-top form {
       position: absolute;
       top: 50%;
       left: 50%;
       -webkit-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%); }
-    .is-child-theme .search-top form {
-      border-top: 1px solid rgba(0, 0, 0, 0.3); }
-      .is-child-theme .search-top form label {
-        display: none; }
-      .is-child-theme .search-top form .input-group-addon,
-      .is-child-theme .search-top form .input-group-addon-btn {
-        font-size: 1em; }
-      .is-child-theme .search-top form input[type="search"],
-      .is-child-theme .search-top form input[type="submit"] {
-        text-rendering: geometricPrecision;
-        -webkit-font-feature-settings: "kern" 1;
-           -moz-font-feature-settings: "kern" 1;
-                font-feature-settings: "kern" 1;
-        font-smoothing: antialiased;
-        -webkit-transform: translate3d(0, 0, 0);
-                transform: translate3d(0, 0, 0);
-        font-family: "Verlag A", "Verlag B";
-        font-size: 2em;
-        color: #fff;
-        border: none;
-        padding: 1em .7em;
-        line-height: .15; }
-        .is-child-theme .search-top form input[type="search"]::-webkit-input-placeholder,
-        .is-child-theme .search-top form input[type="submit"]::-webkit-input-placeholder {
-          color: #fff; }
-        .is-child-theme .search-top form input[type="search"]::-moz-placeholder,
-        .is-child-theme .search-top form input[type="submit"]::-moz-placeholder {
-          color: #fff; }
-        .is-child-theme .search-top form input[type="search"]:-ms-input-placeholder,
-        .is-child-theme .search-top form input[type="submit"]:-ms-input-placeholder {
-          color: #fff; }
-        .is-child-theme .search-top form input[type="search"]::placeholder,
-        .is-child-theme .search-top form input[type="submit"]::placeholder {
-          color: #fff; }
-      .is-child-theme .search-top form input[type="search"] {
-        box-shadow: inset 0 0 37px rgba(0, 0, 0, 0.25);
-        background-color: rgba(255, 255, 255, 0.2); }
-      .is-child-theme .search-top form input[type="submit"] {
-        border-left: none;
-        background-color: #919823;
-        text-shadow: 0 0 1px rgba(0, 0, 0, 0.1); }
+              transform: translate(-50%, -50%);
+      width: 70%;
+      max-width: 700px; }
+    .is-child-theme .search-top .input-group {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); }
+    .is-child-theme .search-top input[type="search"] {
+      border: none;
+      box-shadow: none;
+      border-radius: 3px 0 0 3px; }
+    .is-child-theme .search-top input[type="submit"] {
+      background-color: #fff;
+      border: none;
+      color: #b9c12d;
+      padding: .5em 1.5em;
+      border-radius: 0px 3px 3px 0;
+      font-weight: bold;
+      line-height: 2.3;
+      -webkit-transition: padding 200ms;
+              transition: padding 200ms; }
+      .is-child-theme .search-top input[type="submit"]:hover {
+        padding-left: 2em;
+        padding-right: 1em; }
   .is-child-theme .nav-mobile-menu .search {
     background-color: #565a15; }
   .is-child-theme .nav-mobile-menu input[type="submit"] {
