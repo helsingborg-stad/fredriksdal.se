@@ -26,33 +26,13 @@
     .box-image-container {
         position: relative;
 
-        time.date-box {
+        .date-box {
             position: absolute;
             top: 5px;
             left: 5px;
             background-color: rgba($palette-3, .9);
             color: #fff;
-            text-align: center;
-            line-height: 1;
-            font-family: $condensed-font-family;
-            font-weight: bold;
-            text-transform: uppercase;
-
-            $size: 70px;
-            width: $size;
-            height: $size;
-
-            div {
-                @include center();
-            }
-
-            span {
-                display: block;
-            }
-
-            .day {
-                font-size: 1.8em;
-            }
+            font-size: 1em;
         }
     }
 

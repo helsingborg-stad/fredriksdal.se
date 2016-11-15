@@ -48,7 +48,7 @@
             <?php if ($image && in_array('image', $fields->posts_fields)) : ?>
                 <div class="box-image-container">
                     <img src="<?php echo $image[0]; ?>" alt="<?php echo $post->post_title; ?>" class="box-image">
-                    <time datetime="<?php echo get_post_meta($post->ID, 'event-date-start', true); ?>">
+                    <time class="date-box" datetime="<?php echo get_post_meta($post->ID, 'event-date-start', true); ?>">
                         <div>
                             <span class="day"><?php echo mysql2date('j', get_post_meta($post->ID, 'event-date-start', true)); ?></span>
                             <span class="month"><?php echo mysql2date('M', get_post_meta($post->ID, 'event-date-start', true)); ?></span>
