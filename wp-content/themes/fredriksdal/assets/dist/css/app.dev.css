@@ -1439,7 +1439,7 @@ figure.image-placeholder {
     border: none !important; }
   .is-child-theme .box-index-event .box-image-container {
     position: relative; }
-    .is-child-theme .box-index-event .box-image-container time {
+    .is-child-theme .box-index-event .box-image-container time.date-box {
       position: absolute;
       top: 5px;
       left: 5px;
@@ -1452,15 +1452,15 @@ figure.image-placeholder {
       text-transform: uppercase;
       width: 70px;
       height: 70px; }
-      .is-child-theme .box-index-event .box-image-container time div {
+      .is-child-theme .box-index-event .box-image-container time.date-box div {
         position: absolute;
         top: 50%;
         left: 50%;
         -webkit-transform: translate(-50%, -50%);
                 transform: translate(-50%, -50%); }
-      .is-child-theme .box-index-event .box-image-container time span {
+      .is-child-theme .box-index-event .box-image-container time.date-box span {
         display: block; }
-      .is-child-theme .box-index-event .box-image-container time .day {
+      .is-child-theme .box-index-event .box-image-container time.date-box .day {
         font-size: 1.8em; }
   .is-child-theme .box-index-event .datestring {
     display: block;
@@ -1536,14 +1536,15 @@ figure.image-placeholder {
       .is-child-theme .box-ticket .tickets::after {
         right: 0;
         border-radius: 20px 0 0 20px; }
-  .is-child-theme .event-hero {
-    position: relative; }
-    .is-child-theme .event-hero .slider {
+  .is-child-theme .hero.event-hero {
+    position: relative;
+    min-height: 0; }
+    .is-child-theme .hero.event-hero .slider {
       min-height: 100%; }
-    .is-child-theme .event-hero .slider-image {
+    .is-child-theme .hero.event-hero .slider-image {
       background-position: center center;
       height: 100%; }
-    .is-child-theme .event-hero .event-information {
+    .is-child-theme .hero.event-hero .event-information {
       position: absolute;
       left: 0;
       right: 0;
@@ -1553,40 +1554,48 @@ figure.image-placeholder {
       color: #fff;
       background: -webkit-linear-gradient(top, transparent, black);
       background: linear-gradient(to bottom, transparent, black); }
-      .is-child-theme .event-hero .event-information h1 {
+      .is-child-theme .hero.event-hero .event-information h1 {
         display: inline-block;
         vertical-align: middle;
         color: #fff;
         padding: 0;
         margin: 0;
         margin-left: .5em; }
-      .is-child-theme .event-hero .event-information time {
-        position: relative;
-        display: inline-block;
-        vertical-align: middle;
-        background-color: white;
-        color: #b9c12d;
-        text-align: center;
-        line-height: 1;
-        font-family: "Verlag Cond A", "Verlag Cond B";
-        font-weight: bold;
-        text-transform: uppercase;
-        width: 4em;
-        height: 4em;
-        font-size: 1.5em; }
-        .is-child-theme .event-hero .event-information time div {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          -webkit-transform: translate(-50%, -50%);
-                  transform: translate(-50%, -50%); }
-        .is-child-theme .event-hero .event-information time span {
-          display: block; }
-        .is-child-theme .event-hero .event-information time .day {
-          font-size: 1.8em; }
   .is-child-theme.single-event article p:first-of-type {
     margin-top: 0; }
-  .is-child-theme.single-event article h1 + p:first-of-type {
-    margin-top: 15px; }
+  .is-child-theme.single-event article h1 {
+    margin-bottom: 15px; }
+  .is-child-theme.single-event article h1 .date-box {
+    font-size: .5em;
+    background-color: #b9c12d;
+    color: #fff;
+    margin-right: .5em;
+    vertical-align: middle;
+    position: relative;
+    margin-top: -10px; }
   .is-child-theme.single-event article footer {
     margin-top: 30px; }
+  .is-child-theme time.date-box {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: white;
+    color: #b9c12d;
+    text-align: center;
+    line-height: 1;
+    font-family: "Verlag Cond A", "Verlag Cond B";
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 4em;
+    height: 4em;
+    font-size: 1.5em; }
+    .is-child-theme time.date-box div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
+    .is-child-theme time.date-box span {
+      display: block; }
+    .is-child-theme time.date-box .day {
+      font-size: 1.8em; }
