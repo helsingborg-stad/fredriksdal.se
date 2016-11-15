@@ -29,12 +29,3 @@
         }
     }
 }
-
-#site-header.liquid-header,
-&:not(.home) #site-header,
-&.no-js #site-header  {
-    #header-tabs {
-        height: 0;
-        opacity: 0;
-    }
-}

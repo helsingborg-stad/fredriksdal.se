@@ -102,7 +102,7 @@
 }
 
 #site-header.liquid-header,
-&:not(.home) #site-header,
+&:not(.home):not(.single-event) #site-header,
 &.menu-open #site-header,
 &.no-js #site-header {
     background-color: rgba($palette-2,.97);
@@ -144,5 +144,54 @@
     nav.navbar {
         padding-top: 10px;
         padding-bottom: 10px;
+    }
+
+    #main-menu {
+        @media screen and (min-width: #{$screen-lg-max}) {
+            margin-top: 27px;
+        }
+
+        @media screen and (max-width: #{$screen-lg-max}) {
+            margin-top: 10px;
+        }
+
+        li {
+
+            a {
+                color: $black;
+                line-height: 1;
+
+                &:before {
+                    background-color: $black;
+                    bottom: 0;
+                }
+            }
+
+            &.current-menu-item {
+                a {
+                    color: $black;
+                    border-color: $black;
+
+                    &::before {
+                        visibility: visible;
+                        transform: scaleX(1);
+                    }
+                }
+            }
+        }
+    }
+
+    #mobile-menu,
+    a[href="#mobile-menu"] {
+        &:not(.open) .menu-icon,
+        .menu-icon:after,
+        .menu-icon:before {
+            background-color: #000;
+        }
+    }
+
+    #header-tabs {
+        height: 0;
+        opacity: 0;
     }
 }
