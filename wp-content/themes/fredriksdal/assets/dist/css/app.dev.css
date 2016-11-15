@@ -676,9 +676,11 @@ figure.image-placeholder {
         top: 0;
         font-size: 1.5em;
         line-height: 0;
-        color: rgba(255, 255, 255, 0.5); }
+        color: rgba(0, 0, 0, 0.5); }
     .is-child-theme .modularity-onepage-section.background-green .ajax-response {
       background-color: #e9e5d6; }
+    .is-child-theme .modularity-onepage-section.background-green .close {
+      color: rgba(255, 255, 255, 0.5); }
   .is-child-theme .background-green {
     background: #b9c12d; }
   .is-child-theme .background-lgren {

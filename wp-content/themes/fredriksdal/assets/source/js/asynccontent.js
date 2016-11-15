@@ -18,6 +18,7 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
     ];
 
     function AsyncContentLoader() {
+        this.watchAjaxClose();
         jQuery.each(AsyncContentTrigger,function(index,targetObject) {
             jQuery(targetObject).click(function(event) {
                 if(this.isLocalLink(jQuery(event.target).closest('a').attr('href'))) {
@@ -96,7 +97,16 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
     /* Href */
 
     AsyncContentLoader.prototype.crateIdFromHref = function(url) {
-        return this.parsePostName(url).replace(new RegExp("/", 'g'),"-").replace('-blog-',"");
+        return this.parsePostName(url).replace(new RegExp("/", 'g'),"-").replace('-blog-',"").replace(/\-$/, '');
+    };
+
+    /* Close */
+
+    AsyncContentLoader.prototype.watchAjaxClose = function() {
+        jQuery("section").on('click', '.ajax-response .close',function(event){
+            event.preventDefault();
+            jQuery(".ajax-response").remove();
+        });
     };
 
     new AsyncContentLoader();
