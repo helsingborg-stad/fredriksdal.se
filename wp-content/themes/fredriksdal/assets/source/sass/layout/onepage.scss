@@ -61,6 +61,11 @@
 
         article.frame {
 
+            animation-delay: 1s;
+            animation-name: fadein;
+            animation-duration: 750ms;
+            animation-fill-mode: both;
+
             @media screen and (min-width: #{$screen-md-min}) {
                 max-width: 80%;
                 margin: 0 10%;

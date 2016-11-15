@@ -691,41 +691,50 @@ figure.image-placeholder {
         right: 0;
         height: 5px;
         display: block; }
-      @media screen and (min-width: 767px) {
-        .is-child-theme .modularity-onepage-section .ajax-response article.frame {
-          max-width: 80%;
-          margin: 0 10%; } }
-      .is-child-theme .modularity-onepage-section .ajax-response article.frame h1 + .grid,
-      .is-child-theme .modularity-onepage-section .ajax-response article.frame h2 + .grid,
-      .is-child-theme .modularity-onepage-section .ajax-response article.frame h3 + .grid,
-      .is-child-theme .modularity-onepage-section .ajax-response article.frame h4 + .grid,
-      .is-child-theme .modularity-onepage-section .ajax-response article.frame h5 + .grid,
-      .is-child-theme .modularity-onepage-section .ajax-response article.frame h6 + .grid,
-      .is-child-theme .modularity-onepage-section .ajax-response article.frame p + .grid,
-      .is-child-theme .modularity-onepage-section .ajax-response article.frame ul + .grid,
-      .is-child-theme .modularity-onepage-section .ajax-response article.frame ol + .grid {
-        margin-top: 40px; }
-      .is-child-theme .modularity-onepage-section .ajax-response article.frame p:empty {
-        display: none; }
-      @media screen and (max-width: 768px) {
-        .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news {
-          border-top: 1px solid rgba(0, 0, 0, 0.08);
-          margin-bottom: 0; } }
-      .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news .box-image-container {
-        padding-left: 25%;
-        padding-right: 25%; }
-        @media screen and (max-width: 768px) {
-          .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news .box-image-container {
-            display: none; } }
-      .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news img,
-      .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news .box-image-container {
-        border-radius: 0; }
-        .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news img:after,
-        .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news .box-image-container:after {
+      .is-child-theme .modularity-onepage-section .ajax-response article.frame {
+        -webkit-animation-delay: 1s;
+                animation-delay: 1s;
+        -webkit-animation-name: fadein;
+                animation-name: fadein;
+        -webkit-animation-duration: 750ms;
+                animation-duration: 750ms;
+        -webkit-animation-fill-mode: both;
+                animation-fill-mode: both; }
+        @media screen and (min-width: 767px) {
+          .is-child-theme .modularity-onepage-section .ajax-response article.frame {
+            max-width: 80%;
+            margin: 0 10%; } }
+        .is-child-theme .modularity-onepage-section .ajax-response article.frame h1 + .grid,
+        .is-child-theme .modularity-onepage-section .ajax-response article.frame h2 + .grid,
+        .is-child-theme .modularity-onepage-section .ajax-response article.frame h3 + .grid,
+        .is-child-theme .modularity-onepage-section .ajax-response article.frame h4 + .grid,
+        .is-child-theme .modularity-onepage-section .ajax-response article.frame h5 + .grid,
+        .is-child-theme .modularity-onepage-section .ajax-response article.frame h6 + .grid,
+        .is-child-theme .modularity-onepage-section .ajax-response article.frame p + .grid,
+        .is-child-theme .modularity-onepage-section .ajax-response article.frame ul + .grid,
+        .is-child-theme .modularity-onepage-section .ajax-response article.frame ol + .grid {
+          margin-top: 40px; }
+        .is-child-theme .modularity-onepage-section .ajax-response article.frame p:empty {
           display: none; }
-      @media screen and (max-width: 768px) {
-        .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news .box-content h1, .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news .box-content h2, .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news .box-content h3, .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news .box-content h4, .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news .box-content h5, .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news .box-content h6, .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news .box-content p, .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news .box-content ol, .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news .box-content ul {
-          text-align: left; } }
+        @media screen and (max-width: 768px) {
+          .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news {
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+            margin-bottom: 0; } }
+        .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news .box-image-container {
+          padding-left: 25%;
+          padding-right: 25%; }
+          @media screen and (max-width: 768px) {
+            .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news .box-image-container {
+              display: none; } }
+        .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news img,
+        .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news .box-image-container {
+          border-radius: 0; }
+          .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news img:after,
+          .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news .box-image-container:after {
+            display: none; }
+        @media screen and (max-width: 768px) {
+          .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news .box-content h1, .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news .box-content h2, .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news .box-content h3, .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news .box-content h4, .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news .box-content h5, .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news .box-content h6, .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news .box-content p, .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news .box-content ol, .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news .box-content ul {
+            text-align: left; } }
       .is-child-theme .modularity-onepage-section .ajax-response .container {
         margin-top: 40px;
         position: relative; }
