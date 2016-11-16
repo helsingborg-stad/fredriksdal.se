@@ -945,6 +945,9 @@ figure.image-placeholder {
     line-height: 1; }
     .is-child-theme nav.event-dates li + li {
       margin-left: 30px; }
+    @media (min-width: 959px) and (max-width: 1280px) {
+      .is-child-theme nav.event-dates {
+        padding-top: 190px; } }
     @media (max-width: 767px) {
       .is-child-theme nav.event-dates {
         padding: 20px 0;
