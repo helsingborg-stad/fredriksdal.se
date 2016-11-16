@@ -174,7 +174,7 @@
                     thead, tbody, tfoot, tr, td {
                         display: block;
                     }
-                    tr + tr {
+                    td:first-child, td + td {
                         margin-top: 20px;
                     }
                 }
