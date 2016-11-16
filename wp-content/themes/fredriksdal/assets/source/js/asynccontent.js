@@ -5,7 +5,7 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
 
     var AsyncContentEndpoint = '/wp-json/wp/v2/all?slug=';
 
-    var AsyncContentTempalte = '<div id="ajax-response" class="ajax-response"><div class="container"><div class="grid"><div class="grid-xs-12"><a class="close" href="#close"><i class="pricon pricon-close"></i></a><article class="frame"><h2>{{title}}</h2>{{content}}</article></div></div></div></div>';
+    var AsyncContentTempalte = '<div id="ajax-response" class="ajax-response"><div class="container"><div class="grid"><div class="grid-xs-12"><a class="close" href="#close"><i class="pricon pricon-close"></i></a><article class="frame"><h2>{{title}}</h2>{{content}}{{sidebar}}</article></div></div></div></div>';
 
     var AsyncContentTrigger = [
         '.modularity-onepage-section.async-loading .modularity-mod-posts a',
@@ -14,7 +14,8 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
 
     var AsyncContentReplaceVars = [
         'title',
-        'content'
+        'content',
+        'sidebar'
     ];
 
     function AsyncContentLoader() {
@@ -63,6 +64,7 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
     };
 
     AsyncContentLoader.prototype.responseTemplate = function (contentTemplate, dataResponse) {
+        console.log(dataResponse);
         AsyncContentReplaceVars.forEach(function(item) {
             contentTemplate = contentTemplate.replace("{{" + item + "}}", dataResponse[item]);
         }.bind(this));

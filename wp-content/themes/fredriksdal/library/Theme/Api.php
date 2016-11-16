@@ -30,12 +30,19 @@ class Api
                 }
                 $return = get_post($return);
 
-                return array (
+                return array(
                     'title' => $return->post_title,
                     'content' => apply_filters('the_content', $return->post_content),
-                    //'sidebar' => get_sidebar('content-area-bottom')
+                    'sidebar' => $this->getSidebarContents('content-area-bottom')
                 );
             }
         ));
+    }
+
+    public function getSidebarContents($id)
+    {
+        ob_start();
+        dynamic_sidebar($id);
+        return ob_get_clean();
     }
 }
