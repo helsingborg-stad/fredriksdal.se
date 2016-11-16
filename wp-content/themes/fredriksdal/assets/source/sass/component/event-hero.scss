@@ -10,26 +10,26 @@
         background-position: center center;
         height: 100%;
     }
+}
 
-    .event-information {
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 99;
-        padding: 20px 0 0 0;
+.event-information {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    padding: 20px 0 0 0;
+    color: #fff;
+
+    @include gradient(rgba(#000,0), rgba(#000, 1));
+
+    h1 {
+        display: inline-block;
+        vertical-align: middle;
         color: #fff;
-
-        @include gradient(rgba(#000,0), rgba(#000, 1));
-
-        h1 {
-            display: inline-block;
-            vertical-align: middle;
-            color: #fff;
-            padding: 0;
-            margin: 0;
-            margin-left: .5em;
-        }
+        padding: 0;
+        margin: 0;
+        margin-left: .5em;
     }
 }
 
