@@ -3,6 +3,8 @@
 
 @section('content')
 
+<div class="grid-tester"></div>
+
 <section class="background-lgren events-wrapper">
     <nav class="event-dates text-center">
         <div class="container">
