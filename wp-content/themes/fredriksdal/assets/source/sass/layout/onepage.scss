@@ -78,6 +78,7 @@
         margin-top: 40px;
         padding-bottom: 40px;
         margin-bottom: -60px;
+
         &:before {
             @include gradient(rgba(#000,.3),rgba(#000,0));
             content: "";
@@ -90,10 +91,11 @@
 
         article.frame {
 
-            animation-delay: 1s;
-            animation-name: fadein;
-            animation-duration: 750ms;
-            animation-fill-mode: both;
+            &.is-loaded {
+                animation-name: fadein;
+                animation-duration: 750ms;
+                animation-fill-mode: both;
+            }
 
             @media screen and (min-width: #{$screen-md-min}) {
                 max-width: 80%;
