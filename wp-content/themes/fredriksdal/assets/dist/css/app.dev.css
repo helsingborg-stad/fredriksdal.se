@@ -800,8 +800,10 @@ figure.image-placeholder {
             text-align: left; }
             .is-child-theme .modularity-onepage-section .ajax-response article.frame table thead tr, .is-child-theme .modularity-onepage-section .ajax-response article.frame table thead td, .is-child-theme .modularity-onepage-section .ajax-response article.frame table tbody tr, .is-child-theme .modularity-onepage-section .ajax-response article.frame table tbody td, .is-child-theme .modularity-onepage-section .ajax-response article.frame table tfoot tr, .is-child-theme .modularity-onepage-section .ajax-response article.frame table tfoot td {
               text-align: left;
-              padding: 0 0 20px 0;
               vertical-align: top; }
+              @media screen and (min-width: 767px) {
+                .is-child-theme .modularity-onepage-section .ajax-response article.frame table thead tr, .is-child-theme .modularity-onepage-section .ajax-response article.frame table thead td, .is-child-theme .modularity-onepage-section .ajax-response article.frame table tbody tr, .is-child-theme .modularity-onepage-section .ajax-response article.frame table tbody td, .is-child-theme .modularity-onepage-section .ajax-response article.frame table tfoot tr, .is-child-theme .modularity-onepage-section .ajax-response article.frame table tfoot td {
+                  padding: 20px; } }
         @media screen and (max-width: 768px) {
           .is-child-theme .modularity-onepage-section .ajax-response article.frame table {
             display: block; }
