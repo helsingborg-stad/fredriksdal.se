@@ -3,6 +3,10 @@ namespace Fredriksdal\Theme;
 
 class Api
 {
+
+    private $post;
+    private $sidebarId = "content-area";
+
     public function __construct()
     {
         add_action('rest_api_init', array($this, 'registerRestRoute'));
@@ -28,21 +32,34 @@ class Api
                         'url' => home_url() . "/" . $request['slug']
                     );
                 }
-                $return = get_post($return);
+
+                $this->post = get_post($return);
 
                 return array(
-                    'title' => $return->post_title,
-                    'content' => apply_filters('the_content', $return->post_content),
-                    'sidebar' => $this->getSidebarContents('content-area-bottom')
+                    'title' => $this->post->post_title,
+                    'content' => apply_filters('the_content', $this->post->post_content),
+                    'sidebar' => $this->getSidebarContents($this->sidebarId, $this->post->ID)
                 );
+
             }
         ));
     }
 
-    public function getSidebarContents($id)
+    public function getSidebarContents($sidebarId, $postId)
     {
-        ob_start();
-        dynamic_sidebar($id);
-        return ob_get_clean();
+        $modules = get_post_meta($postId, 'modularity-modules', true);
+
+        if (!empty($modules) && is_array($modules) && isset($modules[$sidebarId]) && !empty($modules[$sidebarId])) {
+            $return = "";
+            foreach ((array) $modules[$sidebarId] as $moduleItem) {
+                if ($moduleItem['hidden'] !== false) {
+                    $return = $return . do_shortcode('[modularity id="' . $moduleItem['postid'] . '"]');
+                }
+            }
+
+            return $return;
+        }
+
+        return "";
     }
 }
