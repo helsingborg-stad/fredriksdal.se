@@ -92,10 +92,12 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
 
     AsyncContentLoader.prototype.startSpinner = function(targetItem) {
         targetItem.addClass("ajax-do-spin ajax-is-active");
+        targetItem.find('.box-image-container').append('<span class="pos-absolute-center spinner-container" style="font-size:3em;"><span class="spinner"></span></span>');
     };
 
     AsyncContentLoader.prototype.stopSpinner = function(targetItem) {
         targetItem.removeClass("ajax-do-spin");
+        targetItem.find('.spinner-container').remove();
     };
 
     /* Scrolling */
