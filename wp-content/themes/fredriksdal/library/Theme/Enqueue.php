@@ -9,6 +9,14 @@ class Enqueue
         // Enqueue scripts and styles
         add_action('wp_enqueue_scripts', array($this, 'style'));
         add_action('wp_enqueue_scripts', array($this, 'script'));
+
+        add_filter('style_loader_tag', array($this, 'changeMedia'));
+    }
+
+    public function changeMedia($tag)
+    {
+        $tag = str_replace("id='fredriksdal-font-css'", "id='fredriksdal-font-css' onload=\"if(media!='all')media='all'\"", $tag);
+        return $tag;
     }
 
     /**
@@ -17,7 +25,7 @@ class Enqueue
      */
     public function style()
     {
-        wp_enqueue_style('fredriksdal-font', '//cloud.typography.com/6096514/6506972/css/fonts.css', '', '1.0.0');
+        wp_enqueue_style('fredriksdal-font', '//cloud.typography.com/6096514/6506972/css/fonts.css', '', '1.0.0'. 'none');
         wp_enqueue_style('fredriksdal-css', get_stylesheet_directory_uri(). '/assets/dist/css/app.min.css', '', filemtime(get_stylesheet_directory() . '/assets/dist/css/app.min.css'));
     }
 
