@@ -166,6 +166,7 @@
             @media screen and (max-width: #{$screen-sm-max}) {
 
                 table {
+                    display: block;
                     thead, tbody, tfoot, tr, td {
                         display: block;
                     }
