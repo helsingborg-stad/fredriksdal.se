@@ -77,6 +77,11 @@
             margin-left: auto;
             margin-right: auto;
         }
+
+        img[src$=".svg"] {
+            max-width: 120px;
+        }
+
     }
 
     .box-image-container img {
