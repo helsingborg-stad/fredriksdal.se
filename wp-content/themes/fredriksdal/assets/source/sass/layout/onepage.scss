@@ -151,6 +151,44 @@
                     }
                 }
             }
+
+            table {
+
+                table-layout: fixed;
+
+                thead, tbody, tfoot {
+                    background-color: transparent;
+                    text-align: left;
+
+                    tr, td {
+                        text-align: left;
+                        vertical-align: top;
+
+                        @media screen and (min-width: #{$screen-md-min}) {
+                            padding: 20px;
+                        }
+                    }
+                }
+
+            }
+
+            @media screen and (max-width: #{$screen-sm-max}) {
+
+                table {
+                    display: block;
+
+                    thead, tfoot {
+                        display: none;
+                    }
+
+                    tbody, tr, td {
+                        display: block;
+                    }
+                    td:first-child, td + td {
+                        margin-top: 20px;
+                    }
+                }
+            }
         }
 
         .container {

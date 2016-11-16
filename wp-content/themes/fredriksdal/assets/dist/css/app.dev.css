@@ -791,6 +791,26 @@ figure.image-placeholder {
       @media screen and (max-width: 768px) {
         .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news .box-content h1, .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news .box-content h2, .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news .box-content h3, .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news .box-content h4, .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news .box-content h5, .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news .box-content h6, .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news .box-content p, .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news .box-content ol, .is-child-theme .modularity-onepage-section .ajax-response article.frame .box.box-news .box-content ul {
           text-align: left; } }
+      .is-child-theme .modularity-onepage-section .ajax-response article.frame table {
+        table-layout: fixed; }
+        .is-child-theme .modularity-onepage-section .ajax-response article.frame table thead, .is-child-theme .modularity-onepage-section .ajax-response article.frame table tbody, .is-child-theme .modularity-onepage-section .ajax-response article.frame table tfoot {
+          background-color: transparent;
+          text-align: left; }
+          .is-child-theme .modularity-onepage-section .ajax-response article.frame table thead tr, .is-child-theme .modularity-onepage-section .ajax-response article.frame table thead td, .is-child-theme .modularity-onepage-section .ajax-response article.frame table tbody tr, .is-child-theme .modularity-onepage-section .ajax-response article.frame table tbody td, .is-child-theme .modularity-onepage-section .ajax-response article.frame table tfoot tr, .is-child-theme .modularity-onepage-section .ajax-response article.frame table tfoot td {
+            text-align: left;
+            vertical-align: top; }
+            @media screen and (min-width: 767px) {
+              .is-child-theme .modularity-onepage-section .ajax-response article.frame table thead tr, .is-child-theme .modularity-onepage-section .ajax-response article.frame table thead td, .is-child-theme .modularity-onepage-section .ajax-response article.frame table tbody tr, .is-child-theme .modularity-onepage-section .ajax-response article.frame table tbody td, .is-child-theme .modularity-onepage-section .ajax-response article.frame table tfoot tr, .is-child-theme .modularity-onepage-section .ajax-response article.frame table tfoot td {
+                padding: 20px; } }
+      @media screen and (max-width: 768px) {
+        .is-child-theme .modularity-onepage-section .ajax-response article.frame table {
+          display: block; }
+          .is-child-theme .modularity-onepage-section .ajax-response article.frame table thead, .is-child-theme .modularity-onepage-section .ajax-response article.frame table tfoot {
+            display: none; }
+          .is-child-theme .modularity-onepage-section .ajax-response article.frame table tbody, .is-child-theme .modularity-onepage-section .ajax-response article.frame table tr, .is-child-theme .modularity-onepage-section .ajax-response article.frame table td {
+            display: block; }
+          .is-child-theme .modularity-onepage-section .ajax-response article.frame table td:first-child, .is-child-theme .modularity-onepage-section .ajax-response article.frame table td + td {
+            margin-top: 20px; } }
       .is-child-theme .modularity-onepage-section .ajax-response .container {
         margin-top: 40px;
         position: relative; }
