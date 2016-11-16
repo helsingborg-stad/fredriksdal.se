@@ -564,6 +564,27 @@ figure.image-placeholder {
         background: rgba(255, 255, 255, 0.1); }
         .is-child-theme nav#mobile-menu ul li.active a, .is-child-theme nav#mobile-menu ul li.current-menu-item a {
           background: #a5ac28; }
+    .is-child-theme nav#mobile-menu .menu-item-social svg {
+      height: 25px;
+      width: auto;
+      vertical-align: -15%;
+      margin-right: 10px; }
+    .is-child-theme nav#mobile-menu .menu-item-social svg, .is-child-theme nav#mobile-menu .menu-item-social path {
+      fill: #fff; }
+    .is-child-theme nav#mobile-menu .menu-item-social [data-tooltip]::before,
+    .is-child-theme nav#mobile-menu .menu-item-social [data-tooltip]:hover::before {
+      display: none; }
+    .is-child-theme nav#mobile-menu .menu-item-social [data-tooltip]::after,
+    .is-child-theme nav#mobile-menu .menu-item-social [data-tooltip]:hover::after {
+      content: attr(data-tooltip);
+      background-color: transparent;
+      font-size: 1em;
+      padding: 0;
+      margin: 0;
+      display: inline-block !important;
+      position: static !important;
+      -webkit-transform: none;
+              transform: none; }
   .is-child-theme .footer-scroller {
     position: relative;
     background-color: #fff;
