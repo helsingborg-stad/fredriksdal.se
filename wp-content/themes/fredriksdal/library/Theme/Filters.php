@@ -79,7 +79,7 @@ class Filters
 
         $socialIcons = (array) get_field('fredriksdal_social_icons', 'option');
         foreach ($socialIcons as $icon) {
-            $svg = \Municipio\Helper\Svg::extract($icon['icon']['url']);
+            $svg = \Municipio\Helper\Svg::extract(get_attached_file($icon['icon']['id']));
             $items .= '<li class="menu-item-social"><a href="' . $icon['link'] . '"><span data-tooltip="' . $icon['tooltip'] .'">' . $svg . '</span></a></li>' . "\n";
         }
 
