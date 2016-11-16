@@ -174,7 +174,12 @@
 
                 table {
                     display: block;
-                    thead, tbody, tfoot, tr, td {
+
+                    thead, tfoot {
+                        display: none;
+                    }
+
+                    tbody, tr, td {
                         display: block;
                     }
                     td:first-child, td + td {

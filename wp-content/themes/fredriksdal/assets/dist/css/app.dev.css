@@ -807,7 +807,9 @@ figure.image-placeholder {
         @media screen and (max-width: 768px) {
           .is-child-theme .modularity-onepage-section .ajax-response article.frame table {
             display: block; }
-            .is-child-theme .modularity-onepage-section .ajax-response article.frame table thead, .is-child-theme .modularity-onepage-section .ajax-response article.frame table tbody, .is-child-theme .modularity-onepage-section .ajax-response article.frame table tfoot, .is-child-theme .modularity-onepage-section .ajax-response article.frame table tr, .is-child-theme .modularity-onepage-section .ajax-response article.frame table td {
+            .is-child-theme .modularity-onepage-section .ajax-response article.frame table thead, .is-child-theme .modularity-onepage-section .ajax-response article.frame table tfoot {
+              display: none; }
+            .is-child-theme .modularity-onepage-section .ajax-response article.frame table tbody, .is-child-theme .modularity-onepage-section .ajax-response article.frame table tr, .is-child-theme .modularity-onepage-section .ajax-response article.frame table td {
               display: block; }
             .is-child-theme .modularity-onepage-section .ajax-response article.frame table td:first-child, .is-child-theme .modularity-onepage-section .ajax-response article.frame table td + td {
               margin-top: 20px; } }
