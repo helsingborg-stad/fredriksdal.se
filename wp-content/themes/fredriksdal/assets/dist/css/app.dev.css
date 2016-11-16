@@ -682,6 +682,23 @@ figure.image-placeholder {
         max-width: 2000px; }
       .is-child-theme .modularity-onepage-section .grid > div > article p, .is-child-theme .modularity-onepage-section .grid > div > article ol, .is-child-theme .modularity-onepage-section .grid > div > article ul {
         line-height: 1.4em; }
+      .is-child-theme .modularity-onepage-section .grid > div > article ul, .is-child-theme .modularity-onepage-section .grid > div > article ol {
+        max-width: 530px;
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+        list-style: none;
+        padding-left: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.08); }
+        .is-child-theme .modularity-onepage-section .grid > div > article ul li, .is-child-theme .modularity-onepage-section .grid > div > article ol li {
+          margin: 0;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+          border-top: 1px solid rgba(238, 238, 238, 0.18);
+          padding: 10px 0; }
+          .is-child-theme .modularity-onepage-section .grid > div > article ul li:before, .is-child-theme .modularity-onepage-section .grid > div > article ol li:before {
+            display: none; }
+        .is-child-theme .modularity-onepage-section .grid > div > article ul li:last-child, .is-child-theme .modularity-onepage-section .grid > div > article ol li:last-child {
+          border-bottom: none; }
       .is-child-theme .modularity-onepage-section .grid > div > article a, .is-child-theme .modularity-onepage-section .grid > div > article a:active, .is-child-theme .modularity-onepage-section .grid > div > article a:hover {
         color: #000; }
     .is-child-theme .modularity-onepage-section:before {
