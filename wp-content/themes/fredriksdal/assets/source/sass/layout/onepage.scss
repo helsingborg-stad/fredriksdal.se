@@ -162,6 +162,18 @@
                 }
 
             }
+
+            @media screen and (max-width: #{$screen-sm-max}) {
+
+                table {
+                    thead, tbody, tfoot, tr, td {
+                        display: block;
+                    }
+                    tr + tr {
+                        margin-top: 20px;
+                    }
+                }
+            }
         }
 
         .container {
