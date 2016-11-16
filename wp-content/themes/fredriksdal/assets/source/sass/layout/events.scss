@@ -1,20 +1,11 @@
-.events-wrapper {
-    background-color: #fff;
-    padding-top: 100px;
-
-    .modularity-mod-slider {
-        margin-bottom: 0;
-    }
-}
-
 nav.event-dates {
     background-color: $palette-3;
     font-family: $base-font-family;
     font-size: 1.1em;
     font-weight: bold;
     text-transform: uppercase;
-    padding: 10px 0;
-    margin-bottom: 15px;
+    padding: 20px 0;
+    padding-top: 120px;
     line-height: 1;
 
     li + li {
@@ -22,7 +13,8 @@ nav.event-dates {
     }
 
     @media #{$screen-below-md} {
-        padding: 0;
+        padding: 20px 0;
+        padding-top: 100px;
 
         li {
             display: block;
@@ -42,6 +34,10 @@ nav.event-dates {
         display: block;
         color: $base-font-color;
 
+        &.active {
+            color: #fff;
+        }
+
         .year {
             display: block;
             font-size: .8em;
@@ -59,49 +55,65 @@ nav.event-dates {
 
 .event-list {
     text-align: center;
-    padding: 20px;
-    max-width: 1000px;
     width: 100%;
-    margin: 0 auto;
-
-    @media #{$screen-below-md} {
-        text-align: left;
-    }
-
-    p + p {
-        margin-top: 15px;
-    }
-
-    @media #{$screen-md-up} {
-        padding: 30px;
-    }
-
-    @media #{$screen-lg-up} {
-        padding: 50px;
-    }
 
     li {
-        padding: 20px 0;
-    }
+        position: relative;
+        height: 40vh;
+        max-height: 400px;
+        overflow: hidden;
 
-    li + li {
-        border-top: 2px solid $palette-3;
-    }
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
 
-    li:first-of-type {
-        padding-top: 0;
-    }
+            background-size: cover;
+            background-position: center;
 
-    li a {
-        display: block;
+            &:hover {
+                .event-information .more-btn {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+        }
 
-        &:hover {
-            h2 {
-                text-decoration: underline;
-                color: $palette-3;
+        .event-information {
+            text-align: left;
+            padding: 0;
+            height: 100%;
+
+            .fix-bottom {
+                position: absolute;
+                bottom: 30px;
+                width: 100%;
             }
 
-            text-decoration: none;
+            h1 {
+                margin: 0;
+            }
+
+            time {
+                font-family: $base-font-family;
+                display: block;
+                line-height: 1;
+            }
+
+            .date-box {
+                background-color: rgba(#fff, .5);
+                color: #fff;
+                font-size: 1.2em;
+            }
+
+            .more-btn {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                opacity: 0;
+                transform: translateX(-50px);
+                transition: 300ms all;
+            }
         }
     }
 }

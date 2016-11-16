@@ -25,6 +25,14 @@ class ArchiveEvent extends \Municipio\Controller\BaseController
     {
         $quaters = array();
 
+        $filter = null;
+        if (isset($_GET['from']) && isset($_GET['to'])) {
+            $filter = array(
+                'from' => $_GET['from'],
+                'to' => $_GET['to']
+            );
+        }
+
         for ($i = 1; $i <= 4; $i++) {
             $endMonth = $i * 3;
             $startMonth = $endMonth - 2;
@@ -33,6 +41,7 @@ class ArchiveEvent extends \Municipio\Controller\BaseController
             if (date('m') > $endMonth) {
                 $year++;
             }
+            $year = (int)$year;
 
             $startDate = mysql2date('Y-m-d', date('Y-m-d', mktime(0, 0, 0, $startMonth, 1, $year)), true);
             $endDate = mysql2date('Y-m-d', date('Y-m-t', mktime(0, 0, 0, $endMonth, 1, $year)), true);
@@ -40,14 +49,30 @@ class ArchiveEvent extends \Municipio\Controller\BaseController
             $startMonth = mysql2date('F', date('Y-m-d', mktime(0, 0, 0, $startMonth, 1, $year)), true);
             $endMonth = mysql2date('F', date('Y-m-d', mktime(0, 0, 0, $endMonth, 1, $year)), true);
 
+            $isCurrent = false;
+            if (date('Y-m-d') >= $startDate && date('Y-m-d') <= $endDate) {
+                $isCurrent = true;
+            }
+
+            $isActive = false;
+            if (!is_null($filter) && $filter['from'] == $startDate && $filter['to'] == $endDate) {
+                $isActive = true;
+            }
+
             $quaters[] = array(
                 'year' => $year,
                 'start_date' => $startDate,
                 'start_month' => $startMonth,
                 'end_date' => $endDate,
-                'end_month' => $endMonth
+                'end_month' => $endMonth,
+                'is_current' => $isCurrent,
+                'is_active' => $isActive
             );
         }
+
+        uasort($quaters, function ($a, $b) {
+            return $a['year'] > $b['year'];
+        });
 
         $quaters = json_decode(json_encode($quaters));
         return $quaters;
