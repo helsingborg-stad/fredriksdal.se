@@ -33,7 +33,7 @@ class Api
                 return array (
                     'title' => $return->post_title,
                     'content' => apply_filters('the_content', $return->post_content),
-                    'sidebar' => get_sidebar('content-area-bottom')
+                    //'sidebar' => get_sidebar('content-area-bottom')
                 );
             }
         ));
