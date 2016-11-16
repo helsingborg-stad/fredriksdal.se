@@ -151,6 +151,9 @@
             }
 
             table {
+
+                table-layout: fixed;
+
                 thead, tbody, tfoot {
                     background-color: transparent;
                     text-align: left;
