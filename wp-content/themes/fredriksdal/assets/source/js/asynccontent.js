@@ -32,6 +32,8 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
     };
 
     AsyncContentLoader.prototype.loadContent = function (clickedObject) {
+        var $section = jQuery(clickedObject).parents("section");
+        jQuery('#ajax-response article.frame').html('<span class="spinner spinner-dark spinner-lg" style="font-size:3em;"></span>');
 
         jQuery("a").removeClass('ajax-is-active');
 
@@ -43,9 +45,11 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
             jQuery('.ajax-response').remove();
 
             //New content
-            jQuery(clickedObject).parents("section").append(
+            $section.append(
                 this.responseTemplate(AsyncContentTempalte, dataResponse)
             );
+
+            $section.find('article.frame').addClass('is-loaded');
 
             //Content loaded
             this.stopSpinner(clickedObject);
