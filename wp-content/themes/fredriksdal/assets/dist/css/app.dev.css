@@ -531,6 +531,23 @@ figure.image-placeholder {
       margin-left: 0; }
     .is-child-theme #main-menu li.menu-item-social + li.menu-item-social {
       margin-left: 0; } }
+  .is-child-theme .nav-aside {
+    border: none; }
+    .is-child-theme .nav-aside li {
+      border: none; }
+    .is-child-theme .nav-aside li + li {
+      border: none; }
+    .is-child-theme .nav-aside a {
+      position: relative;
+      font-family: "Verlag A", "Verlag B";
+      font-weight: bold;
+      font-size: 1.2em;
+      padding: 3px 0;
+      -webkit-transition: 200ms all;
+              transition: 200ms all; }
+      .is-child-theme .nav-aside a:hover {
+        color: #b9c12d;
+        padding-left: 6px; }
   .is-child-theme nav#mobile-menu {
     -webkit-animation: fadeinDown 500ms;
             animation: fadeinDown 500ms; }
@@ -1066,6 +1083,19 @@ figure.image-placeholder {
   .is-child-theme #campaign-wrapper .sidebar-content-area-top [class*="grid-"] {
     margin: 0;
     padding: 0; }
+  .is-child-theme.page #main-content {
+    padding-top: 80px; }
+    @media (min-width: 959px) and (max-width: 1280px) {
+      .is-child-theme.page #main-content {
+        padding-top: 120px; } }
+  .is-child-theme.page .footer-scroller {
+    margin-top: 60px; }
+  .is-child-theme .page-footer .box-border {
+    border: 1px solid #b9c12d;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    background: -webkit-linear-gradient(left, rgba(185, 193, 45, 0.1), rgba(185, 193, 45, 0));
+    background: linear-gradient(to right, rgba(185, 193, 45, 0.1), rgba(185, 193, 45, 0));
+    border-radius: 2px; }
   .is-child-theme .box.box-news .box-image-container {
     position: relative;
     border-radius: 50%;

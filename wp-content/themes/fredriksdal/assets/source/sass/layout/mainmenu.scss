@@ -148,3 +148,29 @@
         margin-left: 0;
     }
 }
+
+.nav-aside {
+    border: none;
+
+    li {
+        border: none;
+    }
+
+    li + li {
+        border: none;
+    }
+
+    a {
+        position: relative;
+        font-family: $base-font-family;
+        font-weight: bold;
+        font-size: 1.2em;
+        padding: 3px 0;
+        transition: 200ms all;
+
+        &:hover {
+            color: $palette-3;
+            padding-left: 6px;
+        }
+    }
+}
