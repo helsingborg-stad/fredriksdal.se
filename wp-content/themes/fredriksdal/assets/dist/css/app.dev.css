@@ -1671,7 +1671,7 @@ figure.image-placeholder {
     background: linear-gradient(to bottom, rgba(185, 193, 45, 0.3), rgba(185, 193, 45, 0)); }
   .is-child-theme .background-image {
     background-size: cover;
-    backgorund-position: center;
+    background-position: center;
     opacity: .3; }
     .is-child-theme .background-image::after {
       display: block;
