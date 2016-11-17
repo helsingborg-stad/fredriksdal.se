@@ -306,15 +306,15 @@ figure.image-placeholder {
           margin: 5px auto;
           display: inline-block !important; } }
   .is-child-theme #site-header.liquid-header,
-  .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event) #site-header,
+  .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event):not(.page) #site-header,
   .is-child-theme.menu-open #site-header,
   .is-child-theme.no-js #site-header {
     background-color: rgba(233, 229, 214, 0.97);
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.7); }
     @media screen and (min-width: 767px) {
       .is-child-theme #site-header.liquid-header .logotype svg, .is-child-theme #site-header.liquid-header .logotype img,
-      .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event) #site-header .logotype svg,
-      .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event) #site-header .logotype img,
+      .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event):not(.page) #site-header .logotype svg,
+      .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event):not(.page) #site-header .logotype img,
       .is-child-theme.menu-open #site-header .logotype svg,
       .is-child-theme.menu-open #site-header .logotype img,
       .is-child-theme.no-js #site-header .logotype svg,
@@ -324,70 +324,70 @@ figure.image-placeholder {
         max-width: none; } }
     .is-child-theme #site-header.liquid-header .logotype svg path,
     .is-child-theme #site-header.liquid-header .logotype svg use,
-    .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event) #site-header .logotype svg path,
-    .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event) #site-header .logotype svg use,
+    .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event):not(.page) #site-header .logotype svg path,
+    .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event):not(.page) #site-header .logotype svg use,
     .is-child-theme.menu-open #site-header .logotype svg path,
     .is-child-theme.menu-open #site-header .logotype svg use,
     .is-child-theme.no-js #site-header .logotype svg path,
     .is-child-theme.no-js #site-header .logotype svg use {
       fill: #000 !important; }
     .is-child-theme #site-header.liquid-header nav.navbar [data-tooltip]:after,
-    .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event) #site-header nav.navbar [data-tooltip]:after,
+    .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event):not(.page) #site-header nav.navbar [data-tooltip]:after,
     .is-child-theme.menu-open #site-header nav.navbar [data-tooltip]:after,
     .is-child-theme.no-js #site-header nav.navbar [data-tooltip]:after {
       background-color: rgba(0, 0, 0, 0.7);
       color: #fff; }
     .is-child-theme #site-header.liquid-header nav.navbar [data-tooltip]:before,
-    .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event) #site-header nav.navbar [data-tooltip]:before,
+    .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event):not(.page) #site-header nav.navbar [data-tooltip]:before,
     .is-child-theme.menu-open #site-header nav.navbar [data-tooltip]:before,
     .is-child-theme.no-js #site-header nav.navbar [data-tooltip]:before {
       border-bottom-color: rgba(0, 0, 0, 0.7);
       opacity: 1;
       bottom: -8px; }
     .is-child-theme #site-header.liquid-header nav.navbar svg.hbg-icon,
-    .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event) #site-header nav.navbar svg.hbg-icon,
+    .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event):not(.page) #site-header nav.navbar svg.hbg-icon,
     .is-child-theme.menu-open #site-header nav.navbar svg.hbg-icon,
     .is-child-theme.no-js #site-header nav.navbar svg.hbg-icon {
       opacity: 1;
       fill: #000; }
     .is-child-theme #site-header.liquid-header nav.navbar,
-    .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event) #site-header nav.navbar,
+    .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event):not(.page) #site-header nav.navbar,
     .is-child-theme.menu-open #site-header nav.navbar,
     .is-child-theme.no-js #site-header nav.navbar {
       padding-top: 10px;
       padding-bottom: 10px; }
     @media screen and (min-width: 1280px) {
       .is-child-theme #site-header.liquid-header #main-menu,
-      .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event) #site-header #main-menu,
+      .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event):not(.page) #site-header #main-menu,
       .is-child-theme.menu-open #site-header #main-menu,
       .is-child-theme.no-js #site-header #main-menu {
         margin-top: 27px; } }
     @media screen and (max-width: 1280px) {
       .is-child-theme #site-header.liquid-header #main-menu,
-      .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event) #site-header #main-menu,
+      .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event):not(.page) #site-header #main-menu,
       .is-child-theme.menu-open #site-header #main-menu,
       .is-child-theme.no-js #site-header #main-menu {
         margin-top: 10px; } }
     .is-child-theme #site-header.liquid-header #main-menu li a,
-    .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event) #site-header #main-menu li a,
+    .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event):not(.page) #site-header #main-menu li a,
     .is-child-theme.menu-open #site-header #main-menu li a,
     .is-child-theme.no-js #site-header #main-menu li a {
       color: #000;
       line-height: 1; }
       .is-child-theme #site-header.liquid-header #main-menu li a:before,
-      .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event) #site-header #main-menu li a:before,
+      .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event):not(.page) #site-header #main-menu li a:before,
       .is-child-theme.menu-open #site-header #main-menu li a:before,
       .is-child-theme.no-js #site-header #main-menu li a:before {
         background-color: #000;
         bottom: 0; }
     .is-child-theme #site-header.liquid-header #main-menu li.current-menu-item a,
-    .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event) #site-header #main-menu li.current-menu-item a,
+    .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event):not(.page) #site-header #main-menu li.current-menu-item a,
     .is-child-theme.menu-open #site-header #main-menu li.current-menu-item a,
     .is-child-theme.no-js #site-header #main-menu li.current-menu-item a {
       color: #000;
       border-color: #000; }
       .is-child-theme #site-header.liquid-header #main-menu li.current-menu-item a::before,
-      .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event) #site-header #main-menu li.current-menu-item a::before,
+      .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event):not(.page) #site-header #main-menu li.current-menu-item a::before,
       .is-child-theme.menu-open #site-header #main-menu li.current-menu-item a::before,
       .is-child-theme.no-js #site-header #main-menu li.current-menu-item a::before {
         visibility: visible;
@@ -399,12 +399,12 @@ figure.image-placeholder {
     .is-child-theme #site-header.liquid-header a[href="#mobile-menu"]:not(.open) .menu-icon,
     .is-child-theme #site-header.liquid-header a[href="#mobile-menu"] .menu-icon:after,
     .is-child-theme #site-header.liquid-header a[href="#mobile-menu"] .menu-icon:before,
-    .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event) #site-header #mobile-menu:not(.open) .menu-icon,
-    .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event) #site-header #mobile-menu .menu-icon:after,
-    .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event) #site-header #mobile-menu .menu-icon:before,
-    .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event) #site-header a[href="#mobile-menu"]:not(.open) .menu-icon,
-    .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event) #site-header a[href="#mobile-menu"] .menu-icon:after,
-    .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event) #site-header a[href="#mobile-menu"] .menu-icon:before,
+    .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event):not(.page) #site-header #mobile-menu:not(.open) .menu-icon,
+    .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event):not(.page) #site-header #mobile-menu .menu-icon:after,
+    .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event):not(.page) #site-header #mobile-menu .menu-icon:before,
+    .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event):not(.page) #site-header a[href="#mobile-menu"]:not(.open) .menu-icon,
+    .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event):not(.page) #site-header a[href="#mobile-menu"] .menu-icon:after,
+    .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event):not(.page) #site-header a[href="#mobile-menu"] .menu-icon:before,
     .is-child-theme.menu-open #site-header #mobile-menu:not(.open) .menu-icon,
     .is-child-theme.menu-open #site-header #mobile-menu .menu-icon:after,
     .is-child-theme.menu-open #site-header #mobile-menu .menu-icon:before,
@@ -419,7 +419,7 @@ figure.image-placeholder {
     .is-child-theme.no-js #site-header a[href="#mobile-menu"] .menu-icon:before {
       background-color: #000; }
     .is-child-theme #site-header.liquid-header #header-tabs,
-    .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event) #site-header #header-tabs,
+    .is-child-theme:not(.home):not(.single-event):not(.post-type-archive-event):not(.page) #site-header #header-tabs,
     .is-child-theme.menu-open #site-header #header-tabs,
     .is-child-theme.no-js #site-header #header-tabs {
       height: 0;
@@ -1098,11 +1098,6 @@ figure.image-placeholder {
   .is-child-theme #campaign-wrapper .sidebar-content-area-top [class*="grid-"] {
     margin: 0;
     padding: 0; }
-  .is-child-theme.page #main-content {
-    padding-top: 80px; }
-    @media (min-width: 959px) and (max-width: 1280px) {
-      .is-child-theme.page #main-content {
-        padding-top: 120px; } }
   .is-child-theme.page .footer-scroller {
     margin-top: 60px; }
   .is-child-theme .page-footer .box-border {
