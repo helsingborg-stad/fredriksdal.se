@@ -3,47 +3,6 @@
 @section('content')
 {!! the_post() !!}
 
-<?php
-
-    $attachmentId = get_post_thumbnail_id();
-    $image = wp_get_attachment_image_src($attachmentId, 'original');
-    if (isset($image[0])) {
-        $image = $image[0];
-    }
-
-?>
-
-@if ($image)
-
-    <div class="hero event-hero">
-        <div class="slider ratio-16-9">
-            <ul>
-                <li>
-                    <div class="slider-image" style="background-image:url('{{ $image }}');"></div>
-                </li>
-            </ul>
-        </div>
-
-        <div class="event-information hidden-xs hidden-sm">
-            <div class="container">
-                <div class="grid">
-                    <div class="grid-sm-12">
-                        <time class="date-box" datetime="{{ get_post_meta(get_the_id(), 'event-date-start', true) }}">
-                            <div>
-                                <span class="day">{{ mysql2date('j', get_post_meta(get_the_id(), 'event-date-start', true)) }}</span>
-                                <span class="month">{{ mysql2date('M', get_post_meta(get_the_id(), 'event-date-start', true)) }}</span>
-                            </div>
-                        </time>
-
-                        <h1>{{ the_title() }}</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-@endif
-
 <section class="background-white gutter gutter-vertical gutter-xl">
     <div class="container">
         <div class="grid gutter gutter-vertical gutter-xl">
