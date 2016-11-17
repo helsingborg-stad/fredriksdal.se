@@ -18,6 +18,8 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
         'sidebar'
     ];
 
+    var AsyncScrollValueCache = 0;
+
     function AsyncContentLoader() {
         this.triggerAjaxOpenHash();
         this.watchAjaxClose();
@@ -120,6 +122,7 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
     AsyncContentLoader.prototype.watchAjaxClose = function() {
         jQuery("section").on('click', '.ajax-response .close',function(event){
             event.preventDefault();
+            jQuery('html, body').animate({scrollTop: Math.abs(jQuery(event.target).closest('a').parents('section').offset().top -jQuery("#site-header").outerHeight())}, 700, jQuery.bez([0.815, 0.020, 0.080, 1.215]));
             jQuery(".ajax-response").remove();
             jQuery("a").removeClass('ajax-is-active');
             this.updateHash("");
@@ -153,7 +156,11 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
     /* Update hash */
     AsyncContentLoader.prototype.updateHash = function(hash) {
         if(history.pushState) {
-            history.pushState(null, null, hash);
+            if(hash === "" ) {
+                history.pushState(null, null, "#");
+            } else {
+                history.pushState(null, null, hash);
+            }
         } else {
             window.location.hash = hash;
         }
