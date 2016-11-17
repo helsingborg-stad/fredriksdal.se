@@ -64,7 +64,6 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
     };
 
     AsyncContentLoader.prototype.responseTemplate = function (contentTemplate, dataResponse) {
-        console.log(dataResponse);
         AsyncContentReplaceVars.forEach(function(item) {
             contentTemplate = contentTemplate.replace("{{" + item + "}}", dataResponse[item]);
         }.bind(this));
@@ -123,6 +122,7 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
             event.preventDefault();
             jQuery(".ajax-response").remove();
             jQuery("a").removeClass('ajax-is-active');
+            window.location.hash = "";
         });
     };
 
