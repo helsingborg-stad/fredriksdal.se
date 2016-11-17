@@ -13,6 +13,7 @@ class Filters
         add_action('Municipio/header_grid_size', array($this, 'headerGridSize'));
         add_filter('wp_nav_menu_items', array($this, 'addSocialIconsToMenu'), 10, 2);
         add_filter('Municipio/main_menu/items', array($this, 'addSocialIconsToMenu'), 10, 2);
+        add_filter('excerpt_more', array($this, 'exerptMore'));
 
         /*
         add_filter('Modularity/Module/Classes', function ($classes, $postType, $args) {
@@ -78,6 +79,11 @@ class Filters
         ) as $imageFilter) {
             add_filter($imageFilter, array($this, 'imageAspectRatioSquare'), 50, 2);
         }
+    }
+
+    public function exerptMore($more)
+    {
+        return '…';
     }
 
     public function addSocialIconsToMenu($items, $args = null)

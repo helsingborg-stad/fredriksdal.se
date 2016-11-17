@@ -9,16 +9,6 @@ class News
     public function __construct()
     {
         add_action('init', array($this, 'registerPostType'));
-        add_filter('excerpt_more', array($this, 'exerptMore'));
-    }
-
-    public function exerptMore($more)
-    {
-        if (get_post_type() !== 'news') {
-            return $more;
-        }
-
-        return '…';
     }
 
     /**

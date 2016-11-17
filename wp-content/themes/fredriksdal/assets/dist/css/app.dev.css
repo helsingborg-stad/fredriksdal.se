@@ -1037,51 +1037,6 @@ figure.image-placeholder {
         text-decoration: none; }
         .is-child-theme nav.event-dates a:hover .months {
           text-decoration: underline; }
-  .is-child-theme .event-list {
-    text-align: center;
-    width: 100%; }
-    .is-child-theme .event-list li {
-      position: relative;
-      height: 40vh;
-      max-height: 400px;
-      overflow: hidden; }
-      .is-child-theme .event-list li a {
-        display: block;
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-position: center; }
-        .is-child-theme .event-list li a:hover .event-information .more-btn {
-          -webkit-transform: translateX(0);
-                  transform: translateX(0);
-          opacity: 1; }
-      .is-child-theme .event-list li .event-information {
-        text-align: left;
-        padding: 0;
-        height: 100%; }
-        .is-child-theme .event-list li .event-information .fix-bottom {
-          position: absolute;
-          bottom: 30px;
-          width: 100%; }
-        .is-child-theme .event-list li .event-information h1 {
-          margin: 0; }
-        .is-child-theme .event-list li .event-information time {
-          font-family: "Verlag A", "Verlag B";
-          display: block;
-          line-height: 1; }
-        .is-child-theme .event-list li .event-information .date-box {
-          background-color: rgba(255, 255, 255, 0.5);
-          color: #fff;
-          font-size: 1.2em; }
-        .is-child-theme .event-list li .event-information .more-btn {
-          position: absolute;
-          right: 0;
-          bottom: 0;
-          opacity: 0;
-          -webkit-transform: translateX(-50px);
-                  transform: translateX(-50px);
-          -webkit-transition: 300ms all;
-                  transition: 300ms all; }
   @media screen and (min-width: 1280px) {
     .is-child-theme .box-index-event {
       margin: 0 20px;
@@ -1679,31 +1634,6 @@ figure.image-placeholder {
       position: relative;
       z-index: 2;
       padding: 50px 0; }
-    .is-child-theme .news-story .background-gradient,
-    .is-child-theme .news-story .background-image {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 300px;
-      z-index: 1; }
-    .is-child-theme .news-story .background-gradient {
-      background: -webkit-linear-gradient(top, rgba(185, 193, 45, 0.3), rgba(185, 193, 45, 0));
-      background: linear-gradient(to bottom, rgba(185, 193, 45, 0.3), rgba(185, 193, 45, 0)); }
-    .is-child-theme .news-story .background-image {
-      background-size: cover;
-      backgorund-position: center;
-      opacity: .3; }
-      .is-child-theme .news-story .background-image::after {
-        display: block;
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 300px;
-        background: -webkit-linear-gradient(bottom, white, rgba(255, 255, 255, 0));
-        background: linear-gradient(to top, white, rgba(255, 255, 255, 0)); }
     .is-child-theme .news-story .read-more {
       background-color: transparent;
       display: inline-block !important;
@@ -1726,8 +1656,33 @@ figure.image-placeholder {
         content: ""; }
       .is-child-theme .news-story .read-more:hover {
         text-indent: 10px; }
-  .is-child-theme .news-story + .news-story {
+  .is-child-theme section + .news-story {
     margin-top: 0; }
+  .is-child-theme .background-gradient,
+  .is-child-theme .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 300px;
+    z-index: 1; }
+  .is-child-theme .background-gradient {
+    background: -webkit-linear-gradient(top, rgba(185, 193, 45, 0.3), rgba(185, 193, 45, 0));
+    background: linear-gradient(to bottom, rgba(185, 193, 45, 0.3), rgba(185, 193, 45, 0)); }
+  .is-child-theme .background-image {
+    background-size: cover;
+    backgorund-position: center;
+    opacity: .3; }
+    .is-child-theme .background-image::after {
+      display: block;
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 300px;
+      background: -webkit-linear-gradient(bottom, white, rgba(255, 255, 255, 0));
+      background: linear-gradient(to top, white, rgba(255, 255, 255, 0)); }
   .is-child-theme .hero.event-hero {
     position: relative;
     min-height: 0; }
