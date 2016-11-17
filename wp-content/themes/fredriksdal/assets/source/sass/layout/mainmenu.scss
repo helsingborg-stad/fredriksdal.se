@@ -173,4 +173,27 @@
             text-indent: 10px;
         }
     }
+
+    .current,
+    .current-menu-item,
+    .current-node {
+        background-color: transparent;
+    }
+
+    .sub-menu {
+        border-top: none;
+        border-left: 1px solid $creamy-darker;
+
+        a {
+            font-size: 1em;
+            padding-left: 15px;
+        }
+
+        .current-menu-item > a::before,
+        .current > a::before {
+            width: 1px;
+            left: -1px;
+            background-color: $palette-3;
+        }
+    }
 }
