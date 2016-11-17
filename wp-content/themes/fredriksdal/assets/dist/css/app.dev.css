@@ -1708,3 +1708,21 @@ figure.image-placeholder {
       display: block; }
     .is-child-theme time.date-box .day {
       font-size: 1.8em; }
+  .is-child-theme .accordion-table.accordion-table-head {
+    padding: 13px 20px;
+    color: #000;
+    border-radius: 2px 2px 0 0 !important; }
+  .is-child-theme .background-green .accordion-table-head.accordion-table {
+    background-color: #b9c12d;
+    color: #000; }
+  .is-child-theme .background-white .accordion-table-head.accordion-table,
+  .is-child-theme .background-lgreen .accordion-table-head.accordion-table {
+    background-color: #b9c12d; }
+  .is-child-theme .accordion-section .accordion-toggle:before {
+    color: #666666;
+    font-size: 1.3em;
+    margin-top: 3px; }
+  .is-child-theme .accordion-section .active-section + .accordion-toggle:before {
+    color: #b9c12d; }
+  .is-child-theme .accordion-section:last-child {
+    border-radius: 0 0 2px 2px; }
