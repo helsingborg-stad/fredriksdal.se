@@ -1,5 +1,7 @@
 @if (get_field('fredriksdal_scroll_elevator_background', 'option'))
 <section class="footer-scroller scroll-elevator-toggle" style="background-image:url({{ get_field('fredriksdal_scroll_elevator_background', 'option') }});"></section>
+@else
+<section class="footer-scroller scroll-elevator-toggle no-gradient"></section>
 @endif
 
 <footer class="main-footer hidden-print">

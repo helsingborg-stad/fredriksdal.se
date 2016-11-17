@@ -1,6 +1,6 @@
 .footer-scroller {
     position: relative;
-    background-color: #fff;
+    background-color: $palette-3;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -26,7 +26,7 @@
             height: auto;
             box-shadow: none;
             border-radius: 0;
-            color: $palette-3;
+            color: $white;
             font-family: $condensed-font-family;
             font-size: 1.2em;
             text-transform: uppercase;

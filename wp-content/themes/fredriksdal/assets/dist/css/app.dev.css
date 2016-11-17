@@ -614,7 +614,7 @@ figure.image-placeholder {
               transform: none; }
   .is-child-theme .footer-scroller {
     position: relative;
-    background-color: #fff;
+    background-color: #b9c12d;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -640,7 +640,7 @@ figure.image-placeholder {
         height: auto;
         box-shadow: none;
         border-radius: 0;
-        color: #b9c12d;
+        color: #fff;
         font-family: "Verlag Cond A", "Verlag Cond B";
         font-size: 1.2em;
         text-transform: uppercase;
