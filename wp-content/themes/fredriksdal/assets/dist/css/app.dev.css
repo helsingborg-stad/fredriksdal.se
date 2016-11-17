@@ -324,10 +324,19 @@ figure.image-placeholder {
         max-width: none; } }
     .is-child-theme #site-header.liquid-header .logotype svg path,
     .is-child-theme #site-header.liquid-header .logotype svg use,
+    .is-child-theme #site-header.liquid-header .logotype svg circle,
+    .is-child-theme #site-header.liquid-header .logotype svg glyph,
+    .is-child-theme #site-header.liquid-header .logotype svg text,
     .is-child-theme.menu-open #site-header .logotype svg path,
     .is-child-theme.menu-open #site-header .logotype svg use,
+    .is-child-theme.menu-open #site-header .logotype svg circle,
+    .is-child-theme.menu-open #site-header .logotype svg glyph,
+    .is-child-theme.menu-open #site-header .logotype svg text,
     .is-child-theme.no-js #site-header .logotype svg path,
-    .is-child-theme.no-js #site-header .logotype svg use {
+    .is-child-theme.no-js #site-header .logotype svg use,
+    .is-child-theme.no-js #site-header .logotype svg circle,
+    .is-child-theme.no-js #site-header .logotype svg glyph,
+    .is-child-theme.no-js #site-header .logotype svg text {
       fill: #000 !important; }
     .is-child-theme #site-header.liquid-header nav.navbar [data-tooltip]:after,
     .is-child-theme.menu-open #site-header nav.navbar [data-tooltip]:after,

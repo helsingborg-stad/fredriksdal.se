@@ -121,7 +121,10 @@
         }
 
         svg path,
-        svg use {
+        svg use,
+        svg circle,
+        svg glyph,
+        svg text {
             fill: $black !important;
         }
     }
