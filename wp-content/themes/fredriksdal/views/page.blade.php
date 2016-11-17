@@ -2,27 +2,6 @@
 
 @section('content')
 
-<?php
-    $featuredImage = wp_get_attachment_image_src(
-        get_post_thumbnail_id(),
-        apply_filters('fredriksdal/page_hero',
-            municipio_to_aspect_ratio('16:9', array(1140, 641))
-        )
-    );
-?>
-
-@if (!is_active_sidebar('slider-area') && is_array($featuredImage))
-<div class="hero event-hero">
-    <div class="slider ratio-16-9">
-        <ul>
-            <li>
-                <div class="slider-image" style="background-image:url('{{ $featuredImage[0] }}');"></div>
-            </li>
-        </ul>
-    </div>
-</div>
-@endif
-
 <div class="container main-container">
 
     @include('partials.breadcrumbs')
