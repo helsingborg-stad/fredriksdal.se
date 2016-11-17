@@ -78,8 +78,10 @@
             margin-right: auto;
         }
 
-        img[src$=".svg"] {
-            max-width: 120px;
+        @media screen and #{$screen-sm-up} {
+            img[src$=".svg"] {
+                max-width: 120px;
+            }
         }
 
     }
