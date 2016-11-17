@@ -285,7 +285,10 @@ figure.image-placeholder {
         width: auto;
         max-width: none; }
       .is-child-theme #site-header .logotype svg path,
-      .is-child-theme #site-header .logotype svg use {
+      .is-child-theme #site-header .logotype svg use,
+      .is-child-theme #site-header .logotype svg circle,
+      .is-child-theme #site-header .logotype svg glyph,
+      .is-child-theme #site-header .logotype svg text {
         fill: #fff;
         -webkit-transition: fill 300ms;
                 transition: fill 300ms; }
