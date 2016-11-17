@@ -5,6 +5,11 @@
     background-color: #fff;
 }
 
+.navbar .current-menu-item a:after,
+.navbar .current-page-ancestor a:after {
+    display: none;
+}
+
 .navbar-mainmenu {
     display: table;
     width: 100%;

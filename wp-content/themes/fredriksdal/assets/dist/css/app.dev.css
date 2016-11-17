@@ -418,6 +418,9 @@ figure.image-placeholder {
   .is-child-theme .menu-icon:before,
   .is-child-theme .menu-icon:after {
     background-color: #fff; }
+  .is-child-theme .navbar .current-menu-item a:after,
+  .is-child-theme .navbar .current-page-ancestor a:after {
+    display: none; }
   .is-child-theme .navbar-mainmenu {
     display: table;
     width: 100%;
