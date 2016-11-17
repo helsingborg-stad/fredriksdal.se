@@ -52,10 +52,23 @@ Fredriksdal.AnchorScroll.AnchorScroll = (function ($) {
     AnchorScroll.prototype.bindAnchorScroll = function (trigger,target) {
         jQuery(trigger).on('click',function(event){
             event.preventDefault();
+            this.updateHash(target);
             var targetOffset = jQuery(target).offset();
             jQuery('html, body').animate({scrollTop: Math.abs(targetOffset.top -Math.abs(AnchorScrollSettings.scrollOffset))}, AnchorScrollSettings.scrollSpeed, jQuery.bez([0.815, 0.020, 0.080, 1.215]));
         }.bind(this));
     };
+
+    AsyncContentLoader.prototype.updateHash = function(hash) {
+        if(history.pushState) {
+            if(hash === "" ) {
+                history.pushState(null, null, "#");
+            } else {
+                history.pushState(null, null, hash);
+            }
+        } else {
+            window.location.hash = hash;
+        }
+    }
 
     new AnchorScroll();
 
