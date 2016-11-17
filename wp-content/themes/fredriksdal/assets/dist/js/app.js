@@ -291,7 +291,11 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
     /* Update hash */
     AsyncContentLoader.prototype.updateHash = function(hash) {
         if(history.pushState) {
-            history.pushState(null, null, hash);
+            if(hash === "" ) {
+                history.pushState(null, null, "#");
+            } else {
+                history.pushState(null, null, hash);
+            }
         } else {
             window.location.hash = hash;
         }
