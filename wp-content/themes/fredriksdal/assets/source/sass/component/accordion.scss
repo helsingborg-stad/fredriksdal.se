@@ -1,0 +1,36 @@
+.accordion-table.accordion-table-head {
+    padding: 13px 20px;
+    color: #000;
+    border-radius: 2px 2px 0 0 !important;
+}
+
+.background-green {
+    .accordion-table-head.accordion-table {
+        background-color: $palette-3;
+        color: $palette-1;
+    }
+}
+
+.background-white,
+.background-lgreen {
+    .accordion-table-head.accordion-table {
+        background-color: $palette-3;
+    }
+}
+
+.accordion-section {
+    .accordion-toggle:before {
+        color: $gray;
+        font-size: 1.3em;
+        margin-top: 3px;
+    }
+
+    .active-section + .accordion-toggle:before {
+        color: $palette-3;
+    }
+
+    &:last-child {
+        border-radius: 0 0 2px 2px;
+    }
+}
+
