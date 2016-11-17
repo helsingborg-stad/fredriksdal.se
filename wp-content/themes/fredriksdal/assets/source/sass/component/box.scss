@@ -145,3 +145,12 @@
         }
     }
 }
+
+.flickity-viewport .box-news.box-news-horizontal {
+    display: block;
+
+    .box-image-container {
+        display: block;
+        float: left;
+    }
+}

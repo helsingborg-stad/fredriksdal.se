@@ -640,7 +640,7 @@ figure.image-placeholder {
         height: auto;
         box-shadow: none;
         border-radius: 0;
-        color: #fff;
+        color: #b9c12d;
         font-family: "Verlag Cond A", "Verlag Cond B";
         font-size: 1.2em;
         text-transform: uppercase;
@@ -1092,7 +1092,7 @@ figure.image-placeholder {
   .is-child-theme #campaign-wrapper .sidebar-content-area-top [class*="grid-"] {
     margin: 0;
     padding: 0; }
-  .is-child-theme.page .footer-scroller {
+  .is-child-theme.page:not(.home) .footer-scroller, .is-child-theme.post .footer-scroller {
     margin-top: 60px; }
   .is-child-theme .page-footer .box-border {
     border: 1px solid #b9c12d;
@@ -1640,6 +1640,11 @@ figure.image-placeholder {
       .is-child-theme .box-ticket .tickets::after {
         right: 0;
         border-radius: 20px 0 0 20px; }
+  .is-child-theme .flickity-viewport .box-news.box-news-horizontal {
+    display: block; }
+    .is-child-theme .flickity-viewport .box-news.box-news-horizontal .box-image-container {
+      display: block;
+      float: left; }
   .is-child-theme .hero.event-hero {
     position: relative;
     min-height: 0; }
