@@ -28,33 +28,33 @@
         <?php dynamic_sidebar('content-area-top'); ?>
     </div>
     @endif
+</section>
 
     @if (have_posts())
-    <ul class="event-list">
         <?php global $post; ?>
         <?php $i = 0; ?>
         @while(have_posts())
             {!! the_post() !!}
             @include('partials.event')
         @endwhile
-    </ul>
     @else
-        <div class="container gutter gutter-xl gutter-vertical">
-            <div class="grid">
-                <div class="grid-xs-12">
-                    <div class="box box-index">
-                        <div class="box-content">
-                            <h3 class="box-title">Inga evenemang</h3>
-                            <p>
-                                Det finns tyvärr inga planerade evenamng
-                                {{ isset($_GET['from']) && isset($_GET['to']) ? 'mellan ' . $_GET['from'] . ' och ' . $_GET['to'] . '. Du kan välja en annan tidsperiod ovan.' : '' }}.
-                            </p>
+        <section class="background-green">
+            <div class="container gutter gutter-xl gutter-vertical">
+                <div class="grid">
+                    <div class="grid-xs-12">
+                        <div class="box box-index">
+                            <div class="box-content">
+                                <h3 class="box-title">Inga evenemang</h3>
+                                <p>
+                                    Det finns tyvärr inga planerade evenamng
+                                    {{ isset($_GET['from']) && isset($_GET['to']) ? 'mellan ' . $_GET['from'] . ' och ' . $_GET['to'] . '. Du kan välja en annan tidsperiod ovan.' : '' }}.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     @endif
-</section>
 
 @stop

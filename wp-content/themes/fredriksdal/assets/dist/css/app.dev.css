@@ -1037,51 +1037,6 @@ figure.image-placeholder {
         text-decoration: none; }
         .is-child-theme nav.event-dates a:hover .months {
           text-decoration: underline; }
-  .is-child-theme .event-list {
-    text-align: center;
-    width: 100%; }
-    .is-child-theme .event-list li {
-      position: relative;
-      height: 40vh;
-      max-height: 400px;
-      overflow: hidden; }
-      .is-child-theme .event-list li a {
-        display: block;
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-position: center; }
-        .is-child-theme .event-list li a:hover .event-information .more-btn {
-          -webkit-transform: translateX(0);
-                  transform: translateX(0);
-          opacity: 1; }
-      .is-child-theme .event-list li .event-information {
-        text-align: left;
-        padding: 0;
-        height: 100%; }
-        .is-child-theme .event-list li .event-information .fix-bottom {
-          position: absolute;
-          bottom: 30px;
-          width: 100%; }
-        .is-child-theme .event-list li .event-information h1 {
-          margin: 0; }
-        .is-child-theme .event-list li .event-information time {
-          font-family: "Verlag A", "Verlag B";
-          display: block;
-          line-height: 1; }
-        .is-child-theme .event-list li .event-information .date-box {
-          background-color: rgba(255, 255, 255, 0.5);
-          color: #fff;
-          font-size: 1.2em; }
-        .is-child-theme .event-list li .event-information .more-btn {
-          position: absolute;
-          right: 0;
-          bottom: 0;
-          opacity: 0;
-          -webkit-transform: translateX(-50px);
-                  transform: translateX(-50px);
-          -webkit-transition: 300ms all;
-                  transition: 300ms all; }
   @media screen and (min-width: 1280px) {
     .is-child-theme .box-index-event {
       margin: 0 20px;
@@ -1645,6 +1600,89 @@ figure.image-placeholder {
     .is-child-theme .flickity-viewport .box-news.box-news-horizontal .box-image-container {
       display: block;
       float: left; }
+  .is-child-theme .pagination-section {
+    background-color: #e9e5d6;
+    margin-top: 0;
+    padding: 40px 0;
+    line-height: 1; }
+  .is-child-theme .page-numbers {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5em; }
+    .is-child-theme .page-numbers li {
+      line-height: 1; }
+    .is-child-theme .page-numbers a:not(.next):not(.prev) {
+      width: auto;
+      height: auto; }
+    .is-child-theme .page-numbers a:hover,
+    .is-child-theme .page-numbers a:focus {
+      text-decoration: underline;
+      background-color: transparent;
+      color: #000; }
+    .is-child-theme .page-numbers.current {
+      background-color: transparent;
+      color: #b9c12d;
+      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3); }
+  .is-child-theme .news-story {
+    position: relative;
+    min-height: 300px;
+    overflow: hidden; }
+    .is-child-theme .news-story:first-of-type {
+      padding-top: 100px;
+      min-height: 400px; }
+    .is-child-theme .news-story > .container {
+      position: relative;
+      z-index: 2;
+      padding: 50px 0; }
+    .is-child-theme .news-story .read-more {
+      background-color: transparent;
+      display: inline-block !important;
+      border: none;
+      padding: 0;
+      color: #b9c12d !important;
+      font-family: "Verlag A", "Verlag B";
+      font-weight: bold;
+      font-size: 1.3em;
+      letter-spacing: 1px;
+      -webkit-transition: 300ms all;
+              transition: 300ms all; }
+      .is-child-theme .news-story .read-more::before {
+        font-family: hbg-pricons;
+        line-height: 1;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        vertical-align: -15%;
+        content: ""; }
+      .is-child-theme .news-story .read-more:hover {
+        text-indent: 10px; }
+  .is-child-theme section + .news-story {
+    margin-top: 0; }
+  .is-child-theme .background-gradient,
+  .is-child-theme .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 300px;
+    z-index: 1; }
+  .is-child-theme .background-gradient {
+    background: -webkit-linear-gradient(top, rgba(185, 193, 45, 0.3), rgba(185, 193, 45, 0));
+    background: linear-gradient(to bottom, rgba(185, 193, 45, 0.3), rgba(185, 193, 45, 0)); }
+  .is-child-theme .background-image {
+    background-size: cover;
+    background-position: center;
+    opacity: .3; }
+    .is-child-theme .background-image::after {
+      display: block;
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 300px;
+      background: -webkit-linear-gradient(bottom, white, rgba(255, 255, 255, 0));
+      background: linear-gradient(to top, white, rgba(255, 255, 255, 0)); }
   .is-child-theme .hero.event-hero {
     position: relative;
     min-height: 0; }
