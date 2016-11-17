@@ -129,11 +129,12 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
     /* Onload trigger */
     AsyncContentLoader.prototype.triggerAjaxOpenHash = function() {
         jQuery.each(AsyncContentTrigger,function(index,targetObject) {
-            console.log("main");
             jQuery(targetObject).each(function(linkindex, link){
-                if("#" + this.createIdFromHref(jQuery(link).attr('href')) === window.location.hash) {
-                    jQuery(link).trigger('click');
-                    return true;
+                if(this.isLocalLink(jQuery(link).closest('a').attr('href'))) {
+                    if("#" + this.createIdFromHref(jQuery(link).attr('href')) === window.location.hash) {
+                        this.loadContent(jQuery(link).closest('a'));
+                        return false;
+                    }
                 }
             }.bind(this));
         }.bind(this));
