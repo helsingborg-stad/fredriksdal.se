@@ -26,7 +26,7 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
                 if(this.isLocalLink(jQuery(event.target).closest('a').attr('href'))) {
                     event.preventDefault();
                     this.loadContent(jQuery(event.target).closest('a'));
-                    window.location.hash = '#' + this.createIdFromHref(jQuery(event.target).closest('a').attr('href'));
+                    this.updateHash('#' + this.createIdFromHref(jQuery(event.target).closest('a').attr('href')));
                 }
             }.bind(this));
         }.bind(this));
@@ -122,20 +122,22 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
             event.preventDefault();
             jQuery(".ajax-response").remove();
             jQuery("a").removeClass('ajax-is-active');
-            window.location.hash = "";
-        });
+            this.updateHash("");
+        }.bind(this));
     };
 
     /* Onload trigger */
     AsyncContentLoader.prototype.triggerAjaxOpenHash = function() {
-        jQuery.each(AsyncContentTrigger,function(index,targetObject) {
-            jQuery(targetObject).each(function(linkindex, link){
-                if(this.isLocalLink(jQuery(link).closest('a').attr('href'))) {
-                    if("#" + this.createIdFromHref(jQuery(link).attr('href')) === window.location.hash) {
-                        this.loadContent(jQuery(link).closest('a'));
-                        return false;
+        jQuery(window).bind("load", function() {
+            jQuery.each(AsyncContentTrigger,function(index,targetObject) {
+                jQuery(targetObject).each(function(linkindex, link){
+                    if(this.isLocalLink(jQuery(link).closest('a').attr('href'))) {
+                        if("#" + this.createIdFromHref(jQuery(link).attr('href')) === window.location.hash) {
+                            this.loadContent(jQuery(link).closest('a'));
+                            return false;
+                        }
                     }
-                }
+                }.bind(this));
             }.bind(this));
         }.bind(this));
     };
@@ -147,6 +149,15 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
         }
         return false;
     };
+
+    /* Update hash */
+    AsyncContentLoader.prototype.updateHash = function(hash) {
+        if(history.pushState) {
+            history.pushState(null, null, hash);
+        } else {
+            window.location.hash = hash;
+        }
+    }
 
     new AsyncContentLoader();
 
