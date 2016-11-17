@@ -103,7 +103,6 @@
 }
 
 #site-header.liquid-header,
-&:not(.home):not(.single-event):not(.post-type-archive-event):not(.page) #site-header,
 &.menu-open #site-header,
 &.no-js #site-header {
     background-color: rgba($palette-2,.97);
