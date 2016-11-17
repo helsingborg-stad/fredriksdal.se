@@ -592,7 +592,11 @@ figure.image-placeholder {
       width: auto;
       vertical-align: -15%;
       margin-right: 10px; }
-    .is-child-theme nav#mobile-menu .menu-item-social svg, .is-child-theme nav#mobile-menu .menu-item-social path {
+    .is-child-theme nav#mobile-menu .menu-item-social svg path,
+    .is-child-theme nav#mobile-menu .menu-item-social svg use,
+    .is-child-theme nav#mobile-menu .menu-item-social svg circle,
+    .is-child-theme nav#mobile-menu .menu-item-social svg glyph,
+    .is-child-theme nav#mobile-menu .menu-item-social svg text {
       fill: #fff; }
     .is-child-theme nav#mobile-menu .menu-item-social [data-tooltip]::before,
     .is-child-theme nav#mobile-menu .menu-item-social [data-tooltip]:hover::before {

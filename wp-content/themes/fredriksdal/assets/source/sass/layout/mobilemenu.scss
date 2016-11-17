@@ -49,7 +49,11 @@ nav#mobile-menu {
             margin-right: 10px;
         }
 
-        svg, path {
+        svg path,
+        svg use,
+        svg circle,
+        svg glyph,
+        svg text {
             fill: #fff;
         }
 
