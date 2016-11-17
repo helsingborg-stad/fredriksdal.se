@@ -547,7 +547,7 @@ figure.image-placeholder {
               transition: 200ms all; }
       .is-child-theme .nav-aside a:hover {
         color: #b9c12d;
-        padding-left: 6px; }
+        text-indent: 10px; }
   .is-child-theme nav#mobile-menu {
     -webkit-animation: fadeinDown 500ms;
             animation: fadeinDown 500ms; }
