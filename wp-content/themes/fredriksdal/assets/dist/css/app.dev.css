@@ -620,6 +620,8 @@ figure.image-placeholder {
     background-position: center center;
     height: 400px;
     overflow: hidden; }
+    .is-child-theme .footer-scroller.no-gradient {
+      height: 200px; }
     .is-child-theme .footer-scroller .scroll-elevator {
       display: block;
       position: absolute;
@@ -631,8 +633,6 @@ figure.image-placeholder {
               transform: translateY(100%);
       -webkit-transition: -webkit-transform 1s;
               transition: transform 1s;
-      background: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.8));
-      background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8));
       padding: 20px 0; }
       .is-child-theme .footer-scroller .scroll-elevator a {
         display: inline-block;
@@ -652,6 +652,9 @@ figure.image-placeholder {
           display: block; }
         .is-child-theme .footer-scroller .scroll-elevator a span {
           display: block; }
+    .is-child-theme .footer-scroller:not(.no-gradient) .scroll-elevator {
+      background: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.8));
+      background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8)); }
   .is-child-theme.show-scroll-elevator .footer-scroller .scroll-elevator {
     -webkit-transform: translateY(0);
             transform: translateY(0); }
