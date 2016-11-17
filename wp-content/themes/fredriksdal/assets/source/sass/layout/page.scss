@@ -1,8 +1,4 @@
 &.page {
-    #main-content {
-        @include header-margin();
-    }
-
     .footer-scroller  {
         margin-top: 60px;
     }
