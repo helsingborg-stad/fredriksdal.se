@@ -58,7 +58,7 @@ Fredriksdal.AnchorScroll.AnchorScroll = (function ($) {
         }.bind(this));
     };
 
-    AsyncContentLoader.prototype.updateHash = function(hash) {
+    AnchorScroll.prototype.updateHash = function(hash) {
         if(history.pushState) {
             if(hash === "" ) {
                 history.pushState(null, null, "#");
