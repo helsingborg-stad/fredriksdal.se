@@ -1,4 +1,3 @@
-
 .box.box-news {
     .box-image-container {
         position: relative;
@@ -33,6 +32,7 @@
 
     &:not(.box-news-horizontal) {
         img {
+            display: inline-block;
             border-radius: 50%;
             box-shadow: inset 0 0 3px rgba(#000,.7);
         }
@@ -91,7 +91,6 @@
     }
 
     .box-image-container img {
-        display: inline-block;
         transition: transform 400ms;
         transform: scale(1) rotate(0deg);
     }
@@ -126,3 +125,4 @@
         }
     }
 }
+

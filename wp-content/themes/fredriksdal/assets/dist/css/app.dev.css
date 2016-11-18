@@ -1245,6 +1245,7 @@ figure.image-placeholder {
       margin: 0 0 -10px 0;
       padding: 0; }
     .is-child-theme .box.box-news:not(.box-news-horizontal) img {
+      display: inline-block;
       border-radius: 50%;
       box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.7); }
     .is-child-theme .box.box-news:not(.box-news-horizontal) h5, .is-child-theme .box.box-news:not(.box-news-horizontal) ul, .is-child-theme .box.box-news:not(.box-news-horizontal) ol, .is-child-theme .box.box-news:not(.box-news-horizontal) p {
@@ -1278,7 +1279,6 @@ figure.image-placeholder {
         max-width: 120px;
         width: 120px; } }
   .is-child-theme .box-news .box-image-container img {
-    display: inline-block;
     -webkit-transition: -webkit-transform 400ms;
             transition: transform 400ms;
     -webkit-transform: scale(1) rotate(0deg);
