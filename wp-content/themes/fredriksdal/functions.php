@@ -8,7 +8,7 @@ if (file_exists(dirname(ABSPATH) . '/vendor/autoload.php')) {
 }
 
 add_action('after_setup_theme', function () {
-    load_theme_textdomain('municipio-intranet', get_stylesheet_directory() . '/languages');
+    load_theme_textdomain('fredriksdal', get_stylesheet_directory() . '/languages');
 });
 
 require_once FREDRIKSDAL_PATH . 'library/Vendor/Psr4ClassLoader.php';
