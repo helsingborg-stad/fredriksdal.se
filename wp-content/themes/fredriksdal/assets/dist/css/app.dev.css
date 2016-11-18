@@ -286,7 +286,7 @@ figure.image-placeholder {
         -webkit-transition: height 200ms, background 300ms;
                 transition: height 200ms, background 300ms;
         height: 60px;
-        width: auto;
+        width: 60px;
         max-width: none; }
       .is-child-theme #site-header .logotype svg path,
       .is-child-theme #site-header .logotype svg use,
