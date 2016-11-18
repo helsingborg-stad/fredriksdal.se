@@ -19,15 +19,10 @@ Fredriksdal.HorizontalScroll.HorizontalScroll = (function ($) {
     };
 
     function HorizontalScroll() {
-        this.htmlWrapper();
         HorizontalScrollTargets.forEach(function(element) {
             jQuery(HorizontalScrollWrapper + ' ' + element).flickity(HorizontalScrollSettigs);
         }.bind(this));
     }
-
-    HorizontalScroll.prototype.htmlWrapper = function () {
-       jQuery('html').addClass('no-flexbox');
-    };
 
     new HorizontalScroll();
 
