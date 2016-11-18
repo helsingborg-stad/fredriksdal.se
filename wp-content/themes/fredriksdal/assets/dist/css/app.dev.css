@@ -1053,6 +1053,45 @@ figure.image-placeholder {
   .is-child-theme #campaign-wrapper .sidebar-content-area-top [class*="grid-"] {
     margin: 0;
     padding: 0; }
+  .is-child-theme h1.campaign-title {
+    font-size: 2.2em; }
+    @media screen and (min-width: 959px) {
+      .is-child-theme h1.campaign-title {
+        font-size: 5em; } }
+    @media screen and (min-width: 767px) {
+      .is-child-theme h1.campaign-title {
+        font-size: 4em; } }
+  .is-child-theme h2.campaign-title {
+    font-size: 2em; }
+    @media screen and (min-width: 959px) {
+      .is-child-theme h2.campaign-title {
+        font-size: 4em; } }
+    @media screen and (min-width: 767px) {
+      .is-child-theme h2.campaign-title {
+        font-size: 3em; } }
+  .is-child-theme h3.campaign-title {
+    font-size: 1.8em; }
+    @media screen and (min-width: 959px) {
+      .is-child-theme h3.campaign-title {
+        font-size: 3em; } }
+    @media screen and (min-width: 767px) {
+      .is-child-theme h3.campaign-title {
+        font-size: 2.5em; } }
+  .is-child-theme h4.campaign-title {
+    font-size: 1.5em; }
+    @media screen and (min-width: 959px) {
+      .is-child-theme h4.campaign-title {
+        font-size: 2em; } }
+  .is-child-theme h5.campaign-title {
+    font-size: 1.5em; }
+    @media screen and (min-width: 959px) {
+      .is-child-theme h5.campaign-title {
+        font-size: 1.2em; } }
+  .is-child-theme h6.campaign-title {
+    font-size: 1em; }
+    @media screen and (min-width: 959px) {
+      .is-child-theme h6.campaign-title {
+        font-size: 1em; } }
   .is-child-theme.page:not(.home) .footer-scroller, .is-child-theme.single .footer-scroller {
     margin-top: 60px; }
   .is-child-theme.page:not(.home) #main-content section:first-of-type::before, .is-child-theme.single #main-content section:first-of-type::before {
@@ -1061,7 +1100,7 @@ figure.image-placeholder {
     padding-top: 80px; }
     @media (min-width: 959px) and (max-width: 1280px) {
       .is-child-theme.page:not(.home) #main-content section:first-of-type::before, .is-child-theme.single #main-content section:first-of-type::before {
-        padding-top: 120px; } }
+        padding-top: 160px; } }
   .is-child-theme.page:not(.home) .hero-featured-image + #main-content section:first-of-type::before, .is-child-theme.single .hero-featured-image + #main-content section:first-of-type::before {
     display: none;
     padding-top: 0; }
