@@ -95,7 +95,8 @@
 }
 
 .box-news:hover {
-    .box-image-container img {
+    .box-image-container img,
+    .box-image-container:after {
         transform: scale(1.02) rotate(1deg);
     }
 }

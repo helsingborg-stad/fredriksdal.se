@@ -1280,7 +1280,8 @@ figure.image-placeholder {
             transition: transform 400ms;
     -webkit-transform: scale(1) rotate(0deg);
             transform: scale(1) rotate(0deg); }
-  .is-child-theme .box-news:hover .box-image-container img {
+  .is-child-theme .box-news:hover .box-image-container img,
+  .is-child-theme .box-news:hover .box-image-container:after {
     -webkit-transform: scale(1.02) rotate(1deg);
             transform: scale(1.02) rotate(1deg); }
   .is-child-theme .accordion .accordion-content article p, .is-child-theme .accordion .accordion-content article ol, .is-child-theme .accordion .accordion-content article ul, .is-child-theme .accordion .accordion-content article li {
