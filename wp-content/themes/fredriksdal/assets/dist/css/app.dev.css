@@ -1055,6 +1055,13 @@ figure.image-placeholder {
     padding: 0; }
   .is-child-theme.page:not(.home) .footer-scroller, .is-child-theme.post .footer-scroller {
     margin-top: 60px; }
+  .is-child-theme.page:not(.home) #main-content, .is-child-theme.post #main-content {
+    padding-top: 80px; }
+    @media (min-width: 959px) and (max-width: 1280px) {
+      .is-child-theme.page:not(.home) #main-content, .is-child-theme.post #main-content {
+        padding-top: 120px; } }
+  .is-child-theme.page:not(.home) .hero-featured-image + #main-content, .is-child-theme.post .hero-featured-image + #main-content {
+    padding-top: 0; }
   .is-child-theme .page-footer .box-border {
     border: 1px solid #b9c12d;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);

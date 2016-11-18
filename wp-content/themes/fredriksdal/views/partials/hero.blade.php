@@ -30,7 +30,7 @@
 ?>
 
 @if (is_array($featuredImage))
-<div class="hero event-hero">
+<div class="hero hero-featured-image">
     <div class="slider ratio-16-9">
         <ul>
             <li>

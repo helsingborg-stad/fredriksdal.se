@@ -3,6 +3,14 @@
     .footer-scroller  {
         margin-top: 60px;
     }
+
+    #main-content {
+        @include header-margin;
+    }
+
+    .hero-featured-image + #main-content {
+        padding-top: 0;
+    }
 }
 
 .page-footer .box-border {
