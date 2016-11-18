@@ -7,6 +7,12 @@
     animation-duration: 200ms;
     z-index: 99999;
 
+    form {
+        @include center();
+        width: 70%;
+        max-width: 700px;
+    }
+
     .toggle-search-top {
         color: #fff;
         font-size: 1.3em;
@@ -22,7 +28,10 @@
             text-decoration: underline;
         }
     }
+}
 
+.search-top,
+&.search .creamy {
     label {
         display: block;
         font-family: $base-font-family;
@@ -31,12 +40,6 @@
         display: block;
         font-size: 2.5em;
         margin-bottom: 10px;
-    }
-
-    form {
-        @include center();
-        width: 70%;
-        max-width: 700px;
     }
 
     .input-group {

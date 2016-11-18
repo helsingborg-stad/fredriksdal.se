@@ -1,5 +1,6 @@
 &.page:not(.home),
-&.single {
+&.single,
+&.search {
     .footer-scroller  {
         margin-top: 60px;
     }

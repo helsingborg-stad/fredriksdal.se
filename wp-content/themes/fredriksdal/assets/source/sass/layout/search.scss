@@ -1,0 +1,14 @@
+&.search {
+    .creamy {
+        background-color: $palette-3;
+        border: none;
+        padding-top: 50px;
+    }
+
+    .search-result-item {
+        h3 .link-item::before {
+            margin-right: .5em;
+            color: $palette-3;
+        }
+    }
+}

@@ -66,7 +66,20 @@ class EventArchive
             $to = sanitize_text_field($_GET['to']);
         }
 
-        if (!is_null($from) || !is_null($to)) {
+        if (!is_null($from) && !is_null($to)) {
+            // USE BETWEEN ON START DATE
+            $where = str_replace(
+                $wpdb->posts . '.post_date >= \''. $from . '\'',
+                '(eventStart.meta_value BETWEEN \'' . $from . '\' AND \'' . $to . '\')',
+                $where
+            );
+            $where = str_replace(
+                'AND ' . $wpdb->posts . '.post_date <= \''. $to . '\'',
+                '',
+                $where
+            );
+        } elseif (!is_null($from) || !is_null($to)) {
+            // USE FROM OR TO
             $where = " AND eventStart.meta_key = 'event-date-start' AND eventEnd.meta_key = 'event-date-end' " . $where;
             $where = str_replace($wpdb->posts . '.post_date >=', 'eventStart.meta_value >=', $where);
             $where = str_replace($wpdb->posts . '.post_date <=', 'eventEnd.meta_value <=', $where);
@@ -119,14 +132,7 @@ class EventArchive
 
         if (is_post_type_archive('event')) {
             // Meta query, upcoming events
-            $query->set('meta_query', array(
-                'relation' => 'AND',
-                array(
-                    'key'     => 'event-date-start',
-                    'value'   => date('Y-m-d H:i:s'),
-                    'compare' => '>=',
-                )
-            ));
+
 
             // Posts per page
             $query->set('posts_per_page', 13);

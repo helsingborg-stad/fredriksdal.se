@@ -6,7 +6,7 @@
 <section class="background-white gutter gutter-vertical gutter-xl">
     <div class="container">
         <div class="grid gutter gutter-vertical gutter-xl">
-            <div class="grid-md-8 grid-lg-8 grid-sm-12">
+            <div class="grid-md-9 grid-lg-9 grid-sm-12">
                 <?php global $post; ?>
                 <article class="clearfix">
                     <h1 {!! $image ? 'class="hidden-md hidden-lg"' : '' !!}>
@@ -57,6 +57,11 @@
                         <div class="date">
                             <label><?php _e('Date', 'fredriksdal'); ?></label>
                             <span class="value">{{ mysql2date('Y-m-d', get_post_meta(get_the_id(), 'event-date-start', true)) }}</span>
+
+                            @if (mysql2date('Y-m-d', get_post_meta(get_the_id(), 'event-date-start', true)) !== mysql2date('Y-m-d', get_post_meta(get_the_id(), 'event-date-end', true)))
+                            till
+                            <span class="value">{{ mysql2date('Y-m-d', get_post_meta(get_the_id(), 'event-date-end', true)) }}</span>
+                            @endif
                         </div>
                         <div class="time clearfix">
                             <div class="time-start">
