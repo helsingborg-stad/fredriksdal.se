@@ -38,7 +38,7 @@
             @include('partials.event')
         @endwhile
     @else
-        <section class="background-green">
+        <section class="background-green no-margin">
             <div class="container gutter gutter-xl gutter-vertical">
                 <div class="grid">
                     <div class="grid-xs-12">
