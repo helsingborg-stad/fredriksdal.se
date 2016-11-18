@@ -201,3 +201,24 @@
         opacity: 0;
     }
 }
+
+.in-english a::before {
+    @include pricon('\EA7E');
+    margin-right: 3px;
+    font-size: 1.3em;
+}
+
+.easy-read a::before {
+    @include pricon('\EA7D');
+    margin-right: 3px;
+}
+
+.sign-language a::before {
+    @include pricon('\EA7C');
+    margin-right: 3px;
+}
+
+a[href="#translate"]::before {
+    @include pricon('\EA39');
+    margin-right: 4px;
+}
