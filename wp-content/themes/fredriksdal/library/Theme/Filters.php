@@ -48,7 +48,7 @@ class Filters
                 return "";
             }
             if (!$isException) {
-                $input = '<div>' . __("Open today: ", 'fredriksdal') . '</div>' . $input;
+                $input = '<div>' . __("Open today: ", 'fredriksdal') . ' </div>' . $input;
             }
             return '<time class="open-hours-label button opaque">' . $input . '</time>';
         }, 10, 2);
