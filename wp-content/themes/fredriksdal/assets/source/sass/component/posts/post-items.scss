@@ -99,7 +99,7 @@
             img[src$=".svg"] {
                 margin: 0;
                 padding: 0;
-                width: 120px;
+                max-width: 120px;
             }
         }
     }
