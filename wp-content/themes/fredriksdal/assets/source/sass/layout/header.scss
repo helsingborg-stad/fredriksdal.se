@@ -115,7 +115,7 @@
         @media screen and (min-width: #{$screen-md-min}) {
             svg, img {
                 height: 50px;
-                width: auto;
+                width: 50px;
                 max-width: none;
             }
         }
