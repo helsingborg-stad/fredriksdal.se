@@ -1826,6 +1826,8 @@ figure.image-placeholder {
     position: relative;
     min-height: 300px;
     overflow: hidden; }
+    .is-child-theme .news-story h1 {
+      padding-bottom: 0; }
     .is-child-theme .news-story:first-of-type {
       padding-top: 100px;
       min-height: 400px; }

@@ -3,6 +3,10 @@
     min-height: 300px;
     overflow: hidden;
 
+    h1 {
+        padding-bottom: 0;
+    }
+
     &:first-of-type {
         padding-top: 100px;
         min-height: 400px;
