@@ -17,7 +17,7 @@
     }
 }
 
-&.page-template-default #main-content {
+&.page-template-default:not(.home) #main-content {
     @include header-margin;
 }
 
