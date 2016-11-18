@@ -1,14 +1,17 @@
 &.page:not(.home),
-&.post {
+&.single {
     .footer-scroller  {
         margin-top: 60px;
     }
 
-    #main-content {
+    #main-content section:first-of-type::before {
+        display: block;
+        content: '';
         @include header-margin;
     }
 
-    .hero-featured-image + #main-content {
+    .hero-featured-image + #main-content section:first-of-type::before {
+        display: none;
         padding-top: 0;
     }
 }

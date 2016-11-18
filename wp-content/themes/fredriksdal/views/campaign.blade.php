@@ -21,7 +21,7 @@
 }
 </style>
 
-<section id="campaign-wrapper" class="header-gutter">
+<section id="campaign-wrapper">
     <div class="container gutter gutter-top gutter-xl">
         <div class="grid">
             <div class="grid-xs-12">
