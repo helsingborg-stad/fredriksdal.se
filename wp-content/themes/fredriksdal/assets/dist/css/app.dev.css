@@ -1178,7 +1178,8 @@ figure.image-placeholder {
     @media (min-width: 959px) and (max-width: 1280px) {
       .is-child-theme.page-template-default:not(.home) #main-content {
         padding-top: 160px; } }
-  .is-child-theme .page-footer .box-border {
+  .is-child-theme .page-footer .box-border,
+  .is-child-theme .post-footer .box-border {
     border: 1px solid #b9c12d;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
     background: -webkit-linear-gradient(left, rgba(185, 193, 45, 0.1), rgba(185, 193, 45, 0));
