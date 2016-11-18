@@ -52,7 +52,7 @@
     }
 
     &.box-news-horizontal {
-        @media screen and #{$screen-below-xs} {
+        @media screen and #{$screen-below-sm} {
             text-align: center;
         }
         .box-image-container {
