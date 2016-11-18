@@ -33,6 +33,8 @@
     &:not(.box-news-horizontal) {
 
         .box-image-container {
+            margin-left: auto;
+            margin-right: auto;
             display: inline-block;
             text-align: center;
         }
