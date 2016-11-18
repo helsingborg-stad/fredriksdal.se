@@ -57,6 +57,15 @@
     }
 }
 
+.background-green + .footer-scroller {
+    background-color: $white;
+    .scroll-elevator {
+        a {
+            color: $black;
+        }
+    }
+}
+
 &.show-scroll-elevator .footer-scroller .scroll-elevator {
     transform: translateY(0);
 }

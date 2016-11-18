@@ -701,6 +701,10 @@ figure.image-placeholder {
     .is-child-theme .footer-scroller:not(.no-gradient) .scroll-elevator {
       background: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.8));
       background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8)); }
+  .is-child-theme .background-green + .footer-scroller {
+    background-color: #fff; }
+    .is-child-theme .background-green + .footer-scroller .scroll-elevator a {
+      color: #000; }
   .is-child-theme.show-scroll-elevator .footer-scroller .scroll-elevator {
     -webkit-transform: translateY(0);
             transform: translateY(0); }
