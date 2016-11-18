@@ -652,6 +652,8 @@ figure.image-placeholder {
       position: static !important;
       -webkit-transform: none;
               transform: none; }
+  .is-child-theme .page-template-campaign-blade .footer-scroller {
+    display: none; }
   .is-child-theme .footer-scroller {
     position: relative;
     background-color: #b9c12d;
