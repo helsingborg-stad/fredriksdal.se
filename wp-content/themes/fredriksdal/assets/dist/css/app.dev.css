@@ -740,7 +740,7 @@ figure.image-placeholder {
       text-align: left; }
     .is-child-theme footer.main-footer [class*="modularity-mod-"]:nth-child(3n+2) {
       text-align: center; }
-    .is-child-theme footer.main-footer [class*="modularity-mod-"] div:not(.grid-md-12) img {
+    .is-child-theme footer.main-footer [class*="modularity-mod-"]:not(.grid-md-12) img {
       width: 40%; }
     .is-child-theme footer.main-footer [class*="modularity-mod-"] p + h3 {
       margin-top: 30px; }
