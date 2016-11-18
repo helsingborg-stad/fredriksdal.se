@@ -114,3 +114,11 @@
         margin-top: 40px;
     }
 }
+
+#besoka {
+    .box.box-news .box-image-container {
+        &:after {
+            display: none;
+        }
+    }
+}

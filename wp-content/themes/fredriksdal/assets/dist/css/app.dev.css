@@ -1287,6 +1287,8 @@ figure.image-placeholder {
     max-width: 2000px; }
   .is-child-theme #main-content [class*="modularity-mod-"] + [class*="modularity-mod-"] {
     margin-top: 40px; }
+  .is-child-theme #besoka .box.box-news .box-image-container:after {
+    display: none; }
   .is-child-theme .btn, .is-child-theme.error404 #wrapper .main-container a,
   .is-child-theme .read-more {
     font-family: "Verlag A", "Verlag B";
