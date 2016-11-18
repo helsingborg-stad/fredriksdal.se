@@ -65,15 +65,15 @@
 .box-news {
 
     .box-image-container {
-        overflow: hidden;
 
         @media screen and #{$screen-sm-up} {
-            width: 250px;
+            max-width: 250px;
             margin-left: auto;
             margin-right: auto;
         }
 
         @media screen and #{$screen-xs} {
+            max-width: 150px;
             width: 150px;
             margin-left: auto;
             margin-right: auto;
@@ -81,8 +81,8 @@
 
         @media screen and #{$screen-sm-up} {
             img[src$=".svg"] {
-                width: 100%;
-                height: auto;
+                max-width: 120px;
+                width: 120px;
             }
         }
 
