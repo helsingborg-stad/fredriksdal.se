@@ -66,6 +66,8 @@
 
     .box-image-container {
         display: inline-block;
+        text-align: center;
+        font-size: 0;
 
         @media screen and #{$screen-sm-up} {
             max-width: 250px;
@@ -89,6 +91,7 @@
     }
 
     .box-image-container img {
+        display: inline-block;
         transition: transform 400ms;
         transform: scale(1) rotate(0deg);
     }
