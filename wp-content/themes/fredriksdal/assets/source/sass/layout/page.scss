@@ -17,6 +17,10 @@
     }
 }
 
+&.page-template-default #main-content {
+    @include header-margin;
+}
+
 .page-footer .box-border {
     border: 1px solid $palette-3;
     box-shadow: 0 5px 10px rgba(#000, .05);
