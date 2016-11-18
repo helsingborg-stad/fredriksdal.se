@@ -1276,6 +1276,9 @@ figure.image-placeholder {
       text-align: center;
       color: #000;
       display: block; }
+    @media screen and (max-width: 0) {
+      .is-child-theme .box.box-news.box-news-horizontal {
+        text-align: center; } }
     @media screen and (min-width: 767px) {
       .is-child-theme .box.box-news.box-news-horizontal .box-image-container {
         width: 20%; } }

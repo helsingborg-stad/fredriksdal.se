@@ -52,6 +52,9 @@
     }
 
     &.box-news-horizontal {
+        @media screen and #{$screen-below-xs} {
+            text-align: center;
+        }
         .box-image-container {
             @media screen and #{$screen-md-up} {
                 width: 20%;
