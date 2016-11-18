@@ -6,7 +6,7 @@
 <section class="background-white gutter gutter-vertical gutter-xl">
     <div class="container">
         <div class="grid gutter gutter-vertical gutter-xl">
-            <div class="grid-md-8 grid-lg-8 grid-sm-12">
+            <div class="grid-md-9 grid-lg-9 grid-sm-12">
                 <?php global $post; ?>
                 <article class="clearfix">
                     <h1 {!! $image ? 'class="hidden-md hidden-lg"' : '' !!}>
