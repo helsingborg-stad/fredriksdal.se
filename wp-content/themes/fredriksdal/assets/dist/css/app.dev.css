@@ -1092,6 +1092,9 @@ figure.image-placeholder {
   .is-child-theme #campaign-wrapper .sidebar-content-area-top [class*="grid-"] {
     margin: 0;
     padding: 0; }
+  @media screen and (min-width: 767px) {
+    .is-child-theme #campaign-wrapper {
+      font-size: 1.2vw; } }
   .is-child-theme h1.campaign-title {
     font-size: 2.2em; }
     @media screen and (min-width: 959px) {

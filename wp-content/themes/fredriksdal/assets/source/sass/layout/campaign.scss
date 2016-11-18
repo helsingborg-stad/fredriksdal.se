@@ -8,6 +8,12 @@
     padding: 0;
 }
 
+@media screen and (min-width: #{$screen-md-min}) {
+    #campaign-wrapper  {
+        font-size: 1.2vw;
+    }
+}
+
 h1.campaign-title {
     font-size: 2.2em;
 
