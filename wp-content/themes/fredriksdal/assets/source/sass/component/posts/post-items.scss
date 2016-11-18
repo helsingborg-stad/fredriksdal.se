@@ -66,8 +66,8 @@
 
     .box-image-container {
         display: inline-block;
-        max-width: none;
-        width: auto;
+        text-align: center;
+        font-size: 0;
 
         @media screen and #{$screen-sm-up} {
             margin-left: auto;
@@ -107,13 +107,15 @@
     */
 
     .box-image-container img {
+        display: inline-block;
         transition: transform 400ms;
         transform: scale(1) rotate(0deg);
     }
 }
 
 .box-news:hover {
-    .box-image-container img {
+    .box-image-container img,
+    .box-image-container:after {
         transform: scale(1.02) rotate(1deg);
     }
 }
@@ -130,5 +132,13 @@
 #main-content {
     [class*="modularity-mod-"] + [class*="modularity-mod-"] {
         margin-top: 40px;
+    }
+}
+
+#besoka {
+    .box.box-news .box-image-container {
+        &:after {
+            display: none;
+        }
     }
 }

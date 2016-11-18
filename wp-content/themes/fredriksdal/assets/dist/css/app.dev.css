@@ -656,6 +656,8 @@ figure.image-placeholder {
       position: static !important;
       -webkit-transform: none;
               transform: none; }
+  .is-child-theme.page-template-campaign-blade .footer-scroller {
+    display: none; }
   .is-child-theme .footer-scroller {
     position: relative;
     background-color: #b9c12d;
@@ -1094,6 +1096,13 @@ figure.image-placeholder {
   .is-child-theme #campaign-wrapper .sidebar-content-area-top [class*="grid-"] {
     margin: 0;
     padding: 0; }
+  @media screen and (min-width: 959px) {
+    .is-child-theme #campaign-wrapper {
+      font-size: 1.2vw; } }
+  .is-child-theme #campaign-wrapper article.full {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px; }
   .is-child-theme h1.campaign-title {
     font-size: 2.2em; }
     @media screen and (min-width: 959px) {
@@ -1279,8 +1288,8 @@ figure.image-placeholder {
     */ }
     .is-child-theme .box-news .box-image-container {
       display: inline-block;
-      max-width: none;
-      width: auto; }
+      text-align: center;
+      font-size: 0; }
       @media screen and (min-width: 469px) {
         .is-child-theme .box-news .box-image-container {
           margin-left: auto;
@@ -1291,17 +1300,21 @@ figure.image-placeholder {
           padding: 0;
           width: 120px; } }
     .is-child-theme .box-news .box-image-container img {
+      display: inline-block;
       -webkit-transition: -webkit-transform 400ms;
               transition: transform 400ms;
       -webkit-transform: scale(1) rotate(0deg);
               transform: scale(1) rotate(0deg); }
-  .is-child-theme .box-news:hover .box-image-container img {
+  .is-child-theme .box-news:hover .box-image-container img,
+  .is-child-theme .box-news:hover .box-image-container:after {
     -webkit-transform: scale(1.02) rotate(1deg);
             transform: scale(1.02) rotate(1deg); }
   .is-child-theme .accordion .accordion-content article p, .is-child-theme .accordion .accordion-content article ol, .is-child-theme .accordion .accordion-content article ul, .is-child-theme .accordion .accordion-content article li {
     max-width: 2000px; }
   .is-child-theme #main-content [class*="modularity-mod-"] + [class*="modularity-mod-"] {
     margin-top: 40px; }
+  .is-child-theme #besoka .box.box-news .box-image-container:after {
+    display: none; }
   .is-child-theme .btn, .is-child-theme.error404 #wrapper .main-container a,
   .is-child-theme .read-more {
     font-family: "Verlag A", "Verlag B";
