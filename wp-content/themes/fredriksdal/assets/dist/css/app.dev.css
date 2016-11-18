@@ -414,6 +414,43 @@ figure.image-placeholder {
     .is-child-theme.no-js #site-header #header-tabs {
       height: 0;
       opacity: 0; }
+  .is-child-theme .in-english a::before {
+    font-family: hbg-pricons;
+    line-height: 1;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: -15%;
+    content: "";
+    margin-right: 3px;
+    font-size: 1.3em; }
+  .is-child-theme .easy-read a::before {
+    font-family: hbg-pricons;
+    line-height: 1;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: -15%;
+    content: "";
+    margin-right: 3px; }
+  .is-child-theme .sign-language a::before {
+    font-family: hbg-pricons;
+    line-height: 1;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: -15%;
+    content: "";
+    margin-right: 3px; }
+  .is-child-theme a[href="#translate"]::before {
+    font-family: hbg-pricons;
+    line-height: 1;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: -15%;
+    content: "";
+    margin-right: 4px; }
   .is-child-theme .menu-icon:not(.open),
   .is-child-theme .menu-icon:before,
   .is-child-theme .menu-icon:after {
@@ -1215,19 +1252,18 @@ figure.image-placeholder {
     border: none; }
   @media screen and (min-width: 469px) {
     .is-child-theme .box-news .box-image-container {
-      max-width: 250px;
+      width: 120px;
       margin-left: auto;
       margin-right: auto; } }
   @media screen and (min-width: 0) and (max-width: 468px) {
     .is-child-theme .box-news .box-image-container {
-      max-width: 150px;
       width: 150px;
       margin-left: auto;
       margin-right: auto; } }
   @media screen and (min-width: 469px) {
     .is-child-theme .box-news .box-image-container img[src$=".svg"] {
-      max-width: 120px;
-      width: 120px; } }
+      width: 120px;
+      height: auto; } }
   .is-child-theme .box-news .box-image-container img {
     -webkit-transition: -webkit-transform 400ms;
             transition: transform 400ms;

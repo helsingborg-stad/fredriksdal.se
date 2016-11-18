@@ -67,13 +67,12 @@
     .box-image-container {
 
         @media screen and #{$screen-sm-up} {
-            max-width: 250px;
+            width: 120px;
             margin-left: auto;
             margin-right: auto;
         }
 
         @media screen and #{$screen-xs} {
-            max-width: 150px;
             width: 150px;
             margin-left: auto;
             margin-right: auto;
@@ -81,8 +80,8 @@
 
         @media screen and #{$screen-sm-up} {
             img[src$=".svg"] {
-                max-width: 120px;
                 width: 120px;
+                height: auto;
             }
         }
 
