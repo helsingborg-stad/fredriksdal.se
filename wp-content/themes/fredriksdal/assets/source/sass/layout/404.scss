@@ -1,0 +1,84 @@
+&.error404 {
+    background-color: $palette-3;
+    #wrapper {
+        background-color: $palette-3;
+        text-align: center;
+
+        .logotype {
+            display: none;
+        }
+
+        .main-container {
+
+            .grid:first-child {
+                padding-top: 0;
+            }
+
+            .grid [class^='grid-']{
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            h1 {
+                font-size: 16vw;
+                @media screen and #{$screen-md-up} {
+                    font-size: 11vw;
+                }
+            }
+
+            h1, .actions a, .actions a:before, p {
+                color: #000;
+            }
+
+            .actions {
+                text-align: center;
+            }
+
+            .actions > li {
+                @media screen and #{$screen-md-up} {
+                    padding: 0 10px;
+                    display: inline-block;
+                    width: 45%;
+                }
+            }
+
+            a {
+                @extend .btn;
+                appearance: none;
+                display: inline-block;
+                vertical-align: middle;
+                padding: 15px 15px;
+                background-color: rgba($palette-2,.8);
+                font-size: .9em;
+                font-weight: 600 !important;
+                color: #252525;
+                text-decoration: none;
+                cursor: pointer;
+                margin: 0;
+                font-weight: bold;
+                border-radius: 2px;
+                transition: background 200ms;
+
+                @media screen and #{$screen-md-up} {
+                    padding: 15px 25px;
+                }
+
+                &:not(.btn-primary) {
+                    display: block;
+                }
+
+                &.btn-primary {
+                    border: none;
+                }
+
+                &:before, i {
+                    display: none;
+                }
+
+                &:hover {
+                    background-color: rgba($palette-2,1);
+                }
+            }
+        }
+    }
+}
