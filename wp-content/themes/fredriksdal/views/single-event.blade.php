@@ -57,6 +57,11 @@
                         <div class="date">
                             <label><?php _e('Date', 'fredriksdal'); ?></label>
                             <span class="value">{{ mysql2date('Y-m-d', get_post_meta(get_the_id(), 'event-date-start', true)) }}</span>
+
+                            @if (mysql2date('Y-m-d', get_post_meta(get_the_id(), 'event-date-start', true)) !== mysql2date('Y-m-d', get_post_meta(get_the_id(), 'event-date-end', true)))
+                            till
+                            <span class="value">{{ mysql2date('Y-m-d', get_post_meta(get_the_id(), 'event-date-end', true)) }}</span>
+                            @endif
                         </div>
                         <div class="time clearfix">
                             <div class="time-start">
