@@ -18,8 +18,6 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
         'sidebar'
     ];
 
-    var AsyncScrollValueCache = 0;
-
     function AsyncContentLoader() {
         this.triggerAjaxOpenHash();
         this.watchAjaxClose();
