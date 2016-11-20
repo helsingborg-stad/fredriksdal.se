@@ -105,7 +105,9 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
 
     AsyncContentLoader.prototype.scrollToResult = function() {
         if(!this.isInViewport('#ajax-response')) {
-            jQuery('html, body').animate({scrollTop: Math.abs(jQuery("#ajax-response").offset().top -jQuery("#site-header").outerHeight())}, 700, jQuery.bez([0.815, 0.020, 0.080, 1.215]));
+            setTimeout(function(){
+                jQuery('html, body').animate({scrollTop: Math.abs(jQuery("#ajax-response").offset().top -jQuery("#site-header").outerHeight())}, 700, jQuery.bez([0.815, 0.020, 0.080, 1.215]));
+            }, 75);
         }
     };
 
