@@ -252,9 +252,9 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
     /* Scrolling */
 
     AsyncContentLoader.prototype.scrollToResult = function() {
-        //if(!this.isInViewport('#ajax-response')) {
+        if(!this.isInViewport('#ajax-response')) {
             jQuery('html, body').animate({scrollTop: Math.abs(jQuery("#ajax-response").offset().top -jQuery("#site-header").outerHeight())}, 700, jQuery.bez([0.815, 0.020, 0.080, 1.215]));
-        //}
+        }
     };
 
     /* Href */
@@ -292,12 +292,21 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
     };
 
     /* Is in viewport */
-    AsyncContentLoader.prototype.isInViewport = function(element) {
-        if(jQuery(element).offset().top < jQuery(document).scrollTop() + (jQuery(window).height() * 0.95)) {
-            return true;
+    AsyncContentLoader.prototype.isInViewport = function (el) {
+
+        if (typeof jQuery === "function" && el instanceof jQuery) {
+            el = el[0];
         }
-        return false;
-    };
+
+        var rect = el.getBoundingClientRect();
+
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
 
     /* Update hash */
     AsyncContentLoader.prototype.updateHash = function(hash) {
