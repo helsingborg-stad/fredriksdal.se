@@ -11,6 +11,16 @@ class Enqueue
         add_action('wp_enqueue_scripts', array($this, 'script'));
 
         add_filter('style_loader_tag', array($this, 'changeMedia'));
+        //add_filter('script_loader_tag', array($this, 'deferMaps'), 10, 2);
+    }
+
+    public function deferMaps($tag, $handle)
+    {
+        if ($handle === 'GoogleMaps') {
+            $tag = str_replace('></script>', ' defer></script>', $tag);
+        }
+
+        return $tag;
     }
 
     public function changeMedia($tag)
@@ -35,6 +45,7 @@ class Enqueue
      */
     public function script()
     {
-        wp_enqueue_script('Fredriksdal-js', get_stylesheet_directory_uri(). '/assets/dist/js/app.min.js', '', filemtime(get_stylesheet_directory() . '/assets/dist/js/app.min.js'), true);
+        wp_enqueue_script('Fredriksdal-js', get_stylesheet_directory_uri(). '/assets/dist/js/app.js', '', filemtime(get_stylesheet_directory() . '/assets/dist/js/app.min.js'), true);
+        wp_enqueue_script('GoogleMaps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCG3F8yqWittpGmEATWu08ftqD6cRiFIo0', 'Fredriksdal-js', '1.0.0', true);
     }
 }
