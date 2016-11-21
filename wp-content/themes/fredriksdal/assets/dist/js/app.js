@@ -163,7 +163,7 @@ Fredriksdal.AnchorScroll.AnchorScroll = (function ($) {
                     this.bindAnchorScroll(item,jQuery(item).attr('href'));
                 }
                 if(this.isAnchorLink(jQuery(item).attr('href')) && !this.anchorLinkExists(jQuery(item).attr('href')) && window.location.pathname !== '/') {
-                    jQuery(item).attr('href', location.protocol + "//" + window.location.hostname  + "/" + jQuery(item).attr('href'));
+                    jQuery(item).attr('href', jQuery(".logotype").attr('href')  + "/" + jQuery(item).attr('href'));
                 }
             }.bind(this));
         }.bind(this));
