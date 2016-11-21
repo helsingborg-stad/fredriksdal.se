@@ -7,6 +7,12 @@ function initMap() {
         center: {lat: 56.0574959, lng: 12.7108654},
         mapTypeId: 'roadmap',
         scrollwheel: false,
+        zoomControl: true,
+        mapTypeControl: false,
+        scaleControl: true,
+        streetViewControl: false,
+        rotateControl: true,
+        fullscreenControl: false
     });
 
     // Add park map
