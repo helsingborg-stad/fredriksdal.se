@@ -18,8 +18,6 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
         'sidebar'
     ];
 
-    var AsyncScrollValueCache = 0;
-
     function AsyncContentLoader() {
         this.triggerAjaxOpenHash();
         this.watchAjaxClose();
@@ -146,12 +144,9 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
     };
 
     /* Is in viewport */
-    AsyncContentLoader.prototype.isInViewport = function(element) {
-        if(jQuery(element).offset().top < jQuery(document).scrollTop() + (jQuery(window).height() * 0.85)) {
-            return true;
-        }
-        return false;
-    };
+    AsyncContentLoader.prototype.isInViewport = function (element) {
+        return jQuery(element).visible(true);
+    }
 
     /* Update hash */
     AsyncContentLoader.prototype.updateHash = function(hash) {
