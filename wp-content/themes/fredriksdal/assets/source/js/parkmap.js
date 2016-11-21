@@ -1,5 +1,5 @@
 function initMap() {
-    var srcImage = 'http://fredriksdal.dev/Fredriksdal_karta_V3.svg';
+    var srcImage = location.protocol + '//fredriksdal.dev/parkmap.svg';
 
     // Initialize the map
     var map = new google.maps.Map(document.getElementById('park-map'), {
