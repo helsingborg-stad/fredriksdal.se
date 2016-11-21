@@ -5,10 +5,8 @@ function initMap() {
     var map = new google.maps.Map(document.getElementById('park-map'), {
         zoom: 16,
         center: {lat: 56.0574959, lng: 12.7108654},
+        mapTypeId: 'roadmap',
         scrollwheel: false,
-        mapTypeId: 'satellite',
-        heading: 50,
-        tilt: 0
     });
 
     // Add park map
@@ -21,8 +19,6 @@ function initMap() {
         srcImage,
         imageBounds
     );
-
-    console.log(mapOverlay);
 
     mapOverlay.setMap(map);
 }
