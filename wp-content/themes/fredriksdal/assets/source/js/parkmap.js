@@ -5,7 +5,7 @@ function initMap() {
     var map = new google.maps.Map(document.getElementById('park-map'), {
         zoom: 16,
         center: {lat: 56.0574959, lng: 12.7108654},
-        mapTypeId: 'roadmap',
+        mapTypeId: 'satellite',
         scrollwheel: false,
         zoomControl: true,
         mapTypeControl: false,
@@ -17,8 +17,8 @@ function initMap() {
 
     // Add park map
     var imageBounds = new google.maps.LatLngBounds(
-        new google.maps.LatLng(56.05357504224284, 12.707661319732551),
-        new google.maps.LatLng(56.06076274162973, 12.71944792938234)
+        new google.maps.LatLng(56.052568, 12.707661),
+        new google.maps.LatLng(56.058804, 12.718831)
     );
 
     var mapOverlay = new google.maps.GroundOverlay(
