@@ -7,8 +7,8 @@ function initMap() {
         center: {lat: 56.0574959, lng: 12.7108654},
         scrollwheel: false,
         mapTypeId: 'satellite',
-        heading: 85,
-        tilt: 45
+        heading: 50,
+        tilt: 0
     });
 
     // Add park map
