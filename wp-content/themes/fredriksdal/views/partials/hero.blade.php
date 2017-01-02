@@ -12,7 +12,7 @@
 
     <a href="#main-content" class="scroll-down-please">
         <div class="scroll-down-please-icon"></div>
-        {{ __("Scroll down", 'fredriksdal') }}
+        <?php _e("Scroll down", 'fredriksdal'); ?>
     </a>
 </div>
 @else
