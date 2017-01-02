@@ -188,7 +188,7 @@
                 {
                     "param": "page_template",
                     "operator": "==",
-                    "value": "\/mnt\/persist\/www/docroot_fredriksdal_beta\/wp-content\/themes\/fredriksdal\/views\/campaign.blade.php"
+                    "value": "\/mnt\/persist\/www/docroot_fredriksdal\/wp-content\/themes\/fredriksdal\/views\/campaign.blade.php"
                 }
             ]
         ],
