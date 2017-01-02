@@ -2,7 +2,7 @@
     global $searchFormNode;
     $searchFormNode = ($searchFormNode) ? $searchFormNode+1 : 1;
 ?>
-<div class="search-top {!! apply_filters('Municipio/desktop_menu_breakpoint','hidden-sm'); !!}" id="search">
+<div class="search-top {!! apply_filters('Municipio/desktop_menu_breakpoint','hidden-sm') !!}" id="search">
     <button type="button" class="btn btn-plain pricon pricon-close toggle-search-top"><?php _e('Close', 'fredriksdal'); ?></button>
 
     <form method="get" action="{{ home_url() }}">
