@@ -1,0 +1,87 @@
+#campaign-wrapper .modularity-mod-slider {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#campaign-wrapper .sidebar-content-area-top [class*="grid-"] {
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (min-width: #{$screen-lg-min}) {
+    #campaign-wrapper  {
+        font-size: 1.2vw;
+    }
+}
+
+#campaign-wrapper article.full {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+}
+
+h1.campaign-title {
+    font-size: 2.2em;
+    font-weight: 800;
+
+    @media screen and #{$screen-lg-up} {
+        font-size: 5em;
+    }
+
+    @media screen and #{$screen-md-up} {
+        font-size: 4em;
+    }
+}
+
+h2.campaign-title {
+    font-size: 2em;
+    font-weight: 800;
+
+    @media screen and #{$screen-lg-up} {
+        font-size: 4em;
+    }
+
+    @media screen and #{$screen-md-up} {
+        font-size: 3em;
+    }
+}
+
+h3.campaign-title {
+    font-size: 1.8em;
+    font-weight: 800;
+
+    @media screen and #{$screen-lg-up} {
+        font-size: 3em;
+    }
+
+    @media screen and #{$screen-md-up} {
+        font-size: 2.5em;
+    }
+}
+
+h4.campaign-title {
+    font-size: 1.5em;
+    font-weight: 800;
+
+    @media screen and #{$screen-lg-up} {
+        font-size: 2em;
+    }
+}
+
+h5.campaign-title {
+    font-size: 1.5em;
+    font-weight: 800;
+
+    @media screen and #{$screen-lg-up} {
+        font-size: 1.2em;
+    }
+}
+
+h6.campaign-title {
+    font-size: 1em;
+    font-weight: 800;
+
+    @media screen and #{$screen-lg-up} {
+        font-size: 1em;
+    }
+}

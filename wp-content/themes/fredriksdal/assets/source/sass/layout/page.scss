@@ -1,0 +1,30 @@
+&.page:not(.home),
+&.single,
+&.search {
+    .footer-scroller  {
+        margin-top: 60px;
+    }
+
+    #main-content section:first-of-type::before {
+        display: block;
+        content: '';
+        @include header-margin;
+    }
+
+    .hero-featured-image + #main-content section:first-of-type::before {
+        display: none;
+        padding-top: 0;
+    }
+}
+
+&.page-template-default:not(.home) #main-content {
+    @include header-margin;
+}
+
+.page-footer .box-border,
+.post-footer .box-border {
+    border: 1px solid $palette-3;
+    box-shadow: 0 5px 10px rgba(#000, .05);
+    @include gradient(rgba($palette-3, .1), rgba($palette-3, 0), to right);
+    border-radius: 2px;
+}

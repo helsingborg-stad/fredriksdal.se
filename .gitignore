@@ -5,11 +5,12 @@
 /config/developer.php
 /config/multisite.php
 /config/salts.php
+/config/ssl.php
 
 # Municipio dependencies #
 ##########################
 wp/
-vendor/
+/vendor/
 wp-content/*
 !wp-content/mu-plugins
 !wp-content/mu-plugins/*

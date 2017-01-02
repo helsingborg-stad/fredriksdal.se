@@ -1,3 +1,15 @@
+
+.menu-icon:not(.open),
+.menu-icon:before,
+.menu-icon:after {
+    background-color: #fff;
+}
+
+.navbar .current-menu-item a:after,
+.navbar .current-page-ancestor a:after {
+    display: none;
+}
+
 .navbar-mainmenu {
     display: table;
     width: 100%;
@@ -8,41 +20,8 @@
         display: block;
     }
 
-    .logotype {
-        display: table-cell !important;
-        vertical-align: middle;
-        line-height: 1;
-
-        @media #{$screen-below-sm} {
-            padding-right: 20px;
-
-            img, svg {
-                width: 100% !important;
-                height: auto !important;
-                max-width: 345px;
-            }
-        }
-
-        @media screen and (max-width: #{$screen-lg-max}) and (min-width: #{$screen-lg-min}) {
-            margin: 5px auto;
-            display: inline-block !important;
-        }
-
-        img {
-            max-height: 30px;
-        }
-    }
-
-    .menu-trigger {
-        display: table-cell;
-        width: 1%;
-    }
-
     .nav {
-        display: table-cell;
-        vertical-align: middle;
-        text-align: right;
-        width: 100%;
+        text-align: left;
     }
 
     a {
@@ -50,17 +29,13 @@
     }
 }
 
-.nav-horizontal>li+li {
-    margin-left: 7px;
-}
-
 .navbar .current-page-ancestor a {
     text-decoration: none;
 }
 
 #main-menu {
-    text-align: right;
-
+    transition: margin 200ms;
+    margin-top: 0;
     @media screen and (max-width: #{$screen-lg-max}) and (min-width: #{$screen-lg-min}) {
         clear: both;
         display: block;
@@ -73,13 +48,12 @@
 
         > a {
             @include textrendering();
-            text-rendering: geometricPrecision;
             text-transform: uppercase;
             text-decoration: none;
-            font-weight: 400;
+            font-weight: 600;
             font-size: 1em;
             color: #fff;
-            margin: 10px 0;
+            margin: 0;
             padding: 3px 0;
             position: relative;
             transition: color 200ms, background 200ms, border 200ms, margin 200ms;
@@ -101,8 +75,7 @@
                 display: none !important;
             }
 
-            &:hover,
-            &:focus {
+            &:hover {
                 background: none;
                 color: #fff;
                 text-decoration: none;
@@ -120,28 +93,112 @@
     }
 }
 
-#site-header.liquid-header #main-menu,
-&:not(.home) #site-header #main-menu,
-&.no-js #site-header #main-menu {
-    li {
-        a {
-            color: $black;
-
-            &:before {
-                background-color: $black;
-            }
-        }
-
-        &.current-menu-item {
-            a {
-                color: $black;
-                border-color: $black;
-            }
-        }
-    }
-}
-
 .menu-item-translate,
 .menu-item-search {
     margin-left: 10px;
+}
+
+.menu-item-search {
+    padding: 0 5px;
+}
+
+#main-menu li.menu-item-social {
+    float: none !important;
+
+    @media (min-width: $screen-lg-max) {
+        float: right !important;
+    }
+
+    margin: 0;
+    padding: 0;
+    margin-left: 5px;
+
+    a:hover {
+        &::after,
+        &::before {
+            display: none;
+        }
+    }
+
+    svg {
+        max-height: 25px;
+        opacity: 1 !important;
+    }
+
+    svg,
+    svg * {
+        transition: 200ms all;
+        fill: #fff;
+    }
+}
+
+.liquid-header #main-menu li.menu-item-social {
+    svg,
+    svg * {
+        fill: $black;
+    }
+}
+
+#main-menu li.menu-item-social + li.menu-item-search {
+    padding-right: 3px !important;
+}
+
+@media (max-width: $screen-lg-max) {
+    #main-menu li.menu-item-search {
+        float: none;
+        margin-left: 0;
+    }
+
+    #main-menu li.menu-item-social + li.menu-item-social {
+        margin-left: 0;
+    }
+}
+
+.nav-aside {
+    border: none;
+
+    li {
+        border: none;
+    }
+
+    li + li {
+        border: none;
+    }
+
+    a {
+        position: relative;
+        font-family: $base-font-family;
+        font-weight: bold;
+        font-size: 1.2em;
+        padding: 3px 0;
+        transition: 200ms all;
+
+        &:hover {
+            color: $palette-3;
+            text-indent: 10px;
+        }
+    }
+
+    .current,
+    .current-menu-item,
+    .current-node {
+        background-color: transparent;
+    }
+
+    .sub-menu {
+        border-top: none;
+        border-left: 1px solid $creamy-darker;
+
+        a {
+            font-size: 1em;
+            padding-left: 15px;
+        }
+
+        .current-menu-item > a::before,
+        .current > a::before {
+            width: 1px;
+            left: -1px;
+            background-color: $palette-3;
+        }
+    }
 }

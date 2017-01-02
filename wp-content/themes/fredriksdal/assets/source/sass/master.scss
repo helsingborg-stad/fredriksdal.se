@@ -1,5 +1,5 @@
 html {
-    //background: $black; //Fixes issues of color in footer, when page is to "short".
+    background: $palette-2; //Fixes issues of color in footer, when page is to "short".
 }
 
 html.video-is-playing {
@@ -26,8 +26,41 @@ html.translated-ltr #site-header {
     display: none !important;
 }
 
+h1 {
+    font-size: 3em;
+
+    @media screen and (max-width: #{$screen-md-max}) {
+        font-size: 6vw;
+    }
+}
+
 h1, h2, h3, h4, h5, h6 {
-    font-weight: bold;
-    font-family: $base-font-family;
+    font-weight: 800;
+    font-family: $condensed-font-family;
     text-transform: uppercase;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: $palette-1;
+
+    a {
+        color: $palette-1;
+    }
+
+    a:hover, a:active, a:visited {
+        color: $gray-dark;
+    }
+
+    &.link-item {
+        left: 0;
+        padding-left: 0;
+    }
+
+    &.link-item:before {
+        display: none;
+    }
+}
+
+figure.image-placeholder {
+    padding-bottom: 100%;
 }

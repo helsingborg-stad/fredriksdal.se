@@ -1,0 +1,87 @@
+.hero.event-hero {
+    position: relative;
+    min-height: 0;
+
+    .slider {
+        min-height: 100%;
+    }
+
+    .slider-image {
+        background-position: center center;
+        height: 100%;
+    }
+}
+
+.event-information {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    padding: 20px 0 0 0;
+    color: #fff;
+
+    @include gradient(rgba(#000,0), rgba(#000, 1));
+
+    h1 {
+        display: inline-block;
+        vertical-align: middle;
+        color: #fff;
+        padding: 0;
+        margin: 0;
+        margin-left: .5em;
+    }
+}
+
+&.single-event article p:first-of-type {
+    margin-top: 0;
+}
+
+&.single-event article h1 {
+    margin-bottom: 15px;
+}
+
+&.single-event article h1 .date-box {
+    font-size: .5em;
+    background-color: $palette-3;
+    color: #fff;
+    margin-right: .5em;
+    vertical-align: middle;
+    position: relative;
+    margin-top: -10px;
+}
+
+&.single-event article footer {
+    margin-top: 30px;
+}
+
+time.date-box {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: rgba(#fff, 1);
+    color: $palette-3;
+    text-align: center;
+    line-height: 1;
+    font-family: $condensed-font-family;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    $size: 4em;
+    width: $size;
+    height: $size;
+
+    font-size: 1.5em;
+
+    div {
+        @include center();
+    }
+
+    span {
+        display: block;
+    }
+
+    .day {
+        font-size: 1.8em;
+    }
+}

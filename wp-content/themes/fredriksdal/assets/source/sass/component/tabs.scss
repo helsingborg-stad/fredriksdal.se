@@ -1,0 +1,31 @@
+#header-tabs {
+    text-align: right;
+    height: 37px;
+    overflow: hidden;
+    opacity: 1;
+    transition: opacity 200ms, height 200ms;
+
+    @media screen and (max-width: #{$screen-lg-max}) {
+        text-align: center;
+    }
+
+    ul.navbar {
+        background: none;
+        text-align: right;
+        display: inline-block;
+
+        li {
+            display: inline-block;
+
+            a {
+                display: block;
+                color: #fff;
+                padding: 0 7px;
+            }
+
+            &:last-child a {
+                padding-right: 0;
+            }
+        }
+    }
+}

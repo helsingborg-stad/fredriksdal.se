@@ -1,0 +1,65 @@
+nav.event-dates {
+    background-color: $palette-3;
+    font-family: $base-font-family;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 20px 0;
+    padding-top: 120px;
+    line-height: 1;
+
+    li + li {
+        margin-left: 30px;
+    }
+
+    @media (min-width: $screen-lg-min) and (max-width: $screen-lg-max) {
+        padding-top: 190px;
+    }
+
+    @media #{$screen-below-md} {
+        padding: 20px 0;
+        padding-top: 100px;
+
+        li {
+            display: block;
+
+            a {
+                padding: 10px 0;
+            }
+        }
+
+        li + li {
+            margin: 0;
+            border-top: 1px solid darken($palette-3, 5%);
+        }
+    }
+
+    a {
+        display: block;
+        color: $base-font-color;
+
+        &.active {
+            color: #fff;
+        }
+
+        .year {
+            display: block;
+            font-size: .8em;
+        }
+
+        &:hover {
+            text-decoration: none;
+
+            .months {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.box-index-event {
+    @media screen and (min-width: #{$screen-lg-max}) {
+        margin: 0 20px;
+        width: auto;
+    }
+}

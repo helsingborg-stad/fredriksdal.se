@@ -1,0 +1,76 @@
+.news-story {
+    position: relative;
+    min-height: 300px;
+    overflow: hidden;
+
+    h1 {
+        padding-bottom: 0;
+    }
+
+    &:first-of-type {
+        padding-top: 100px;
+        min-height: 400px;
+    }
+
+    > .container {
+        position: relative;
+        z-index: 2;
+        padding: 50px 0;
+    }
+
+    .read-more {
+        background-color: transparent;
+        display: inline-block !important;
+        border: none;
+        padding: 0;
+        color: $palette-3 !important;
+        font-family: $base-font-family;
+        font-weight: bold;
+        font-size: 1.3em;
+        letter-spacing: 1px;
+        transition: 300ms all;
+
+        &::before {
+            @include pricon('\EA2C');
+        }
+
+        &:hover {
+            text-indent: 10px;
+        }
+    }
+}
+
+section + .news-story {
+    margin-top: 0;
+}
+
+.background-gradient,
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 300px;
+    z-index: 1;
+}
+
+.background-gradient {
+    @include gradient(rgba($palette-3, .3), rgba($palette-3, 0));
+}
+
+.background-image {
+    background-size: cover;
+    background-position: center;
+    opacity: .3;
+
+    &::after {
+        display: block;
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 300px;
+        @include gradient(rgba(#fff, 1), rgba(#fff, 0), to top);
+    }
+}

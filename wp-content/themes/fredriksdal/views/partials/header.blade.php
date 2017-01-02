@@ -1,13 +1,5 @@
 <header id="site-header" class="site-header header-casual">
-    <div class="search-top {!! apply_filters('Municipio/desktop_menu_breakpoint','hidden-sm'); !!}" id="search">
-        <div class="container">
-            <div class="grid">
-                <div class="grid-sm-12">
-                    {{ get_search_form() }}
-                </div>
-            </div>
-        </div>
-    </div>
+    @include('partials.search.top-search')
 
     <nav class="navbar navbar-mainmenu">
         <div class="container">
@@ -15,6 +7,25 @@
                 <div class="grid-xs-12 {!! apply_filters('Municipio/header_grid_size','grid-md-12'); !!}">
 
                     {!! municipio_get_logotype(get_field('header_logotype', 'option'), get_field('logotype_tooltip', 'option')) !!}
+
+                    {!!
+                        wp_nav_menu(array(
+                            'theme_location' => 'header-tabs-menu',
+                            'container' => 'nav',
+                            'container_class' => 'hidden-print hidden-xs hidden-sm hidden-md',
+                            'container_id' => 'header-tabs',
+                            'menu_class' => 'small navbar',
+                            'menu_id' => 'help-menu-top-bar',
+                            'echo' => 'echo',
+                            'before' => '',
+                            'after' => '',
+                            'link_before' => '',
+                            'link_after' => '',
+                            'items_wrap' => '<ul class="%2$s">%3$s</ul>',
+                            'depth' => 1,
+                            'fallback_cb' => '__return_false'
+                        ));
+                    !!}
 
                     {!! $navigation['mainMenu'] !!}
                     <a href="#mobile-menu" data-target="#mobile-menu" class="{!! apply_filters('Municipio/mobile_menu_breakpoint','hidden-md hidden-lg'); !!} menu-trigger"><span class="menu-icon"></span></a>
