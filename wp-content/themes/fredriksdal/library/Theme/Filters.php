@@ -36,9 +36,6 @@ class Filters
         // Search
         add_filter('Municipio/search_result/date', array($this, 'eventDate'), 10, 2);
 
-        //Remove base-theme filters
-        add_action('init', array($this, 'unregisterMunicipioImageFilter'));
-
         add_filter('Modularity/Module/Classes', function ($classes, $moduleType, $sidebarArgs) {
             if ($key = array_search('box-filled', $classes)) {
                 unset($classes[$key]);
@@ -169,15 +166,6 @@ class Filters
         $date = date('Y-m-d \k\l\. H:i', strtotime(get_field('event-date-start', $post->ID)));
 
         return $date;
-    }
-
-    /**
-     * Unregister built in image sizes. Use modularity
-     * @return void
-     */
-    public function unregisterMunicipioImageFilter()
-    {
-        \Municipio\Theme\ImageSizeFilter::removeFilter('Modularity/slider/image', 'filterHeroImageSize', 100);
     }
 
     /**
