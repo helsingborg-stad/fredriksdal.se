@@ -833,6 +833,11 @@ figure.image-placeholder {
       margin-top: 40px;
       padding-bottom: 40px;
       margin-bottom: -60px; }
+      .is-child-theme .modularity-onepage-section .ajax-response p + [class*="mod-"],
+      .is-child-theme .modularity-onepage-section .ajax-response ul + [class*="mod-"],
+      .is-child-theme .modularity-onepage-section .ajax-response ol + [class*="mod-"],
+      .is-child-theme .modularity-onepage-section .ajax-response [class*="mod-"] + [class*="mod-"] {
+        margin-top: 40px; }
       .is-child-theme .modularity-onepage-section .ajax-response:before {
         background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3), transparent);
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent);
@@ -898,6 +903,8 @@ figure.image-placeholder {
                 padding: 20px; } }
           .is-child-theme .modularity-onepage-section .ajax-response article.frame table thead td + td, .is-child-theme .modularity-onepage-section .ajax-response article.frame table tbody td + td, .is-child-theme .modularity-onepage-section .ajax-response article.frame table tfoot td + td {
             border-left: none; }
+          .is-child-theme .modularity-onepage-section .ajax-response article.frame table thead tr + tr, .is-child-theme .modularity-onepage-section .ajax-response article.frame table tbody tr + tr, .is-child-theme .modularity-onepage-section .ajax-response article.frame table tfoot tr + tr {
+            border-top: none; }
       @media screen and (max-width: 768px) {
         .is-child-theme .modularity-onepage-section .ajax-response article.frame table {
           display: block; }

@@ -79,6 +79,13 @@
         padding-bottom: 40px;
         margin-bottom: -60px;
 
+        p + [class*="mod-"],
+        ul + [class*="mod-"],
+        ol + [class*="mod-"],
+        [class*="mod-"] + [class*="mod-"] {
+            margin-top: 40px;
+        }
+
         &:before {
             @include gradient(rgba(#000,.3),rgba(#000,0));
             content: "";
@@ -171,6 +178,10 @@
 
                     td + td {
                         border-left: none;
+                    }
+
+                    tr + tr {
+                        border-top: none;
                     }
                 }
 
