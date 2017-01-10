@@ -498,7 +498,8 @@ figure.image-placeholder {
                 transform: translate3d(0, 0, 0);
         text-transform: uppercase;
         text-decoration: none;
-        font-weight: 600;
+        font-weight: 800;
+        font-family: "Verlag Cond A", "Verlag Cond B";
         font-size: 1em;
         color: #fff;
         margin: 0;
