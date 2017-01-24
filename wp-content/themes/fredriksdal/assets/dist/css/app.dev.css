@@ -834,6 +834,8 @@ figure.image-placeholder {
       margin-top: 40px;
       padding-bottom: 40px;
       margin-bottom: -60px; }
+      .is-child-theme .modularity-onepage-section .ajax-response [class*="mod-"]:not([class*="grid-"]) {
+        max-width: none; }
       .is-child-theme .modularity-onepage-section .ajax-response p + [class*="mod-"],
       .is-child-theme .modularity-onepage-section .ajax-response ul + [class*="mod-"],
       .is-child-theme .modularity-onepage-section .ajax-response ol + [class*="mod-"],
