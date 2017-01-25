@@ -98,7 +98,11 @@ class Filters
             return $items;
         }
 
-        $socialIcons = (array) get_field('fredriksdal_social_icons', 'option');
+        $socialIcons = get_field('fredriksdal_social_icons', 'option');
+        if (!is_array($socialIcons)) {
+            return array();
+        }
+
         foreach ($socialIcons as $icon) {
             $svg = \Municipio\Helper\Svg::extract(get_attached_file($icon['icon']['id']));
             $items .= '<li class="menu-item-social"><a href="' . $icon['link'] . '"><span data-tooltip="' . $icon['tooltip'] .'">' . $svg . '</span></a></li>' . "\n";
