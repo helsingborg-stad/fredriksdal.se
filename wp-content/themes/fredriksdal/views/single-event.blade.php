@@ -84,7 +84,7 @@
                     @if (isset($occations) && count($occations) > 0)
                     <div class="box-ticket-occasions">
                         <p>
-                            <strong>{{ the_title() }}</strong> kan även ses på följande datum:
+                            <strong>{{ the_title() }}</strong> kan också besökas på:
                         </p>
                         <p>
                             <ul>
