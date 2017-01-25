@@ -761,18 +761,18 @@ figure.image-placeholder {
     @media screen and (max-width: 768px) {
       .is-child-theme footer.main-footer [class*="modularity-mod-"]:nth-child(3n) {
         -webkit-box-ordinal-group: 4;
-            -ms-flex-order: 3;
+        -webkit-order: 3;
                 order: 3;
         text-align: center; }
       .is-child-theme footer.main-footer [class*="modularity-mod-"]:nth-child(3n+1) {
         -webkit-box-ordinal-group: 3;
-            -ms-flex-order: 2;
+        -webkit-order: 2;
                 order: 2;
         text-align: center;
         margin-bottom: 30px; }
       .is-child-theme footer.main-footer [class*="modularity-mod-"]:nth-child(3n+2) {
         -webkit-box-ordinal-group: 2;
-            -ms-flex-order: 1;
+        -webkit-order: 1;
                 order: 1;
         margin-bottom: 40px; }
       .is-child-theme footer.main-footer [class*="modularity-mod-"] img {
@@ -1829,6 +1829,13 @@ figure.image-placeholder {
       .is-child-theme .box-ticket .tickets::after {
         right: 0;
         border-radius: 20px 0 0 20px; }
+  .is-child-theme .box-ticket-occasions {
+    background-color: #fff;
+    text-align: left;
+    border: 1px solid #e0dac5;
+    background-color: #fbfaf7;
+    border-top: none;
+    padding: 15px; }
   .is-child-theme .flickity-viewport .box-news.box-news-horizontal {
     display: block; }
     .is-child-theme .flickity-viewport .box-news.box-news-horizontal .box-image-container {

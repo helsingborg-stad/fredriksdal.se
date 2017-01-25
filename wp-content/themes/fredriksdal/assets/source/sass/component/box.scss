@@ -146,6 +146,15 @@
     }
 }
 
+.box-ticket-occasions {
+    background-color: #fff;
+    text-align: left;
+    border: 1px solid darken($palette-2, 5%);
+    background-color: lighten($palette-2, 10%);
+    border-top: none;
+    padding: 15px;
+}
+
 .flickity-viewport .box-news.box-news-horizontal {
     display: block;
 
