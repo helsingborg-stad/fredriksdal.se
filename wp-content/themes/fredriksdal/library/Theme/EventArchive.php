@@ -8,7 +8,7 @@ class EventArchive
     {
         add_action('pre_get_posts', array($this, 'modifyQuery'), 100);
         add_filter('posts_fields', array($this, 'sqlSelect'));
-        add_filter('posts_groupby', array($this, 'sqlGroupBy'));
+        //add_filter('posts_groupby', array($this, 'sqlGroupBy'));
         add_filter('nav_menu_link_attributes', array($this, 'filterEventCategoryLinks'), 10, 3);
         add_filter('nav_menu_css_class', array($this, 'setCurrentEventCategory'), 10, 2);
         add_filter('wp_nav_menu_items', array($this, 'filterEventItems'), 10, 2);
