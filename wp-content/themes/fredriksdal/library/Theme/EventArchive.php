@@ -99,7 +99,7 @@ class EventArchive
      */
     public function sqlSelect($select)
     {
-        if (is_admin()) {
+        if (is_admin() ||!is_post_type_archive($this->eventPostType)) {
             return $select;
         }
 
@@ -114,7 +114,7 @@ class EventArchive
      */
     public function sqlGroupBy($groupBy)
     {
-        if (is_admin()) {
+        if (is_admin() ||!is_post_type_archive($this->eventPostType)) {
             return $groupBy;
         }
 
