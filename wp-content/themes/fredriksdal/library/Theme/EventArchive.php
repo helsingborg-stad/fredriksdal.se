@@ -34,10 +34,6 @@ class EventArchive
 
     public function eventDateFilterJoin($join)
     {
-        if (!is_post_type_archive($this->eventPostType)) {
-            return false;
-        }
-
         global $wpdb;
 
         $from = null;
@@ -61,10 +57,6 @@ class EventArchive
 
     public function eventDateFilterWhere($where, $from, $to)
     {
-        if (!is_post_type_archive($this->eventPostType)) {
-            return false;
-        }
-
         global $wpdb;
 
         $from = null;
@@ -107,10 +99,6 @@ class EventArchive
      */
     public function sqlSelect($select)
     {
-        if (!is_post_type_archive($this->eventPostType)) {
-            return $select;
-        }
-
         if (is_admin()) {
             return $select;
         }
@@ -130,10 +118,6 @@ class EventArchive
             return $groupBy;
         }
 
-        if (!is_post_type_archive($this->eventPostType)) {
-            return $groupBy;
-        }
-
         global $wpdb;
         $groupBy = $wpdb->posts . '.post_title';
         return $groupBy;
@@ -146,11 +130,7 @@ class EventArchive
      */
     public function modifyQuery($query)
     {
-        if (!is_post_type_archive($this->eventPostType)) {
-            return $query;
-        }
-
-        if (is_admin() ||!$query->is_main_query()) {
+        if (is_admin() ||!$query->is_main_query() ||!is_post_type_archive($this->eventPostType)) {
             return $query;
         }
 
