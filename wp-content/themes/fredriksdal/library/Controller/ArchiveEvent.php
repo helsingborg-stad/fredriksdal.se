@@ -78,14 +78,20 @@ class ArchiveEvent extends \Municipio\Controller\BaseController
         return $quaters;
     }
 
-    public static function getEventDate($eventId)
+    public static function getEventDate($post)
     {
+        $eventId = $post->ID;
+
         $start = date('Y-m-d H:i:s', strtotime(get_field('event-date-start', $eventId)));
         $end = date('Y-m-d H:i:s', strtotime(get_field('event-date-end', $eventId)));
         $date = mysql2date('j F Y', $start, true) . ' kl. ' . mysql2date('H:i', $start, true) . ' till ' . mysql2date('j F Y', $end, true) . ' kl. ' . mysql2date('H:i', $end, true);
 
         if (date('Y-m-d', strtotime($start)) == date('Y-m-d', strtotime($end))) {
             $date = mysql2date('j F Y', $start, true) . ' kl. ' . mysql2date('H:i', $start, true) . ' - ' . mysql2date('H:i', $end, true);
+        }
+
+        if ($post->occations_count > 1) {
+            $date .= ' <span style="font-style:italic;">(och ' .  $post->occations_count  . ' andra tillfällen)</span>';
         }
 
         return $date;

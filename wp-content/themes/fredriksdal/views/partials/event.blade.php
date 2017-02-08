@@ -18,7 +18,7 @@ $featuredImage = wp_get_attachment_image_src(
         <div class="grid">
             <div class="grid-xs-12">
                 <time datetime="{{ get_post_meta(get_the_id(), 'event-date-start', true) }}">
-                    {{ \Fredriksdal\Controller\ArchiveEvent::getEventDate($post->ID) }}
+                    {!! \Fredriksdal\Controller\ArchiveEvent::getEventDate($post) !!}
                 </time>
 
                 <h1>{{ the_title() }}</h1>

@@ -79,6 +79,17 @@
         padding-bottom: 40px;
         margin-bottom: -60px;
 
+        [class*="mod-"]:not([class*="grid-"]) {
+            max-width: none;
+        }
+
+        p + [class*="mod-"],
+        ul + [class*="mod-"],
+        ol + [class*="mod-"],
+        [class*="mod-"] + [class*="mod-"] {
+            margin-top: 40px;
+        }
+
         &:before {
             @include gradient(rgba(#000,.3),rgba(#000,0));
             content: "";
@@ -153,7 +164,7 @@
             }
 
             table {
-
+                border: none;
                 table-layout: fixed;
 
                 thead, tbody, tfoot {
@@ -167,6 +178,14 @@
                         @media screen and (min-width: #{$screen-md-min}) {
                             padding: 20px;
                         }
+                    }
+
+                    td + td {
+                        border-left: none;
+                    }
+
+                    tr + tr {
+                        border-top: none;
                     }
                 }
 

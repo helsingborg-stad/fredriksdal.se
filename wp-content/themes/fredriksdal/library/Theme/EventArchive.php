@@ -4,11 +4,15 @@ namespace Fredriksdal\Theme;
 
 class EventArchive
 {
+
+    private $eventPostType = "event";
+
     public function __construct()
     {
         add_action('pre_get_posts', array($this, 'modifyQuery'), 100);
         add_filter('posts_fields', array($this, 'sqlSelect'));
         add_filter('posts_groupby', array($this, 'sqlGroupBy'));
+
         add_filter('nav_menu_link_attributes', array($this, 'filterEventCategoryLinks'), 10, 3);
         add_filter('nav_menu_css_class', array($this, 'setCurrentEventCategory'), 10, 2);
         add_filter('wp_nav_menu_items', array($this, 'filterEventItems'), 10, 2);
@@ -21,7 +25,7 @@ class EventArchive
 
     public function eventPostsModule($template, $module, $fields)
     {
-        if ($fields->posts_data_source !== 'posttype' || ($fields->posts_data_source === 'posttype' && $fields->posts_data_post_type !== 'event')) {
+        if ($fields->posts_data_source !== 'posttype' || ($fields->posts_data_source === 'posttype' && $fields->posts_data_post_type !== $this->eventPostType)) {
             return $template;
         }
 
@@ -95,7 +99,7 @@ class EventArchive
      */
     public function sqlSelect($select)
     {
-        if (is_admin()) {
+        if (is_admin() ||!is_post_type_archive($this->eventPostType)) {
             return $select;
         }
 
@@ -110,7 +114,7 @@ class EventArchive
      */
     public function sqlGroupBy($groupBy)
     {
-        if (is_admin()) {
+        if (is_admin() ||!is_post_type_archive($this->eventPostType)) {
             return $groupBy;
         }
 
@@ -126,7 +130,7 @@ class EventArchive
      */
     public function modifyQuery($query)
     {
-        if (is_admin() ||!$query->is_main_query()) {
+        if (is_admin() ||!$query->is_main_query() ||!is_post_type_archive($this->eventPostType)) {
             return $query;
         }
 

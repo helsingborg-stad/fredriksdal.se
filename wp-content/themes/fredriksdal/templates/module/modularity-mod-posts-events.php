@@ -62,7 +62,7 @@
                 <h5 class="box-index-title link-item"><?php echo apply_filters('the_title', $post->post_title); ?></h5>
                 <?php endif; ?>
 
-                <time class="datestring"><?php echo \Fredriksdal\Controller\ArchiveEvent::getEventDate($post->ID); ?></time>
+                <time class="datestring"><?php echo \Fredriksdal\Controller\ArchiveEvent::getEventDate($post); ?></time>
 
                 <?php if (in_array('excerpt', $fields->posts_fields)) : ?>
                 <?php echo isset(get_extended($post->post_content)['main']) ? apply_filters('the_excerpt', wp_trim_words(wp_strip_all_tags(strip_shortcodes(get_extended($post->post_content)['main'])), 30, null)) : ''; ?>

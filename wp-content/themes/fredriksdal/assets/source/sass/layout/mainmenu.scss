@@ -50,13 +50,15 @@
             @include textrendering();
             text-transform: uppercase;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 800;
+            font-family: $condensed-font-family;
             font-size: 1em;
             color: #fff;
             margin: 0;
             padding: 3px 0;
             position: relative;
             transition: color 200ms, background 200ms, border 200ms, margin 200ms;
+
 
             &:before {
                 content: "";

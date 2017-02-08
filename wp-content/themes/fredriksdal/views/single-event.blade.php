@@ -78,30 +78,26 @@
                     <div class="tickets">
                     @if (is_string(get_field('event-ticket_url')) && get_field('event-ticket_url'))
                         <a href="{{ get_field('event-ticket_url') }}" target="_blank">Köp biljetter</a>
-                    @else
-
                     @endif
                     </div>
-                </div>
 
-                @if (isset($occations) && count($occations) > 0)
-                    <div class="box box-filled background-white">
-                        <div class="box-content">
-                            <p>
-                                <strong>{{ the_title() }}</strong> kan även ses på följande datum:
-                            </p>
-                            <p>
-                                <ul>
-                                    @foreach ($occations as $occation)
-                                        <li>
-                                            <a class="link-item link-item-light" href="{{ get_permalink($occation->ID) }}">{{ \Municipio\Helper\Dt::dateWithTime(strtotime(get_field('event-date-start', $occation->ID))) }}</a>
-                                        </li>
-                                    @endforeach
-                                </ul>
-                            </p>
-                        </div>
+                    @if (isset($occations) && count($occations) > 0)
+                    <div class="box-ticket-occasions">
+                        <p>
+                            <strong>{{ the_title() }}</strong> kan också besökas på:
+                        </p>
+                        <p>
+                            <ul>
+                                @foreach ($occations as $occation)
+                                    <li>
+                                        <a class="link-item" href="{{ get_permalink($occation->ID) }}">{{ \Municipio\Helper\Dt::dateWithTime(strtotime(get_field('event-date-start', $occation->ID))) }}</a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </p>
                     </div>
-                @endif
+                    @endif
+                </div>
 
                 {!! dynamic_sidebar('right-sidebar') !!}
             </aside>
