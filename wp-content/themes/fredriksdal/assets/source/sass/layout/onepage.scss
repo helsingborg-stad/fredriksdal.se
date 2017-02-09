@@ -323,6 +323,10 @@
         }
     }
 
+    .flickity-enabled .flickity-page-dots {
+        position: static;
+    }
+
     .flickity-enabled.is-draggable {
         tap-highlight-color: transparent;
         user-select: none;
