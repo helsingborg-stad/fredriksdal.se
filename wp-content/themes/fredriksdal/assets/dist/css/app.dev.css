@@ -1861,6 +1861,8 @@ figure.image-placeholder {
     .is-child-theme .main-container .modularity-mod-posts .grid [class*="grid-"] {
       margin-top: 15px;
       margin-bottom: 15px; } }
+  .is-child-theme .box-news .box-image-container .spinner-container {
+    z-index: 99; }
   .is-child-theme .pagination-section {
     background-color: #e9e5d6;
     margin-top: 0;

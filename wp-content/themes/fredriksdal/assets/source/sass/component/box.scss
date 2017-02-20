@@ -189,3 +189,7 @@
         margin-bottom: $grid-gutter-lg/2;
     }
 }
+
+.box-news .box-image-container .spinner-container {
+    z-index: 99;
+}
