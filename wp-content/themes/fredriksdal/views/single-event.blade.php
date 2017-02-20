@@ -9,16 +9,20 @@
             <div class="grid-md-9 grid-lg-9 grid-sm-12">
                 <?php global $post; ?>
                 <article class="clearfix">
+                    <header>
                     <h1 {!! $image ? 'class="hidden-md hidden-lg"' : '' !!}>
-                        <time class="date-box" datetime="{{ get_post_meta(get_the_id(), 'event-date-start', true) }}">
-                            <div>
-                                <span class="day">{{ mysql2date('j', get_post_meta(get_the_id(), 'event-date-start', true)) }}</span>
-                                <span class="month">{{ mysql2date('M', get_post_meta(get_the_id(), 'event-date-start', true)) }}</span>
-                            </div>
-                        </time>
+                        <div class="tc">
+                            <time class="date-box" datetime="{{ get_post_meta(get_the_id(), 'event-date-start', true) }}">
+                                <div>
+                                    <span class="day">{{ mysql2date('j', get_post_meta(get_the_id(), 'event-date-start', true)) }}</span>
+                                    <span class="month">{{ mysql2date('M', get_post_meta(get_the_id(), 'event-date-start', true)) }}</span>
+                                </div>
+                            </time>
+                        </div>
 
-                        {{ the_title() }}
+                        <div class="tc">{{ the_title() }}</div>
                     </h1>
+                    </header>
 
                     @if (isset(get_extended($post->post_content)['main']) && strlen(get_extended($post->post_content)['main']) > 0 && isset(get_extended($post->post_content)['extended']) && strlen(get_extended($post->post_content)['extended']) > 0)
 
