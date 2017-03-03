@@ -1180,6 +1180,9 @@ figure.image-placeholder {
     @media screen and (min-width: 959px) {
       .is-child-theme h6.campaign-title {
         font-size: 1em; } }
+  .is-child-theme #campaign-wrapper .box-index-event {
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.1); }
   .is-child-theme.page:not(.home) .footer-scroller, .is-child-theme.single .footer-scroller, .is-child-theme.search .footer-scroller {
     margin-top: 60px; }
   .is-child-theme.page:not(.home) #main-content section:first-of-type::before, .is-child-theme.single #main-content section:first-of-type::before, .is-child-theme.search #main-content section:first-of-type::before {
