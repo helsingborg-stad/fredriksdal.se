@@ -991,6 +991,8 @@ figure.image-placeholder {
         position: absolute;
         width: 100%;
         height: 100%; }
+    .is-child-theme .modularity-onepage-section .flickity-enabled .flickity-page-dots {
+      position: static; }
     .is-child-theme .modularity-onepage-section .flickity-enabled.is-draggable {
       tap-highlight-color: transparent;
       -webkit-user-select: none;
@@ -1119,7 +1121,7 @@ figure.image-placeholder {
   @media screen and (min-width: 1280px) {
     .is-child-theme .box-index-event {
       margin: 0 20px;
-      width: auto; } }
+      width: 100%; } }
   .is-child-theme #campaign-wrapper .modularity-mod-slider {
     margin-bottom: 0;
     padding-bottom: 0; }
@@ -1841,6 +1843,26 @@ figure.image-placeholder {
     .is-child-theme .flickity-viewport .box-news.box-news-horizontal .box-image-container {
       display: block;
       float: left; }
+  .is-child-theme .main-container .box.box-index {
+    background-color: #f6f5f2; }
+  @media (min-width: 0) {
+    .is-child-theme .main-container .modularity-mod-posts .grid [class*="grid-"] {
+      margin-top: 0;
+      margin-bottom: 0; } }
+  @media (min-width: 469px) {
+    .is-child-theme .main-container .modularity-mod-posts .grid [class*="grid-"] {
+      margin-top: 5px;
+      margin-bottom: 5px; } }
+  @media (min-width: 767px) {
+    .is-child-theme .main-container .modularity-mod-posts .grid [class*="grid-"] {
+      margin-top: 15px;
+      margin-bottom: 15px; } }
+  @media (min-width: 959px) {
+    .is-child-theme .main-container .modularity-mod-posts .grid [class*="grid-"] {
+      margin-top: 15px;
+      margin-bottom: 15px; } }
+  .is-child-theme .box-news .box-image-container .spinner-container {
+    z-index: 99; }
   .is-child-theme .pagination-section {
     background-color: #e9e5d6;
     margin-top: 0;
@@ -1954,15 +1976,22 @@ figure.image-placeholder {
   .is-child-theme.single-event article p:first-of-type {
     margin-top: 0; }
   .is-child-theme.single-event article h1 {
-    margin-bottom: 15px; }
+    display: table;
+    margin-bottom: 15px;
+    line-height: 1; }
+    .is-child-theme.single-event article h1 div.tc {
+      display: table-cell;
+      vertical-align: top; }
+      .is-child-theme.single-event article h1 div.tc:first-of-type {
+        width: 1%;
+        padding-right: 15px; }
   .is-child-theme.single-event article h1 .date-box {
     font-size: .5em;
     background-color: #b9c12d;
     color: #fff;
     margin-right: .5em;
     vertical-align: middle;
-    position: relative;
-    margin-top: -10px; }
+    position: relative; }
   .is-child-theme.single-event article footer {
     margin-top: 30px; }
   .is-child-theme time.date-box {

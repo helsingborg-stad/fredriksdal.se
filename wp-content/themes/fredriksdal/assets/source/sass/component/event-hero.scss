@@ -38,7 +38,19 @@
 }
 
 &.single-event article h1 {
+    display: table;
     margin-bottom: 15px;
+    line-height: 1;
+
+    div.tc {
+        display: table-cell;
+        vertical-align: top;
+
+        &:first-of-type {
+            width: 1%;
+            padding-right: 15px;
+        }
+    }
 }
 
 &.single-event article h1 .date-box {
@@ -48,7 +60,6 @@
     margin-right: .5em;
     vertical-align: middle;
     position: relative;
-    margin-top: -10px;
 }
 
 &.single-event article footer {

@@ -99,11 +99,13 @@ class EventArchive
      */
     public function sqlSelect($select)
     {
-        if (is_admin() ||!is_post_type_archive($this->eventPostType)) {
+        if (is_admin() || !is_post_type_archive($this->eventPostType)) {
             return $select;
         }
 
-        $select .= ', COUNT(ID)-1 as occations_count';
+        global $wpdb;
+
+        $select .= ', COUNT(DISTINCT ' . $wpdb->posts . '.ID)-1 as occations_count';
         return $select;
     }
 
@@ -114,7 +116,7 @@ class EventArchive
      */
     public function sqlGroupBy($groupBy)
     {
-        if (is_admin() ||!is_post_type_archive($this->eventPostType)) {
+        if (is_admin() || !is_post_type_archive($this->eventPostType)) {
             return $groupBy;
         }
 
@@ -130,7 +132,7 @@ class EventArchive
      */
     public function modifyQuery($query)
     {
-        if (is_admin() ||!$query->is_main_query() ||!is_post_type_archive($this->eventPostType)) {
+        if (is_admin() ||!$query->is_main_query() || !is_post_type_archive($this->eventPostType)) {
             return $query;
         }
 
