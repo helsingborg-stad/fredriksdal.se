@@ -137,11 +137,9 @@ class EventArchive
         }
 
         if (is_post_type_archive('event')) {
-            // Meta query, upcoming events
-
 
             // Posts per page
-            $query->set('posts_per_page', 13);
+            $query->set('posts_per_page', 100);
 
             // Sort
             $query->set('meta_key', 'event-date-start');

@@ -43,11 +43,13 @@ class ArchiveEvent extends \Municipio\Controller\BaseController
             }
             $year = (int)$year;
 
-            $startDate = mysql2date('Y-m-d', date('Y-m-d', mktime(0, 0, 0, $startMonth, 1, $year)), true);
-            $endDate = mysql2date('Y-m-d', date('Y-m-t', mktime(0, 0, 0, $endMonth, 1, $year)), true);
+            //Start date
+            $startDate  = mysql2date('Y-m-d', date('Y-m-d', mktime(0, 0, 0, $startMonth, 1, $year)), true);
+            $endDate    = mysql2date('Y-m-d', date('Y-m-t', mktime(0, 0, 0, $endMonth, 1, $year)), true);
 
+            //End date
             $startMonth = mysql2date('F', date('Y-m-d', mktime(0, 0, 0, $startMonth, 1, $year)), true);
-            $endMonth = mysql2date('F', date('Y-m-d', mktime(0, 0, 0, $endMonth, 1, $year)), true);
+            $endMonth   = mysql2date('F', date('Y-m-d', mktime(0, 0, 0, $endMonth, 1, $year)), true);
 
             $isCurrent = false;
             if (date('Y-m-d') >= $startDate && date('Y-m-d') <= $endDate) {
@@ -68,6 +70,7 @@ class ArchiveEvent extends \Municipio\Controller\BaseController
                 'is_current' => $isCurrent,
                 'is_active' => $isActive
             );
+
         }
 
         uasort($quaters, function ($a, $b) {
