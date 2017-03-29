@@ -60,13 +60,23 @@
                     <div class="box-content">
                         <div class="date">
                             <label><?php _e('Date', 'fredriksdal'); ?></label>
-                            <span class="value">{{ mysql2date('Y-m-d', get_post_meta(get_the_id(), 'event-date-start', true)) }}</span>
+
+                            @if (count($occations) > 0)
+                                <span class="value">{{ mysql2date('Y-m-d', get_post_meta(get_the_id(), 'event-date-start', true)) }}</span>
+                            @elseif(count($passedOccations) > 0)
+                                <span class="value" style="text-decoration: line-through;">{{ mysql2date('Y-m-d', $passedOccations[0]) }}</span>
+                            @else
+                                <span class="value">Passerat</span>
+                            @endif
 
                             @if (mysql2date('Y-m-d', get_post_meta(get_the_id(), 'event-date-start', true)) !== mysql2date('Y-m-d', get_post_meta(get_the_id(), 'event-date-end', true)))
                             till
                             <span class="value">{{ mysql2date('Y-m-d', get_post_meta(get_the_id(), 'event-date-end', true)) }}</span>
                             @endif
+
                         </div>
+
+                        @if (count($occations) > 0)
                         <div class="time clearfix">
                             <div class="time-start">
                                 <label><?php _e('From', 'fredriksdal'); ?></label>
@@ -77,6 +87,8 @@
                                 <div class="value">{{ mysql2date('H:i', get_post_meta(get_the_id(), 'event-date-end', true)) }}</div>
                             </div>
                         </div>
+
+                        @endif
                     </div>
 
                     <div class="tickets">
@@ -85,13 +97,20 @@
                     @endif
                     </div>
 
-                    @if (isset($occations) && count($occations) > 0)
+                    <?php //var_dump($passedOccations); ?>
+
+                    @if (isset($occations) && isset($passedOccations) && (count($occations) > 0 || count($passedOccations) > 0 ))
                     <div class="box-ticket-occasions">
                         <p>
                             <strong>{{ the_title() }}</strong> kan också besökas på:
                         </p>
                         <p>
                             <ul>
+                                @foreach ($passedOccations as $occation)
+                                    <li>
+                                        <span style="text-decoration: line-through;" class="link-item" >{{ \Municipio\Helper\Dt::dateWithTime(strtotime(get_field('event-date-start', $occation->ID))) }}</span>
+                                    </li>
+                                @endforeach
                                 @foreach ($occations as $occation)
                                     <li>
                                         <a class="link-item" href="{{ get_permalink($occation->ID) }}">{{ \Municipio\Helper\Dt::dateWithTime(strtotime(get_field('event-date-start', $occation->ID))) }}</a>
