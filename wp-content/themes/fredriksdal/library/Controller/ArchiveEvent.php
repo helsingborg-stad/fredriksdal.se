@@ -97,6 +97,10 @@ class ArchiveEvent extends \Municipio\Controller\BaseController
             $date .= ' <span style="font-style:italic;">(och ' .  $post->occations_count  . ' andra tillfällen)</span>';
         }
 
+        if ($post->occations_count == 1) {
+            $date .= ' <span style="font-style:italic;">(och ' .  $post->occations_count  . ' annat tillfälle)</span>';
+        }
+
         return $date;
     }
 }
