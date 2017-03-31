@@ -33,17 +33,20 @@ class ArchiveEvent extends \Municipio\Controller\BaseController
         );
     }
 
-    public function getFilterMenu()
+    public function getFilterMenu($theme_location = 'event-categories')
     {
-        $links = wp_get_nav_menu_items('Evenemangsmeny');
+        if (($theme_location) && ($locations = get_nav_menu_locations()) && isset($locations[$theme_location])) {
+            $links = wp_get_nav_menu_items(get_term($locations[$theme_location], 'nav_menu')->term_id);
+        }
 
-        foreach ($links as $key => $item) {
-            $links[$key]->link = "?from=" . sanitize_text_field($_GET['from']) . "&to=" . sanitize_text_field($_GET['to']) . "&filter=".sanitize_title($item->title);
+        if (is_array($links) && !empty($links)) {
+            foreach ((array) $links as $key => $item) {
+                $links[$key]->link = "?from=" . sanitize_text_field($_GET['from']) . "&to=" . sanitize_text_field($_GET['to']) . "&filter=".sanitize_title($item->title);
 
-            if ($_GET['filter'] == sanitize_title($item->title)) {
-                $links[$key]->classes = $links[$key]->classes . " current_page_item";
+                if ($_GET['filter'] == sanitize_title($item->title)) {
+                    $links[$key]->classes = $links[$key]->classes . " current_page_item";
+                }
             }
-
         }
 
         return $links;
