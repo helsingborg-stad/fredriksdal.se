@@ -1,52 +1,90 @@
 
-#show-filters.navbar-event-categories {
-    background: none;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 99;
-    animation: fdsseq .2s forwards;
-    @include gradient(rgba(#fff,0), rgba(#fff,1));
+ul#event-categories {
+    display: block;
+    text-align: left;
+    padding: 10px 0 0 0;
+    font-size: .86em;
+}
 
-    ul {
-        display: block;
-        text-align: center;
-        padding: 20px 0 10px 0;
-    }
+ul#event-categories li {
+    opacity: 0;
+    display: inline-block;
+    animation: fdsseq .5s forwards;
 
-    ul li {
-        opacity: 0;
-        display: inline-block;
-        margin-bottom: 10px;
-        animation: fdsseq .5s forwards;
-
-        @for $i from 1 through 20 {
-            &:nth-child(#{$i}) {
-                animation-delay: unquote(".")#{$i}s;
-            }
+    @for $i from 1 through 20 {
+        &:nth-child(#{$i}) {
+            animation-delay: unquote(".")#{$i}s;
         }
-
     }
 
-    ul li a {
-        display: block;
-        background-color: rgba($palette-3,.95);
-        padding: 3px 13px;
-        font-weight: bold;
+    &:not(:first-child) a:before:not(.close-me) {
+        content: "#";
+    }
+
+    a.close-me {
+        display: inline-block;
+    }
+
+    &.current_page_item  a {
         color: $palette-1;
+        font-weight: bold;
+
+        i {
+            color: $palette-3;
+        }
     }
 
-    ul li ul {
-        display: none;
+    &:not(.current_page_item) a {
+        color: lighten($palette-1,20%);
+    }
+
+}
+
+ul#event-categories li a {
+    display: inline-block;
+    padding: 0;
+    color: $palette-1;
+}
+
+ul#event-categories li ul {
+    display: none;
+}
+
+
+#archive-filter {
+
+    .max-width-container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    input[name="search"],
+    input[type="submit"] {
+        border: none;
+        height: 50px;
+        font-weight: bold;
+        line-height: 40px;
+        font-size: 1.1em;
+    }
+
+    input[name="search"] {
+        background: $palette-2;
+
+        &:placehoder,
+        &::placeholder {
+            color: #000;
+            font-weight: bold;
+        }
+    }
+
+    input[type="submit"] {
+        background: $palette-3;
     }
 }
 
 @keyframes fdsseq {
    from {
     opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
   }
 
   to {

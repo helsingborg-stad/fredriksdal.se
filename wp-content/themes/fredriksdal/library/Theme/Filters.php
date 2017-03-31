@@ -19,20 +19,6 @@ class Filters
         add_filter('Municipio/main_menu/items', array($this, 'addSocialIconsToMenu'), 10, 2);
         add_filter('excerpt_more', array($this, 'exerptMore'));
 
-        /*
-        add_filter('Modularity/Module/Classes', function ($classes, $postType, $args) {
-            if ($postType !== 'mod-posts') {
-                return $classes;
-            }
-
-            if ($key = array_search('box-news-horizontal', $classes)) {
-                unset($classes[$key]);
-            }
-
-            return $classes;
-        }, 10, 3);
-        */
-
         // Search
         add_filter('Municipio/search_result/date', array($this, 'eventDate'), 10, 2);
 

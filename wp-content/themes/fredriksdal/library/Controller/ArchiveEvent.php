@@ -15,6 +15,65 @@ class ArchiveEvent extends \Municipio\Controller\BaseController
     public function init()
     {
         $this->data['quaters'] = $this->getQuaters();
+        $this->data['links'] = $this->getFilterMenu();
+        $this->data['baseLink'] = $this->getBaseLink();
+        $this->redirectToQuarter();
+    }
+
+
+    public function getBaseLink()
+    {
+        return './?' . http_build_query(
+            array_filter(
+                array(
+                    'from' => sanitize_text_field($_GET['from']),
+                    'to' => sanitize_text_field($_GET['to'])
+                )
+            )
+        );
+    }
+
+    public function getFilterMenu()
+    {
+        $links = wp_get_nav_menu_items('Evenemangsmeny');
+
+        foreach ($links as $key => $item) {
+            $links[$key]->link = "?from=" . sanitize_text_field($_GET['from']) . "&to=" . sanitize_text_field($_GET['to']) . "&filter=".sanitize_title($item->title);
+
+            if ($_GET['filter'] == sanitize_title($item->title)) {
+                $links[$key]->classes = $links[$key]->classes . " current_page_item";
+            }
+
+        }
+
+        return $links;
+    }
+
+    /**
+     * Redirect to correct page.
+     * @return bool
+     */
+    public function redirectToQuarter()
+    {
+        if (isset($_GET['from']) || isset($_GET['to'])) {
+            return false;
+        }
+
+        foreach ((array) $this->getQuaters() as $quarter) {
+            if ($quarter->is_current) {
+                wp_redirect('?' . http_build_query(
+                    array_filter(
+                        array(
+                            'from' => $quarter->start_date,
+                            'to' => $quarter->end_date,
+                            'filter' => get_query_var('filter')
+                        )
+                    )
+                ));
+            }
+        }
+
+        return true;
     }
 
     /**
@@ -28,8 +87,8 @@ class ArchiveEvent extends \Municipio\Controller\BaseController
         $filter = null;
         if (isset($_GET['from']) && isset($_GET['to'])) {
             $filter = array(
-                'from' => $_GET['from'],
-                'to' => $_GET['to']
+                'from' => sanitize_text_field($_GET['from']),
+                'to' => sanitize_text_field($_GET['to'])
             );
         }
 
@@ -68,9 +127,13 @@ class ArchiveEvent extends \Municipio\Controller\BaseController
                 'end_date' => $endDate,
                 'end_month' => $endMonth,
                 'is_current' => $isCurrent,
-                'is_active' => $isActive
-            );
-
+                'is_active' => $isActive,
+                'url' => '?' . http_build_query(array(
+                        'from' => $startDate,
+                        'to' => $endDate,
+                        'filter' => sanitize_text_field($_GET['filter'])
+                    ))
+                );
         }
 
         uasort($quaters, function ($a, $b) {
@@ -95,6 +158,10 @@ class ArchiveEvent extends \Municipio\Controller\BaseController
 
         if ($post->occations_count > 1) {
             $date .= ' <span style="font-style:italic;">(och ' .  $post->occations_count  . ' andra tillfällen)</span>';
+        }
+
+        if ($post->occations_count == 1) {
+            $date .= ' <span style="font-style:italic;">(och ' .  $post->occations_count  . ' annat tillfälle)</span>';
         }
 
         return $date;
