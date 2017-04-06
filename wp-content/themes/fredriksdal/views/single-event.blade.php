@@ -76,7 +76,7 @@
 
                         </div>
 
-                        @if (count($occations) > 0)
+                        @if (!empty(get_post_meta(get_the_id(), 'event-date-start', true)))
                         <div class="time clearfix">
                             <div class="time-start">
                                 <label><?php _e('From', 'fredriksdal'); ?></label>
@@ -87,7 +87,6 @@
                                 <div class="value">{{ mysql2date('H:i', get_post_meta(get_the_id(), 'event-date-end', true)) }}</div>
                             </div>
                         </div>
-
                         @endif
                     </div>
 
