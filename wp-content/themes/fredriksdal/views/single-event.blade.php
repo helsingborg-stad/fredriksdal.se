@@ -61,7 +61,7 @@
                         <div class="date">
                             <label><?php _e('Date', 'fredriksdal'); ?></label>
 
-                            @if (count($occations) > 0)
+                            @if (strtotime(get_post_meta(get_the_id(), 'event-date-end', true)) >= time())
                                 <span class="value">{{ mysql2date('Y-m-d', get_post_meta(get_the_id(), 'event-date-start', true)) }}</span>
                             @elseif(count($passedOccations) > 0)
                                 <span class="value" style="text-decoration: line-through;">{{ mysql2date('Y-m-d', $passedOccations[0]) }}</span>
