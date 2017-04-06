@@ -139,9 +139,16 @@ class ArchiveEvent extends \Municipio\Controller\BaseController
                 );
         }
 
-        uasort($quaters, function ($a, $b) {
-            return $a['year'] > $b['year'];
-        });
+        //Create sorting cols
+        $year = array();
+        $date = array();
+        foreach ($data as $key => $row) {
+            $year[$key]     = $row['year'];
+            $date[$key]     = $row['start_date'];
+        }
+
+        //Sort
+        array_multisort($year, SORT_ASC, $date, SORT_ASC, $quaters);
 
         $quaters = json_decode(json_encode($quaters));
         return $quaters;
