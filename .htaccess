@@ -66,5 +66,5 @@
 
 # Prevent clickjacking attempts
 <IfModule mod_headers.c>
-    Header always append X-Frame-Options SAMEORIGIN
+    #Header always append X-Frame-Options SAMEORIGIN
 </IfModule>
