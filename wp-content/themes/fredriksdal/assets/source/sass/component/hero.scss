@@ -32,14 +32,6 @@
         }
     }
 
-    .modularity-mod-slider {
-        padding-top: 56.25%;
-        position: relative;
-        .slider {
-            @include cover();
-        }
-    }
-
     &.sidebar-slider-area time {
         font-family: $condensed-font-family;
         padding: 7px 12px;

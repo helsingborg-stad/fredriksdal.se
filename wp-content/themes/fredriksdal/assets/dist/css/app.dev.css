@@ -1395,15 +1395,6 @@ figure.image-placeholder {
         .is-child-theme .hero .has-text-block .slider-image:before,
         .is-child-theme .hero .has-text-block .slider-video:before {
           background: rgba(0, 0, 0, 0.4); } }
-    .is-child-theme .hero .modularity-mod-slider {
-      padding-top: 56.25%;
-      position: relative; }
-      .is-child-theme .hero .modularity-mod-slider .slider {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0; }
     .is-child-theme .hero.sidebar-slider-area time {
       font-family: "Verlag Cond A", "Verlag Cond B";
       padding: 7px 12px;
