@@ -1,0 +1,54 @@
+[{
+    "key": "group_581b2c1c5fb02",
+    "title": "OnePage Menu",
+    "fields": [
+        {
+            "key": "field_581b2c28304ea",
+            "label": "Link to menu item",
+            "name": "section_menu_item",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "": "No link",
+                "omoss": "Om Fredriksdal",
+                "karta": "Karta",
+                "besoka": "Bes\u00f6ka",
+                "handla": "\u00c4ta och handla",
+                "boka": "Boka"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "placeholder": "",
+            "disabled": 0,
+            "readonly": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "onepage"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": ""
+}]
+

@@ -1,0 +1,198 @@
+<?php 
+
+if (function_exists('acf_add_local_field_group')) {
+    acf_add_local_field_group(array(
+    'key' => 'group_58243e71da006',
+    'title' => __('Campaign settings', 'fredriksdal'),
+    'fields' => array(
+        0 => array(
+            'key' => 'field_58243e81c3c19',
+            'label' => 'Background color',
+            'name' => 'background_color',
+            'type' => 'color_picker',
+            'instructions' => '',
+            'required' => 1,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => 50,
+                'class' => '',
+                'id' => '',
+            ),
+            'default_value' => '#B9C12D',
+        ),
+        1 => array(
+            'key' => 'field_58244191ad1bc',
+            'label' => 'Text color',
+            'name' => 'text_color',
+            'type' => 'color_picker',
+            'instructions' => '',
+            'required' => 1,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => 50,
+                'class' => '',
+                'id' => '',
+            ),
+            'default_value' => '#FFFFFF',
+        ),
+        2 => array(
+            'key' => 'field_582447b2b2c3c',
+            'label' => 'Title type',
+            'name' => 'title',
+            'type' => 'radio',
+            'instructions' => '',
+            'required' => 1,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'choices' => array(
+            ),
+            'allow_null' => 0,
+            'other_choice' => 0,
+            'save_other_choice' => 0,
+            'default_value' => '',
+            'layout' => 'horizontal',
+            'return_format' => 'value',
+        ),
+        3 => array(
+            'key' => 'field_582447e9b2c3d',
+            'label' => 'Title rows',
+            'name' => 'title_custom',
+            'type' => 'repeater',
+            'instructions' => '',
+            'required' => 1,
+            'conditional_logic' => array(
+                0 => array(
+                    0 => array(
+                        'field' => 'field_582447b2b2c3c',
+                        'operator' => '==',
+                        'value' => 'custom',
+                    ),
+                ),
+            ),
+            'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'collapsed' => '',
+            'min' => 1,
+            'max' => '',
+            'layout' => 'table',
+            'button_label' => 'Lägg till rad',
+            'sub_fields' => array(
+                0 => array(
+                    'key' => 'field_58244805b2c3e',
+                    'label' => 'Title',
+                    'name' => 'title',
+                    'type' => 'text',
+                    'instructions' => '',
+                    'required' => 1,
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'default_value' => '',
+                    'placeholder' => '',
+                    'prepend' => '',
+                    'append' => '',
+                    'maxlength' => '',
+                    'readonly' => 0,
+                    'disabled' => 0,
+                ),
+                1 => array(
+                    'key' => 'field_58244814b2c3f',
+                    'label' => 'Size',
+                    'name' => 'size',
+                    'type' => 'select',
+                    'instructions' => '',
+                    'required' => 1,
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                        'width' => 5,
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'choices' => array(
+                    ),
+                    'default_value' => array(
+                    ),
+                    'allow_null' => 0,
+                    'multiple' => 0,
+                    'ui' => 0,
+                    'ajax' => 0,
+                    'return_format' => 'value',
+                    'placeholder' => '',
+                    'disabled' => 0,
+                    'readonly' => 0,
+                ),
+                2 => array(
+                    'key' => 'field_582449852b22f',
+                    'label' => 'Style',
+                    'name' => 'style',
+                    'type' => 'checkbox',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'choices' => array(
+                    ),
+                    'default_value' => array(
+                    ),
+                    'layout' => 'horizontal',
+                    'toggle' => 0,
+                    'return_format' => 'value',
+                ),
+            ),
+        ),
+        4 => array(
+            'key' => 'field_5824470b776e0',
+            'label' => 'Title alignment',
+            'name' => 'title_alignment',
+            'type' => 'radio',
+            'instructions' => '',
+            'required' => 1,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'choices' => array(
+            ),
+            'allow_null' => 0,
+            'other_choice' => 0,
+            'save_other_choice' => 0,
+            'default_value' => '',
+            'layout' => 'horizontal',
+            'return_format' => 'value',
+        ),
+    ),
+    'location' => array(
+        0 => array(
+            0 => array(
+                'param' => 'page_template',
+                'operator' => '==',
+                'value' => 'campaign.blade.php',
+            ),
+        ),
+    ),
+    'menu_order' => 0,
+    'position' => 'normal',
+    'style' => 'default',
+    'label_placement' => 'top',
+    'instruction_placement' => 'label',
+    'hide_on_screen' => '',
+    'active' => 1,
+    'description' => '',
+));
+}

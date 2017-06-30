@@ -17,4 +17,17 @@ $loader->addPrefix('Fredriksdal', FREDRIKSDAL_PATH . 'library');
 $loader->addPrefix('Fredriksdal', FREDRIKSDAL_PATH . 'source/php/');
 $loader->register();
 
+add_action('init', function () {
+    $acfExportManager = new \AcfExportManager\AcfExportManager();
+    $acfExportManager->setTextdomain('fredriksdal');
+    $acfExportManager->setExportFolder(FREDRIKSDAL_PATH . 'library/AcfFields');
+    $acfExportManager->autoExport(array(
+        'fredriksdal-menu'             => 'group_581b2c1c5fb02',
+        'fredriksdal-section'          => 'group_5810c4152dd10',
+        'fredriksdal-campaign'         => 'group_58243e71da006',
+        'fredriksdal-options'          => 'group_5825cca7a2d15',
+    ));
+    $acfExportManager->import();
+});
+
 new Fredriksdal\App();
