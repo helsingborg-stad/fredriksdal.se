@@ -86,7 +86,7 @@ class Filters
 
         $socialIcons = get_field('fredriksdal_social_icons', 'option');
         if (!is_array($socialIcons)) {
-            return array();
+            return $items;
         }
 
         foreach ($socialIcons as $icon) {

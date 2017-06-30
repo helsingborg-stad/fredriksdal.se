@@ -8,7 +8,7 @@
 
                     {!! municipio_get_logotype(get_field('header_logotype', 'option'), get_field('logotype_tooltip', 'option')) !!}
 
-                    {!!
+                    <?php var_dump(
                         wp_nav_menu(array(
                             'theme_location' => 'header-tabs-menu',
                             'container' => 'nav',
@@ -25,7 +25,7 @@
                             'depth' => 1,
                             'fallback_cb' => '__return_false'
                         ));
-                    !!}
+                    ); ?>
 
                     {!! $navigation['mainMenu'] !!}
                     <a href="#mobile-menu" data-target="#mobile-menu" class="{!! apply_filters('Municipio/mobile_menu_breakpoint','hidden-md hidden-lg'); !!} menu-trigger"><span class="menu-icon"></span></a>
