@@ -74,6 +74,10 @@
             "url": "https://github.com/helsingborg-stad/modularity-interactive-img-map.git"
         },
         {
+            "type": "vcs",
+            "url": "https://github.com/helsingborg-stad/acf-export-manager.git"
+        },
+        {
             "type":"composer",
             "url":"https://wpackagist.org"
         },
@@ -93,7 +97,7 @@
 
     "require": {
         "composer/installers": "~1.0",
-        "helsingborg-stad/modularity": ">=1.0.0",
+        "helsingborg-stad/modularity": ">=2.0.0",
         "helsingborg-stad/municipio": ">=1.0.0",
         "helsingborg-stad/lix-calculator": ">=1.0.1",
         "helsingborg-stad/custom-short-links": ">=1.0.0",
