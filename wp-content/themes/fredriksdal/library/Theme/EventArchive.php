@@ -79,6 +79,7 @@ class EventArchive
 
         if (!is_null($from) && !is_null($to)) {
             // USE BETWEEN ON START DATE
+            $where = " AND eventStart.meta_key = 'event-date-start' " . $where;
             $where = str_replace(
                 $wpdb->posts . '.post_date >= \''. $from . '\'',
                 '(eventStart.meta_value BETWEEN \'' . $from . '\' AND \'' . $to . '\')',
