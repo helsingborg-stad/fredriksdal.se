@@ -25,7 +25,14 @@ require_once 'config/plugins.php';
 require_once 'config/update.php';
 require_once 'config/upload.php';
 require_once 'config/cron.php';
-require_once 'config/ssl.php';
+
+/**
+ * SSL settings
+ * Can be used to force site to behave behind a proxy.
+ */
+if (file_exists(__DIR__ . '/config/ssl.php')) {
+    require_once 'config/ssl.php';
+}
 
 /**
  * Cookie settings
@@ -70,8 +77,9 @@ if (file_exists(__DIR__ . '/config/developer.php')) {
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
-if ( !defined('ABSPATH') )
-	define('ABSPATH', dirname(__FILE__) . '/');
+if (!defined('ABSPATH')) {
+    define('ABSPATH', dirname(__FILE__) . '/');
+}
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
