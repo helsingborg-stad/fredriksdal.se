@@ -207,7 +207,7 @@ Fredriksdal.AsyncContentLoader = Fredriksdal.AsyncContentLoader || {};
 
 Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
 
-    var AsyncContentEndpoint = '/wp-json/wp/v2/all?slug=';
+    var AsyncContentEndpoint = 'wp/v2/all?slug=';
 
     var AsyncContentTempalte = '<div id="ajax-response" class="ajax-response"><div class="container"><div class="grid"><div class="grid-xs-12"><a class="close" href="#close"><i class="pricon pricon-close"></i></a><article class="frame"><h2>{{title}}</h2>{{content}}{{sidebar}}</article></div></div></div></div>';
 
@@ -264,7 +264,7 @@ Fredriksdal.AsyncContentLoader.AsyncContentLoader = (function ($) {
     };
 
     AsyncContentLoader.prototype.createEndpointSlug = function (url) {
-        return location.protocol + "//" + window.location.hostname + AsyncContentEndpoint + this.parsePostName(url);
+        return rest_url + AsyncContentEndpoint + this.parsePostName(url);
     };
 
     AsyncContentLoader.prototype.responseTemplate = function (contentTemplate, dataResponse) {

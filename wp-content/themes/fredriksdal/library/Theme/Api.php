@@ -10,6 +10,7 @@ class Api
     public function __construct()
     {
         add_action('rest_api_init', array($this, 'registerRestRoute'));
+        add_action('wp_head', array($this, 'printRestUrl'));
     }
 
     public function registerRestRoute()
@@ -21,6 +22,8 @@ class Api
                 if (!isset($request['slug'])) {
                     return null;
                 }
+
+                $request['slug'] = str_replace(get_blog_details()->path, "/", $request['slug']);
 
                 $return = url_to_postid(
                     home_url() . "/" . $request['slug']
@@ -61,5 +64,10 @@ class Api
         }
 
         return "";
+    }
+
+    public function printRestUrl()
+    {
+        echo '<script>var rest_url = "' . get_rest_url() . '";</script>';
     }
 }
