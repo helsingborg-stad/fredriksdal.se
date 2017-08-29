@@ -1039,6 +1039,10 @@ figure.image-placeholder {
           content: ""; }
       .is-child-theme .modularity-onepage-section .flickity-prev-next-button.previous:not(:disabled):hover:after {
         margin-left: -5px; }
+    .is-child-theme .modularity-onepage-section button.flickity-prev-next-button.previous, .is-child-theme .modularity-onepage-section button.flickity-prev-next-button.next {
+      padding: 0px !important; }
+      .is-child-theme .modularity-onepage-section button.flickity-prev-next-button.previous:before, .is-child-theme .modularity-onepage-section button.flickity-prev-next-button.previous:after, .is-child-theme .modularity-onepage-section button.flickity-prev-next-button.next:before, .is-child-theme .modularity-onepage-section button.flickity-prev-next-button.next:after {
+        display: block; }
     .is-child-theme .modularity-onepage-section .flickity-page-dots {
       width: 100%;
       padding: 20px 0 0 0;

@@ -408,6 +408,14 @@
             margin-left: -5px;
         }
     }
+    //IPAD FIX
+    button.flickity-prev-next-button.previous, button.flickity-prev-next-button.next {
+        padding: 0px !important;
+
+        &:before, &:after {
+            display: block;
+        }
+    }
 
     /* Page dots */
 
