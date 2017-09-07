@@ -204,3 +204,8 @@
         }
     }
 }
+
+//Hide translate on desktop menu
+ul#main-menu li.menu-item-translate {
+    display: none !important;
+}

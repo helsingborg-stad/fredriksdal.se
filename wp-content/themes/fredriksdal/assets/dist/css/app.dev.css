@@ -17,34 +17,42 @@
 @-webkit-keyframes fadeinDown {
   from {
     opacity: 0;
-    margin-top: -20vh; }
+    -webkit-transform: translateY(-20vh);
+            transform: translateY(-20vh); }
   to {
     opacity: 1;
-    margin-top: 0; } }
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
 
 @keyframes fadeinDown {
   from {
     opacity: 0;
-    margin-top: -20vh; }
+    -webkit-transform: translateY(-20vh);
+            transform: translateY(-20vh); }
   to {
     opacity: 1;
-    margin-top: 0; } }
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
 
 @-webkit-keyframes fadeinUp {
   from {
     opacity: 0;
-    margin-top: 20vh; }
+    -webkit-transform: translateY(20vh);
+            transform: translateY(20vh); }
   to {
     opacity: 1;
-    margin-top: 0; } }
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
 
 @keyframes fadeinUp {
   from {
     opacity: 0;
-    margin-top: 20vh; }
+    -webkit-transform: translateY(20vh);
+            transform: translateY(20vh); }
   to {
     opacity: 1;
-    margin-top: 0; } }
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
 
 @-webkit-keyframes fadeinUpHeroText {
   from {
@@ -583,6 +591,8 @@ figure.image-placeholder {
         width: 1px;
         left: -1px;
         background-color: #b9c12d; }
+  .is-child-theme ul#main-menu li.menu-item-translate {
+    display: none !important; }
   .is-child-theme nav#mobile-menu {
     -webkit-animation: fadeinDown 500ms;
             animation: fadeinDown 500ms; }
@@ -641,6 +651,21 @@ figure.image-placeholder {
       position: static !important;
       -webkit-transform: none;
               transform: none; }
+  .is-child-theme nav#mobile-menu li.menu-item-translate a:before,
+  .is-child-theme nav#mobile-menu li.menu-item-social a:before {
+    display: none !important; }
+  .is-child-theme nav#mobile-menu li.menu-item-translate {
+    margin-left: 0; }
+    .is-child-theme nav#mobile-menu li.menu-item-translate i {
+      margin-right: .5em; }
+  @media screen and (max-width: 468px) {
+    .is-child-theme .is-child-theme nav#mobile-menu ul {
+      max-height: calc(100vh - (60px + 50px));
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 80px;
+      padding-top: 15px;
+      -webkit-backface-visibility: hidden; } }
   .is-child-theme.page-template-campaign-blade .footer-scroller {
     display: none; }
   .is-child-theme .footer-scroller {

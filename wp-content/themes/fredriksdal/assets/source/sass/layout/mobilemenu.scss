@@ -76,3 +76,38 @@ nav#mobile-menu {
         }
     }
 }
+
+nav#mobile-menu {
+    //Remove Icons
+    li.menu-item-translate,
+    li.menu-item-social
+    {
+        a:before {
+            display: none !important;
+        }
+    }
+
+    //Fix Language icon spacing
+    li.menu-item-translate {
+        margin-left: 0;
+
+        i {
+            margin-right: .5em;
+        }
+    }
+}
+
+//Make mobile menu scrollable
+@media screen and (max-width: #{$screen-xs-max}) {
+    .is-child-theme nav#mobile-menu ul {
+        max-height: calc(100vh - (60px + 50px));
+        overflow-y: scroll;
+        -webkit-overflow-scrolling:touch; // mobile safari
+
+        padding-bottom: 80px;
+        padding-top: 15px;
+
+        -webkit-backface-visibility: hidden;
+    }
+}
+

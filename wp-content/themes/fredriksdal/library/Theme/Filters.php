@@ -19,6 +19,10 @@ class Filters
         add_filter('Municipio/main_menu/items', array($this, 'addSocialIconsToMenu'), 10, 2);
         add_filter('excerpt_more', array($this, 'exerptMore'));
 
+        if (!empty(get_field('google_translate_menu', 'option')) && !empty(get_field('show_google_translate', 'option')) && get_field('show_google_translate', 'option') !== 'false') {
+            add_filter('wp_nav_menu_items', array($this, 'addTranslate'), 10, 2);
+        }
+
         // Search
         add_filter('Municipio/search_result/date', array($this, 'eventDate'), 10, 2);
 
@@ -93,6 +97,30 @@ class Filters
             $svg = \Municipio\Helper\Svg::extract(get_attached_file($icon['icon']['id']));
             $items .= '<li class="menu-item-social"><a href="' . $icon['link'] . '"><span data-tooltip="' . $icon['tooltip'] .'">' . $svg . '</span></a></li>' . "\n";
         }
+
+        return $items;
+    }
+
+     /**
+     * Appends translate icon to menu
+     * @param  string $items  Items html
+     * @param  array  $args   Menu args
+     * @return string         Items html
+     */
+    public function addTranslate($items, $args = null)
+    {
+       if ($args && $args->theme_location != apply_filters('Municipio/main_menu_theme_location', 'main-menu')) {
+            return $items;
+        }
+
+        //Not in child (if inherited from main)
+        if ($args && (isset($args->child_menu) && $args->child_menu == true) && $args->theme_location == "main-menu") {
+            return $items;
+        }
+
+
+        $label = '<i class="pricon pricon-globe"></i>Translate';
+        $items .= '<li class="menu-item-translate"><a href="#translate" class="translate-icon-btn" aria-label="translate">' . $label . '</a></li>';
 
         return $items;
     }
