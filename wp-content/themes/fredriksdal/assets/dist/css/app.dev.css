@@ -659,7 +659,7 @@ figure.image-placeholder {
     .is-child-theme nav#mobile-menu li.menu-item-translate i {
       margin-right: .5em; }
   @media screen and (max-width: 468px) {
-    .is-child-theme .is-child-theme nav#mobile-menu ul {
+    .is-child-theme nav#mobile-menu ul {
       max-height: calc(100vh - (60px + 50px));
       overflow-y: scroll;
       -webkit-overflow-scrolling: touch;

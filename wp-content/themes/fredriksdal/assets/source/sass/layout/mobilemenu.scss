@@ -99,7 +99,7 @@ nav#mobile-menu {
 
 //Make mobile menu scrollable
 @media screen and (max-width: #{$screen-xs-max}) {
-    .is-child-theme nav#mobile-menu ul {
+    nav#mobile-menu ul {
         max-height: calc(100vh - (60px + 50px));
         overflow-y: scroll;
         -webkit-overflow-scrolling:touch; // mobile safari
@@ -110,4 +110,3 @@ nav#mobile-menu {
         -webkit-backface-visibility: hidden;
     }
 }
-
