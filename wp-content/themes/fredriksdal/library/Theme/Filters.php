@@ -20,7 +20,7 @@ class Filters
         add_filter('excerpt_more', array($this, 'exerptMore'));
 
         if (!empty(get_field('google_translate_menu', 'option')) && !empty(get_field('show_google_translate', 'option')) && get_field('show_google_translate', 'option') !== 'false') {
-            add_filter('wp_nav_menu_items', array($this, 'addTranslate'), 10, 2);
+            add_filter('wp_nav_menu_items', array($this, 'addTranslate'), 9, 2);
         }
 
         // Search

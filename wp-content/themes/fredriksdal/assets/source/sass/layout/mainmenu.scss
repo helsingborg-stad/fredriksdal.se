@@ -206,6 +206,8 @@
 }
 
 //Hide translate on desktop menu
-ul#main-menu li.menu-item-translate {
-    display: none !important;
+ul#main-menu {
+    li.menu-item-translate, li.sign-language {
+        display: none !important;
+    }
 }
