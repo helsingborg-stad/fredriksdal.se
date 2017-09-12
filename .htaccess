@@ -2,7 +2,7 @@
 
 # Redirect campaign
 <IfModule mod_rewrite.c>
-    RedirectMatch 301 /mikaeli/(.*) /mikaeli-marknad/$1
+    RedirectMatch 301 /mikaeli(.*) /mikaeli-marknad$1
 </ifModule>
 
 # Admin redirect
