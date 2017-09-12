@@ -1,5 +1,10 @@
 # Secutiry rules & Wordpress default configuration.
 
+# Redirect campaign
+<IfModule mod_rewrite.c>
+    RedirectMatch 301 /mikaeli/(.*) /mikaeli-marknad/$1
+</ifModule>
+
 # Admin redirect
 <IfModule mod_rewrite.c>
     RedirectMatch 301 /admin/(.*) /wp/wp-admin/$1
