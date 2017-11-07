@@ -149,7 +149,8 @@ Fredriksdal.AnchorScroll.AnchorScroll = (function ($) {
                 if(this.isAnchorLink(jQuery(item).attr('href')) && this.anchorLinkExists(jQuery(item).attr('href'))) {
                     this.bindAnchorScroll(item,jQuery(item).attr('href'));
                 }
-                if(this.isAnchorLink(jQuery(item).attr('href')) && !this.anchorLinkExists(jQuery(item).attr('href')) && window.location.pathname !== '/') {
+
+                if(this.isAnchorLink(jQuery(item).attr('href')) && !this.anchorLinkExists(jQuery(item).attr('href')) && (window.location.pathname !== '/' || window.location.search.indexOf('?s=') >= 0)) {
                     jQuery(item).attr('href', jQuery(".logotype").attr('href')  + "/" + jQuery(item).attr('href'));
                 }
             }.bind(this));
