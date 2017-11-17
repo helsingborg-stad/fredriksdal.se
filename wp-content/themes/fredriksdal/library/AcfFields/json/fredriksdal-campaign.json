@@ -11,7 +11,7 @@
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
-                "width": 50,
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -26,7 +26,7 @@
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
-                "width": 50,
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -45,7 +45,10 @@
                 "class": "",
                 "id": ""
             },
-            "choices": [],
+            "choices": {
+                "default": "Default",
+                "custom": "Custom"
+            },
             "allow_null": 0,
             "other_choice": 0,
             "save_other_choice": 0,
@@ -76,7 +79,7 @@
             },
             "collapsed": "",
             "min": 1,
-            "max": "",
+            "max": 0,
             "layout": "table",
             "button_label": "L\u00e4gg till rad",
             "sub_fields": [
@@ -89,7 +92,7 @@
                     "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "33",
                         "class": "",
                         "id": ""
                     },
@@ -97,9 +100,7 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": "",
-                    "readonly": 0,
-                    "disabled": 0
+                    "maxlength": ""
                 },
                 {
                     "key": "field_58244814b2c3f",
@@ -110,20 +111,25 @@
                     "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": 5,
+                        "width": "33",
                         "class": "",
                         "id": ""
                     },
-                    "choices": [],
+                    "choices": {
+                        "h1": "h1",
+                        "h2": "h2",
+                        "h3": "h3",
+                        "h4": "h4",
+                        "h5": "h5",
+                        "h6": "h6"
+                    },
                     "default_value": [],
                     "allow_null": 0,
                     "multiple": 0,
                     "ui": 0,
                     "ajax": 0,
                     "return_format": "value",
-                    "placeholder": "",
-                    "disabled": 0,
-                    "readonly": 0
+                    "placeholder": ""
                 },
                 {
                     "key": "field_582449852b22f",
@@ -134,12 +140,19 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "33",
                         "class": "",
                         "id": ""
                     },
-                    "choices": [],
-                    "default_value": [],
+                    "choices": {
+                        "u": "Underline",
+                        "b": "Bold"
+                    },
+                    "allow_custom": 0,
+                    "save_custom": 0,
+                    "default_value": [
+                        "b"
+                    ],
                     "layout": "horizontal",
                     "toggle": 0,
                     "return_format": "value"
@@ -159,7 +172,11 @@
                 "class": "",
                 "id": ""
             },
-            "choices": [],
+            "choices": {
+                "left": "Left",
+                "center": "Center",
+                "right": "Right"
+            },
             "allow_null": 0,
             "other_choice": 0,
             "save_other_choice": 0,
