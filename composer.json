@@ -14,68 +14,8 @@
     "minimum-stability" : "stable",
     "repositories": [
         {
-            "type": "vcs",
-            "url": "https://github.com/helsingborg-stad/Modularity.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/helsingborg-stad/Municipio.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/helsingborg-stad/xcap-import.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/helsingborg-stad/lix-calculator.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/helsingborg-stad/open-hours.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/helsingborg-stad/custom-short-links.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/helsingborg-stad/readspeaker-helper.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/helsingborg-stad/content-scheduler.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/helsingborg-stad/broken-link-detector.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/helsingborg-stad/better-post-UI.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/helsingborg-stad/force-ssl.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/helsingborg-stad/modularity-onepage.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/helsingborg-stad/open-hours.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/helsingborg-stad/modularity-interactive-img-map.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/helsingborg-stad/acf-export-manager.git"
+            "type":"composer",
+            "url":"https://packagist.org"
         },
         {
             "type":"composer",
