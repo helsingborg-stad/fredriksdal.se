@@ -59,7 +59,7 @@
         "wpackagist-plugin/autodescription": "2.7.0",
         "wpackagist-plugin/mce-table-buttons": "^3.0.0",
         "humanmade/page-for-post-type": "^1.0.0",
-        "johnpbloch/wordpress": "^4.7"
+        "johnpbloch/wordpress": "^4.9.4"
     },
 
     "extra": {
