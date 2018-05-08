@@ -74,7 +74,7 @@ class EventArchive
         }
 
         if (isset($_GET['to']) && !empty($_GET['to'])) {
-            $to = sanitize_text_field($_GET['to']);
+            $to =  date('Y-m-d', strtotime("+1 day", strtotime(sanitize_text_field($_GET['to']))));
         }
 
         if (!is_null($from) && !is_null($to)) {
@@ -82,19 +82,20 @@ class EventArchive
             $where = " AND eventStart.meta_key = 'event-date-start' " . $where;
             $where = str_replace(
                 $wpdb->posts . '.post_date >= \''. $from . '\'',
-                '(eventStart.meta_value BETWEEN \'' . $from . '\' AND \'' . $to . '\')',
+                '(eventStart.meta_value BETWEEN CAST(\'' . $from . '\' AS DATE) AND CAST(\'' . $to . '\' AS DATE))',
                 $where
             );
             $where = str_replace(
-                'AND ' . $wpdb->posts . '.post_date <= \''. $to . '\'',
+                'AND ' . $wpdb->posts . '.post_date =<= CAST(\''. $to . '\' AS DATE)',
                 '',
                 $where
             );
         } elseif (!is_null($from) || !is_null($to)) {
+
             // USE FROM OR TO
             $where = " AND eventStart.meta_key = 'event-date-start' AND eventEnd.meta_key = 'event-date-end' " . $where;
-            $where = str_replace($wpdb->posts . '.post_date >=', 'eventStart.meta_value >=', $where);
-            $where = str_replace($wpdb->posts . '.post_date <=', 'eventEnd.meta_value <=', $where);
+            $where = str_replace($wpdb->posts . '.post_date >=', 'CAST(eventStart.meta_value AS DATE) >==', $where);
+            $where = str_replace($wpdb->posts . '.post_date <=', 'CAST(eventEnd.meta_value AS DATE) =<=', $where);
         }
 
         return $where;
@@ -147,7 +148,7 @@ class EventArchive
         if (is_post_type_archive('event')) {
 
             // Posts per page
-            $query->set('posts_per_page', 100);
+            $query->set('posts_per_page', 300);
 
             // Sort
             $query->set('meta_key', 'event-date-start');
