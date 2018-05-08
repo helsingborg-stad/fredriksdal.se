@@ -52,6 +52,7 @@
         "helsingborg-stad/open-hours": ">=1.0.0",
         "helsingborg-stad/modularity-interactive-img-map": ">=1.0.0",
         "helsingborg-stad/modularity-timeline": ">=1.0.0",
+        "helsingborg-stad/google-analythics": ">=1.0.0",
         "wpackagist-plugin/wp-editor-widget": "^0.5.5",
         "wpackagist-plugin/varnish-http-purge": "4.0",
         "wpackagist-plugin/stream": "^3.0.4",
