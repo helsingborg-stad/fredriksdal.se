@@ -1359,6 +1359,8 @@ figure.image-placeholder {
     transition: transform 400ms;
     -webkit-transform: scale(1.001) rotate(0deg);
             transform: scale(1.001) rotate(0deg); }
+  .is-child-theme .box-news img.box-image[src*=".svg"] {
+    width: 120px; }
   .is-child-theme .box-news:hover .box-image-container img,
   .is-child-theme .box-news:hover .box-image-container:after {
     -webkit-transform: scale(1.02) rotate(1deg);

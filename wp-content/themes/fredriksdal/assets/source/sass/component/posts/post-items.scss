@@ -108,6 +108,10 @@
         transition: transform 400ms;
         transform: scale(1.001) rotate(0deg);
     }
+
+    img.box-image[src*=".svg"] {
+        width: 120px;
+    }
 }
 
 .box-news:hover {
