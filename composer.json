@@ -61,7 +61,8 @@
         "wpackagist-plugin/autodescription": "3.0.4",
         "wpackagist-plugin/mce-table-buttons": "^3.0.0",
         "humanmade/page-for-post-type": "^1.0.0",
-        "johnpbloch/wordpress": "^4.9.4"
+        "johnpbloch/wordpress": "^4.9.4",
+        "helsingborg-stad/api-event-manager-integration": "^0.5.5"
     },
 
     "extra": {
