@@ -10,7 +10,7 @@ class App
 
         new \Fredriksdal\Controller\Admin\RemoveOnePageMetaBox();
 
-        new \Fredriksdal\Theme\EventArchive();
+        // new \Fredriksdal\Theme\EventArchive();
         new \Fredriksdal\Theme\OnePage();
         new \Fredriksdal\Theme\OnePageMenu();
         new \Fredriksdal\Theme\DisableComments();

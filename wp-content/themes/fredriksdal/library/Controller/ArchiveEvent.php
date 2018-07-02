@@ -14,10 +14,10 @@ class ArchiveEvent extends \Municipio\Controller\BaseController
 {
     public function init()
     {
-        $this->data['quaters'] = $this->getQuaters();
-        $this->data['links'] = $this->getFilterMenu();
-        $this->data['baseLink'] = $this->getBaseLink();
-        $this->redirectToQuarter();
+        // $this->data['quaters'] = $this->getQuaters();
+        // $this->data['links'] = $this->getFilterMenu();
+        // $this->data['baseLink'] = $this->getBaseLink();
+        // $this->redirectToQuarter();
     }
 
 
