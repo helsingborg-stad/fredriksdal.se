@@ -166,6 +166,12 @@ h1, h2, h3, h4, h5, h6, p {
 figure.image-placeholder {
   padding-bottom: 100%; }
 
+section + section {
+  margin-top: 0px; }
+
+section.news-story + section.news-story {
+  margin-top: 40px; }
+
 .is-child-theme {
   /* Layout */
   /* Centered content */
@@ -1201,12 +1207,12 @@ figure.image-placeholder {
     background-color: rgba(255, 255, 255, 0.1); }
   .is-child-theme.page:not(.home) .footer-scroller, .is-child-theme.single .footer-scroller, .is-child-theme.search .footer-scroller {
     margin-top: 60px; }
-  .is-child-theme.page:not(.home) #main-content section:first-of-type::before, .is-child-theme.single #main-content section:first-of-type::before, .is-child-theme.search #main-content section:first-of-type::before {
+  .is-child-theme.page:not(.home) #main-content > section:first-of-type::before, .is-child-theme.single #main-content > section:first-of-type::before, .is-child-theme.search #main-content > section:first-of-type::before {
     display: block;
     content: '';
     padding-top: 80px; }
     @media (min-width: 959px) and (max-width: 1280px) {
-      .is-child-theme.page:not(.home) #main-content section:first-of-type::before, .is-child-theme.single #main-content section:first-of-type::before, .is-child-theme.search #main-content section:first-of-type::before {
+      .is-child-theme.page:not(.home) #main-content > section:first-of-type::before, .is-child-theme.single #main-content > section:first-of-type::before, .is-child-theme.search #main-content > section:first-of-type::before {
         padding-top: 160px; } }
   .is-child-theme.page:not(.home) .hero-featured-image + #main-content section:first-of-type::before, .is-child-theme.single .hero-featured-image + #main-content section:first-of-type::before, .is-child-theme.search .hero-featured-image + #main-content section:first-of-type::before {
     display: none;
