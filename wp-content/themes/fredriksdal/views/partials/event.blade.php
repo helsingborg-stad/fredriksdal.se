@@ -18,7 +18,7 @@ $featuredImage = wp_get_attachment_image_src(
         <div class="grid">
             <div class="grid-xs-12">
                 <time datetime="{{ get_post_meta(get_the_id(), 'event-date-start', true) }}">
-                    {!! \Fredriksdal\Controller\ArchiveEvent::getEventDate($post) !!}
+                    {{ \Municipio\Helper\Event::formatEventDate($post->start_date, $post->end_date) }}
                 </time>
 
                 <h1>{{ the_title() }}</h1>
@@ -27,7 +27,7 @@ $featuredImage = wp_get_attachment_image_src(
                     {{ the_excerpt() }}
                 </article>
 
-                <a href="{{ the_permalink() }}" class="read-more">Läs mer</a>
+                <a href="{{ esc_url(add_query_arg('date', preg_replace('/\D/', '', $post->start_date), the_permalink())) }}" class="read-more">Läs mer</a>
             </div>
         </div>
     </div>
