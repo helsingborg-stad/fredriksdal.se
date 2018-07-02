@@ -2,12 +2,39 @@
 
 namespace Fredriksdal\Controller;
 
-class SingleEvent extends \Municipio\Controller\BaseController
+class SingleEvent extends \Municipio\Controller\SingleEvent
 {
     public function init()
     {
-        $this->data['occations'] = $this->getOccations();
-        $this->data['passedOccations'] = $this->getOccations("<");
+        global $post;
+        $this->data['occasion'] = $this->singleEventDate($post->ID);
+        $this->data['location'] = get_post_meta($post->ID, 'location', true);
+        $this->data['occations'] = $this->getOccationsWithEventManagerIntegration($post->ID);
+    }
+
+    /**
+     * Gets all occations of the event (except current occation)
+     * @return object
+     */
+    public function getOccationsWithEventManagerIntegration($postID)
+    {
+        if (!class_exists('\EventManagerIntegration\Helper\QueryEvents')) {
+            return array();
+        }
+
+        $occations = \EventManagerIntegration\Helper\QueryEvents::getEventOccasions($postID);
+
+        if (is_array($occations) && !empty($occations)) {
+            foreach ($occations as $key => $occasion) {
+                if (strtotime($occasion->start_date) == strtotime($this->data['occasion']['start_date'])) {
+                    unset($occations[$key]);
+                }
+            }
+
+            return $occations;
+        }
+
+        return array();
     }
 
     /**
