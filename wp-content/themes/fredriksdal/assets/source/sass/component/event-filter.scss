@@ -52,12 +52,21 @@ ul#event-categories li ul {
 
 
 #archive-filter {
+    z-index: 99;
+    position: relative;
 
+    .input-group {
+        width: 100%;
+    }
+    span.input-group-addon {
+        display: none;
+    }
     .max-width-container {
         max-width: 800px;
         margin: 0 auto;
     }
 
+    input[type="text"],
     input[name="search"],
     input[type="submit"] {
         border: none;
@@ -67,7 +76,8 @@ ul#event-categories li ul {
         font-size: 1.1em;
     }
 
-    input[name="search"] {
+    input[name="search"],
+    input[type="text"] {
         background: $palette-2;
 
         &:placehoder,
@@ -79,6 +89,7 @@ ul#event-categories li ul {
 
     input[type="submit"] {
         background: $palette-3;
+        margin: 0;
     }
 }
 

@@ -48,11 +48,15 @@
             @if (in_array('date_range', $enabledHeaderFilters))
             <div class="grid-sm-12 grid-md-auto">
                 <label for="filter-date-from" class="text-sm sr-only"><strong><?php _e('Date published', 'municipio'); ?>:</strong></label>
-                <div class="input-group">
-                    <span class="input-group-addon"><?php _e('From', 'municipio'); ?>:</span>
-                    <input type="text" name="from" placeholder="<?php _e('From date', 'municipio'); ?>…" id="filter-date-from" class="form-control datepicker-range datepicker-range-from" value="{{ isset($_GET['from']) && !empty($_GET['from']) ? sanitize_text_field($_GET['from']) : '' }}" readonly>
-                    <span class="input-group-addon"><?php _e('To', 'municipio'); ?>:</span>
-                    <input type="text" name="to" placeholder="<?php _e('To date', 'municipio'); ?>" class="form-control datepicker-range datepicker-range-to" value="{{ isset($_GET['to']) && !empty($_GET['to']) ? sanitize_text_field($_GET['to']) : '' }}" readonly>
+                <div class="grid">
+                    <div class="grid-sm-12 grid-md-auto">
+                        <span class="input-group-addon"><?php _e('From', 'municipio'); ?>:</span>
+                        <input type="text" name="from" placeholder="<?php _e('From date', 'municipio'); ?>…" id="filter-date-from" class="grid-auto xform-control datepicker-range datepicker-range-from" value="{{ isset($_GET['from']) && !empty($_GET['from']) ? sanitize_text_field($_GET['from']) : '' }}" readonly>
+                    </div>
+                    <div class="grid-sm-12 grid-md-auto">
+                        <span class="input-group-addon"><?php _e('To', 'municipio'); ?>:</span>
+                        <input type="text" name="to" placeholder="<?php _e('To date', 'municipio'); ?>" class="grid-auto form-control datepicker-range datepicker-range-to" value="{{ isset($_GET['to']) && !empty($_GET['to']) ? sanitize_text_field($_GET['to']) : '' }}" readonly>
+                    </div>
                 </div>
             </div>
             @endif
