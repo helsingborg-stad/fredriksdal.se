@@ -6,12 +6,17 @@
     }
 
     .search-result-item {
-        &:not(:last-child) {
-            margin-bottom: 40px;
-        }
         h3 .link-item::before {
             margin-right: .5em;
             color: $palette-3;
         }
     }
+}
+
+.search-result-item {
+    margin-bottom: 40px;
+}
+
+li:last-child .search-result-item {
+    margin-bottom: 0px;
 }
