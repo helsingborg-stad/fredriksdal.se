@@ -1232,6 +1232,8 @@ section.news-story + section.news-story {
     background-color: #b9c12d;
     border: none;
     padding-top: 50px; }
+  .is-child-theme.search .search-result-item:not(:last-child) {
+    margin-bottom: 40px; }
   .is-child-theme.search .search-result-item h3 .link-item::before {
     margin-right: .5em;
     color: #b9c12d; }
