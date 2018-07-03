@@ -6,15 +6,14 @@
     <div class="container">
         <div class="grid gutter gutter-vertical gutter-xl">
             <div class="grid-md-9 grid-lg-9 grid-sm-12">
-
                 <article class="clearfix">
                     <header>
                     <h1 {!! $image ? 'class="hidden-md hidden-lg"' : '' !!}>
                         <div class="tc">
                             <time class="date-box" datetime="{{ $occasion['start_date'] }}">
                                 <div>
-                                    <span class="day">{{ $occasion['date_parts']['date'] ?? '' }}</span>
-                                    <span class="month">{{ mysql2date('M', strtotime($occasion['date_parts']['month'])) ?? '' }}</span>
+                                    <span class="day">{{ $occasion['date_parts']['date'] }}</span>
+                                    <span class="month">{{ mysql2date('M', strtotime($occasion['date_parts']['month']))}}</span>
                                 </div>
                             </time>
                         </div>
