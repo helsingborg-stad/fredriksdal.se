@@ -12,8 +12,8 @@
                         <div class="tc">
                             <time class="date-box" datetime="{{ $occasion['start_date'] }}">
                                 <div>
-                                    <span class="day">{{ $occasion['date_parts']['date'] }}</span>
-                                    <span class="month">{{ mysql2date('M', strtotime($occasion['date_parts']['month']))}}</span>
+                                    <span class="day">{{ mysql2date( 'd', $occasion['start_date']) }}</span>
+                                    <span class="month">{{ mysql2date('M', strtotime($occasion['start_date'])) }}</span>
                                 </div>
                             </time>
                         </div>
