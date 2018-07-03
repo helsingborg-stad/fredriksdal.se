@@ -11,10 +11,10 @@
                     <header>
                     <h1 {!! $image ? 'class="hidden-md hidden-lg"' : '' !!}>
                         <div class="tc">
-                            <time class="date-box" datetime="{{ get_post_meta(get_the_id(), 'event-date-start', true) }}">
+                            <time class="date-box" datetime="{{ $occasion['start_date'] }}">
                                 <div>
                                     <span class="day">{{ $occasion['date_parts']['date'] ?? '' }}</span>
-                                    <span class="month">{{ $occasion['date_parts']['month'] ?? '' }}</span>
+                                    <span class="month">{{ mysql2date('M', strtotime($occasion['date_parts']['month'])) ?? '' }}</span>
                                 </div>
                             </time>
                         </div>
@@ -59,8 +59,7 @@
                     <div class="box-content">
                         <div class="date">
                             <label><?php _e('Date', 'fredriksdal'); ?></label>
-
-                            @if (strtotime($occasion['start_date']) >= time())
+                            @if (strtotime($occasion['start_date']) >= time() || strtotime($occasion['end_date']) >= time())
                                 <span class="value">{{explode(' ', $occasion['start_date'])[0]}}</span>
                             @elseif(count($occations) > 0)
                                 <span class="value" style="text-decoration: line-through;">{{explode(' ', $occasion['start_date'])[0]}}</span>
@@ -68,9 +67,9 @@
                                 <span class="value">Passerat</span>
                             @endif
 
-                            @if (mysql2date('Y-m-d', get_post_meta(get_the_id(), 'event-date-start', true)) !== mysql2date('Y-m-d', get_post_meta(get_the_id(), 'event-date-end', true)))
+                            @if (mysql2date('Y-m-d', explode(' ', $occasion['start_date'])[0]) !== mysql2date('Y-m-d', explode(' ', $occasion['end_date'])[0]))
                             till
-                            <span class="value">{{ mysql2date('Y-m-d', get_post_meta(get_the_id(), 'event-date-end', true)) }}</span>
+                            <span class="value">{{ mysql2date('Y-m-d', explode(' ', $occasion['end_date'])[0]) }}</span>
                             @endif
 
                         </div>
@@ -90,8 +89,8 @@
                     </div>
 
                     <div class="tickets">
-                    @if (is_string(get_field('event-ticket_url')) && get_field('event-ticket_url'))
-                        <a href="{{ get_field('event-ticket_url') }}" target="_blank">Köp biljetter</a>
+                    @if (is_string(get_field('booking_link')) && get_field('event-ticket_url'))
+                        <a href="{{ get_field('booking_link') }}" target="_blank">Köp biljetter</a>
                     @endif
                     </div>
 
