@@ -13,7 +13,7 @@
                             <time class="date-box" datetime="{{ $occasion['start_date'] }}">
                                 <div>
                                     <span class="day">{{ mysql2date( 'd', $occasion['start_date']) }}</span>
-                                    <span class="month">{{ mysql2date('M', strtotime($occasion['start_date'])) }}</span>
+                                    <span class="month">{{ mysql2date('M', $occasion['start_date']) }}</span>
                                 </div>
                             </time>
                         </div>
