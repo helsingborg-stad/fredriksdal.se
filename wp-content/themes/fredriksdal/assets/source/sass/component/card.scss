@@ -1,0 +1,10 @@
+
+.box-card-post:hover {
+    -webkit-box-shadow: 0 8px 20px rgba(0, 0, 0, .4);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .4);
+    -webkit-transition: -webkit-box-shadow .2s ease-out;
+    transition: box-shadow .2s ease-out;
+    background-color: #fff;
+    outline: solid 1px #B9C123;
+
+}

@@ -10,16 +10,14 @@ namespace Fredriksdal\Controller;
  * Name your controller file Archive.php and the class should be named Archive.
  */
 
-class ArchiveEvent extends \Municipio\Controller\BaseController
+class ArchiveEvent extends \Municipio\Controller\Archive
 {
-    public function init()
-    {
-        // $this->data['quaters'] = $this->getQuaters();
-        // $this->data['links'] = $this->getFilterMenu();
-        // $this->data['baseLink'] = $this->getBaseLink();
-        // $this->redirectToQuarter();
-    }
 
+    public function __construct()
+    {
+        parent::__construct();
+
+    }
 
     public function getBaseLink()
     {
@@ -78,6 +76,7 @@ class ArchiveEvent extends \Municipio\Controller\BaseController
 
         return true;
     }
+
 
     /**
      * Get an array with quaters info
@@ -153,6 +152,25 @@ class ArchiveEvent extends \Municipio\Controller\BaseController
         $quaters = json_decode(json_encode($quaters));
         return $quaters;
     }
+
+    /**
+     * Get date parts as array
+     * @param  string $start_date event start date
+     * @return array              date values
+     */
+    public function dateParts($start_date)
+    {
+        $start = date('Y-m-d H:i:s', strtotime($start_date));
+        $date  = array(
+            'date'  => mysql2date('j', $start, true),
+            'month' => mysql2date('F', $start, true),
+            'year' 	=> mysql2date('Y', $start, true),
+            'time'  => mysql2date('H:i', $start, true),
+        );
+
+        return $date;
+    }
+
 
     public static function getEventDate($post)
     {

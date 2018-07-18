@@ -2196,3 +2196,8 @@ section.news-story + section.news-story {
     opacity: 1;
     -webkit-transform: none;
     transform: none; } }
+  .is-child-theme .box-card-post:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: box-shadow .2s ease-out;
+    background-color: #fff;
+    outline: solid 1px #B9C123; }
