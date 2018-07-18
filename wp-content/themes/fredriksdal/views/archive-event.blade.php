@@ -109,7 +109,7 @@
                     </div>
                 @endif
                 <button class="gutter-bottom btn btn-primary btn-block btn-green show-post show-all-post">Se alla programpunkter</button>
-                <div class="fade-bottom"></div>
+                    @if ($postNum > 11) <div class="fade-bottom"></div> @endif
                 <div class="grid">
                     <div class="grid-sm-12 text-center u-mb-7 hidden">
                         {!!
