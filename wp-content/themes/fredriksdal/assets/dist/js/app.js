@@ -208,10 +208,29 @@ Fredriksdal.Archive = Fredriksdal.Archive || {};
 
 Fredriksdal.Archive.Archive = (function ($) {
     function Archive() {
-        $( ".show-post" ).on( "click", function() {
+        $(".show-post").on("click", function () {
             Archive.prototype.toogleShowPost($(this));
         }).bind(this);
+
+        Archive.prototype.responsiveMedia();
+
+        $(window).resize(function () {
+            Archive.prototype.responsiveMedia();
+        });
     };
+
+    Archive.prototype.responsiveMedia = function () {
+        if ($(window).width() < 769) {
+            var int = 0;
+            $(".show-post-hidden-archive").each(function (int) {
+                if (int >= 8) {
+                    $(this).addClass('hidden');
+                }
+                int++;
+            });
+        }
+    };
+
 
     Archive.prototype.toogleShowPost = function (thisObj) {
         if (thisObj.hasClass('show-all-post')) {
@@ -227,7 +246,7 @@ Fredriksdal.Archive.Archive = (function ($) {
             $('.fade-bottom').removeClass('hidden');
             thisObj.text('Se alla programpunkter');
             var int = 0;
-            $( ".show-post-hidden-archive" ).each(function(int) {
+            $(".show-post-hidden-archive").each(function (int) {
                 if (int > 11) {
                     $(this).addClass('hidden');
                 }

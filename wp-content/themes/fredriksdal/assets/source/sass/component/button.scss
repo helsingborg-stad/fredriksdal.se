@@ -19,6 +19,9 @@
         font-size:20px;
         padding:10px;
         margin-bottom:20px;
+        &:focus {
+            background-color: $palette-3 !important;
+        }
     }
     &.show-all-post {
         position:absolute;
@@ -31,6 +34,16 @@
     }
     &.show-less-post {
 
+    }
+    @media only screen and (max-width: 768px) {
+        &.show-all-post {
+            position:relative;
+            top: unset;
+            left: unset;
+            margin-right: unset;
+            transform: unset;
+            margin: 20px auto;
+        }
     }
 }
 

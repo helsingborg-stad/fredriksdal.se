@@ -71,10 +71,20 @@ nav.event-dates {
     bottom:0px;
     height:420px;
     width:100%;
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+56&0.44+0,1+56 */
     background: -moz-linear-gradient(top, rgba(255,255,255,0.44) 0%, rgba(255,255,255,1) 56%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top, rgba(255,255,255,0.44) 0%,rgba(255,255,255,1) 56%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, rgba(255,255,255,0.44) 0%,rgba(255,255,255,1) 56%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#70ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
     z-index:10;
 }
+@media only screen and (max-width: 768px) {
+    .fade-bottom {
+        display:none;
+    }
+}
+#archive-filter .segmented-control label {
+    font-size:1rem !important;
+    color:$base-font-color;
+    margin-bottom: 0px;
+}
+
