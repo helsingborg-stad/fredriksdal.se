@@ -1,7 +1,9 @@
 @extends('templates.master')
 
 @section('content')
-
+    <section class="background-lgren events-wrapper">
+        <nav class="event-dates text-center"></nav>
+    </section>
     @if (get_field('archive_' . sanitize_title($postType) . '_filter_position', 'option') == 'top')
         @include('partials.archive-filters')
     @endif
