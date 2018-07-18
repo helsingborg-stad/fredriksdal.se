@@ -1,6 +1,6 @@
 <?php global $post; ?>
 
-<div class="{{ $grid_size }}">
+<div class="{{ $grid_size }}  @if ($postNum > 11) hidden @endif show-post-hidden-archive">
     <a href="{{ the_permalink() }}" class="box box-index box-card-post">
         <div class="box-container" data-equal-item>
             @if (municipio_get_thumbnail_source(null,array(400,225)))

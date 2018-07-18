@@ -25,7 +25,7 @@
             }
             ?>
 
-            <div class="{{ $cols }}">
+            <div class="{{ $cols }} archive-event">
 
                 @if (get_field('archive_' . sanitize_title($postType) . '_title', 'option') || is_category() || is_date())
                     <div class="grid">
@@ -84,7 +84,7 @@
                                 {!! the_post() !!}
 
                                 @if (in_array($template, array('full', 'compressed', 'collapsed', 'horizontal-cards')))
-                                    <div class="grid-xs-12 post @if ($postNum > 8) hide @endif ">
+                                    <div class="grid-xs-12 post">
                                         @include('partials.blog.type.post-' . $template)
                                     </div>
                                 @else
@@ -108,14 +108,16 @@
                         <?php dynamic_sidebar('content-area'); ?>
                     </div>
                 @endif
-
+                <button class="gutter-bottom btn btn-primary btn-block btn-green show-post show-all-post">Se alla programpunkter</button>
+                <div class="fade-bottom"></div>
                 <div class="grid">
-                    <div class="grid-sm-12 text-center u-mb-7">
+                    <div class="grid-sm-12 text-center u-mb-7 hidden">
                         {!!
                             paginate_links(array(
                                 'type' => 'list'
                             ))
                         !!}
+
                     </div>
                 </div>
             </div>

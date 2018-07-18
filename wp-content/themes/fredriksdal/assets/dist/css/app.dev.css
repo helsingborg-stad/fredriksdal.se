@@ -1143,6 +1143,21 @@ section.news-story + section.news-story {
     .is-child-theme .box-index-event {
       margin: 0 20px;
       width: 100%; } }
+  .is-child-theme .archive-event {
+    position: relative; }
+  .is-child-theme .fade-bottom {
+    position: absolute;
+    bottom: 0px;
+    height: 420px;
+    width: 100%;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+56&0.44+0,1+56 */
+    /* FF3.6-15 */
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.44) 0%, white 56%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#70ffffff', endColorstr='#ffffff',GradientType=0 );
+    /* IE6-9 */
+    z-index: 10; }
   .is-child-theme #campaign-wrapper .modularity-mod-slider {
     margin-bottom: 0;
     padding-bottom: 0; }
@@ -1390,6 +1405,22 @@ section.news-story + section.news-story {
     background-color: #b9c12d; }
     .is-child-theme .btn-green:hover {
       background-color: #a5ac28; }
+    .is-child-theme .btn-green.show-post {
+      border: none;
+      width: 325px;
+      margin: 0 auto;
+      font-size: 20px;
+      padding: 10px;
+      margin-bottom: 20px; }
+    .is-child-theme .btn-green.show-all-post {
+      position: absolute;
+      top: 75%;
+      left: 50%;
+      margin-right: -50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 12; }
   .is-child-theme:not(.home) .hero {
     max-height: 80vh; }
     .is-child-theme:not(.home) .hero .modularity-mod-slider {
