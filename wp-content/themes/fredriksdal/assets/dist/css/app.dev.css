@@ -257,7 +257,6 @@ section.news-story + section.news-story {
     -webkit-animation: fadein 2s;
             animation: fadein 2s; }
     .is-child-theme #site-header nav.navbar {
-      background-color: transparent;
       transition: padding 200ms;
       padding: 15px 0; }
     .is-child-theme #site-header nav.navbar [data-tooltip]:after {
