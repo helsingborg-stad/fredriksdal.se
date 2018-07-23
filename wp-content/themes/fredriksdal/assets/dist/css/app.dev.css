@@ -1103,7 +1103,6 @@ section.news-story + section.news-story {
   .is-child-theme article h1 + p {
     margin-top: 20px; }
   .is-child-theme nav.event-dates {
-    background-color: #b9c12d;
     font-family: "Verlag A", "Verlag B";
     font-size: 1.1em;
     font-weight: bold;
