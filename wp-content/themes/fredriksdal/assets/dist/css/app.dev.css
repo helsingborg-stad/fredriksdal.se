@@ -253,7 +253,7 @@ section.news-story + section.news-story {
     top: 0px;
     left: 0;
     transition: all 200ms;
-    background-color: rgba(185, 193, 45, 0.98);
+    background-color: rgba(185, 193, 45, 0.86);
     -webkit-animation: fadein 2s;
             animation: fadein 2s; }
     .is-child-theme #site-header nav.navbar {
