@@ -14,7 +14,10 @@
     animation: fadein 2s;
 
     nav.navbar, .navbar:not(.navbar-creamy) {
-        background:transparent !important;
+        //background:transparent !important;
+
+        background:,transparent, !important;
+    ),
         transition: padding 200ms;
         padding: 15px 0;
     }
