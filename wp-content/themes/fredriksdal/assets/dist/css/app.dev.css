@@ -256,7 +256,8 @@ section.news-story + section.news-story {
     background-color: rgba(185, 193, 45, 0.86);
     -webkit-animation: fadein 2s;
             animation: fadein 2s; }
-    .is-child-theme #site-header nav.navbar {
+    .is-child-theme #site-header nav.navbar, .is-child-theme #site-header .navbar:not(.navbar-creamy) {
+      background: transparent !important;
       transition: padding 200ms;
       padding: 15px 0; }
     .is-child-theme #site-header nav.navbar [data-tooltip]:after {
