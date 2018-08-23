@@ -236,7 +236,7 @@ Fredriksdal.Archive.Archive = (function ($) {
         if (thisObj.hasClass('show-all-post')) {
             thisObj.removeClass('show-all-post');
             thisObj.addClass('show-less-post');
-            thisObj.text('Se mindre programpunkter');
+            thisObj.text('Se färre programpunkter');
             $('.show-post-hidden-archive').removeClass('hidden');
             $('.fade-bottom').addClass('hidden');
         }
@@ -259,6 +259,7 @@ Fredriksdal.Archive.Archive = (function ($) {
     new Archive();
 
 })(jQuery);
+
 Fredriksdal = Fredriksdal || {};
 Fredriksdal.AsyncContentLoader = Fredriksdal.AsyncContentLoader || {};
 
