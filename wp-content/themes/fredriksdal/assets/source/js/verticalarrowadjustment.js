@@ -12,6 +12,10 @@ Fredriksdal.VerticalArrowAdjustment.VerticalArrowAdjustment = (function ($) {
         jQuery(window).on("orientationchange",function(){
             this.adjustArrows();
         }.bind(this));
+
+        jQuery(window).bind("load", function () {
+            setTimeout(5000,this.adjustArrows());
+        }.bind(this));
     }
 
     VerticalArrowAdjustment.prototype.adjustArrows = function () {

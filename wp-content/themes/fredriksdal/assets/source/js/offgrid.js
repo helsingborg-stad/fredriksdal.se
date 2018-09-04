@@ -17,11 +17,10 @@ Fredriksdal.OffGrid.OffGrid = (function ($) {
             this.adjustArrows();
         }.bind(this));
 
-        jQuery(window).bind("load", function () {
-            this.adjustArrows();
-            setTimeout(2000,this.adjustArrows());
+        jQuery(window).on("load",function(){
+            var imgSizeHeight = jQuery('.flickity-viewport .box-image-container').height() + jQuery('.flickity-viewport .box-content').height() ;
+            $('.flickity-viewport').height(imgSizeHeight);
         }.bind(this));
-
     }
 
 
