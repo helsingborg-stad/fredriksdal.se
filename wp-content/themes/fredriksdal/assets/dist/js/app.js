@@ -607,7 +607,7 @@ Fredriksdal.OffGrid.OffGrid = (function ($) {
         jQuery(window).on("orientationchange",function(){
             this.adjustArrows();
         }.bind(this));
-        
+
         jQuery(window).bind("load", function () {
             this.adjustArrows();
         }.bind(this));
