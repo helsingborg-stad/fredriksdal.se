@@ -19,6 +19,7 @@ Fredriksdal.OffGrid.OffGrid = (function ($) {
 
         jQuery(window).bind("load", function () {
             this.adjustArrows();
+            setTimeout(2000,this.adjustArrows());
         }.bind(this));
 
     }
