@@ -17,9 +17,11 @@ $featuredImage = wp_get_attachment_image_src(
     <div class="container">
         <div class="grid">
             <div class="grid-xs-12">
-                <time datetime="{{ get_post_meta(get_the_id(), 'event-date-start', true) }}">
-                    {{ \Municipio\Helper\Event::formatEventDate($post->start_date, $post->end_date) }}
-                </time>
+                @if(method_exists('\EventManagerIntegration\App', 'formatEventDate'))
+                    <time datetime="{{ get_post_meta(get_the_id(), 'event-date-start', true) }}">
+                        {{ \EventManagerIntegration\App::formatEventDate($post->start_date, $post->end_date) }}
+                    </time>
+                @endif
 
                 <h1>{{ the_title() }}</h1>
 

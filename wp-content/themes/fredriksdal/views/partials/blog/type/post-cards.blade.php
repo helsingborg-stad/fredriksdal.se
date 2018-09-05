@@ -18,9 +18,11 @@
             <div class="box-content">
                 <h3 class="text-highlight">{{ the_title() }}</h3>
                 @if (get_field('archive_' . sanitize_title(get_post_type()) . '_feed_date_published', 'option') != 'false')
-                    <time>
-                        {{ \Municipio\Helper\Event::formatEventDate($post->start_date, $post->end_date) }}
-                    </time>
+                    @if(method_exists('\EventManagerIntegration\App', 'formatEventDate'))
+                        <time datetime="{{ get_post_meta(get_the_id(), 'event-date-start', true) }}">
+                            {{ \EventManagerIntegration\App::formatEventDate($post->start_date, $post->end_date) }}
+                        </time>
+                    @endif
                 @endif
             </div>
         </div>

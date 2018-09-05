@@ -6,23 +6,22 @@ class SingleEvent extends \Municipio\Controller\SingleEvent
 {
     public function init()
     {
-        global $post;
-        $this->data['occasion'] = $this->singleEventDate($post->ID);
-        $this->data['location'] = get_post_meta($post->ID, 'location', true);
-        $this->data['occations'] = $this->getOccationsWithEventManagerIntegration($post->ID);
+        $this->data['occasion'] = method_exists('\EventManagerIntegration\Helper\SingleEventData', 'singleEventDate') ? \EventManagerIntegration\Helper\SingleEventData::singleEventDate() : null;
+        $this->data['occations'] = $this->getOccationsWithEventManagerIntegration();
     }
 
     /**
      * Gets all occations of the event (except current occation)
      * @return object
      */
-    public function getOccationsWithEventManagerIntegration($postID)
+    public function getOccationsWithEventManagerIntegration()
     {
         if (!class_exists('\EventManagerIntegration\Helper\QueryEvents')) {
             return array();
         }
 
-        $occations = \EventManagerIntegration\Helper\QueryEvents::getEventOccasions($postID);
+        global $post;
+        $occations = \EventManagerIntegration\Helper\QueryEvents::getEventOccasions($post->ID);
 
         if (is_array($occations) && !empty($occations)) {
             foreach ($occations as $key => $occasion) {
