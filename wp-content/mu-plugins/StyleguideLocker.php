@@ -13,7 +13,7 @@ class StyleguideLocker
 {
     public function __construct()
     {
-        $this->lockStyleguide('1.7.0');
+        //$this->lockStyleguide('1.7.0');
     }
 
     public function lockStyleguide($version)

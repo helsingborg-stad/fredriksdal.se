@@ -2248,3 +2248,20 @@ section.news-story + section.news-story {
     transition: box-shadow .2s ease-out;
     background-color: #fff;
     outline: solid 1px #B9C123; }
+  .is-child-theme .flickity-prev-next-button.next, .is-child-theme .flickity-prev-next-button .previous {
+    position: absolute;
+    top: 50%;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    margin-top: -38px; }
+  .is-child-theme .flickity-prev-next-button.next {
+    right: 15px;
+    text-align: right; }
+  .is-child-theme .flickity-prev-next-button.previous {
+    left: 15px;
+    text-align: left; }

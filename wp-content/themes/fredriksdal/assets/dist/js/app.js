@@ -610,8 +610,7 @@ Fredriksdal.OffGrid.OffGrid = (function ($) {
         }.bind(this));
 
         jQuery(window).on("load",function(){
-            var imgSizeHeight = jQuery('.flickity-viewport .box-image-container').height() + jQuery('.flickity-viewport .box-content').height() ;
-            //$('.flickity-viewport').height(imgSizeHeight);
+
         }.bind(this));
     }
 
