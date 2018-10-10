@@ -1390,7 +1390,8 @@ section.news-story + section.news-story {
     -webkit-transform: scale(1.001) rotate(0deg);
             transform: scale(1.001) rotate(0deg); }
   .is-child-theme .box-news img.box-image[src*=".svg"] {
-    width: 120px; }
+    width: 120px;
+    height: 120px; }
   .is-child-theme .box-news:hover .box-image-container img,
   .is-child-theme .box-news:hover .box-image-container:after {
     -webkit-transform: scale(1.02) rotate(1deg);
