@@ -64,7 +64,8 @@
         "johnpbloch/wordpress": "^4.9.4",
         "helsingborg-stad/api-event-manager-integration": ">=0.1.0",
         "wpackagist-plugin/classic-editor": "^0.4.0",
-        "helsingborg-stad/active-directory-api-wp-integration": "^2.2"
+        "helsingborg-stad/active-directory-api-wp-integration": "^2.2",
+        "wpackagist-plugin/username-changer": "^3.1"
     },
 
     "extra": {
