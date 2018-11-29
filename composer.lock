@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8ada513ec4145a1080fc2b6a67d3ca4c",
+    "content-hash": "104724a7b4653b79d932fb8a1e4f1f2c",
     "packages": [
         {
             "name": "aristath/kirki",
@@ -681,6 +681,34 @@
             ],
             "description": "Imrpoves the ACF repeater-field UX by adding collapsing top-level functionality",
             "time": "2016-10-11T12:00:20+00:00"
+        },
+        {
+            "name": "helsingborg-stad/active-directory-api-wp-integration",
+            "version": "2.2.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/helsingborg-stad/active-directory-api-wp-integration.git",
+                "reference": "e33d6a5adab93eb76c7f7f56e1902783203929bb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/helsingborg-stad/active-directory-api-wp-integration/zipball/e33d6a5adab93eb76c7f7f56e1902783203929bb",
+                "reference": "e33d6a5adab93eb76c7f7f56e1902783203929bb",
+                "shasum": ""
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Thulin",
+                    "email": "sebastian.thulin@helsingborg.se"
+                }
+            ],
+            "description": "Simple plugin for verification of existing WordPress users with api.",
+            "time": "2018-11-08T14:46:35+00:00"
         },
         {
             "name": "helsingborg-stad/api-event-manager-integration",
