@@ -223,3 +223,11 @@ a[href="#translate"]::before {
     @include pricon('\EA39');
     margin-right: 4px;
 }
+
+.c-dropdown-link.translate {
+    color:#000;
+    &::before {
+        @include pricon('\EA39');
+        margin-right: 4px;
+    }
+}

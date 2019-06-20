@@ -26,7 +26,19 @@
                             'fallback_cb' => '__return_false'
                         ));
                     !!}
+                    <span class="dropdown">
+                        <span class="dropdown-toggle hidden"><?php _e('More', 'municipio'); ?></span>
+                        <ul class="dropdown-menu nav-grouped-overflow hidden"></ul>
+                    </span>
 
+                    @if (get_field('header_dropdown_links', 'option') === true && \Municipio\Helper\Navigation::getMenuNameByLocation('dropdown-links-menu'))
+                        <span class="c-dropdown js-dropdown ">
+                         <span class="c-dropdown-link translate c-dropdown__toggle js-dropdown__toggle">{{ \Municipio\Helper\Navigation::getMenuNameByLocation('dropdown-links-menu')}}</span>
+                         <span class="c-dropdown__menu c-dropdown__menu--bubble">
+                                    {!! \Municipio\Theme\Navigation::outputDropdownLinksMenu() !!}
+                         </span>
+                        </span>
+                     @endif
                     {!! $navigation['mainMenu'] !!}
                     <a href="#mobile-menu" data-target="#mobile-menu" class="{!! apply_filters('Municipio/mobile_menu_breakpoint','hidden-md hidden-lg'); !!} menu-trigger"><span class="menu-icon"></span></a>
                 </div>
