@@ -39,6 +39,7 @@
                          </span>
                         </span>
                      @endif
+                    
                     {!! $navigation['mainMenu'] !!}
                     <a href="#mobile-menu" data-target="#mobile-menu" class="{!! apply_filters('Municipio/mobile_menu_breakpoint','hidden-md hidden-lg'); !!} menu-trigger"><span class="menu-icon"></span></a>
                 </div>
