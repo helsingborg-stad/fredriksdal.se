@@ -229,16 +229,17 @@ a[href="#translate"]::before {
     right: 20px;
     top: 5px;
     background-color: transparent;
+    font-size: 13px;
 }
 .c-dropdown-link {
     color: #000;
-
+    font-size: 100%;
     &::before {
         @include pricon('\EA39');
         margin-right: 3px;
         vertical-align: -15%;
         font-family: hbg-pricons;
-        font-size: 1.3em;
+        font-size: 1em;
         text-rendering: auto;
     }
 
