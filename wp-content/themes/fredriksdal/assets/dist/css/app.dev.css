@@ -476,6 +476,8 @@ section.news-story + section.news-story {
         vertical-align: -15%;
         content: "";
         margin-right: 4px; }
+  .is-child-theme #menu-language li a {
+    padding: 4px 16px; }
   .is-child-theme .menu-icon:not(.open),
   .is-child-theme .menu-icon:before,
   .is-child-theme .menu-icon:after {

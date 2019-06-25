@@ -225,6 +225,7 @@ a[href="#translate"]::before {
 }
 
 .c-dropdown.translate {
+
     float: right;
     position: absolute;
     right: 20px;
@@ -239,4 +240,7 @@ a[href="#translate"]::before {
         }
     }
 
+}
+#menu-language li a {
+    padding:4px 16px;
 }
