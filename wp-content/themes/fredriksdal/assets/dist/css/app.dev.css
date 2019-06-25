@@ -459,14 +459,15 @@ section.news-story + section.news-story {
     vertical-align: -15%;
     content: "";
     margin-right: 4px; }
-  .is-child-theme .c-dropdown-link.translate {
+  .is-child-theme .c-dropdown {
     float: right;
     position: absolute;
     right: 20px;
     top: 5px;
-    background-color: transparent;
+    background-color: transparent; }
+  .is-child-theme .c-dropdown-link {
     color: #000; }
-    .is-child-theme .c-dropdown-link.translate::before {
+    .is-child-theme .c-dropdown-link::before {
       font-family: hbg-pricons;
       line-height: 1;
       text-rendering: auto;
