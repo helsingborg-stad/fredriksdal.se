@@ -490,7 +490,7 @@ section.news-story + section.news-story {
       text-rendering: auto; }
   .is-child-theme .c-dropdown__menu li a {
     padding: 4px 16px !important; }
-  .is-child-theme html.translated-ltr #site-header {
+  .is-child-theme #site-header {
     top: 0px !important; }
   .is-child-theme .menu-icon:not(.open),
   .is-child-theme .menu-icon:before,
