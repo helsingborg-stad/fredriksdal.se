@@ -489,7 +489,7 @@ section.news-story + section.news-story {
       font-size: 1em;
       text-rendering: auto; }
   .is-child-theme #menu-language li a {
-    padding: 4px 16px; }
+    padding: 4px 16px !important; }
   .is-child-theme .menu-icon:not(.open),
   .is-child-theme .menu-icon:before,
   .is-child-theme .menu-icon:after {
