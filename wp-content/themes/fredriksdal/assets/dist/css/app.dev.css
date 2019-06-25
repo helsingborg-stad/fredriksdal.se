@@ -488,7 +488,7 @@ section.news-story + section.news-story {
       font-family: hbg-pricons;
       font-size: 1em;
       text-rendering: auto; }
-  .is-child-theme #menu-language li a {
+  .is-child-theme .c-dropdown__menu li a {
     padding: 4px 16px !important; }
   .is-child-theme .menu-icon:not(.open),
   .is-child-theme .menu-icon:before,
