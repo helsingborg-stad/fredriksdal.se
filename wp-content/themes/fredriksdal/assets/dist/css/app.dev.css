@@ -468,7 +468,8 @@ section.news-story + section.news-story {
     font-size: 13px; }
   .is-child-theme .c-dropdown-link {
     color: #000;
-    font-size: 100%; }
+    font-size: 100%;
+    cursor: pointer; }
     .is-child-theme .c-dropdown-link::before {
       font-family: hbg-pricons;
       line-height: 1;

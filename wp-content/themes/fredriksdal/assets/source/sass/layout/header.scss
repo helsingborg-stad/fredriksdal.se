@@ -234,6 +234,7 @@ a[href="#translate"]::before {
 .c-dropdown-link {
     color: #000;
     font-size: 100%;
+    cursor:pointer;
     &::before {
         @include pricon('\EA39');
         margin-right: 3px;
