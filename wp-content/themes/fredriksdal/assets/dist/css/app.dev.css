@@ -459,6 +459,11 @@ section.news-story + section.news-story {
     vertical-align: -15%;
     content: "";
     margin-right: 4px; }
+  .is-child-theme iframe.skiptranslate {
+    display: none; }
+  .is-child-theme body {
+    top: 0px !important;
+    position: initial !important; }
   .is-child-theme .c-dropdown {
     float: right;
     position: absolute;

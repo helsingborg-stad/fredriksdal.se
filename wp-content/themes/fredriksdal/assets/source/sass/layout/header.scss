@@ -223,6 +223,16 @@ a[href="#translate"]::before {
     @include pricon('\EA39');
     margin-right: 4px;
 }
+
+iframe.skiptranslate {
+    display: none;
+}
+
+body {
+    top: 0px !important;
+    position: initial !important;
+}
+
 .c-dropdown {
     float: right;
     position: absolute;
@@ -231,10 +241,12 @@ a[href="#translate"]::before {
     background-color: transparent;
     font-size: 13px;
 }
+
 .c-dropdown-link {
     color: #000;
     font-size: 100%;
-    cursor:pointer;
+    cursor: pointer;
+
     &::before {
         @include pricon('\EA39');
         margin-right: 3px;
@@ -243,8 +255,6 @@ a[href="#translate"]::before {
         font-size: 1em;
         text-rendering: auto;
     }
-
-
 }
 
 #menu-language li a {
