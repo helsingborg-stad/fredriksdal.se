@@ -205,6 +205,10 @@
 }
 
 .menu-trigger {
+    .menu-icon {
+        background-color: #000 !important;
+    }
+
     @media screen and (max-width: #{$screen-lg-max}) {
         position: absolute;
         right: 37px;

@@ -422,6 +422,8 @@ section.news-story + section.news-story {
     .is-child-theme.no-js #site-header #header-tabs {
       height: 0;
       opacity: 0; }
+  .is-child-theme .menu-trigger .menu-icon {
+    background-color: #000 !important; }
   @media screen and (max-width: 1280px) {
     .is-child-theme .menu-trigger {
       position: absolute;
