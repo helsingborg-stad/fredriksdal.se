@@ -422,6 +422,13 @@ section.news-story + section.news-story {
     .is-child-theme.no-js #site-header #header-tabs {
       height: 0;
       opacity: 0; }
+  .is-child-theme .site-header.header-casual .menu-trigger .menu-icon::after,
+  .is-child-theme .site-header.header-casual .menu-trigger .menu-icon::before,
+  .is-child-theme .site-header.header-contrasted-nav .menu-trigger .menu-icon::after,
+  .is-child-theme .site-header.header-contrasted-nav .menu-trigger .menu-icon::before,
+  .is-child-theme .site-header.header-jumbo .menu-trigger .menu-icon::after,
+  .is-child-theme .site-header.header-jumbo .menu-trigger .menu-icon::before {
+    background-color: transparent; }
   .is-child-theme .menu-trigger:before, .is-child-theme .menu-trigger:after {
     background-color: #000; }
   .is-child-theme .menu-trigger:not(.open) .menu-icon,

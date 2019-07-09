@@ -204,10 +204,19 @@
     }
 }
 
+.site-header.header-casual .menu-trigger .menu-icon::after,
+.site-header.header-casual .menu-trigger .menu-icon::before,
+.site-header.header-contrasted-nav .menu-trigger .menu-icon::after,
+.site-header.header-contrasted-nav .menu-trigger .menu-icon::before,
+.site-header.header-jumbo .menu-trigger .menu-icon::after,
+.site-header.header-jumbo .menu-trigger .menu-icon::before {
+    background-color: transparent;
+}
 .menu-trigger {
     &:before, &:after {
         background-color: #000;
     }
+
     &:not(.open) .menu-icon,
     .menu-icon:after,
     .menu-icon:before {
