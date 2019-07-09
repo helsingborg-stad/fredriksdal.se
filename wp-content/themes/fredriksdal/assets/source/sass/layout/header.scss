@@ -256,6 +256,19 @@ body {
         display: none;
     }
 }
+.site-header.header-casual .menu-trigger .menu-icon,
+.site-header.header-contrasted-nav .menu-trigger .menu-icon,
+.site-header.header-jumbo .menu-trigger .menu-icon {
+    background-color: #000;
+}
+.site-header.header-casual .menu-trigger .menu-icon::after,
+.site-header.header-casual .menu-trigger .menu-icon::before,
+.site-header.header-contrasted-nav .menu-trigger .menu-icon::after,
+.site-header.header-contrasted-nav .menu-trigger .menu-icon::before,
+.site-header.header-jumbo .menu-trigger .menu-icon::after,
+.site-header.header-jumbo .menu-trigger .menu-icon::before {
+    background-color: #000;
+}
 
 .c-dropdown-link {
     color: #000;
@@ -284,3 +297,4 @@ body {
         }
     }
 }
+
