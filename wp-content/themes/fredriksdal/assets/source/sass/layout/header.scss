@@ -195,11 +195,20 @@
         .menu-icon:before {
             background-color: #000;
         }
+
     }
 
     #header-tabs {
         height: 0;
         opacity: 0;
+    }
+}
+
+.menu-trigger {
+    @media screen and (max-width: #{$screen-lg-max}) {
+        position: absolute;
+        right: 37px;
+        top: 15px;
     }
 }
 
@@ -240,6 +249,10 @@ body {
     top: 5px;
     background-color: transparent;
     font-size: 13px;
+
+    @media screen and (max-width: #{$screen-lg-max}) {
+        display:none;
+    }
 }
 
 .c-dropdown-link {
