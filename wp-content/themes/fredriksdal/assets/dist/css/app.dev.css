@@ -515,7 +515,7 @@ section.news-story + section.news-story {
   .is-child-theme .site-header.header-jumbo .menu-trigger .menu-icon::after,
   .is-child-theme .site-header.header-jumbo .menu-trigger .menu-icon::before {
     background-color: #000; }
-  .is-child-theme .is-child-theme .open .menu-icon {
+  .is-child-theme .is-child-theme .menu-trigger.open .menu-icon {
     background-color: transparent; }
   .is-child-theme .is-child-theme .menu-icon:after,
   .is-child-theme .is-child-theme .menu-icon:before {
