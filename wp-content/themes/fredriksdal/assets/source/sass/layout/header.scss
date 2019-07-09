@@ -205,13 +205,13 @@
 }
 
 .menu-trigger {
-    .menu-icon {
-        background-color: #000 !important;
-        &:not(.open) &::before, &:not(.open) &::after {
-            background-color: #000;
-        }
-    }
 
+    &:not(.open) .menu-icon,
+    .menu-icon:after,
+    .menu-icon:before {
+        background-color: #000;
+    }
+    
     @media screen and (max-width: #{$screen-lg-max}) {
         position: absolute;
         right: 37px;
@@ -258,7 +258,7 @@ body {
     font-size: 13px;
 
     @media screen and (max-width: #{$screen-lg-max}) {
-        display:none;
+        display: none;
     }
 }
 
@@ -280,6 +280,7 @@ body {
 .c-dropdown__menu li a {
     padding: 4px 16px !important;
 }
+
 #site-header {
-    top:0px !important;
+    top: 0px !important;
 }
