@@ -422,6 +422,8 @@ section.news-story + section.news-story {
     .is-child-theme.no-js #site-header #header-tabs {
       height: 0;
       opacity: 0; }
+  .is-child-theme .menu-trigger::before {
+    background-color: #000; }
   .is-child-theme .menu-trigger:not(.open) .menu-icon,
   .is-child-theme .menu-trigger .menu-icon:after,
   .is-child-theme .menu-trigger .menu-icon:before {
