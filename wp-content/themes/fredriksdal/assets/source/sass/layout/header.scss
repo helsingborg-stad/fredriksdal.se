@@ -299,8 +299,10 @@ body {
 .site-header.header-jumbo .menu-trigger .menu-icon::before {
     background-color: #000;
 }
+.is-child-theme .open .menu-icon {
+    background-color: transparent;
+}
 .is-child-theme .menu-icon:after,
-.is-child-theme .menu-icon:before,
-.is-child-theme .menu-icon:not(.open) {
+.is-child-theme .menu-icon:before {
     background-color: #000;
 }
