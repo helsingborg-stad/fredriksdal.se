@@ -207,8 +207,8 @@
 .menu-trigger {
     .menu-icon {
         background-color: #000 !important;
-        &::before, &::after {
-            background-color: #000 !important;
+        &:not(.open) &::before, &:not(.open) &::after {
+            background-color: #000;
         }
     }
 

@@ -424,8 +424,8 @@ section.news-story + section.news-story {
       opacity: 0; }
   .is-child-theme .menu-trigger .menu-icon {
     background-color: #000 !important; }
-    .is-child-theme .menu-trigger .menu-icon::before, .is-child-theme .menu-trigger .menu-icon::after {
-      background-color: #000 !important; }
+    .is-child-theme .menu-trigger .menu-icon:not(.open) .is-child-theme .menu-trigger .menu-icon::before, .is-child-theme .menu-trigger .menu-icon:not(.open) .is-child-theme .menu-trigger .menu-icon::after {
+      background-color: #000; }
   @media screen and (max-width: 1280px) {
     .is-child-theme .menu-trigger {
       position: absolute;
