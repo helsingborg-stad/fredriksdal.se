@@ -65,7 +65,9 @@
         "helsingborg-stad/api-event-manager-integration": ">=0.1.0",
         "wpackagist-plugin/classic-editor": "^0.4.0",
         "helsingborg-stad/active-directory-api-wp-integration": "^2.2",
-        "wpackagist-plugin/username-changer": "^3.1"
+        "wpackagist-plugin/username-changer": "^3.1",
+        "helsingborg-stad/algolia-index": "^1.7",
+        "helsingborg-stad/algolia-index-modularity-addon": "^1.0"
     },
 
     "extra": {
