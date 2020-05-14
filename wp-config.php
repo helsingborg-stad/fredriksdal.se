@@ -27,6 +27,15 @@ require_once 'config/upload.php';
 require_once 'config/cron.php';
 
 /**
+ * Search settings
+ *
+ * Searchengine configuration. 
+ */
+if (file_exists(__DIR__ . '/config/search.php')) {
+    require_once 'config/search.php';
+}
+
+/**
  * SSL settings
  * Can be used to force site to behave behind a proxy.
  */
