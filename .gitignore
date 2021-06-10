@@ -62,3 +62,4 @@ wp-content/themes/fredriksdal/node_modules
 .Trashes
 ehthumbs.db
 Thumbs.db
+.dccache
